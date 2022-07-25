@@ -1,0 +1,7 @@
+#dependencies
+node_modules/
+.next
+.git
+
+# static folder for DigitalOcean App Platform
+_static
