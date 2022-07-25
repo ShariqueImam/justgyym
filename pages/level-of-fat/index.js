@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { MainHeading } from "../../components/UI/Heading";
 import Image from "next/image";
-// import Slider from "react-rangeslider";
-import "react-rangeslider/lib/index.css";
 import Animator from "../../components/UI/Animator";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import { Button } from "../../components/UI/Button";
