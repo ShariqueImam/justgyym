@@ -12,6 +12,10 @@
   background: radial-gradient(rgba(56, 21, 3, 0.9), rgba(0, 0, 0, 1));
   /* background: red; */
 }
+.bg1 {
+  background: radial-gradient(rgba(0, 12, 61, 0.9), rgba(0, 0, 0, 1));
+  /* background: red; */
+}
 
 .fading {
   opacity: 1;

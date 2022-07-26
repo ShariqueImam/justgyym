@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import MoneyBack from "./MoneyBack";
 import FullPlan from "./FullPlan";
 import Plan from "./Plan/Plan";
@@ -8,7 +8,8 @@ import PlanFeatures from "./PlanFeatures/PlanFeatures";
 import Get from "./Get/Get";
 import Summary from "./Summary/Summary";
 import Cookies from "js-cookie";
-
+import Video from "./Video";
+import Review from "./Review/Review";
 const style = {
   wrapper: "",
 };
@@ -23,11 +24,13 @@ const FinalPage = () => {
       <Result fat={fat} />
       <Summary fat={fat} />
       <PlanFeatures fat={fat} />
-      <Try fat={fat} />
-      <Plan fat={fat} />
       <Get fat={fat} />
+      <Video />
       <FullPlan fat={fat} />
+      <Plan fat={fat} />
+      <Try fat={fat} />
       <MoneyBack fat={fat} />
+      <Review fat={fat} />
     </div>
   );
 };

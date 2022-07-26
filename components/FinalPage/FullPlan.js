@@ -1,7 +1,7 @@
 import React from 'react'
 import { MainHeading } from '../UI/Heading'
 const style={
-    wrapper:'my-24',
+    wrapper:'my-28 bg1 py-12',
     para:'text-gray-400 text-xl my-8 w-[90%] md:w-[30%] lg:w-[35%] mx-auto'
 }
 const FullPlan = () => {

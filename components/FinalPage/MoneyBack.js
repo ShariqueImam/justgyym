@@ -21,7 +21,8 @@ const MoneyBack = () => {
           applicable limitations in our money-back policy
         </p>
       </div>
-      <GiConfirmed className="text-5xl md:text-9xl text-orange-600 scale-[3] md:scale-[4] lg:scale-[3.2] my-12 md:my-0"/>
+      {/* <GiConfirmed className="text-5xl md:text-9xl text-orange-600 scale-[3] md:scale-[4] lg:scale-[3.2] my-12 md:my-0"/> */}
+      <Image src={'/download.svg'} width={500} height={500}/>
     </div>
   );
 };
