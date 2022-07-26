@@ -4,6 +4,7 @@ import { Switch } from "pretty-checkbox-react";
 import "@djthoms/pretty-checkbox";
 import Link from "next/link";
 import { BiErrorCircle } from "react-icons/bi";
+import { calcLength } from "framer-motion";
 // text-[#FFF4ED]
 const style = {
   wrapper:
@@ -28,18 +29,20 @@ const Home = (props) => {
   const [checked2, setChecked2] = React.useState(false);
   const [Error, setError] = React.useState(false);
   const [Touch, setTouch] = React.useState(false);
-  const handleTouch = () => {
+  const handleTouch = (val) => {
+    console.log(val)
+    setError(val && !checked1 || !checked2);
     setTouch(true);
-    setError(Touch && !checked1 && !checked2);
   };
   const handle1 = () => {
-    setError(Touch && !checked1 && !checked2);
+    setError(!checked1 && !checked2);
     setChecked2((prev) => !prev);
   };
   const handle2 = () => {
-    setError(Touch && !checked1 && !checked2);
+    setError(!checked1 && !checked2);
     setChecked1((prev) => !prev);
   };
+  console.log(Error)
   return (
     <div className={style.wrapper}>
       <div className={style.left}>
@@ -64,7 +67,7 @@ const Home = (props) => {
               color="warning"
               shape="slim"
               state={checked1}
-              setState={setChecked1}
+              // setState={setChecked1}
               onChange={handle1}
             ></Switch>{" "}
             <div onClick={handle1} className="mx-4">
@@ -106,7 +109,7 @@ const Home = (props) => {
               color="warning"
               shape="slim"
               state={checked2}
-              setState={setChecked2}
+              // setState={setChecked2}
               onChange={handle2}
             ></Switch>
             <div onClick={handle2} className="mx-4">
@@ -120,7 +123,7 @@ const Home = (props) => {
             any exercise program
           </p>
           {/* for error of the home page */}
-          {Error && (
+          {Error && Touch && (
             <div className="bg-red-500 px-4 py-3 flex items-center justify-center max-w-fit my-2">
               <BiErrorCircle className="text-gray-50 text-3xl mr-3" />
               <p className="text-gray-50">
@@ -145,7 +148,7 @@ const Home = (props) => {
             color="warning"
             shape="slim"
             state={checked1}
-            setState={setChecked1}
+            // setState={setChecked1}
             onChange={handle1}
           ></Switch>{" "}
           <div onClick={handle1} className="mx-4">
@@ -187,7 +190,7 @@ const Home = (props) => {
             color="warning"
             shape="slim"
             state={checked2}
-            setState={setChecked2}
+            // setState={setChecked2}
             onChange={handle1}
           ></Switch>
           <div onClick={handle1} className="mx-4">
@@ -201,7 +204,7 @@ const Home = (props) => {
           exercise program
         </p>
         {/* for error of the home page */}
-        {Error && (
+        {Error && Touch && (
           <div className="bg-red-500 px-4 py-3 flex items-center justify-center">
             <BiErrorCircle className="text-gray-50 text-3xl mr-3" />
             <p className="text-gray-50">

@@ -10,10 +10,9 @@ const style = {
 };
 const Goal = (props) => {
   const handleClick = (value) => {
-    props.touch();
+    props.touch(true);
     props.goal(value);
   };
-  console.log(props.isTrue)
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter, sans-serif" }}>
       <h2 className={style.heading}>Choose Your Goal</h2>
