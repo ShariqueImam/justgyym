@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { MainHeading, SmallHeading } from "../../components/UI/Heading";
 import { Button } from "../../components/UI/Button";
 import Link from "next/link";
 import Animator from "../../components/UI/Animator";
@@ -15,15 +14,51 @@ const style = {
 
 const DOB = () => {
   const [dob, setDob] = useState(Cookies.get("dob") ? Cookies.get("dob") : "");
-
   const dobChangeHandler = (e) => {
-    setDob(e.target.value);
+    if (
+      e.target.value.length < 11 &&
+      /^[ A-Za-z0-9_@./#&+-]*$/.test(e.target.value)
+    ) {
+      if (
+        e.target.value.length < 11 &&
+        e.target.length !== 2 &&
+        e.target.length !== 5
+      ) {
+        setDob(`${e.target.value}`);
+      }
+      if (e.target.value.length == 2) {
+        setDob(`${e.target.value}/`);
+      }
+      if (e.target.value.length == 5) {
+        setDob(`${e.target.value}/`);
+      }
+      if (e.target.value.length == 6) {
+        setDob((prev) => {
+          if (prev.slice(-1) == "/") {
+            return prev.slice(0, -1);
+          }
+          return prev
+
+        });
+      }
+      if (e.target.value.length == 3) {
+        setDob((prev) => {
+          if (prev.slice(-1) == "/") {
+            return prev.slice(0, -1);
+          }
+          return prev
+        });
+      }
+      // if (e.target.value.length == 4) {
+      //   setDob(e.target.value + "/");
+      // }
+    }
+    console.log(e.target.value);
   };
   const handleClick = () => {
     Cookies.set("dob", dob);
     setDob("");
   };
-
   return (
     <>
       {/* <ProgressBar scrollLength={"96%"} val={24} /> */}
@@ -38,8 +73,7 @@ const DOB = () => {
             Let's create your account
           </h2>
           <div className={style.container}>
-
-          <ProgressBar1 scrollLength={"100%"} val={2} />
+            <ProgressBar1 scrollLength={"100%"} val={2} />
           </div>
 
           <div
@@ -60,7 +94,7 @@ const DOB = () => {
           </div>
           <Link href={`${dob.length > 0 ? "/email" : ""}`}>
             <div onClick={handleClick}>
-              <Button dis={dob.length > 0 ? false : true} text={'Continue'}/>
+              <Button dis={dob.length > 0 ? false : true} text={"Continue"} />
             </div>
           </Link>
         </div>
