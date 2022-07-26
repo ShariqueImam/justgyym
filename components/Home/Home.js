@@ -4,7 +4,6 @@ import { Switch } from "pretty-checkbox-react";
 import "@djthoms/pretty-checkbox";
 import Link from "next/link";
 import { BiErrorCircle } from "react-icons/bi";
-import { calcLength } from "framer-motion";
 // text-[#FFF4ED]
 const style = {
   wrapper:
@@ -42,7 +41,6 @@ const Home = (props) => {
     setError(!checked1 && !checked2);
     setChecked1((prev) => !prev);
   };
-  console.log(Error)
   return (
     <div className={style.wrapper}>
       <div className={style.left}>
