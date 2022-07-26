@@ -14,7 +14,7 @@ const Products = () => {
 
   return (
     <>
-      <ProgressBar scrollLength={"84%"} val={21} link="/meal-prep-time"/>
+      <ProgressBar scrollLength={"84%"} val={23} link="/meal-prep-time"/>
       <Animator>
         <MainHeading text="Let us create a meal plan based on your preferences" />
         <SmallHeading text="You can always adjust a meal plan later" />

@@ -39,7 +39,7 @@ const WorkoutIssue = () => {
   };
   return (
     <>
-      <ProgressBar scrollLength={"36%"} val={9} link="/workouts"/>
+      <ProgressBar scrollLength={"36%"} val={10} link="/workouts"/>
       <Animator>
         <MainHeading
           text={

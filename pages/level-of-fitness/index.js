@@ -52,7 +52,7 @@ const LevelOfFitnes = () => {
   const content = fitness[value - 1];
   return (
     <>
-      <ProgressBar scrollLength={"24%"} val={6} link="/target-weight"/>
+      <ProgressBar scrollLength={"24%"} val={7} link="/target-weight"/>
       <Animator>
         <div className="mx-auto" style={{ fontFamily: "Inter,sans-serif" }}>
           <MainHeading text={"What's your level of fitness?"} />
@@ -63,9 +63,13 @@ const LevelOfFitnes = () => {
           />
           {/* slider */}
           <div
-            className="my-8 md:my-12 flex items-center justify-center font-bold"
+            className="my-8 md:my-12 flex items-center justify-center font-bold flex-col"
             style={{ fontFamily: "Inter,sans-serif" }}
           >
+               <div className="text-gray-50 flex w-[85%] md:w-[15%] font-thin mb-4">
+                  <p className="flex-1">1</p>
+                  <p className="">10</p>
+                </div>
             <Box sx={{ width: 300 }}>
               <Slider
                 aria-label="Always-visible"
@@ -80,6 +84,10 @@ const LevelOfFitnes = () => {
                 valueLabelDisplay="on"
               />
             </Box>
+            <div className="text-gray-50 flex w-[85%] md:w-[20%] font-thin">
+                  <p className="flex-1">Worst Shape</p>
+                  <p className="">I'm on fire</p>
+                </div>
           </div>
           <div className="text-gray-100 mx-auto w-[90%] md:w-[40%] lg:w-[30%] mx-auto bg-neutral-900 px-7 py-6">
             <h2 className="font-bold text-xl text-gray-50">{content.h}</h2>

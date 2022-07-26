@@ -9,16 +9,16 @@ const style = {
   wrapper: "flex flex-col md:flex-row",
   left: "w-[100%] md:w-[50%] flex items-center justify-center",
   right:
-    "w-[100%] md:w-[50%] bg-neutral-900 h-[67vh] md:h-[90vh] text-stone-200 flex flex-col justify-center px-4 md:px-12",
+    "w-[100%] md:w-[50%] bg-neutral-900 h-[60vh] md:h-[83vh] text-stone-200 flex flex-col justify-center px-4 md:px-12",
 };
 const Attention = () => {
   return (
     <>
-      <ProgressBar scrollLength={"48%"} val={12}  link="/additional-goals"/>
+      <ProgressBar scrollLength={"48%"} val={13}  link="/additional-goals"/>
       <Animator>
         <div className={style.wrapper}  style={{fontFamily:'Inter,sans-serif'}}>
           <div className={style.left}>
-            <Image src={"/status.webp"} width={700} height={800} />
+            <Image src={"/status.webp"} width={700} height={700} />
           </div>
           <div className={style.right}>
             <h2

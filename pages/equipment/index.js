@@ -17,23 +17,29 @@ const WorkoutPlace = () => {
   };
   return (
     <>
-      <ProgressBar scrollLength={"60%"} val={16} link="/pull-ups"/>
+      <ProgressBar scrollLength={"60%"} val={17} link="/workout-place"/>
       <Animator>
-        <MainHeading text="Choose the place for your workouts" />
-        <div onClick={() => handleClick("Home")}>
+        <MainHeading text="Which type of equipment do you have access to?" />
+        <div onClick={() => handleClick("no")}>
           <BasicCard
-            cardText="Home 🏡"
-            isClick={Click === "Home" ? true : false}
+            cardText="No Equipment"
+            isClick={Click === "no" ? true : false}
           />
         </div>{" "}
-        <div onClick={() => handleClick("Gym")}>
+        <div onClick={() => handleClick("basic")}>
           <BasicCard
-            cardText="Gym 🏋️‍♂️"
-            isClick={Click === "Gym" ? true : false}
+            cardText="Basic Equipment"
+            isClick={Click === "basic" ? true : false}
           />
         </div>
-        <Link href={`${Click.length > 0 ? "/equipment" : ""}`}>
-          <div onClick={() => Cookies.set("workout-place", Click)} className="mt-72 md:mt-2">
+        <div onClick={() => handleClick("full")}>
+          <BasicCard
+            cardText="Full Equipment"
+            isClick={Click === "full" ? true : false}
+          />
+        </div>
+        <Link href={`${Click.length > 0 ? "/workout-frequency" : ""}`}>
+          <div onClick={() => Cookies.set("equipment", Click)} className="mt-72 md:mt-2">
             <Button dis={Click.length > 0 ? false : true} text={'Continue'}/>
           </div>
         </Link>

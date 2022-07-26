@@ -35,10 +35,12 @@ const Workouts = () => {
 
   return (
     <>
-      <ProgressBar scrollLength={"32%"} val={8} link="/loh"/>
+      <ProgressBar scrollLength={"32%"} val={9} link="/loh" />
 
       <Animator>
-        <MainHeading text={"What sports are you interested in?"} />
+        <div className="mx-12">
+          <MainHeading text={"What sports are you interested in?"} />
+        </div>
         <div onClick={() => handleClick("gym")}>
           <BasicCard
             cardText="Gym Workouts"
@@ -77,9 +79,9 @@ const Workouts = () => {
           />
         </div>
 
-        <Link href={`${Click.length > 0? "/workout-issue" : ""}`}>
+        <Link href={`${Click.length > 0 ? "/workout-issue" : ""}`}>
           <div onClick={() => Cookies.set("workouts", JSON.stringify(Click))}>
-            <Button dis={Click.length > 0 ? false : true} text={'Continue'}/>
+            <Button dis={Click.length > 0 ? false : true} text={"Continue"} />
           </div>
         </Link>
       </Animator>

@@ -41,7 +41,7 @@ const Height = () => {
   };
   return (
     <>
-      <ProgressBar scrollLength={"16%"} val={4} link="/problem-area"/>
+      <ProgressBar scrollLength={"16%"} val={5} link="/problem-area"/>
       <Animator className={style.wrapper}>
         <MainHeading text={"What's your height?"} />
         {/* the unit box */}

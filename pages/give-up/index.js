@@ -14,11 +14,11 @@ const style = {
 const GiveUp = () => {
   return (
     <>
-      <ProgressBar scrollLength={"40%"} val={10}  link="/workout-issue"/>
+      <ProgressBar scrollLength={"40%"} val={11}  link="/workout-issue"/>
       <Animator>
         <div className={style.wrapper}  style={{fontFamily:'Inter,sans-serif'}}>
           <div className={style.left}>
-            <Image src={`/Fat/15.webp`} width={300} height={350} />
+            <Image src={`/final/c.webp`} width={300} height={550} />
           </div>
           <div className={style.right}>
             <h2

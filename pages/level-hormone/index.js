@@ -10,7 +10,7 @@ import ProgressBar from "../../components/ProgressBar/ProgressBar";
 const LevelHormone = () => {
   return (
     <>
-      <ProgressBar scrollLength={"72%"} val={18} link="/workout-duration"/>
+      <ProgressBar scrollLength={"72%"} val={20} link="/workout-duration"/>
 
       <Animator>
         <div className="flex flex-col items-center " style={{ fontFamily: "Inter,sans-serif" }}>

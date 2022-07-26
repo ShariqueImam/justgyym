@@ -33,7 +33,7 @@ const Challenge = () => {
   };
   return (
     <>
-      <ProgressBar scrollLength={"88%"} val={22} link="/products"/>
+      <ProgressBar scrollLength={"88%"} val={24} link="/products"/>
       <Animator>
         <MainHeading text="In addition to your goal, what challenge would you like to join?" />
         <div onClick={() => handleClick("1")}  style={{fontFamily:'Inter,sans-serif'}}>

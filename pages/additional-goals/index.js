@@ -33,7 +33,7 @@ const AdditionalGoals = () => {
   };
   return (
     <>
-      <ProgressBar scrollLength={"44%"} val={11}  link="/give-up"/>
+      <ProgressBar scrollLength={"44%"} val={12}  link="/give-up"/>
       <Animator>
         <SmallHeading text="We're sure you want not only a better body, but to improve your lifestyle too." />
         <MainHeading text="Tick your additional goals below:" />

@@ -22,7 +22,7 @@ const WorkoutFrequency = () => {
   };
   return (
     <>
-      <ProgressBar scrollLength={"64%"} val={16} link="/workout-place"/>
+      <ProgressBar scrollLength={"64%"} val={18} link="/workout-place"/>
       <Animator>
         <MainHeading text="How many times per week have you trained in the last 3 months?" />
         <div onClick={() => handleClick("0")} style={{fontFamily:'Inter,sans-serif'}}>

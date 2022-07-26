@@ -16,7 +16,7 @@ const Pushups = () => {
   };
   return (
     <>
-      <ProgressBar scrollLength={"52%"} val={13}  link="/attention"/>
+      <ProgressBar scrollLength={"52%"} val={14}  link="/attention"/>
       <Animator>
         <MainHeading text="How many push-ups can you do in one round?" />
         <div onClick={() => handleClick("10")}>

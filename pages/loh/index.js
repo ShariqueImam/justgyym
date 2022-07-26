@@ -24,7 +24,7 @@ const index = () => {
   };
   useEffect(() => {
     setTimeout(() => {
-      img > 3 && router.push("/workouts");
+      img > 5 && router.push("/workouts");
     }, 100);
   }, [img]);
   const imgVariants = {
@@ -43,7 +43,7 @@ const index = () => {
   };
   return (
     <>
-      <ProgressBar scrollLength={"28%"} val={7} link="/level-of-fitness"/>
+      <ProgressBar scrollLength={"28%"} val={8} link="/level-of-fitness"/>
 
       <Animator>
         <div className={style.wrapper}>
@@ -77,6 +77,24 @@ const index = () => {
                 className={`${img === 3 ? "flex" : "hidden"} `}
               >
                 <Image src={"/loh/3.webp"} width={400} height={300} />
+              </motion.div>
+              <motion.div
+                variants={imgVariants}
+                initial="hidden"
+                animate="show"
+                exit="exit"
+                className={`${img === 4 ? "flex" : "hidden"} `}
+              >
+                <Image src={"/loh/4.webp"} width={400} height={300} />
+              </motion.div>
+              <motion.div
+                variants={imgVariants}
+                initial="hidden"
+                animate="show"
+                exit="exit"
+                className={`${img === 5 ? "flex" : "hidden"} `}
+              >
+                <Image src={"/loh/5.webp"} width={400} height={300} />
               </motion.div>
             </div>
           </AnimatePresence>

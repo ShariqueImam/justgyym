@@ -16,7 +16,7 @@ const WorkoutDuration = () => {
   };
   return (
     <>
-      <ProgressBar scrollLength={"68%"} val={17} link="/workout-frequency"/>
+      <ProgressBar scrollLength={"68%"} val={19} link="/workout-frequency"/>
       <Animator>
         <MainHeading text="How much time are you willing to spend on a workout?" />
         <div onClick={() => handleClick("Half")}>

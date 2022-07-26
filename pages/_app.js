@@ -19,7 +19,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title key={"title"}>Madplans Test</title>
+        <title key={"title"}>Just Gyym | You perfect fitness partner</title>
+        {/* <link rel="icon" href="/logo.webp" className="transform scale-[0.5]"/> */}
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"

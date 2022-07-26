@@ -16,7 +16,7 @@ const Time = () => {
   };
   return (
     <>
-      <ProgressBar scrollLength={"80%"} val={20} link="/water"/>
+      <ProgressBar scrollLength={"80%"} val={22} link="/water"/>
       <Animator>
         <MainHeading text="How much time are you ready to spend per one meal prep?" />
         <div onClick={() => handleClick("30")}>

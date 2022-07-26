@@ -51,7 +51,7 @@ const TargetWeight = () => {
   };
   return (
     <>
-      <ProgressBar scrollLength={"20%"} val={5} link="/height"/>
+      <ProgressBar scrollLength={"20%"} val={6} link="/height"/>
       <Animator>
         <MainHeading text={"What's your current and target weight?"} />
         <div
