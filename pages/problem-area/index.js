@@ -20,45 +20,47 @@ const ProblemArea = () => {
 
   return (
     <>
-      <ProgressBar scrollLength={"12%"} val={4} link="/level-of-fat"/>
-      <Animator>
-        <MainHeading text="Select problem areas" />
-        <div onClick={() => handleClick("weakchest")}>
-          <Card3
-            cardText={"Weak chest"}
-            imgUrl="/chest.webp"
-            isClick={click.includes('weakchest')? true : false}
-          />
-        </div>
-        <div onClick={() => handleClick("slimarms")}>
-          <Card3
-            cardText={"Slim arms"}
-            imgUrl="/arms.webp"
-            isClick={click.includes('slimarms')? true : false}
-          />
-        </div>
-        <div onClick={() => handleClick("beerbelly")}>
-          <Card3
-            cardText={"Beer belly"}
-            imgUrl="/tummy.webp"
-            isClick={click.includes('beerbelly')? true : false}
-          />
-        </div>
-        <div onClick={() => handleClick("slimlegs")}>
-          <Card3
-            cardText={"Slim legs"}
-            imgUrl="/legs.webp"
-            isClick={click.includes('slimlegs')? true : false}
-          />
-        </div>
-        <Link href={`${click.length > 0? "/height" : ""}`}>
-          <div
-            onClick={() => Cookies.set("problem-area", JSON.stringify(click))}
-          >
-            <Button dis={click.length > 0 ? false : true} text={'Continue'}/>
+      <ProgressBar  scrollLength={"12%"} val={4} link="/level-of-fat" />
+      <div className="w-[95%] md:w-[34%] lg:w-[32%] mx-auto">
+        <Animator>
+          <MainHeading text="Select problem areas" />
+          <div onClick={() => handleClick("weakchest")}>
+            <Card3
+              cardText={"Weak chest"}
+              imgUrl="/chest.webp"
+              isClick={click.includes("weakchest") ? true : false}
+            />
           </div>
-        </Link>
-      </Animator>
+          <div onClick={() => handleClick("slimarms")}>
+            <Card3
+              cardText={"Slim arms"}
+              imgUrl="/arms.webp"
+              isClick={click.includes("slimarms") ? true : false}
+            />
+          </div>
+          <div onClick={() => handleClick("beerbelly")}>
+            <Card3
+              cardText={"Beer belly"}
+              imgUrl="/tummy.webp"
+              isClick={click.includes("beerbelly") ? true : false}
+            />
+          </div>
+          <div onClick={() => handleClick("slimlegs")}>
+            <Card3
+              cardText={"Slim legs"}
+              imgUrl="/legs.webp"
+              isClick={click.includes("slimlegs") ? true : false}
+            />
+          </div>
+          <Link href={`${click.length > 0 ? "/height" : ""}`}>
+            <div
+              onClick={() => Cookies.set("problem-area", JSON.stringify(click))}
+            >
+              <Button dis={click.length > 0 ? false : true} text={"Continue"} />
+            </div>
+          </Link>
+        </Animator>
+      </div>
     </>
   );
 };

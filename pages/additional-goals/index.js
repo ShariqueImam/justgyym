@@ -33,56 +33,62 @@ const AdditionalGoals = () => {
   };
   return (
     <>
-      <ProgressBar scrollLength={"44%"} val={12}  link="/give-up"/>
-      <Animator>
-        <SmallHeading text="We're sure you want not only a better body, but to improve your lifestyle too." />
-        <MainHeading text="Tick your additional goals below:" />
-        <div onClick={() => handleClick("sleep")} style={{fontFamily:'Inter,sans-serif'}}>
-          <BasicCard
-            cardText={"Improve sleep"}
-            isClick={Click.includes("sleep") ? true : false}
-          />
-        </div>{" "}
-        <div onClick={() => handleClick("habit")}>
-          <BasicCard
-            cardText={"Form a physical habit"}
-            isClick={Click.includes("habit") ? true : false}
-          />
-        </div>{" "}
-        <div onClick={() => handleClick("discipline")}>
-          <BasicCard
-            cardText={"Self-discipline"}
-            isClick={Click.includes("discipline") ? true : false}
-          />
-        </div>{" "}
-        <div onClick={() => handleClick("healthy")}>
-          <BasicCard
-            cardText={"Feel more healthy"}
-            isClick={Click.includes("healthy") ? true : false}
-          />
-        </div>{" "}
-        <div onClick={() => handleClick("stress")}>
-          <BasicCard
-            cardText={"Reduce Stress"}
-            isClick={Click.includes("stress") ? true : false}
-          />
-        </div>{" "}
-        <p className="border-t-[1px] border-stone-500 w-[90%] md:w-[40%] lg:w-[25%] mx-auto"></p>
-
-        <div onClick={() => handleClick("none")}>
-          <BasicCard
-            cardText={"None of the above"}
-            isClick={Click.includes("none") ? true : false}
-          />
-        </div>
-        <Link href={`${Click.length > 0 ? "/attention" : ""}`}>
+      <ProgressBar scrollLength={"44%"} val={12} link="/give-up" />
+      <div className="w-[95%] md:w-[34%] lg:w-[32%] mx-auto">
+        <Animator>
+          <SmallHeading text="We're sure you want not only a better body, but to improve your lifestyle too." />
+          <MainHeading text="Tick your additional goals below:" />
           <div
-            onClick={() => Cookies.set("additional-goals", JSON.stringify(Click))}
+            onClick={() => handleClick("sleep")}
+            style={{ fontFamily: "Inter,sans-serif" }}
           >
-            <Button dis={Click.length > 0 ? false : true} text={'Continue'}/>
+            <BasicCard
+              cardText={"Improve sleep"}
+              isClick={Click.includes("sleep") ? true : false}
+            />
+          </div>{" "}
+          <div onClick={() => handleClick("habit")}>
+            <BasicCard
+              cardText={"Form a physical habit"}
+              isClick={Click.includes("habit") ? true : false}
+            />
+          </div>{" "}
+          <div onClick={() => handleClick("discipline")}>
+            <BasicCard
+              cardText={"Self-discipline"}
+              isClick={Click.includes("discipline") ? true : false}
+            />
+          </div>{" "}
+          <div onClick={() => handleClick("healthy")}>
+            <BasicCard
+              cardText={"Feel more healthy"}
+              isClick={Click.includes("healthy") ? true : false}
+            />
+          </div>{" "}
+          <div onClick={() => handleClick("stress")}>
+            <BasicCard
+              cardText={"Reduce Stress"}
+              isClick={Click.includes("stress") ? true : false}
+            />
+          </div>{" "}
+          <p className="border-t-[1px] border-stone-500 mx-auto"></p>
+          <div onClick={() => handleClick("none")}>
+            <BasicCard
+              cardText={"None of the above"}
+              isClick={Click.includes("none") ? true : false}
+            />
           </div>
-        </Link>
-      </Animator>
+          <Link href={`${Click.length > 0 ? "/attention" : ""}`}>
+            <div
+              onClick={() =>
+                Cookies.set("additional-goals", JSON.stringify(Click))
+              }
+            >
+              <Button dis={Click.length > 0 ? false : true} text={"Continue"} />
+            </div>
+          </Link>
+        </Animator>
+      </div>
     </>
   );
 };

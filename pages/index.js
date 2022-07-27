@@ -8,7 +8,9 @@ const App = (props) => {
 
   return (
     <Animator className="overflow-x-hidden">
-      <Home goal={handleClick} />
+      <div className="">
+        <Home goal={handleClick} />
+      </div>
     </Animator>
   );
 };

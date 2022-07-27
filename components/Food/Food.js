@@ -28,7 +28,7 @@ const Food = ({ auto, valuess }) => {
     valuess(Click);
   }, [Click]);
   const style = {
-    wrapper: "w-[90%] md:w-[32%] lg:w-[25%] mx-auto",
+    wrapper: "mx-auto",
     container: "flex flex-wrap gap-4",
     item: `px-4 py-1 transition duration-[200ms] border-2 border-transparent 
     ${

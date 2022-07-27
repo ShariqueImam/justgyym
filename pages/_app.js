@@ -35,13 +35,13 @@ function MyApp({ Component, pageProps }) {
           <div key={asPath}>
             <Navbar menu={handleMenu} />
             {isOpen && <OpenMenu menu={handleMenu} />}
-              {!isOpen && (
-                <Component
-                  {...pageProps}
-                  onClick={handleMenu}
-                  setData={handleData}
-                />
-              )}
+            {!isOpen && (
+              <Component
+                {...pageProps}
+                onClick={handleMenu}
+                setData={handleData}
+              />
+            )}
           </div>
         </AnimatePresence>
       </div>

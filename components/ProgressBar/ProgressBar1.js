@@ -13,7 +13,7 @@ const ProgressBar = (props) => {
   transition-delay: 0.2s;
 `;
   return (
-    <div className="flex mx-6 my-4 flex-col">
+    <div className="flex my-4 flex-col">
       <ProgressBarStyled />
       <h2 className="text-orange-700 text-center mt-5">{props.val}/3</h2>
     </div>

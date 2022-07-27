@@ -33,32 +33,53 @@ const Challenge = () => {
   };
   return (
     <>
-      <ProgressBar scrollLength={"88%"} val={24} link="/products"/>
-      <Animator>
-        <MainHeading text="In addition to your goal, what challenge would you like to join?" />
-        <div onClick={() => handleClick("1")}  style={{fontFamily:'Inter,sans-serif'}}>
-          <BasicCard cardText="No excuse! 😎" isClick={Click.includes("1") ? true : false}/>
-        </div>{" "}
-        <div onClick={() => handleClick("30")}>
-          <BasicCard cardText="30 days without junk food! 🥑" isClick={Click.includes("30") ? true : false}/>
-        </div>{" "}
-        <div onClick={() => handleClick("80")}>
-          <BasicCard cardText="80 Club: do 80 push-ups in one round! 😤" isClick={Click.includes("80") ? true : false}/>
-        </div>{" "}
-        <div onClick={() => handleClick("100")}>
-          <BasicCard cardText="I’ll take on all the challenges! 🙌" isClick={Click.includes("100") ? true : false}/>
-        </div>{" "}
-        <p className="border-t-[1px] border-stone-500 w-[90%] md:w-[40%] lg:w-[25%] mx-auto"></p>
-
-        <div onClick={() => handleClick("none")}>
-          <BasicCard cardText="None of the above ❌" isClick={Click.includes("none") ? true : false}/>
-        </div>
-        <Link href={`${Click.length > 0 ? "/name" : ""}`}>
-          <div onClick={() => Cookies.set("challenge", JSON.stringify(Click))}>
-            <Button dis={Click.length > 0 ? false : true} text={'Continue'}/>
+      <ProgressBar scrollLength={"88%"} val={24} link="/products" />
+      <div className="w-[95%] md:w-[34%] lg:w-[33%] mx-auto">
+        <Animator>
+          <MainHeading text="In addition to your goal, what challenge would you like to join?" />
+          <div
+            onClick={() => handleClick("1")}
+            style={{ fontFamily: "Inter,sans-serif" }}
+          >
+            <BasicCard
+              cardText="No excuse! 😎"
+              isClick={Click.includes("1") ? true : false}
+            />
+          </div>{" "}
+          <div onClick={() => handleClick("30")}>
+            <BasicCard
+              cardText="30 days without junk food! 🥑"
+              isClick={Click.includes("30") ? true : false}
+            />
+          </div>{" "}
+          <div onClick={() => handleClick("80")}>
+            <BasicCard
+              cardText="80 Club: do 80 push-ups in one round! 😤"
+              isClick={Click.includes("80") ? true : false}
+            />
+          </div>{" "}
+          <div onClick={() => handleClick("100")}>
+            <BasicCard
+              cardText="I’ll take on all the challenges! 🙌"
+              isClick={Click.includes("100") ? true : false}
+            />
+          </div>{" "}
+          <p className="border-t-[1px] border-stone-500  mx-auto"></p>
+          <div onClick={() => handleClick("none")}>
+            <BasicCard
+              cardText="None of the above ❌"
+              isClick={Click.includes("none") ? true : false}
+            />
           </div>
-        </Link>
-      </Animator>
+          <Link href={`${Click.length > 0 ? "/name" : ""}`}>
+            <div
+              onClick={() => Cookies.set("challenge", JSON.stringify(Click))}
+            >
+              <Button dis={Click.length > 0 ? false : true} text={"Continue"} />
+            </div>
+          </Link>
+        </Animator>
+      </div>
     </>
   );
 };

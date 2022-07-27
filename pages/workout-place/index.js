@@ -17,27 +17,32 @@ const WorkoutPlace = () => {
   };
   return (
     <>
-      <ProgressBar scrollLength={"60%"} val={16} link="/pull-ups"/>
-      <Animator>
-        <MainHeading text="Choose the place for your workouts" />
-        <div onClick={() => handleClick("Home")}>
-          <BasicCard
-            cardText="Home 🏡"
-            isClick={Click === "Home" ? true : false}
-          />
-        </div>{" "}
-        <div onClick={() => handleClick("Gym")}>
-          <BasicCard
-            cardText="Gym 🏋️‍♂️"
-            isClick={Click === "Gym" ? true : false}
-          />
-        </div>
-        <Link href={`${Click.length > 0 ? "/equipment" : ""}`}>
-          <div onClick={() => Cookies.set("workout-place", Click)} className="mt-72 md:mt-2">
-            <Button dis={Click.length > 0 ? false : true} text={'Continue'}/>
+      <ProgressBar scrollLength={"60%"} val={16} link="/pull-ups" />
+      <div className="w-[95%] md:w-[34%] lg:w-[32%] mx-auto">
+        <Animator>
+          <MainHeading text="Choose the place for your workouts" />
+          <div onClick={() => handleClick("Home")}>
+            <BasicCard
+              cardText="Home 🏡"
+              isClick={Click === "Home" ? true : false}
+            />
+          </div>{" "}
+          <div onClick={() => handleClick("Gym")}>
+            <BasicCard
+              cardText="Gym 🏋️‍♂️"
+              isClick={Click === "Gym" ? true : false}
+            />
           </div>
-        </Link>
-      </Animator>
+          <Link href={`${Click.length > 0 ? "/equipment" : ""}`}>
+            <div
+              onClick={() => Cookies.set("workout-place", Click)}
+              className="mt-72 md:mt-2"
+            >
+              <Button dis={Click.length > 0 ? false : true} text={"Continue"} />
+            </div>
+          </Link>
+        </Animator>
+      </div>
     </>
   );
 };

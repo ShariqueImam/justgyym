@@ -52,54 +52,59 @@ const LevelOfFitnes = () => {
   const content = fitness[value - 1];
   return (
     <>
-      <ProgressBar scrollLength={"24%"} val={7} link="/target-weight"/>
-      <Animator>
-        <div className="mx-auto" style={{ fontFamily: "Inter,sans-serif" }}>
-          <MainHeading text={"What's your level of fitness?"} />
-          <SmallHeading
-            text={
-              "Choose your current level of fitness to align the workout plan with."
-            }
-          />
-          {/* slider */}
-          <div
-            className="my-8 md:my-12 flex items-center justify-center font-bold flex-col"
-            style={{ fontFamily: "Inter,sans-serif" }}
-          >
-               <div className="text-gray-50 flex w-[85%] md:w-[15%] font-thin mb-4">
-                  <p className="flex-1">1</p>
-                  <p className="">10</p>
-                </div>
-            <Box sx={{ width: 300 }}>
-              <Slider
-                aria-label="Always-visible"
-                defaultValue={1}
-                getAriaValueText={valuetext}
-                step={1}
-                marks
-                min={1}
-                onChange={handleChange}
-                max={10}
-                color="warning"
-                valueLabelDisplay="on"
-              />
-            </Box>
-            <div className="text-gray-50 flex w-[85%] md:w-[20%] font-thin">
-                  <p className="flex-1">Worst Shape</p>
-                  <p className="">I'm on fire</p>
-                </div>
-          </div>
-          <div className="text-gray-100 mx-auto w-[90%] md:w-[40%] lg:w-[30%] mx-auto bg-neutral-900 px-7 py-6">
-            <h2 className="font-bold text-xl text-gray-50">{content.h}</h2>
-            <p className="text-stone-300 my-2">{content.p}</p>
-          </div>
-          <Link href="/loh">
-            <div onClick={Cookies.set("level-of-fitness", value)} className="mt-48 md:mt-2">
-              <Button text={"Continue"} />
+      <ProgressBar scrollLength={"24%"} val={7} link="/target-weight" />
+      <div className="w-[95%] md:w-[32%] lg:w-[28%] mx-auto">
+        <Animator>
+          <div className="mx-auto" style={{ fontFamily: "Inter,sans-serif" }}>
+            <MainHeading text={"What's your level of fitness?"} />
+            <SmallHeading
+              text={
+                "Choose your current level of fitness to align the workout plan with."
+              }
+            />
+            {/* slider */}
+            <div
+              className="my-8 md:my-12 flex items-center justify-center font-bold flex-col"
+              style={{ fontFamily: "Inter,sans-serif" }}
+            >
+              <div className="text-gray-50 flex font-thin mb-4">
+                <p className="flex-1">1</p>
+                <p className="">10</p>
+              </div>
+              <Box sx={{ width: 330 }}>
+                <Slider
+                  aria-label="Always-visible"
+                  defaultValue={1}
+                  getAriaValueText={valuetext}
+                  step={1}
+                  marks
+                  min={1}
+                  onChange={handleChange}
+                  max={10}
+                  color="warning"
+                  valueLabelDisplay="on"
+                />
+              </Box>
+              <div className="text-gray-50 flex  font-thin">
+                <p className="flex-1">Worst Shape</p>
+                <p className="">I'm on fire</p>
+              </div>
             </div>
-          </Link>
-        </div>
-      </Animator>
+            <div className="text-gray-100 mx-auto bg-neutral-900 px-3 py-3">
+              <h2 className="font-bold text-xl text-gray-50">{content.h}</h2>
+              <p className="text-stone-300 my-2">{content.p}</p>
+            </div>
+            <Link href="/loh">
+              <div
+                onClick={Cookies.set("level-of-fitness", value)}
+                className="mt-48 md:mt-2"
+              >
+                <Button text={"Continue"} />
+              </div>
+            </Link>
+          </div>
+        </Animator>
+      </div>
     </>
   );
 };

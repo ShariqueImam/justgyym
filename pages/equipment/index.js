@@ -17,33 +17,38 @@ const WorkoutPlace = () => {
   };
   return (
     <>
-      <ProgressBar scrollLength={"60%"} val={17} link="/workout-place"/>
-      <Animator>
-        <MainHeading text="Which type of equipment do you have access to?" />
-        <div onClick={() => handleClick("no")}>
-          <BasicCard
-            cardText="No Equipment"
-            isClick={Click === "no" ? true : false}
-          />
-        </div>{" "}
-        <div onClick={() => handleClick("basic")}>
-          <BasicCard
-            cardText="Basic Equipment"
-            isClick={Click === "basic" ? true : false}
-          />
-        </div>
-        <div onClick={() => handleClick("full")}>
-          <BasicCard
-            cardText="Full Equipment"
-            isClick={Click === "full" ? true : false}
-          />
-        </div>
-        <Link href={`${Click.length > 0 ? "/workout-frequency" : ""}`}>
-          <div onClick={() => Cookies.set("equipment", Click)} className="mt-72 md:mt-2">
-            <Button dis={Click.length > 0 ? false : true} text={'Continue'}/>
+      <ProgressBar scrollLength={"60%"} val={17} link="/workout-place" />
+      <div className="w-[95%] md:w-[34%] lg:w-[32%] mx-auto">
+        <Animator>
+          <MainHeading text="Which type of equipment do you have access to?" />
+          <div onClick={() => handleClick("no")}>
+            <BasicCard
+              cardText="No Equipment"
+              isClick={Click === "no" ? true : false}
+            />
+          </div>{" "}
+          <div onClick={() => handleClick("basic")}>
+            <BasicCard
+              cardText="Basic Equipment"
+              isClick={Click === "basic" ? true : false}
+            />
           </div>
-        </Link>
-      </Animator>
+          <div onClick={() => handleClick("full")}>
+            <BasicCard
+              cardText="Full Equipment"
+              isClick={Click === "full" ? true : false}
+            />
+          </div>
+          <Link href={`${Click.length > 0 ? "/workout-frequency" : ""}`}>
+            <div
+              onClick={() => Cookies.set("equipment", Click)}
+              className="mt-72 md:mt-2"
+            >
+              <Button dis={Click.length > 0 ? false : true} text={"Continue"} />
+            </div>
+          </Link>
+        </Animator>
+      </div>
     </>
   );
 };

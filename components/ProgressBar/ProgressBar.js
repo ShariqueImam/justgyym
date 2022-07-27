@@ -17,7 +17,7 @@ const ProgressBar = (props) => {
     transition-delay: 0.2s;
   `;
   return (
-    <div className="flex mx-12 my-4 items-center justify-center">
+    <div className="flex mx-8 my-4 items-center justify-center">
       <Link href={`${props.link}`}>
         <MdArrowBackIos className="text-3xl text-gray-100 mx-3 border-2 border-stone-600 px-1 cursor-pointer" />
       </Link>

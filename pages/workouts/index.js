@@ -36,55 +36,55 @@ const Workouts = () => {
   return (
     <>
       <ProgressBar scrollLength={"32%"} val={9} link="/loh" />
-
-      <Animator>
-        <div className="mx-12">
+      <div className="w-[95%] md:w-[34%] lg:w-[32%] mx-auto">
+        <Animator>
           <MainHeading text={"What sports are you interested in?"} />
-        </div>
-        <div onClick={() => handleClick("gym")}>
-          <BasicCard
-            cardText="Gym Workouts"
-            isClick={Click.includes("gym") ? true : false}
-          />
-        </div>
-        <div onClick={() => handleClick("home")}>
-          <BasicCard
-            cardText="Workouts at home"
-            isClick={Click.includes("home") ? true : false}
-          />
-        </div>
-        <div onClick={() => handleClick("boxing")}>
-          <BasicCard
-            cardText="Boxing"
-            isClick={Click.includes("boxing") ? true : false}
-          />
-        </div>
-        <div onClick={() => handleClick("martialarts")}>
-          <BasicCard
-            cardText="Other martial arts"
-            isClick={Click.includes("martialarts") ? true : false}
-          />
-        </div>
-        <div onClick={() => handleClick("jogging")}>
-          <BasicCard
-            cardText="Jogging"
-            isClick={Click.includes("jogging") ? true : false}
-          />
-        </div>
-        <p className="border-t-[1px] border-stone-500 w-[90%] md:w-[40%] lg:w-[25%] mx-auto"></p>
-        <div onClick={() => handleClick("none")}>
-          <BasicCard
-            cardText="None of the above"
-            isClick={Click.includes("none") ? true : false}
-          />
-        </div>
 
-        <Link href={`${Click.length > 0 ? "/workout-issue" : ""}`}>
-          <div onClick={() => Cookies.set("workouts", JSON.stringify(Click))}>
-            <Button dis={Click.length > 0 ? false : true} text={"Continue"} />
+          <div onClick={() => handleClick("gym")}>
+            <BasicCard
+              cardText="Gym Workouts"
+              isClick={Click.includes("gym") ? true : false}
+            />
           </div>
-        </Link>
-      </Animator>
+          <div onClick={() => handleClick("home")}>
+            <BasicCard
+              cardText="Workouts at home"
+              isClick={Click.includes("home") ? true : false}
+            />
+          </div>
+          <div onClick={() => handleClick("boxing")}>
+            <BasicCard
+              cardText="Boxing"
+              isClick={Click.includes("boxing") ? true : false}
+            />
+          </div>
+          <div onClick={() => handleClick("martialarts")}>
+            <BasicCard
+              cardText="Other martial arts"
+              isClick={Click.includes("martialarts") ? true : false}
+            />
+          </div>
+          <div onClick={() => handleClick("jogging")}>
+            <BasicCard
+              cardText="Jogging"
+              isClick={Click.includes("jogging") ? true : false}
+            />
+          </div>
+          <p className="border-t-[1px] border-stone-500 mx-auto"></p>
+          <div onClick={() => handleClick("none")}>
+            <BasicCard
+              cardText="None of the above"
+              isClick={Click.includes("none") ? true : false}
+            />
+          </div>
+
+          <Link href={`${Click.length > 0 ? "/workout-issue" : ""}`}>
+            <div onClick={() => Cookies.set("workouts", JSON.stringify(Click))}>
+              <Button dis={Click.length > 0 ? false : true} text={"Continue"} />
+            </div>
+          </Link>
+        </Animator>
+      </div>
     </>
   );
 };

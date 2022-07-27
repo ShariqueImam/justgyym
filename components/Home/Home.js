@@ -7,7 +7,7 @@ import { BiErrorCircle } from "react-icons/bi";
 // text-[#FFF4ED]
 const style = {
   wrapper:
-    " w-[95%] md:w-[80%] lg:w-[70%] mx-auto my-12 flex flex-col md:flex-row text-gray-200",
+    "w-[95%] md:w-[80%] lg:w-[70%] mx-auto my-12 flex flex-col md:flex-row text-gray-200",
   left: "md:w-[50%] flex-1 flex flex-col",
   right: "md:w-[40%]",
   tag: "flex flex-col flex-1 mx-auto",

@@ -9,7 +9,7 @@ import ProgressBar from "../../components/ProgressBar/ProgressBar";
 
 import { AnimatePresence, motion } from "framer-motion";
 const style = {
-  wrapper: "w-[90%] md:w-[50%] lg:w-[40%] mx-auto flex flex-col",
+  wrapper: "mx-auto flex flex-col",
   buttonContainer: "flex items-center justify-around w-[100%] mt-12 md:mt-16",
   container:
     "flex flex-col px-6 py-4 bg-neutral-800 hover:bg-neutral-700 transition duration-[300ms] w-[60%] md:w-[25%] mx-auto items-center justify-center",
@@ -43,79 +43,83 @@ const index = () => {
   };
   return (
     <>
-      <ProgressBar scrollLength={"28%"} val={8} link="/level-of-fitness"/>
+      <ProgressBar scrollLength={"28%"} val={8} link="/level-of-fitness" />
+      <div className="w-[95%] md:w-[38%] lg:w-[37%] mx-auto">
+        <Animator>
+          <div className={style.wrapper}>
+            {/* adding the images */}
+            <MainHeading text={"Like or dislike it."} />
+            <AnimatePresence exitBeforeEnter>
+              <div className={style.imgContainer} key={img}>
+                <motion.div
+                  variants={imgVariants}
+                  initial="hidden"
+                  animate="show"
+                  exit="exit"
+                  className={`${img === 1 ? "flex" : "hidden"} `}
+                >
+                  <Image src={"/loh/1.webp"} width={400} height={300} />
+                </motion.div>
+                <motion.div
+                  variants={imgVariants}
+                  initial="hidden"
+                  animate="show"
+                  exit="exit"
+                  className={`${img === 2 ? "flex" : "hidden"} `}
+                >
+                  <Image src={"/loh/2.webp"} width={400} height={300} />
+                </motion.div>
+                <motion.div
+                  variants={imgVariants}
+                  initial="hidden"
+                  animate="show"
+                  exit="exit"
+                  className={`${img === 3 ? "flex" : "hidden"} `}
+                >
+                  <Image src={"/loh/3.webp"} width={400} height={300} />
+                </motion.div>
+                <motion.div
+                  variants={imgVariants}
+                  initial="hidden"
+                  animate="show"
+                  exit="exit"
+                  className={`${img === 4 ? "flex" : "hidden"} `}
+                >
+                  <Image src={"/loh/4.webp"} width={400} height={300} />
+                </motion.div>
+                <motion.div
+                  variants={imgVariants}
+                  initial="hidden"
+                  animate="show"
+                  exit="exit"
+                  className={`${img === 5 ? "flex" : "hidden"} `}
+                >
+                  <Image src={"/loh/5.webp"} width={400} height={300} />
+                </motion.div>
+              </div>
+            </AnimatePresence>
 
-      <Animator>
-        <div className={style.wrapper}>
-          {/* adding the images */}
-          <MainHeading text={"Like or dislike it."} />
-          <AnimatePresence exitBeforeEnter>
-            <div className={style.imgContainer} key={img}>
-              <motion.div
-                variants={imgVariants}
-                initial="hidden"
-                animate="show"
-                exit="exit"
-                className={`${img === 1 ? "flex" : "hidden"} `}
-              >
-                <Image src={"/loh/1.webp"} width={400} height={300} />
-              </motion.div>
-              <motion.div
-                variants={imgVariants}
-                initial="hidden"
-                animate="show"
-                exit="exit"
-                className={`${img === 2 ? "flex" : "hidden"} `}
-              >
-                <Image src={"/loh/2.webp"} width={400} height={300} />
-              </motion.div>
-              <motion.div
-                variants={imgVariants}
-                initial="hidden"
-                animate="show"
-                exit="exit"
-                className={`${img === 3 ? "flex" : "hidden"} `}
-              >
-                <Image src={"/loh/3.webp"} width={400} height={300} />
-              </motion.div>
-              <motion.div
-                variants={imgVariants}
-                initial="hidden"
-                animate="show"
-                exit="exit"
-                className={`${img === 4 ? "flex" : "hidden"} `}
-              >
-                <Image src={"/loh/4.webp"} width={400} height={300} />
-              </motion.div>
-              <motion.div
-                variants={imgVariants}
-                initial="hidden"
-                animate="show"
-                exit="exit"
-                className={`${img === 5 ? "flex" : "hidden"} `}
-              >
-                <Image src={"/loh/5.webp"} width={400} height={300} />
-              </motion.div>
-            </div>
-          </AnimatePresence>
-
-          {/* buttons */}
-          <div className={style.buttonContainer} style={{ fontFamily: "Inter,sans-serif" }}>
-            <div className={style.container} onClick={handleClick}>
-              <BiDislike className="text-yellow-400 text-2xl md:text-3xl" />
-              <p className={style.text}>DisLike</p>
-            </div>
-            <div className={style.container} onClick={handleClick}>
-              <BsEmojiNeutral className="text-yellow-400 text-2xl md:text-3xl" />
-              <p className={style.text}>Neutral</p>
-            </div>
-            <div className={style.container} onClick={handleClick}>
-              <BiLike className="text-yellow-400 text-2xl md:text-3xl" />
-              <p className={style.text}>Like</p>
+            {/* buttons */}
+            <div
+              className={style.buttonContainer}
+              style={{ fontFamily: "Inter,sans-serif" }}
+            >
+              <div className={style.container} onClick={handleClick}>
+                <BiDislike className="text-yellow-400 text-2xl md:text-3xl" />
+                <p className={style.text}>DisLike</p>
+              </div>
+              <div className={style.container} onClick={handleClick}>
+                <BsEmojiNeutral className="text-yellow-400 text-2xl md:text-3xl" />
+                <p className={style.text}>Neutral</p>
+              </div>
+              <div className={style.container} onClick={handleClick}>
+                <BiLike className="text-yellow-400 text-2xl md:text-3xl" />
+                <p className={style.text}>Like</p>
+              </div>
             </div>
           </div>
-        </div>
-      </Animator>
+        </Animator>
+      </div>
     </>
   );
 };
