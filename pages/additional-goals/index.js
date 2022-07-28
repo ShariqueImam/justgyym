@@ -39,8 +39,10 @@ const AdditionalGoals = (props) => {
       <ProgressBar scrollLength={"44%"} val={11} link="/give-up" />
       <div className="w-[95%] md:w-[39%] lg:w-[32%] mx-auto">
         <Animator>
-          <SmallHeading text="We're sure you want not only a better body, but to improve your lifestyle too." />
-          <MainHeading text="Tick your additional goals below:" />
+          <div className="w-[95%] md:w-[75%]">
+            <SmallHeading text="We're sure you want not only a better body, but to improve your lifestyle too." />
+            <MainHeading text="Tick your additional goals below:" />
+          </div>
           <div
             onClick={() => handleClick("sleep")}
             style={{ fontFamily: "Inter,sans-serif" }}

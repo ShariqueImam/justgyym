@@ -12,7 +12,7 @@ const WorkoutIssue = (props) => {
   const [Click, setClick] = useState([]);
   const [Show, setShow] = useState(false);
   const handleClick = (value) => {
-    setShow(false)
+    setShow(false);
     if (value !== "none") {
       const index = Click.indexOf(value);
       if (index > -1) {
@@ -35,7 +35,7 @@ const WorkoutIssue = (props) => {
       }
     }
   };
-  props.which('home1')
+  props.which("home1");
 
   const handleClick1 = () => {
     setShow(true);
@@ -45,11 +45,14 @@ const WorkoutIssue = (props) => {
       <ProgressBar scrollLength={"36%"} val={10} link="/workouts" />
       <div className="w-[95%] md:w-[39%] lg:w-[32%] mx-auto">
         <Animator>
-          <MainHeading
-            text={
-              "Have you experienced any of these issues in your previous fitness attempts?"
-            }
-          />
+          <div className="w-[95%] md:w-[80%]">
+            <MainHeading
+              text={
+                "Have you experienced any of these issues in your previous fitness attempts?"
+              }
+            />{" "}
+          </div>
+
           <div onClick={() => handleClick("motivation")}>
             <BasicCard
               cardText="Lack of motivation"
@@ -83,7 +86,10 @@ const WorkoutIssue = (props) => {
             />
             {/* adding the thanks page */}
             {Show && Click != "none" && (
-              <div className="bg-blue-600 px-5 py-3 mx-auto" style={{fontFamily:'Inter,sans-serif'}}>
+              <div
+                className="bg-blue-600 px-5 py-3 mx-auto"
+                style={{ fontFamily: "Inter,sans-serif" }}
+              >
                 <div className="flex items-center">
                   <AiOutlineStock className="text-gray-100 text-xl " />
                   <h2 className="text-gray-100 mx-2 text-xl font-bold">
@@ -100,35 +106,46 @@ const WorkoutIssue = (props) => {
             )}
           </div>
           {/* THESE ARE THE BUTTON THAT ARE ADDED OR SHOWED UPON CONDITION */}
-     {Click[0]!=='none'&& <div>
-      {!Show && (
-            <div onClick={handleClick1}>
-              <Button dis={Click.length > 0 ? false : true} text={"Continue"} />
+          {Click[0] !== "none" && (
+            <div>
+              {!Show && (
+                <div onClick={handleClick1}>
+                  <Button
+                    dis={Click.length > 0 ? false : true}
+                    text={"Continue"}
+                  />
+                </div>
+              )}
+              {Show && (
+                <Link href={`${Click.length > 0 ? "/give-up" : ""}`}>
+                  <div
+                    onClick={() =>
+                      Cookies.set("workout-issue", JSON.stringify(Click))
+                    }
+                  >
+                    <Button
+                      dis={Click.length > 0 ? false : true}
+                      text={"Got it"}
+                    />
+                  </div>
+                </Link>
+              )}
             </div>
           )}
-          {Show && (
-            <Link href={`${Click.length > 0 ? "/give-up" : ""}`}>
-              <div
-                onClick={() =>
-                  Cookies.set("workout-issue", JSON.stringify(Click))
-                }
-              >
-                <Button dis={Click.length > 0 ? false : true} text={"Got it"} />
-              </div>
-            </Link>
-          )}
-      </div>}
-     {Click[0]==='none'&& <div>
-      {!Show && (
-         <Link href={`${Click.length > 0 ? "/give-up" : ""}`}>
-            <div onClick={handleClick1}>
-              <Button dis={Click.length > 0 ? false : true} text={"Continue"} />
+          {Click[0] === "none" && (
+            <div>
+              {!Show && (
+                <Link href={`${Click.length > 0 ? "/give-up" : ""}`}>
+                  <div onClick={handleClick1}>
+                    <Button
+                      dis={Click.length > 0 ? false : true}
+                      text={"Continue"}
+                    />
+                  </div>
+                </Link>
+              )}
             </div>
-            </Link>
           )}
-      </div>}
-          
-          
         </Animator>
       </div>
     </>

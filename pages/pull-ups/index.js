@@ -15,14 +15,16 @@ const Pullups = (props) => {
       return value;
     });
   };
-  props.which('home1')
+  props.which("home1");
 
   return (
     <>
       <ProgressBar scrollLength={"56%"} val={13} link="/push-ups" />
       <div className="w-[95%] md:w-[39%] lg:w-[32%] mx-auto">
         <Animator>
-          <MainHeading text="How many pull-ups can you do in one round?" />
+          <div className="w-[95%] md:w-[80%]">
+            <MainHeading text="How many pull-ups can you do in one round?" />
+          </div>
           <div onClick={() => handleClick("0")}>
             <BasicCard1
               cardText="I can’t make a single pull-up"

@@ -14,14 +14,16 @@ const Pushups = (props) => {
       return value;
     });
   };
-  props.which('home1')
+  props.which("home1");
 
   return (
     <>
       <ProgressBar scrollLength={"52%"} val={12} link="/attention" />
       <div className="w-[95%] md:w-[39%] lg:w-[32%] mx-auto">
         <Animator>
-          <MainHeading text="How many push-ups can you do in one round?" />
+          <div className="w-[95%] md:w-[80%]">
+            <MainHeading text="How many push-ups can you do in one round?" />
+          </div>
           <div onClick={() => handleClick("10")}>
             <BasicCard1
               cardText="Less than 10 💪"

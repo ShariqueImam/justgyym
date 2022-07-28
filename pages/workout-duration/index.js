@@ -14,14 +14,16 @@ const WorkoutDuration = (props) => {
       return value;
     });
   };
-  props.which('home1')
+  props.which("home1");
 
   return (
     <>
       <ProgressBar scrollLength={"68%"} val={17} link="/workout-frequency" />
       <div className="w-[95%] md:w-[39%] lg:w-[32%] mx-auto">
         <Animator>
-          <MainHeading text="How much time are you willing to spend on a workout?" />
+          <div className="w-[95%] md:w-[80%]">
+            <MainHeading text="How much time are you willing to spend on a workout?" />
+          </div>
           <div onClick={() => handleClick("Half")}>
             <BasicCard1
               cardText="30 minutes ⏰"

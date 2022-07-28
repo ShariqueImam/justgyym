@@ -9,7 +9,7 @@ import Link from "next/link";
 import Cookies from "js-cookie";
 const Workouts = (props) => {
   const [Click, setClick] = useState([]);
-  props.which('home1')
+  props.which("home1");
 
   const handleClick = (value) => {
     if (value !== "none") {
@@ -40,8 +40,9 @@ const Workouts = (props) => {
       <ProgressBar scrollLength={"32%"} val={9} link="/loh" />
       <div className="w-[95%] md:w-[39%] lg:w-[32%] mx-auto">
         <Animator>
-          <MainHeading text={"What sports are you interested in?"} />
-
+          <div className="w-[95%] md:w-[80%]">
+            <MainHeading text={"What sports are you interested in?"} />
+          </div>
           <div onClick={() => handleClick("gym")}>
             <BasicCard
               cardText="Gym Workouts"
@@ -87,7 +88,7 @@ const Workouts = (props) => {
           </Link>
         </Animator>
       </div>
-    </>      
+    </>
   );
 };
 
