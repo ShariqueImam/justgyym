@@ -58,7 +58,7 @@ const Result = ({fat}) => {
           </div>
         </div>
       </div>
-      <p className="text-xs text-center my-4 text-stone-500">
+      <p className="text-xs text-center my-4 text-stone-500" style={{fontWeight:300}}>
         *The image is not intended to represent the user. Results vary per
         person and are not guaranteed.
       </p>

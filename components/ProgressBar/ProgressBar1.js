@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const ProgressBar = (props) => {
   const ProgressBarStyled = styled.div`
-  background: linear-gradient(to right, #ea580c ${props.scrollLength}, transparent 0);
+  background: linear-gradient(to right, #ea580c ${props.scrollLength}, #363636 0);
   width: 100%;
   height: 5px;
   z-index: 40;
@@ -13,9 +13,9 @@ const ProgressBar = (props) => {
   transition-delay: 0.2s;
 `;
   return (
-    <div className="flex my-4 flex-col">
+    <div className="flex my-4 items-center justify-center">
       <ProgressBarStyled />
-      <h2 className="text-orange-700 text-center mt-5">{props.val}/3</h2>
+      <h2 className="text-neutral-500 text-xs mx-2">{props.val}/3</h2>
     </div>
   );
 };

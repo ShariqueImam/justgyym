@@ -6,7 +6,7 @@ import Link from "next/link";
 import Animator from "../../components/UI/Animator";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Cookies from "js-cookie";
-const ProblemArea = () => {
+const ProblemArea = (props) => {
   const [click, setClick] = useState([]);
   const handleClick = (value) => {
     const index = click.indexOf(value);
@@ -17,6 +17,7 @@ const ProblemArea = () => {
       setClick([...click, value]);
     }
   };
+  props.which('home1')
 
   return (
     <>

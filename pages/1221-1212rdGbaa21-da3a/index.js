@@ -7,6 +7,7 @@ const index = (props) => {
   const [Val, setVal] = useState(Cookies.get("target-body")||'slim');
   const [Code, setCode] = useState(-1);
   const [Got, setGot] = useState(false);
+  props.which("home1");
 
   if (Val === "slim" && Got == false) {
     setCode(0);

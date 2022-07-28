@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import { SmallHeading, MainHeading } from "../../components/UI/Heading";
 import { Button } from "../../components/UI/Button";
 import { BasicCard } from "../../components/UI/BasicCard";
+import { BasicCard4 } from "../../components/UI/BasicCard4";
 import Animator from "../../components/UI/Animator";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Cookies from "js-cookie";
 import Link from "next/link";
-const AdditionalGoals = () => {
+const AdditionalGoals = (props) => {
+  props.which("home1");
+
   const [Click, setClick] = useState([]);
   const handleClick = (value) => {
     if (value !== "none") {
@@ -33,8 +36,8 @@ const AdditionalGoals = () => {
   };
   return (
     <>
-      <ProgressBar scrollLength={"44%"} val={12} link="/give-up" />
-      <div className="w-[95%] md:w-[34%] lg:w-[32%] mx-auto">
+      <ProgressBar scrollLength={"44%"} val={11} link="/give-up" />
+      <div className="w-[95%] md:w-[39%] lg:w-[32%] mx-auto">
         <Animator>
           <SmallHeading text="We're sure you want not only a better body, but to improve your lifestyle too." />
           <MainHeading text="Tick your additional goals below:" />
@@ -73,7 +76,7 @@ const AdditionalGoals = () => {
           </div>{" "}
           <p className="border-t-[1px] border-stone-500 mx-auto"></p>
           <div onClick={() => handleClick("none")}>
-            <BasicCard
+            <BasicCard4
               cardText={"None of the above"}
               isClick={Click.includes("none") ? true : false}
             />

@@ -13,23 +13,23 @@ const Review = () => {
   const { width } = useWindowSize();
   return (
     <div className="my-24 bg-neutral-900 py-12">
-      <p className="text-center my-5 text-gray-100 text-xl md:text-3xl">
+      <p className="text-center my-5 text-gray-100 text-xl md:text-xl font-semibold" >
         We helped over
       </p>
-      <h2 className="text-center my-5 text-gray-100 text-3xl md:text-5xl">
+      <h2 className="text-center my-5 text-gray-100 text-3xl md:text-5xl font-semibold">
         85000+ people
       </h2>
-      <p className="text-center my-5 text-gray-400 text-sm md:text-md">
+      <p className="text-center my-5 text-stone-400 text-md md:text-lg tracking-wide" style={{fontWeight:300}}>
         to achieve their dream physique
       </p>
       {/* adding the review */}
       <div className="w-[95%] md:w-[60%] mx-auto flex">
         <Swiper
-          spaceBetween={5}
+          spaceBetween={10}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-          slidesPerView={width > 1000 ? 3 : 1}
+          slidesPerView={width > 1000 &&width<1200 ? 2 : width>1200?3:1}
           scrollbar={true}
         >
           <SwiperSlide>

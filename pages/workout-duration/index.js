@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { MainHeading } from "../../components/UI/Heading";
 import { Button } from "../../components/UI/Button";
-import { BasicCard } from "../../components/UI/BasicCard";
+import { BasicCard1 } from "../../components/UI/BasicCard1";
 import Link from "next/link";
 import Animator from "../../components/UI/Animator";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Cookies from "js-cookie";
-const WorkoutDuration = () => {
+const WorkoutDuration = (props) => {
   const [Click, setClick] = useState("");
   const handleClick = (value) => {
     setClick((prev) => {
@@ -14,32 +14,34 @@ const WorkoutDuration = () => {
       return value;
     });
   };
+  props.which('home1')
+
   return (
     <>
-      <ProgressBar scrollLength={"68%"} val={19} link="/workout-frequency" />
-      <div className="w-[95%] md:w-[34%] lg:w-[32%] mx-auto">
+      <ProgressBar scrollLength={"68%"} val={17} link="/workout-frequency" />
+      <div className="w-[95%] md:w-[39%] lg:w-[32%] mx-auto">
         <Animator>
           <MainHeading text="How much time are you willing to spend on a workout?" />
           <div onClick={() => handleClick("Half")}>
-            <BasicCard
+            <BasicCard1
               cardText="30 minutes ⏰"
               isClick={Click === "Half" ? true : false}
             />
           </div>{" "}
           <div onClick={() => handleClick("Quarter")}>
-            <BasicCard
+            <BasicCard1
               cardText="45 minutes ⏰"
               isClick={Click === "Quarter" ? true : false}
             />
           </div>{" "}
           <div onClick={() => handleClick("One")}>
-            <BasicCard
+            <BasicCard1
               cardText="1 hour 🕐"
               isClick={Click === "One" ? true : false}
             />
           </div>{" "}
           <div onClick={() => handleClick("one")}>
-            <BasicCard
+            <BasicCard1
               cardText="Let Just Gyym decide"
               isClick={Click === "one" ? true : false}
             />

@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { MainHeading } from "../../components/UI/Heading";
 import { BasicCard } from "../../components/UI/BasicCard";
+import { BasicCard4 } from "../../components/UI/BasicCard4";
 import { Button } from "../../components/UI/Button";
 import Animator from "../../components/UI/Animator";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Link from "next/link";
 import Cookies from "js-cookie";
-const Workouts = () => {
+const Workouts = (props) => {
   const [Click, setClick] = useState([]);
+  props.which('home1')
 
   const handleClick = (value) => {
     if (value !== "none") {
@@ -36,7 +38,7 @@ const Workouts = () => {
   return (
     <>
       <ProgressBar scrollLength={"32%"} val={9} link="/loh" />
-      <div className="w-[95%] md:w-[34%] lg:w-[32%] mx-auto">
+      <div className="w-[95%] md:w-[39%] lg:w-[32%] mx-auto">
         <Animator>
           <MainHeading text={"What sports are you interested in?"} />
 
@@ -72,7 +74,7 @@ const Workouts = () => {
           </div>
           <p className="border-t-[1px] border-stone-500 mx-auto"></p>
           <div onClick={() => handleClick("none")}>
-            <BasicCard
+            <BasicCard4
               cardText="None of the above"
               isClick={Click.includes("none") ? true : false}
             />
@@ -85,7 +87,7 @@ const Workouts = () => {
           </Link>
         </Animator>
       </div>
-    </>
+    </>      
   );
 };
 

@@ -11,10 +11,11 @@ const style = {
   right:
     "w-[100%] md:w-[50%] bg-neutral-900 h-[60vh] md:h-[83vh] text-stone-200 flex flex-col justify-center px-4 md:px-12",
 };
-const Attention = () => {
+const Attention = (props) => {
+  props.which("home1");
+
   return (
     <>
-      <ProgressBar scrollLength={"48%"} val={13}  link="/additional-goals"/>
       <Animator>
         <div className={style.wrapper}  style={{fontFamily:'Inter,sans-serif'}}>
           <div className={style.left}>

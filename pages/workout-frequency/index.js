@@ -3,11 +3,12 @@ import { MainHeading } from "../../components/UI/Heading";
 import { Button } from "../../components/UI/Button";
 import Animator from "../../components/UI/Animator";
 import Cookies from "js-cookie";
-import { BasicCard } from "../../components/UI/BasicCard";
+import { BasicCard1 } from "../../components/UI/BasicCard1";
+import { BasicCard2 } from "../../components/UI/BasicCard2";
 import Link from "next/link";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import { GiMuscleUp } from "react-icons/gi";
-const WorkoutFrequency = () => {
+const WorkoutFrequency = (props) => {
   const [Show, setShow] = useState(false);
   const [Click, setClick] = useState("");
   const handleClick1 = () => {
@@ -20,43 +21,46 @@ const WorkoutFrequency = () => {
     });
     setShow(false);
   };
+  props.which('home1')
+
   return (
     <>
-      <ProgressBar scrollLength={"64%"} val={18} link="/workout-place" />
-      <div className="w-[95%] md:w-[34%] lg:w-[32%] mx-auto">
+      <ProgressBar scrollLength={"64%"} val={16} link="/workout-place" />
+      <div className="w-[95%] md:w-[39%] lg:w-[29%] mx-auto">
         <Animator>
           <MainHeading text="How many times per week have you trained in the last 3 months?" />
           <div
             onClick={() => handleClick("0")}
             style={{ fontFamily: "Inter,sans-serif" }}
           >
-            <BasicCard
+            <BasicCard2
               cardText="Not at all 😔"
               isClick={Click === "0" ? true : false}
+              cardPara="I haven't trained, but I will after claiming my workout program!"
             />
           </div>{" "}
           <div onClick={() => handleClick("2")}>
-            <BasicCard
+            <BasicCard1
               cardText="1-2 times a week 💪"
               isClick={Click === "2" ? true : false}
             />
           </div>{" "}
           <div onClick={() => handleClick("3")}>
-            <BasicCard
+            <BasicCard1
               cardText="3 times a week 💪⚡️"
               isClick={Click === "3" ? true : false}
             />
           </div>{" "}
           <div onClick={() => handleClick("4")}>
-            <BasicCard
+            <BasicCard1
               cardText="More than 3 times a week 🏆"
               isClick={Click === "4" ? true : false}
             />
             {Show && (
-              <div className="bg-blue-600 px-5 py-3 mx-auto">
+              <div className="bg-blue-600 px-5 py-3 mx-auto" style={{fontFamily:'Inter,sans-serif'}}>
                 <div className="flex items-center">
                   <GiMuscleUp className="text-gray-100 text-xl " />
-                  <h2 className="text-gray-100 mx-2 text-xl font-bold">
+                  <h2 className="text-gray-100 mx-2 text-lg font-bold">
                     You’ve workout more than{" "}
                     {`${
                       Click === "0"
@@ -70,13 +74,13 @@ const WorkoutFrequency = () => {
                     % of users*
                   </h2>
                 </div>
-                <p className="text-gray-100 text-sm my-2">
+                <p className="text-gray-100 text-sm my-2 " style={{fontWeight:250}}>
                   It will be easier for you to maintain a workout plan.
                 </p>
               </div>
             )}
             {Show && (
-              <p className="text-sm text-stone-400 mx-auto my-7">
+              <p className="text-xs text-gray-50 mx-auto my-7">
                 *users of MadMuscles who took the quiz
               </p>
             )}
@@ -101,7 +105,7 @@ const WorkoutFrequency = () => {
               >
                 <Button
                   dis={Click.length > 0 ? false : true}
-                  text={"Got it."}
+                  text={"Got it"}
                 />
               </div>
             </Link>

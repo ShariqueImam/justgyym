@@ -9,11 +9,15 @@ import Cookies from "js-cookie";
 function MyApp({ Component, pageProps }) {
   const { asPath } = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const [Which, setWhich] = useState('');
   const handleMenu = () => {
     setIsOpen((prev) => !prev);
   };
   const handleData = ({ types, value }) => {
     Cookies.set(types, value);
+  };
+  const handelWhich = (value) => {
+    setWhich(value);
   };
 
   return (
@@ -28,7 +32,7 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <div
-        className="overflow-x-hidden scroll-smooth home-bg z-0 w-[100vw]"
+        className={`overflow-x-hidden scroll-smooth ${Which==='home' ? 'home-bg':'home-bg1'}  z-0 w-[100vw]`}
         style={{ fontDisplay: "swap" }}
       >
         <AnimatePresence exitBeforeEnter>
@@ -40,6 +44,7 @@ function MyApp({ Component, pageProps }) {
                 {...pageProps}
                 onClick={handleMenu}
                 setData={handleData}
+                which={handelWhich}
               />
             )}
           </div>

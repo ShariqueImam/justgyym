@@ -7,11 +7,11 @@ import { MdFastfood } from "react-icons/md";
 import { GiWaterDrop } from "react-icons/gi";
 import { TbGlassFull } from "react-icons/tb";
 const style = {
-  wrapper: "my-12 md:my-28",
-  container: "w-[95%] md:w-[40%] mx-auto mt-16 bg-stone-800 px-12 py-8 ",
+  wrapper: "my-12 md:my-28 w-[95%] md:w-[55%] mx-auto",
+  container: "mx-auto mt-16 bg-[#212121] px-12 py-8 ",
   container1:
-    "w-[95%] md:w-[40%] mx-auto my-4  py-8 flex flex-col md:flex-row items-center justify-center",
-  side: "bg-stone-800 mx-2 px-4 bg-stone-800 flex flex-col py-6 w-[100%] my-3",
+    "mx-auto my-4 py-8 flex flex-col md:flex-row items-center justify-center",
+  side: "bg-[#212121] mx-2 px-4  flex flex-col py-6 w-[100%] my-3",
 };
 
 function valuetext(value) {
@@ -34,7 +34,7 @@ const Summary = () => {
       className={style.wrapper}
       style={{ fontFamily: "Poppins, sans-serif" }}
     >
-      <MainHeading text={"Personal summary based on your answers"} />
+      <h2 className="text-3xl md:text-5xl text-gray-50 font-semibold">Personal summary based on your answers</h2>
       <div className={style.container}>
         <p className="text-gray-400 text-lg md:text-xl">Current BMI</p>
         <h1 className="text-gray-100 text-lg md:text-3xl">{BMI} BMI</h1>
@@ -72,7 +72,7 @@ const Summary = () => {
       <div className={style.container1}>
         <div className={style.side}>
           <div className="flex mb-6">
-            <MdFastfood className="text-5xl md:text-7xl text-orange-600" />
+            <h2 className="text-4xl md:text-5xl">🍔</h2>
             <div className="flex flex-col items-center justify-center mx-8">
               <h2 className="text-gray-100 text-sm">Daily calorie intake</h2>
               <p className="text-gray-100 text-xl">2335 kcal</p>
@@ -88,7 +88,7 @@ const Summary = () => {
         </div>
         <div className={style.side}>
           <div className="flex mb-6">
-            <GiWaterDrop className="text-5xl md:text-7xl text-orange-600 " />
+            <h2 className="text-4xl md:text-5xl">💧</h2>
             <div className="flex flex-col items-center justify-center mx-8">
               <h2 className="text-gray-100 text-sm">Daily Water intake</h2>
               <p className="text-gray-100 text-xl">1.7L</p>

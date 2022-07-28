@@ -6,7 +6,9 @@ const style = {
     "text-gray-200 w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8 font-bold text-xl",
   para: "text-gray-200 w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8",
 };
-const Privacy = () => {
+const Privacy = (props) => {
+  props.which('home1')
+
   return (
     <Animator>
       <MainHeading text={"Do Not Sell My Personal Information"} />

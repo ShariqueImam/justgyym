@@ -44,11 +44,13 @@ const fitness = [
 function valuetext(value) {
   return `${value}°C`;
 }
-const LevelOfFitnes = () => {
+const LevelOfFitnes = (props) => {
   const [value, setValue] = useState(1);
   const handleChange = (e, event, h) => {
     setValue(event);
   };
+  props.which('home1')
+
   const content = fitness[value - 1];
   return (
     <>
@@ -67,14 +69,14 @@ const LevelOfFitnes = () => {
               className="my-8 md:my-12 flex items-center justify-center font-bold flex-col"
               style={{ fontFamily: "Inter,sans-serif" }}
             >
-              <div className="text-gray-50 flex font-thin mb-4">
+              <div className="text-gray-50 flex font-thin mb-4 w-[100%]">
                 <p className="flex-1">1</p>
                 <p className="">10</p>
               </div>
-              <Box sx={{ width: 330 }}>
+              <Box sx={{ width: '100%'}}>
                 <Slider
                   aria-label="Always-visible"
-                  defaultValue={1}
+                  defaultValue={5}
                   getAriaValueText={valuetext}
                   step={1}
                   marks
@@ -85,7 +87,7 @@ const LevelOfFitnes = () => {
                   valueLabelDisplay="on"
                 />
               </Box>
-              <div className="text-gray-50 flex  font-thin">
+              <div className="text-gray-50 flex font-thin w-[100%]">
                 <p className="flex-1">Worst Shape</p>
                 <p className="">I'm on fire</p>
               </div>

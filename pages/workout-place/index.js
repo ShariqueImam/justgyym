@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { MainHeading } from "../../components/UI/Heading";
 import { Button } from "../../components/UI/Button";
-import { BasicCard } from "../../components/UI/BasicCard";
+import { BasicCard1 } from "../../components/UI/BasicCard1";
 import Animator from "../../components/UI/Animator";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Cookies from "js-cookie";
 import Link from "next/link";
 
-const WorkoutPlace = () => {
+const WorkoutPlace = (props) => {
   const [Click, setClick] = useState("");
   const handleClick = (value) => {
     setClick((prev) => {
@@ -15,20 +15,22 @@ const WorkoutPlace = () => {
       return value;
     });
   };
+  props.which('home1')
+
   return (
     <>
-      <ProgressBar scrollLength={"60%"} val={16} link="/pull-ups" />
+      <ProgressBar scrollLength={"60%"} val={14} link="/pull-ups" />
       <div className="w-[95%] md:w-[34%] lg:w-[32%] mx-auto">
         <Animator>
           <MainHeading text="Choose the place for your workouts" />
           <div onClick={() => handleClick("Home")}>
-            <BasicCard
+            <BasicCard1
               cardText="Home 🏡"
               isClick={Click === "Home" ? true : false}
             />
           </div>{" "}
           <div onClick={() => handleClick("Gym")}>
-            <BasicCard
+            <BasicCard1
               cardText="Gym 🏋️‍♂️"
               isClick={Click === "Gym" ? true : false}
             />

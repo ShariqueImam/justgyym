@@ -1,18 +1,28 @@
-import React from 'react'
-import { MainHeading } from '../UI/Heading'
-const style={
-    wrapper:'my-28 bg1 py-12',
-    para:'text-gray-400 text-xl my-8 w-[90%] md:w-[30%] lg:w-[35%] mx-auto'
-}
+import React from "react";
+import Image from "next/image";
+const style = {
+  wrapper: "my-28 bg1 py-12",
+  para: "text-gray-100 text-lg my-8 w-[90%] md:w-[40%] lg:w-[35%] mx-auto flex items-center gap-4",
+};
 const FullPlan = () => {
   return (
     <div className={style.wrapper}>
-        <MainHeading text={'Full Workout Plan'}/>
-        <p className={style.para}>✅ Build a habit & form correct exercising techniques</p>
-        <p className={style.para}>✅ Lose excessive body fat & improve workout intensity</p>
-        <p className={style.para}>✅ Achieve your goal and change your life forever</p>
+      <h2 className="text-3xl md:text-4xl text-gray-100 text-center font-semibold">Full Workout Plan</h2>
+      <p className={style.para} style={{fontWeight:250}}>
+        <Image src={"/tick.png"} width={20} height={20} />
+        Build a habit & form correct exercising techniques
+      </p>
+      <p className={style.para} style={{fontWeight:250}}>
+        <Image src={"/tick.png"} width={20} height={20} />
+        Lose excessive body fat & improve workout intensity
+      </p>
+      <p className={style.para} style={{fontWeight:250}}>
+        {" "}
+        <Image src={"/tick.png"} width={20} height={20} />
+        Achieve your goal and change your life forever
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default FullPlan
+export default FullPlan;

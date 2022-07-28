@@ -33,7 +33,7 @@ const Food = ({ auto, valuess }) => {
     item: `px-4 py-1 transition duration-[200ms] border-2 border-transparent 
     ${
       auto
-        ? "bg-neutral-900 text-gray-500"
+        ? "bg-neutral-900 text-neutral-600"
         : "hover:border-orange-600  hover:bg-neutral-700 cursor-pointer bg-neutral-700 text-gray-200"
     } ${Click.includes("")} `,
     heading: "text-3xl text-gray-200 my-8",
@@ -309,6 +309,15 @@ const Food = ({ auto, valuess }) => {
         >
           Protein powder
         </p>
+        <p
+          className={
+            style.item +
+            `${Click.includes("100") && "border-orange-600 bg-neutral-700"}`
+          }
+          onClick={() => handleClick("100")}
+        >
+          Vegan protein powder
+        </p>
       </div>
       <h2 className={style.heading}>Meat & Fish (Optional)</h2>
       <div className={style.container}>
@@ -440,6 +449,24 @@ const Food = ({ auto, valuess }) => {
           onClick={() => handleClick("43")}
         >
           Grape
+        </p>
+        <p
+          className={
+            style.item +
+            `${Click.includes("45") && "border-orange-600 bg-neutral-700"}`
+          }
+          onClick={() => handleClick("45")}
+        >
+ Pomegranate
+        </p>
+        <p
+          className={
+            style.item +
+            `${Click.includes("44") && "border-orange-600 bg-neutral-700"}`
+          }
+          onClick={() => handleClick("44")}
+        >
+         Tropical fruits (pineapple, mango, papaya, pitahaya)
         </p>
       </div>
     </div>

@@ -7,7 +7,7 @@ import axios from "axios";
 import Link from "next/link";
 const style = {
   wrapper:
-    "bg-neutral-900 px-3 md:px-12 py-8 md:py-24 flex flex-col md:flex-row w-[95%] md:w-[70%] lg:w-[60%] mx-auto",
+    "bg-neutral-900 px-3 md:px-12 py-8 md:py-24 flex flex-col md:flex-row w-[95%] md:w-[80%] lg:w-[60%] mx-auto",
   left: "w-[95%] md:w-[50%] flex items-center justify-center",
   right: "w-[95%] md:w-[50%] ",
 };

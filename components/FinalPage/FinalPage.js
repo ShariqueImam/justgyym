@@ -28,7 +28,6 @@ const FinalPage = () => {
       <Video />
       <FullPlan fat={fat} />
       <Plan fat={fat} />
-      <Try fat={fat} />
       <MoneyBack fat={fat} />
       <Review fat={fat} />
     </div>

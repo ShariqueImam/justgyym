@@ -5,7 +5,7 @@ const App = (props) => {
   const handleClick = (value) => {
     props.setData({ types: "goal", value: value });
   };
-
+  props.which("home");
   return (
     <Animator className="overflow-x-hidden">
       <div className="">

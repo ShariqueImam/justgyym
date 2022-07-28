@@ -6,13 +6,12 @@ import Cookies from "js-cookie";
 import ProgressBar1 from "../../components/ProgressBar/ProgressBar1";
 
 const style = {
-  wrapper: "flex flex-col my-8",
-  container: "w-[90%] md:w-[40%] lg:w-[25%] mx-auto my-6 md:my-2",
+  container: "mx-auto my-6 md:my-10",
   input:
-    "my-3 ring-none outline-none px-5 py-2 bg-transparent border-[1px] border-stone-600 placeholder:text-stone-300 w-[100%] text-gray-200 bg-stone-800",
+    "my-3 ring-none outline-none px-5 py-3 bg-transparent border-[1px] border-stone-600 placeholder:font-thin placeholder:text-neutral-400 w-[100%] text-gray-200 bg-[#191919] text-lg focus:border-2 focus:border-orange-600",
 };
 
-const DOB = () => {
+const DOB = (props) => {
   const [dob, setDob] = useState(Cookies.get("dob") ? Cookies.get("dob") : "");
   const dobChangeHandler = (e) => {
     if (
@@ -37,8 +36,7 @@ const DOB = () => {
           if (prev.slice(-1) == "/") {
             return prev.slice(0, -1);
           }
-          return prev
-
+          return prev;
         });
       }
       if (e.target.value.length == 3) {
@@ -46,47 +44,52 @@ const DOB = () => {
           if (prev.slice(-1) == "/") {
             return prev.slice(0, -1);
           }
-          return prev
+          return prev;
         });
       }
-      // if (e.target.value.length == 4) {
-      //   setDob(e.target.value + "/");
-      // }
     }
-    console.log(e.target.value);
   };
   const handleClick = () => {
     Cookies.set("dob", dob);
     setDob("");
   };
+    props.which("home1");
+
   return (
     <>
       {/* <ProgressBar scrollLength={"96%"} val={24} /> */}
       <Animator>
-        <div className={style.wrapper}>
-          <div className="bg-stone-800 w-[90%] md:w-[40%] lg:w-[25%] mx-auto py-3">
-            <p className="font-thin text-gray-50 tracking-wide text-lg md:text-md my-1 mx-5 text-left md:text-center">
-              ✅ Your workout and meal plan are almost ready!
+        <div
+          className="w-[95%] md:w-[42%] lg:w-[33%] mx-auto mt-4"
+          style={{ fontFamily: "Inter,sans-serif" }}
+        >
+          <div className="bg-[#191919] mx-auto py-2 flex items-center mb-7">
+            <p className="text-2xl ml-3">✅ </p>
+            <p
+              className="text-gray-50 tracking-wide text-lg md:text-md my-1 mx-5"
+              style={{ fontWeight: 250 }}
+            >
+              Your workout and meal plan are almost ready!
             </p>
           </div>
-          <h2 className="w-[70%] md:w-[75%] lg:w-[45%] mx-auto text-gray-50 text-3xl md:text-3xl lg:text-4xl mx-5 md:mx-auto text-left md:text-center my-5 font-bold">
+          <h2 className=" mx-auto text-gray-50 text-3xl md:text-3xl lg:text-4xl my-2 font-semibold">
             Let's create your account
           </h2>
           <div className={style.container}>
-            <ProgressBar1 scrollLength={"100%"} val={2} />
+            <ProgressBar1 scrollLength={"66%"} val={2} />
           </div>
 
           <div
             className={style.container}
             style={{ fontFamily: "Inter,sans-serif" }}
           >
-            <label htmlFor="name" className="text-gray-200 my-4">
+            <label htmlFor="name" className="text-gray-200 text-xl" style={{fontWeight:250}}>
               What is your date of birth?
             </label>
             <input
               id="name"
               type="text"
-              placeholder="DD/MM/YEAR"
+              placeholder="DD / MM / YEAR"
               className={style.input}
               value={dob}
               onChange={dobChangeHandler}
@@ -94,7 +97,11 @@ const DOB = () => {
           </div>
           <Link href={`${dob.length > 0 ? "/email" : ""}`}>
             <div onClick={handleClick}>
-              <Button dis={dob.length > 0 ? false : true} text={"Continue"} />
+              <Button
+                dis={dob.length > 0 ? false : true}
+                text={"Continue"}
+                className="mt-64 md:mt-2"
+              />
             </div>
           </Link>
         </div>

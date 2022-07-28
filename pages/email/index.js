@@ -7,11 +7,13 @@ import axios from "axios";
 import Cookies from "js-cookie";
 const style = {
   wrapper: "flex flex-col my-8",
-  container: "w-[90%] md:w-[40%] lg:w-[25%] mx-auto my-6 md:my-2",
+  container: "mx-auto my-6 md:my-10",
   input:
-    "my-3 ring-none outline-none px-5 py-2 bg-transparent border-[1px] border-stone-600 placeholder:text-stone-300 w-[100%] text-gray-200 bg-stone-800",
+  "my-3 ring-none outline-none px-5 py-3 bg-transparent border-[1px] border-stone-600 placeholder:font-thin placeholder:text-neutral-400 w-[100%] text-gray-200 bg-[#191919] text-lg focus:border-2 focus:border-orange-600",
 };
-const Email = () => {
+const Email = (props) => {
+  props.which("home1");
+
   const [email, setEmail] = useState(
     Cookies.get("email") ? Cookies.get("email") : ""
   );
@@ -65,13 +67,17 @@ const Email = () => {
       {/* <ProgressBar scrollLength={"100%"} val={25} /> */}
 
       <Animator>
-        <div className={style.wrapper}>
-          <div className="bg-stone-800 w-[90%] md:w-[40%] lg:w-[25%] mx-auto py-3">
-            <p className="font-thin text-gray-50 tracking-wide text-lg md:text-md my-1 mx-5 text-left md:text-center">
-              ✅ Your workout and meal plan are almost ready!
+        <div
+          className="w-[95%] md:w-[42%] lg:w-[33%] mx-auto mt-4"
+          style={{ fontFamily: "Inter,sans-serif" }}
+        >
+         <div className="bg-[#191919] mx-auto py-2 flex items-center mb-7">
+            <p className="text-2xl ml-3">✅ </p>
+            <p className="text-gray-50 tracking-wide text-lg md:text-md my-1 mx-5" style={{fontWeight:250}}>
+              Your workout and meal plan are almost ready!
             </p>
           </div>
-          <h2 className="w-[70%] md:w-[75%] lg:w-[45%] mx-auto text-gray-50 text-3xl md:text-3xl lg:text-4xl mx-5 md:mx-auto text-left md:text-center my-5 font-bold">
+          <h2 className=" mx-auto text-gray-50 text-3xl md:text-3xl lg:text-4xl my-2 font-semibold">
             Let's create your account
           </h2>
           <div className={style.container}>
@@ -88,10 +94,11 @@ const Email = () => {
             <input
               id="name"
               type="text"
-              placeholder="Email"
+              placeholder="name@example.com"
               className={style.input}
               value={email}
               onChange={emailChangeHandler}
+              style={{fontFamily:'Inter,sans-serif'}}
             />
 
             {Checked && (
@@ -99,7 +106,7 @@ const Email = () => {
                 Enter a valid email
               </p>
             )}
-            <h2 className="text-gray-100 my-3">
+            <h2 className="text-gray-100 text-lg mt-10 tracking-wide" style={{fontWeight:300}}>
               We respect your privacy and take protecting it very seriously — no
               spam
             </h2>

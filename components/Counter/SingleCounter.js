@@ -8,7 +8,7 @@ const SingleCounter = (props) => {
 		props.ending()
 	 }
 	return (
-		<div className="text-gray-200 text-3xl sm:text-4xl md:text-5xl font-semibold mt-1" >
+		<div className="text-gray-200 text-xl sm:text-xl md:text-2xl font-semibold mt-1" >
 			<CountUp
 				start={props.start}
 				end={props.end}
@@ -41,4 +41,4 @@ const SingleCounter = (props) => {
 	);
 };
 
-export default SingleCounter;
+export default React.memo(SingleCounter);

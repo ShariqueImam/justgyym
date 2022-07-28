@@ -4,8 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 const style = {
   wrapper:
-    "h-[10vh] w-[100%] md:w-[95%] lg:w-[90%] flex mx-auto items-center justify-between px-3",
-  logo: "text-orange-500 text-2xl flex-1 cursor-pointer flex-1 max-w-fit",
+    "absolute h-[7vh] w-[100%] md:w-[98%] lg:w-[98%] flex mx-auto items-center justify-between px-3 mt-2",
+  logo: "cursor-pointer flex-1 max-w-fit",
   container: "flex items-center justify-center",
 };
 const Navbar = (props) => {

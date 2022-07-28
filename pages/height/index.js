@@ -10,11 +10,13 @@ const style = {
   wrapper: "flex flex-col",
   container: " mx-auto",
   input:
-    "my-4 ring-none outline-none px-5 py-2 bg-transparent border-[1px] border-stone-600 placeholder:text-stone-300 w-[100%] text-gray-200 bg-stone-800",
+    "bg-[#191919] my-4 ring-none outline-none px-5 py-3 bg-transparent border-[1px] border-stone-500 placeholder:font-thin placeholder:text-neutral-400 w-[100%] text-gray-200 ",
   height: "text-gray-200 my-8 mx-6",
 };
 
-const Height = () => {
+const Height = (props) => {
+  props.which("home1");
+
   const [Unit, setUnit] = useState("cm");
   const [height, setHeight] = useState("");
   const [click, setClick] = useState(false);
@@ -42,7 +44,7 @@ const Height = () => {
   return (
     <>
       <ProgressBar scrollLength={"16%"} val={5} link="/problem-area" />
-      <div className="w-[95%] md:w-[34%] lg:w-[32%] mx-auto">
+      <div className="w-[95%] md:w-[34%] lg:w-[32%] mx-auto font-normal">
         <Animator className={style.wrapper}>
           <MainHeading text={"What's your height?"} />
           {/* the unit box */}
@@ -55,7 +57,7 @@ const Height = () => {
               <h2 className="text-stone-400 flex-1">Units</h2>
               <div className="flex items-center justify-center">
                 <h2
-                  className={`text-stone-200 bg-stone-700 px-4 py-2 mx-1 border-[1px] border-transparent cursor-pointer hover:border-orange-600 ${
+                  className={`text-stone-200 bg-[#212121] px-4 py-2 mx-1 border-[1px] border-transparent cursor-pointer hover:border-orange-600 ${
                     Unit === "ft" && "border-orange-600"
                   }`}
                   onClick={() => handleUnit("ft")}
@@ -63,7 +65,7 @@ const Height = () => {
                   ft
                 </h2>
                 <h2
-                  className={`text-stone-200 bg-stone-700 px-4 py-2 mx-1 border-[1px] border-transparent cursor-pointer hover:border-orange-600 ${
+                  className={`text-stone-200 bg-[#212121] px-4 py-2 mx-1 border-[1px] border-transparent cursor-pointer hover:border-orange-600 ${
                     Unit === "cm" && "border-orange-600"
                   }`}
                   onClick={() => handleUnit("cm")}
@@ -72,8 +74,8 @@ const Height = () => {
                 </h2>
               </div>
             </div>
-            <label htmlFor="height" className="text-gray-200 my-4">
-              Height:
+            <label htmlFor="height" className="text-gray-200 my-4 text-lg" style={{fontWeight:400}}>
+              Height ({`${Unit=='cm'?'cm':'ft'}`}) 
             </label>
             <input
               id="height"
@@ -82,6 +84,7 @@ const Height = () => {
               className={style.input}
               value={`${height}`}
               onChange={heightChangeHandler}
+              style={{fontFamily:'Inter,sans-serif'}}
             />
             {click && Unit === "cm" && (
               <p className={`${valid ? "hidden" : "flex"}  text-red-500`}>
@@ -95,11 +98,12 @@ const Height = () => {
                 Height should be between 3ft and 9ft
               </p>
             )}
-
+            {/* YOUR HEIGHT BUTTON   */}
+{/* 
             <h2 className={style.height}>
               Your Height: {height}
               {`${Unit === "cm" ? "cm" : "ft"}`}
-            </h2>
+            </h2> */}
           </div>
           <Link href={`${valid ? "/target-weight" : ""}`}>
             <div onClick={handleClick} className={`mt-64 md:mt-2`}>

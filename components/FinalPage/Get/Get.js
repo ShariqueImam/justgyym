@@ -6,16 +6,16 @@ import { DiGoogleAnalytics } from "react-icons/di";
 import Image from "next/image";
 const style = {
   wrapper: "",
-  container: "w-[95%] md:w-[40%] mx-auto flex flex-col md:flex-row",
+  container: "w-[95%] md:w-[55%] mx-auto flex flex-col md:flex-row",
   left: "w-[95%] md:w-[60%] mx-auto",
-  right: "w-[95%] md:w-[35%] mx-auto flex items-center justify-center",
+  right: "w-[95%] md:w-[45%] mx-auto flex items-center justify-center ",
   singleGet: "my-24",
   text: "text-gray-200 text-xl md:text-2xl my-8 text-center md:text-left",
 };
 const Get = () => {
   return (
     <div className={style.wrapper} style={{ fontFamily: "Poppins,sans-serif" }}>
-      <MainHeading text={"What you get:"} />
+      <h2 className="text-2xl md:text-4xl text-gray-50 font-bold text-center">What you get:</h2>
       <div className={style.container}>
         <div className={style.left}>
           <div className={style.singleGet}>

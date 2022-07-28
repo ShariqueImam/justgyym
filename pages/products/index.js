@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MainHeading, SmallHeading } from "../../components/UI/Heading";
-import { Button } from "../../components/UI/Button";
+import { Button1 } from "../../components/UI/Button1";
 import { Switch } from "pretty-checkbox-react";
 import "@djthoms/pretty-checkbox";
 import Food from "../../components/Food/Food";
@@ -8,14 +8,15 @@ import Animator from "../../components/UI/Animator";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Cookies from "js-cookie";
 import Link from "next/link";
-const Products = () => {
+const Products = (props) => {
   const [checked, setChecked] = useState(false);
   const [Click, setClick] = useState([]);
+  props.which('home1')
 
   return (
     <>
-      <ProgressBar scrollLength={"84%"} val={23} link="/meal-prep-time" />
-      <div className="w-[95%] md:w-[34%] lg:w-[33%] mx-auto">
+      <ProgressBar scrollLength={"84%"} val={20} link="/meal-prep-time" />
+      <div className="w-[95%] md:w-[39%] lg:w-[33%] mx-auto">
         <Animator>
           <MainHeading text="Let us create a meal plan based on your preferences" />
           <SmallHeading text="You can always adjust a meal plan later" />
@@ -30,7 +31,7 @@ const Products = () => {
               <Switch
                 bigger
                 color="warning"
-                shape="slim"
+                shape="fill"
                 state={checked}
                 setState={setChecked}
                 onClick={() => setChecked((prev) => !prev)}
@@ -44,7 +45,7 @@ const Products = () => {
           <Food auto={checked} valuess={(value) => setClick([...value])} />
           <Link href={`${Click.length > 0 || checked ? "/challenge" : ""}`}>
             <div>
-              <Button
+              <Button1
                 dis={Click.length > 0 || checked ? false : true}
                 text={"Continue"}
               />

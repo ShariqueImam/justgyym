@@ -7,12 +7,12 @@ import Cookies from "js-cookie";
 import ProgressBar1 from "../../components/ProgressBar/ProgressBar1";
 const style = {
   wrapper: "flex flex-col my-8",
-  container: "my-6 md:my-2",
+  container: "my-6 md:my-8",
   input:
-    "my-3 ring-none outline-none px-5 py-4 bg-transparent border-[1px] border-stone-600 placeholder:text-stone-500 w-[100%] text-gray-200 bg-stone-800",
+    "my-3 ring-none outline-none px-5 py-3 bg-transparent border-[1px] border-stone-600 placeholder:font-thin placeholder:text-neutral-400 w-[100%] text-gray-200 bg-[#191919] text-lg focus:border-2 focus:border-orange-600",
 };
 
-const Name = () => {
+const Name = (props) => {
   const [name, setName] = useState(
     Cookies.get("name") ? Cookies.get("name") : ""
   );
@@ -23,17 +23,20 @@ const Name = () => {
     Cookies.set("name", name);
     setName("");
   };
+  props.which('home1')
+
   return (
     <>
       {/* <ProgressBar scrollLength={"92%"} val={23} /> */}
-      <div className="w-[95%] md:w-[34%] lg:w-[33%] mx-auto">
+      <div className="w-[95%] md:w-[42%] lg:w-[33%] mx-auto mt-4" style={{fontFamily:'Inter,sans-serif'}}>
         <Animator className={style.wrapper}>
-          <div className="bg-stone-800 mx-auto py-3">
-            <p className="font-thin text-gray-50 tracking-wide text-lg md:text-md my-1 mx-5 text-left md:text-center">
-              ✅ Your workout and meal plan are almost ready!
+          <div className="bg-[#191919] mx-auto py-2 flex items-center mb-7">
+            <p className="text-2xl ml-3">✅ </p>
+            <p className="text-gray-50 tracking-wide text-lg md:text-md my-1 mx-5" style={{fontWeight:250}}>
+              Your workout and meal plan are almost ready!
             </p>
           </div>
-          <h2 className=" mx-auto  text-gray-50 text-3xl md:text-3xl lg:text-4xl  my-5 font-bold">
+          <h2 className=" mx-auto text-gray-50 text-3xl md:text-3xl lg:text-4xl my-2 font-semibold">
             Let's create your account
           </h2>
           <div className={style.container}>
@@ -44,16 +47,17 @@ const Name = () => {
             className={style.container}
             style={{ fontFamily: "Inter,sans-serif" }}
           >
-            <label htmlFor="name" className="text-gray-200 my-4">
+            <label htmlFor="name" className="text-gray-200 text-xl" style={{fontWeight:250}}>
               What should we call you?
             </label>
             <input
               id="name"
               type="text"
-              placeholder="Your Name"
+              placeholder="Name"
               className={style.input}
               value={name}
               onChange={changeHandler}
+              style={{fontWeight:400}}
             />
           </div>
           <Link href={`${name.length > 0 ? "/dob" : ""}`}>

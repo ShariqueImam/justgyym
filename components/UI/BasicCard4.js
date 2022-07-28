@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { ImCross } from "react-icons/im";
-export const BasicCard = ({ cardText, isClick }) => {
+export const BasicCard4 = ({ cardText, isClick }) => {
   const cardStyle = {
     card: `border-2 border-transparent ${
       isClick ? "border-orange-600" : ""
@@ -18,16 +18,11 @@ export const BasicCard = ({ cardText, isClick }) => {
     <div className={cardStyle.card} style={{ fontFamily: "Inter,sans-serif" }}>
       {/* cardText !== "None of the above" &&  */}
       {/* above for the img to be changed */}
-      {isClick ? (
-        <Image src={"/c.png"} height={20} width={22} />
-      ) : (
-        <Image src={"/a.png"} height={20} width={25} />
+
+      {cardText == "None of the above" && (
+        <ImCross className=" text-orange-700 text-xl" />
       )}
       <div className="flex-1 flex items-center justify-center mx-4">
-        {cardText == "None of the above" && (
-          <ImCross className="mx-3 text-orange-700 text-xl" />
-        )}
-
         <h3
           className={cardStyle.smallHeading}
           onClick={handleClick}

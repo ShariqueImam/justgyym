@@ -2,7 +2,9 @@ import React from "react";
 import { MainHeading, SmallHeading } from "../../../components/UI/Heading";
 import Animator from "../../../components/UI/Animator";
 
-const Privacy = () => {
+const Privacy = (props) => {
+  props.which('home1')
+
   return (
     <Animator>
       <MainHeading text={"Privacy Policy"} />

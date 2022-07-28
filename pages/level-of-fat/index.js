@@ -9,19 +9,21 @@ import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import Cookies from "js-cookie";
 const style = {
-  wrapper: "flex flex-col md:flex-row mt-12",
-  left: "w-[100%] md:w-[50%] flex items-start justify-center mt-4 ",
+  wrapper: "flex flex-col md:flex-row",
+  left: " w-[100%] md:w-[50%] flex items-center justify-center mt-4 ",
   right:
-    "w-[100%] md:w-[50%] bg-neutral-900 h-[35vh] md:h-[80vh] flex items-start justify-start md:px-8 lg:p-12",
+    " w-[100%] md:w-[50%] bg-[#191919] h-[40vh] md:h-[85vh] flex items-start justify-center md:justify-start md:px-8 lg:p-12",
 };
 function valuetext(value) {
-  return `${value}°C`;
+  return `${value}-${value-5}`;
 }
-const LevelOfFat = () => {
+const LevelOfFat = (props) => {
   const [value, setValue] = useState(5);
   const handleChange = (e, value, a) => {
     setValue(value);
   };
+  props.which("home");
+
   return (
     <>
       <ProgressBar scrollLength={"12%"} val={3} link="/body-type" />
@@ -31,20 +33,20 @@ const LevelOfFat = () => {
           style={{ fontFamily: "Inter,sans-serif" }}
         >
           <div className={style.left}>
-            <Image src={`/Fat/${value}.webp`} width={250} height={490} />
+            <Image src={`/Fat/${value}.webp`} width={200} height={490} />
             {/* <Image src={`/Fat/bg.svg`} width={250} height={490} /> */}
           </div>
           <div className={style.right}>
-            <div className="">
-              <MainHeading text={"Choose your level of body fat"} />
+            <div className="w-[50%]">
+              <h2 className="text-2xl md:text-4xl text-gray-50 font-bold my-12">Choose your level of body fat</h2>
               {/* slide */}
               <div className="my-8 md:my-24 mx-auto flex flex-col items-center justify-center">
-                <Box sx={{ width: 300 }}>
+                <Box sx={{ width: '100%' }}>
                   <Slider
-                    aria-label="Fat"
-                    defaultValue={5}
+                    aria-label="Always-visible"
+                    defaultValue={20}
                     getAriaValueText={valuetext}
-                    valueLabelDisplay="auto"
+                    valueLabelDisplay="on"
                     step={5}
                     marks
                     min={5}

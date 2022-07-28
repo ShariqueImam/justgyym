@@ -7,7 +7,7 @@ import ProgessBar from "../../components/ProgressBar/ProgressBar";
 import Cookies from "js-cookie";
 import Link from "next/link";
 import Image from "next/image";
-const BodyType = () => {
+const BodyType = (props) => {
   const [click, setClick] = useState("");
   const handleClick = (value) => {
     setClick((prev) => {
@@ -15,6 +15,8 @@ const BodyType = () => {
       return value;
     });
   };
+  props.which("home1");
+
   return (
     <>
       <ProgessBar scrollLength={"8%"} val={2} link="/target-body" />

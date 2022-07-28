@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { MainHeading } from "../../components/UI/Heading";
 import { Button } from "../../components/UI/Button";
-import { BasicCard } from "../../components/UI/BasicCard";
+import { BasicCard1 } from "../../components/UI/BasicCard1";
 import Link from "next/link";
 import Animator from "../../components/UI/Animator";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Cookies from "js-cookie";
-const Time = () => {
+const Time = (props) => {
   const [Click, setClick] = useState("");
   const handleClick = (value) => {
     setClick((prev) => {
@@ -14,32 +14,34 @@ const Time = () => {
       return value;
     });
   };
+  props.which('home1')
+
   return (
     <>
-      <ProgressBar scrollLength={"80%"} val={22} link="/water" />
-      <div className="w-[95%] md:w-[34%] lg:w-[32%] mx-auto">
+      <ProgressBar scrollLength={"80%"} val={19} link="/water" />
+      <div className="w-[95%] md:w-[41%] lg:w-[32%] mx-auto">
         <Animator>
           <MainHeading text="How much time are you ready to spend per one meal prep?" />
           <div onClick={() => handleClick("30")}>
-            <BasicCard
+            <BasicCard1
               cardText="Less than 30 min 🥑"
               isClick={Click === "30" ? true : false}
             />
           </div>{" "}
           <div onClick={() => handleClick("60")}>
-            <BasicCard
+            <BasicCard1
               cardText="30-60 min 🥑 🥑"
               isClick={Click === "60" ? true : false}
             />
           </div>
           <div onClick={() => handleClick("120")}>
-            <BasicCard
+            <BasicCard1
               cardText="More than 1 hour 🥑 🥑 🥑"
               isClick={Click === "120" ? true : false}
             />
           </div>
           <div onClick={() => handleClick("0")}>
-            <BasicCard
+            <BasicCard1
               cardText="I prefer to order meals or go out to eat 📦"
               isClick={Click === "0" ? true : false}
             />

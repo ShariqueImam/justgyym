@@ -10,11 +10,13 @@ const style = {
   cardContainer: "flex flex-col",
 };
 
-const TargetBody = () => {
+const TargetBody = (props) => {
   const [handle, setHandle] = useState("lose");
   useEffect(() => {
     setHandle(Cookies.get("goal"));
   }, []);
+  props.which("home1");
+
   return (
     <>
       <ProgressBar scrollLength={"4%"} val={1} link="/" />
