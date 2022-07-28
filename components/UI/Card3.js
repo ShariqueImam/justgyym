@@ -5,7 +5,7 @@ export const Card3 = ({ cardText, imgUrl, isClick }) => {
   const cardStyle = {
     card: `border-2 ${
       isClick ? "border-orange-600" : " "
-    } mx-auto  px-8 py-1 my-5 flex items-center justify-center bg-[#212121] hover:bg-[#313131] cursor-pointer transition duration-[10ms] border-transparent`,
+    } mx-auto  px-8 py-3 my-5 flex items-center justify-center bg-[#212121] hover:bg-[#313131] cursor-pointer transition duration-[10ms] border-transparent`,
     smallHeading: "text-2xl md:text-2xl flex-1 text-stone-200 font-normal mx-3",
   };
   return (

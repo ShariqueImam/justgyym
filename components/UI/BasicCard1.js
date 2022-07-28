@@ -4,7 +4,7 @@ export const BasicCard1 = ({ cardText, isClick }) => {
   const cardStyle = {
     card: `border-2 border-transparent ${
       isClick ? "border-orange-600" : ""
-    }  px-4 py-4 my-5 flex items-center justify-center bg-[#212121] hover:bg-[#313131] cursor-pointer transition duration-[10ms]`,
+    }  px-4 py-3 my-5 flex items-center justify-center bg-[#212121] hover:bg-[#313131] cursor-pointer transition duration-[10ms]`,
     smallHeading: "text-lg md:text-lg flex-1 text-gray-50 font-semibold",
   };
 
