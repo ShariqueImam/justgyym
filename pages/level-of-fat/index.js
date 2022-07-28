@@ -18,7 +18,7 @@ function valuetext(value) {
   return `${value}-${value - 5}`;
 }
 const LevelOfFat = (props) => {
-  const [value, setValue] = useState(5);
+  const [value, setValue] = useState(20);
   const handleChange = (e, value, a) => {
     setValue(value);
   };
