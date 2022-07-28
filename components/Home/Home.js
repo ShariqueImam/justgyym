@@ -141,8 +141,8 @@ const Home = (props) => {
       </div>
       <div className={style.allowSmall}>
         <div className={style.allow1}>
-          <div onClick={handle2}>
-            {checked2 ? (
+          <div onClick={handle1}>
+            {checked1 ? (
               <Image src={"/c.png"} height={width<700?45:30} width={width<700?45:35} />
             ) : (
               <Image src={"/a.png"} height={width<700?45:30} width={width<700?45:35} />
@@ -189,7 +189,7 @@ const Home = (props) => {
               <Image src={"/a.png"} height={width<700?45:30} width={width<700?45:35} />
             )}
           </div>
-          <div onClick={handle1} className="mx-4">
+          <div onClick={handle2} className="mx-4">
             {" "}
             I would like to receive updates about products, services, and
             special offers from MadMuscles via email
