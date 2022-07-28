@@ -32,13 +32,13 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <div
-        className={`overflow-x-hidden scroll-smooth ${Which==='home' ? 'home-bg':'home-bg1'}  z-0 w-[100vw]`}
+        className={`overflow-x-hidden scroll-smooth ${Which==='home' || Which==='home2' ? 'home-bg':'home-bg1'}  z-0 w-[100vw]`}
         style={{ fontDisplay: "swap" }}
       >
         <AnimatePresence exitBeforeEnter>
           <div key={asPath}>
-            <Navbar menu={handleMenu} />
-            {isOpen && <OpenMenu menu={handleMenu} />}
+            <Navbar menu={handleMenu} pos={Which}/>
+            {isOpen && <OpenMenu menu={handleMenu} pos={Which}/>}
             {!isOpen && (
               <Component
                 {...pageProps}

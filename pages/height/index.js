@@ -106,7 +106,7 @@ const Height = (props) => {
             </h2> */}
           </div>
           <Link href={`${valid ? "/target-weight" : ""}`}>
-            <div onClick={handleClick} className={`mt-64 md:mt-2`}>
+            <div onClick={handleClick} className={`mt-72 md:mt-2`}>
               <Button
                 text={"Continue"}
                 dis={height.length > 0 ? false : true}

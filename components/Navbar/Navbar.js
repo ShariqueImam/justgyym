@@ -2,13 +2,13 @@ import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Link from "next/link";
 import Image from "next/image";
-const style = {
-  wrapper:
-    "absolute h-[7vh] w-[100%] md:w-[98%] lg:w-[98%] flex mx-auto items-center justify-between px-3 mt-2",
-  logo: "cursor-pointer flex-1 max-w-fit",
-  container: "flex items-center justify-center",
-};
 const Navbar = (props) => {
+  const style = {
+    wrapper:
+      `z-1 ${props.pos==='home2'?'absolute':'relative'} h-[7vh] w-[100%] md:w-[98%] lg:w-[98%] flex mx-auto items-center justify-between px-3 mt-2`,
+    logo: "cursor-pointer flex-1 max-w-fit",
+    container: "flex items-center justify-center",
+  };
   const handleClick = () => {
     props.menu();
   };

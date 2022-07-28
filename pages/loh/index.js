@@ -11,7 +11,7 @@ const style = {
   wrapper: "mx-auto flex flex-col",
   buttonContainer: "flex items-center justify-between w-[100%] mt-12 md:mt-16",
   container:
-    "flex flex-col px-6 py-3 bg-neutral-800 hover:bg-neutral-700 transition duration-[300ms] w-[60%] md:w-[25%] items-center justify-center",
+    "flex flex-col px-6 py-3 bg-neutral-800 hover:bg-neutral-700 transition duration-[300ms] w-[60%] md:w-[25%] items-center justify-center mx-3 md:mx-0",
   text: "text-gray-200 mt-3",
   imgContainer: "flex items-center justify-center my-5",
 };
