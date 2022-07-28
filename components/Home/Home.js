@@ -1,10 +1,10 @@
 import React from "react";
 import Goal from "./Goal";
 import Image from "next/image";
-import { Switch } from "pretty-checkbox-react";
 import "@djthoms/pretty-checkbox";
 import Link from "next/link";
 import { BiErrorCircle } from "react-icons/bi";
+import useWindowSize from "../hooks/windowSize";
 // text-[#FFF4ED]
 const style = {
   wrapper:
@@ -22,6 +22,7 @@ const style = {
   recommend: "text-xs text-stone-400 my-2",
 };
 const Home = (props) => {
+  const { width } = useWindowSize();
   const handleClick = (value) => {
     props.goal(value);
   };
@@ -102,7 +103,7 @@ const Home = (props) => {
             </div>
           </div>
           <div className={style.allow1}>
-          <div onClick={handle2}>
+            <div onClick={handle2}>
               {checked2 ? (
                 <Image src={"/c.png"} height={30} width={35} />
               ) : (
@@ -140,14 +141,13 @@ const Home = (props) => {
       </div>
       <div className={style.allowSmall}>
         <div className={style.allow1}>
-          <Switch
-            bigger
-            color="warning"
-            shape="slim"
-            state={checked1}
-            // setState={setChecked1}
-            onChange={handle1}
-          ></Switch>{" "}
+          <div onClick={handle2}>
+            {checked2 ? (
+              <Image src={"/c.png"} height={width<700?45:30} width={width<700?45:35} />
+            ) : (
+              <Image src={"/a.png"} height={width<700?45:30} width={width<700?45:35} />
+            )}
+          </div>
           <div onClick={handle1} className="mx-4">
             By continuing, I agree with{" "}
             <Link href="/info/terms">
@@ -182,14 +182,13 @@ const Home = (props) => {
           </div>
         </div>
         <div className={style.allow1}>
-          <Switch
-            bigger
-            color="warning"
-            shape="slim"
-            state={checked2}
-            // setState={setChecked2}
-            onChange={handle1}
-          ></Switch>
+          <div onClick={handle2}>
+            {checked2 ? (
+              <Image src={"/c.png"} height={width<700?45:30} width={width<700?45:35} />
+            ) : (
+              <Image src={"/a.png"} height={width<700?45:30} width={width<700?45:35} />
+            )}
+          </div>
           <div onClick={handle1} className="mx-4">
             {" "}
             I would like to receive updates about products, services, and
