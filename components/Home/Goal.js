@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 const style = {
   wrapper: "text-[#FFF4ED]",
-  heading: "text-4xl md:text-4xl my-3 text-center md:text-left",
+  heading: "text-4xl md:text-4xl my-3 text-center md:text-left font-bold",
   cardContainer: "flex flex-col",
   card: "px-8 py-2 my-3 mx-3 flex items-center justify-center bg-neutral-900 hover:bg-neutral-800 cursor-pointer transition duration-[200ms] ",
   smallHeading: "text-2xl md:text-2xl flex-1",

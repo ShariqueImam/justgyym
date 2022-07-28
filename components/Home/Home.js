@@ -8,12 +8,12 @@ import useWindowSize from "../hooks/windowSize";
 // text-[#FFF4ED]
 const style = {
   wrapper:
-    "w-[95%] md:w-[80%] lg:w-[70%] mx-auto my-12 flex flex-col md:flex-row text-gray-200",
+    "w-[95%] md:w-[90%] lg:w-[80%] mx-auto my-12 flex flex-col md:flex-row text-gray-200",
   left: "md:w-[50%] flex-1 flex flex-col",
-  right: "md:w-[40%]",
+  right: "md:w-[47%]",
   tag: "flex flex-col flex-1 mx-auto",
   heading:
-    " text-5xl md:text-5xl lg:text-6xl mx-auto md:mx-0 w-[80%] md:w-[70%] my-4 md:my-12 tracking-wide",
+    " font-bold text-5xl md:text-5xl lg:text-6xl mx-auto md:mx-0 w-[80%] md:w-[70%] my-4 md:my-12 tracking-wide",
   para: "text-sm text-center md:text-left",
   allow: "hidden md:flex flex-col ",
   allow1: "flex items-center my-4 w-[90%] md:w-[70%]",
