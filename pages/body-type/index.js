@@ -22,8 +22,10 @@ const BodyType = (props) => {
       <ProgessBar scrollLength={"8%"} val={2} link="/target-body" />
       <div className="w-[95%] md:w-[34%] lg:w-[32%] mx-auto">
         <Animator>
-          <MainHeading text={"Choose your body type"} />
-          <SmallHeading text="Choose the one that is most similar to yours now. There are no good or bad body types." />
+          <div className="w-[95%] md:w-[80]">
+            <MainHeading text={"Choose your body type"} />
+            <SmallHeading text="Choose the one that is most similar to yours now. There are no good or bad body types." />
+          </div>
           <div
             onClick={() => handleClick("ectomorph")}
             style={{ fontFamily: "Inter,sans-serif" }}

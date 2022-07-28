@@ -6,7 +6,7 @@ export const Button = ({ dis, text }) => {
     wrapper: ` flex items-center md:justify-center ${
       dis
         ? "bg-orange-900 cursor-not-allowed "
-        : "bg-[#f0410f] cursor-pointer hover:bg-orange-600"
+        : "bg-[#ff4400] cursor-pointer hover:bg-orange-600"
     }  md:max-w-fit  px-6 py-4 md:px-4 md:py-3 lg:px-4 lg:py-3 transition duration-[50ms] ml-auto my-3 md:my-6`,
     btn: `${
       dis ? "text-stone-400" : "text-gray-100 "

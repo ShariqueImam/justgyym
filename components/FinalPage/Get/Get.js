@@ -10,30 +10,30 @@ const style = {
   left: "w-[95%] md:w-[60%] mx-auto",
   right: "w-[95%] md:w-[45%] mx-auto flex items-center justify-center ",
   singleGet: "my-24",
-  text: "text-gray-200 text-xl md:text-2xl my-8 text-center md:text-left",
+  text: "text-[#ffffff] text-xl md:text-2xl my-8 text-center md:text-left",
 };
 const Get = () => {
   return (
     <div className={style.wrapper} style={{ fontFamily: "Poppins,sans-serif" }}>
-      <h2 className="text-2xl md:text-4xl text-gray-50 font-bold text-center">What you get:</h2>
+      <h2 className="text-2xl md:text-4xl text-[#ffffff] font-bold text-center">What you get:</h2>
       <div className={style.container}>
         <div className={style.left}>
           <div className={style.singleGet}>
-            <GiMuscleUp className=" text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-orange-600 text-gray-200 rounded-full" />
+            <GiMuscleUp className=" text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full" />
             <h2 className={style.text}>Personalized workout program</h2>
           </div>
           <div className={style.singleGet}>
-            <BsFillCalendar2CheckFill className=" text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-orange-600 text-gray-200 rounded-full" />
+            <BsFillCalendar2CheckFill className=" text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full" />
             <h2 className={style.text}>
               Clear and easy to follow workout plan
             </h2>
           </div>
           <div className={style.singleGet}>
-            <GiGrowth className=" text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-orange-600 text-gray-200 rounded-full" />
+            <GiGrowth className=" text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full" />
             <h2 className={style.text}>Visible results after first month</h2>
           </div>
           <div className={style.singleGet}>
-            <DiGoogleAnalytics className=" text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-orange-600 text-gray-200 rounded-full" />
+            <DiGoogleAnalytics className=" text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full" />
             <h2 className={style.text}>Progress tracking and analysis</h2>
           </div>
         </div>

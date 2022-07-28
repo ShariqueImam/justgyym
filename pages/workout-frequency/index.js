@@ -57,7 +57,7 @@ const WorkoutFrequency = (props) => {
               isClick={Click === "4" ? true : false}
             />
             {Show && (
-              <div className="bg-blue-600 px-5 py-3 mx-auto" style={{fontFamily:'Inter,sans-serif'}}>
+              <div className="bg-[#2563eb]  px-5 py-3 mx-auto" style={{fontFamily:'Inter,sans-serif'}}>
                 <div className="flex items-center">
                   <GiMuscleUp className="text-gray-100 text-xl " />
                   <h2 className="text-gray-100 mx-2 text-lg font-bold">

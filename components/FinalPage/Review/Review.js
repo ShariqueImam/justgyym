@@ -12,14 +12,14 @@ import useWindowSize from "../../hooks/windowSize";
 const Review = () => {
   const { width } = useWindowSize();
   return (
-    <div className="my-24 bg-neutral-900 py-12">
-      <p className="text-center my-5 text-gray-100 text-xl md:text-xl font-semibold" >
+    <div className="mt-24 bg-neutral-900 py-12">
+      <p className="text-center my-5 text-[#ffffff] text-xl md:text-xl font-semibold" >
         We helped over
       </p>
-      <h2 className="text-center my-5 text-gray-100 text-3xl md:text-5xl font-semibold">
+      <h2 className="text-center my-5 text-[#ffffff] text-3xl md:text-5xl font-semibold">
         85000+ people
       </h2>
-      <p className="text-center my-5 text-stone-400 text-md md:text-lg tracking-wide" style={{fontWeight:300}}>
+      <p className="text-center my-5 text-[#b3b3b3] text-md md:text-lg tracking-wide" style={{fontWeight:300}}>
         to achieve their dream physique
       </p>
       {/* adding the review */}

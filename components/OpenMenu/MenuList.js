@@ -3,7 +3,7 @@ import Link from "next/link";
 const style = {
   wrapper: "px-4 md:px-8 py-6",
   list: "text-xl border-b-[1px] border-stone-600 my-3 py-2 cursor-pointer",
-  question:'bg-stone-900 px-2 py-2 text-stone-400'
+  question:'bg-[#1e1e1e] px-2 py-2 text-[#8d8d8d]'
 };
 const MenuList = (props) => {
   return (
@@ -30,7 +30,7 @@ const MenuList = (props) => {
         <p className={style.list}onClick={()=>props.menu()}>Contact Us</p>
       </Link>
       <Link href="">
-        <p className={style.question}>Any questions? We're here to help.</p>
+        <p className={style.question} style={{fontWeight:300}}>Any questions? We're here to help.</p>
       </Link>
 
       <a href="/" className="block underline my-4">support@test.com</a>

@@ -37,36 +37,36 @@ const index = (props) => {
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
       {!Show && !Show1 && <Counter min={0} max={40} end={handleEnd} text={'Analyzing Data'}/>}
       {Show && !Show1 && (
-        <div className="bg-[#191919] w-[95vw] md:w-[62vw] lg:w-[45vw] h-[55vh] md:h-[75vh] lg:h-[60vh] px-7 py-8 md:px-20">
+        <div className="bg-[#1e1e1e] w-[95vw] md:w-[62vw] lg:w-[45vw] h-[55vh] md:h-[75vh] lg:h-[60vh] px-7 py-8 md:px-20">
           <div className="flex items-center jusitfy-center">
             <div className="flex items-center  flex-1">
               <Image src="/test.png" width={50} height={50}/>
-              <h2 className="text-gray-50 text-sm ml-4" style={{fontWeight:600}}>ALMOST DONE!</h2>
+              <h2 className="text-[#ffffff] text-sm ml-4" style={{fontWeight:600}}>ALMOST DONE!</h2>
             </div>
             <div onClick={handleClick}>
-              <ImCross className="text-gray-50 text-2xl font-thin hover:text-stone-400 cursor-pointer"  />
+              <ImCross className="text-[#ffffff] text-2xl font-thin hover:text-stone-300 cursor-pointer"  />
             </div>
           </div>
-          <h2 className="text-gray-50 text-3xl my-7 font-bold" >
-            <span className="text-orange-600">Are you ready</span> to make the
+          <h2 className="text-[#ffffff] text-3xl my-7 font-bold" >
+            <span className="text-[#ff4400]">Are you ready</span> to make the
             commitment?
           </h2>
           <div className="my-5">
             <h2
               onClick={handleClick}
-              className="hover:bg-neutral-500 bg-[#323232] text-gray-50 font-normal my-4 py-4 px-5 cursor-pointer"
+              className="hover:bg-neutral-500 bg-[#393939] text-[#ffffff] font-normal my-4 py-4 px-5 cursor-pointer"
             >
               Yes, I will do my first workout today👌.
             </h2>
             <h2
               onClick={handleClick}
-              className="hover:bg-neutral-500 bg-[#323232] text-gray-50 font-normal my-4 py-4 px-5 cursor-pointer"
+              className="hover:bg-neutral-500 bg-[#393939] text-[#ffffff] font-normal my-4 py-4 px-5 cursor-pointer"
             >
               Yes, I will do my first workout tomorrow😎.
             </h2>
             <h2
               onClick={handleClick}
-              className="hover:bg-neutral-500 bg-[#323232] text-gray-50 font-normal my-4 py-4 px-5 cursor-pointer"
+              className="hover:bg-neutral-500 bg-[#393939] text-[#ffffff] font-normal my-4 py-4 px-5 cursor-pointer"
             >
               I am not ready for the commitment.
             </h2>

@@ -2,8 +2,8 @@ import React from 'react'
 
 
 const style ={
-  mainHeading:' text-gray-50 text-3xl md:text-3xl lg:text-4xl my-8 font-bold',
-  smallHeading:'text-stone-300 text-sm my-3',
+  mainHeading:'text-[#ffffff] text-3xl md:text-3xl lg:text-4xl my-8 font-bold',
+  smallHeading:'text-[#ffffff] text-sm my-3',
 }
 
 export const MainHeading = ({text}) => {

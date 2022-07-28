@@ -25,10 +25,10 @@ const Result = ({fat}) => {
       </div>
       {/* the buttons */}
       <div className={style.container1}>
-        <h2 className="text-gray-100 text-xl bg-neutral-800 w-[50%] mx-auto text-center py-2">
+        <h2 className="text-[#ffffff] text-xl bg-[#1e1e1e] w-[50%] mx-auto text-center py-2">
           Now
         </h2>
-        <h2 className="text-gray-100 text-xl bg-neutral-800 w-[50%] mx-auto text-center py-2">
+        <h2 className="text-[#ffffff] text-xl bg-[#1e1e1e] w-[50%] mx-auto text-center py-2">
           6 Months
         </h2>
       </div>
@@ -38,7 +38,7 @@ const Result = ({fat}) => {
           <h3 className="text-orange-600 text-xl">{+fat+20}%-{+fat+20+5}%</h3>
           <h3 className="text-gray-200 text-sm my-3">Body Muscles</h3>
           <div className="flex ">
-            <p className="w-[3vw] md:w-[1.5vw] bg-orange-500 h-[0.5vh] mx-1"></p>
+            <p className="w-[3vw] md:w-[1.5vw] bg-[#ff4400] h-[0.5vh] mx-1"></p>
             <p className="w-[3vw] md:w-[1.5vw] bg-orange-900 h-[0.5vh] mx-1"></p>
             <p className="w-[3vw] md:w-[1.5vw] bg-orange-900 h-[0.5vh] mx-1"></p>
             <p className="w-[3vw] md:w-[1.5vw] bg-orange-900 h-[0.5vh] mx-1"></p>
@@ -46,19 +46,19 @@ const Result = ({fat}) => {
           </div>
         </div>
         <div className={style.rightContainer}>
-          <h2 className="text-gray-100 text-xl ">Body Fat</h2>
+          <h2 className="text-[#ffffff] text-xl ">Body Fat</h2>
           <h3 className="text-orange-600 text-xl">{+fat+20-20}%-{+fat+20-20+5}%</h3>
           <h3 className="text-gray-200 text-sm my-3">Body Muscles</h3>
           <div className="flex ">
-            <p className="w-[3vw] md:w-[1.5vw] bg-orange-500 h-[0.5vh] mx-1"></p>
-            <p className="w-[3vw] md:w-[1.5vw] bg-orange-500 h-[0.5vh] mx-1"></p>
-            <p className="w-[3vw] md:w-[1.5vw] bg-orange-500 h-[0.5vh] mx-1"></p>
-            <p className="w-[3vw] md:w-[1.5vw] bg-orange-500 h-[0.5vh] mx-1"></p>
+            <p className="w-[3vw] md:w-[1.5vw] bg-[#ff4400] h-[0.5vh] mx-1"></p>
+            <p className="w-[3vw] md:w-[1.5vw] bg-[#ff4400] h-[0.5vh] mx-1"></p>
+            <p className="w-[3vw] md:w-[1.5vw] bg-[#ff4400] h-[0.5vh] mx-1"></p>
+            <p className="w-[3vw] md:w-[1.5vw] bg-[#ff4400] h-[0.5vh] mx-1"></p>
             <p className="w-[3vw] md:w-[1.5vw] bg-orange-900 h-[0.5vh] mx-1"></p>
           </div>
         </div>
       </div>
-      <p className="text-xs text-center my-4 text-stone-500" style={{fontWeight:300}}>
+      <p className="text-xs text-center my-4 text-[#8d8d8d]" style={{fontWeight:300}}>
         *The image is not intended to represent the user. Results vary per
         person and are not guaranteed.
       </p>

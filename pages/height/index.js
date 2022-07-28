@@ -8,10 +8,10 @@ import Cookies from "js-cookie";
 
 const style = {
   wrapper: "flex flex-col",
-  container: " mx-auto",
+  container: "mx-auto",
   input:
-    "bg-[#191919] my-4 ring-none outline-none px-5 py-3 bg-transparent border-[1px] border-stone-500 placeholder:font-thin placeholder:text-neutral-400 w-[100%] text-gray-200 ",
-  height: "text-gray-200 my-8 mx-6",
+    "bg-[#1E1E1E] my-4 ring-none outline-none px-5 py-3 bg-transparent border-[1px] border-stone-500 placeholder:font-thin placeholder:text-neutral-400 w-[100%] text-[#ffffff]",
+  height: "text-[#ffffff] my-8 mx-6",
 };
 
 const Height = (props) => {
@@ -54,7 +54,7 @@ const Height = (props) => {
           >
             {/* UNITS  */}
             <div className="flex my-12 items-center justify-center">
-              <h2 className="text-stone-400 flex-1">Units</h2>
+              <h2 className="text-[#8d8d8d] flex-1">Units</h2>
               <div className="flex items-center justify-center">
                 <h2
                   className={`text-stone-200 bg-[#212121] px-4 py-2 mx-1 border-[1px] border-transparent cursor-pointer hover:border-orange-600 ${

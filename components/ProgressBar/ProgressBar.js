@@ -6,7 +6,7 @@ const ProgressBar = (props) => {
   const ProgressBarStyled = styled.div`
     background: linear-gradient(
       to right,
-      #ea580c ${props.scrollLength},
+      #ff6025 ${props.scrollLength},
       #363636 0
     );
     width: 100%;

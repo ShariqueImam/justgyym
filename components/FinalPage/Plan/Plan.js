@@ -61,7 +61,7 @@ const Plan = () => {
         <Image src={"/final/a.webp"} height={500} width={200} />
       </div>
       <div className={style.right}>
-        <h2 className="text-xl text-gray-200 md:text-4xl">
+        <h2 className="text-xl text-[#ffffff] md:text-4xl font-semibold">
           Choose the best plan for you
         </h2>
         <div onClick={() => handleClick("3-MONTH PLAN", 49.99)}>
@@ -100,7 +100,7 @@ const Plan = () => {
             <Button text={"Continue"} />
           </div>
         </Link>
-        <p className="text-gray-200 text-xs my-6">
+        <p className="text-gray-200 text-xs my-12">
           By continuing, you agree that if you don't cancel at least 24 hours
           prior to the end of the current period, you will automatically be
           charged 49.99 USD every 3 months until you cancel in settings. Learn

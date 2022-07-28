@@ -65,7 +65,7 @@ const Water = (props) => {
             />
             {Show && (
               <div
-                className="bg-blue-600 px-5 py-3 mx-auto"
+                className="bg-[#2563eb]  px-5 py-3 mx-auto"
                 style={{ fontFamily: "Inter,sans-serif" }}
               >
                 <div className="flex items-center">

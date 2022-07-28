@@ -10,7 +10,7 @@ const style = {
   wrapper: "flex flex-col ",
   container: "mx-auto",
   input:
-    "bg-[#191919] my-4 ring-none outline-none px-5 py-3 border-[1px] border-stone-500 placeholder:text-neutral-400 placeholder:font-thin w-[100%] text-gray-200 placeholder:text-neutral-400 text-lg",
+    " my-4 ring-none outline-none px-5 py-3 border-[1px] bg-[#1E1E1E] placeholder:text-neutral-400 placeholder:font-thin w-[100%] text-[#ffffff] placeholder:text-neutral-400 text-lg",
   height: "text-gray-200 my-4 mx-6",
 };
 const TargetWeight = (props) => {
@@ -59,7 +59,7 @@ const TargetWeight = (props) => {
           >
             {/* UNITS  */}
             <div className="flex my-12 items-center justify-center">
-              <h2 className="text-stone-400 flex-1">Units</h2>
+              <h2 className="text-[#8d8d8d] flex-1">Units</h2>
               <div className="flex items-center justify-center">
                 <h2
                   className={`text-stone-200 bg-[#212121] px-4 py-2 mx-1 border-[1px] border-transparent cursor-pointer hover:border-orange-600 ${
@@ -82,7 +82,7 @@ const TargetWeight = (props) => {
             <div className="my-12">
               <label
                 htmlFor="current"
-                className="text-gray-200 text-lg"
+                className="text-[#ffffff] text-lg"
                 style={{ fontWeight: 400 }}
               >
                 Current Weight({`${Unit === "lb" ? "lb" : "kg"}`})
@@ -106,7 +106,7 @@ const TargetWeight = (props) => {
             <div className="my-12">
               <label
                 htmlFor="target"
-                className="text-gray-200 text-lg"
+                className="text-[#ffffff] text-lg"
                 style={{ fontWeight: 400 }}
               >
                 Target Weight({`${Unit === "lb" ? "lb" : "kg"}`})
@@ -131,12 +131,12 @@ const TargetWeight = (props) => {
             {/* adding the thanks page */}
             {Show && target === current && valid1 && valid2 && (
               <div
-                className="bg-blue-600 px-5 py-3"
+                className="bg-[#2563eb] px-5 py-3"
                 style={{ fontFamily: "Inter,sans-serif" }}
               >
                 <div className="flex items-center">
                   <BiClipboard className="text-gray-100 text-xl " />
-                  <h2 className="text-gray-100 mx-2 text-xl font-bold">
+                  <h2 className="text-[#ffffff] mx-2 text-xl font-bold">
                     Great!
                   </h2>
                 </div>
