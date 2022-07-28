@@ -8,7 +8,7 @@ import useWindowSize from "../hooks/windowSize";
 // text-[#FFF4ED]
 const style = {
   wrapper:
-    "w-[95%] md:w-[90%] lg:w-[80%] mx-auto my-12 flex flex-col md:flex-row text-gray-200",
+    "w-[95%] md:w-[90%] lg:w-[80%] mx-auto my-12 flex flex-col md:flex-row text-gray-50",
   left: "md:w-[50%] flex-1 flex flex-col",
   right: "md:w-[47%]",
   tag: "flex flex-col flex-1 mx-auto",
@@ -19,7 +19,7 @@ const style = {
   allow1: "flex items-center my-4 w-[90%] md:w-[70%]",
   allowSmall: "flex md:hidden flex-col p-4",
   checkbox: "bg-transparent accent-orange-600  a mx-3",
-  recommend: "text-xs text-stone-400 my-2",
+  recommend: "text-xs text-gray-50 my-2",
 };
 const Home = (props) => {
   const { width } = useWindowSize();
