@@ -10,16 +10,16 @@ const style = {
   wrapper:
     "w-[95%] md:w-[90%] lg:w-[80%] mx-auto my-12 flex flex-col md:flex-row text-[#ffffff]",
   left: "md:w-[50%] flex-1 flex flex-col",
-  right: "md:w-[47%]",
-  tag: "flex flex-col flex-1 mx-auto",
+  right: "md:w-[45%]",
+  tag: "flex flex-col flex-1 w-[95%] md:w-[80%]",
   heading:
-    " font-bold text-5xl md:text-5xl lg:text-5xl mx-auto md:mx-0 w-[80%] md:w-[70%] my-4 md:my-12 tracking-wide",
-  para: "text-sm text-center md:text-left",
+    "leading-[50px] md:leading-[60px] lg:leading-[60px] mx-3 font-extrabold text-4xl md:text-5xl lg:text-5xl w-[80%] md:w-[70%] my-4 md:my-12 tracking-wide",
+  para: "text-sm mx-3",
   allow: "hidden md:flex flex-col ",
   allow1: "flex items-center my-4 w-[90%] md:w-[70%]",
   allowSmall: "flex md:hidden flex-col p-4",
-  checkbox: "bg-transparent accent-orange-600  a mx-3",
-  recommend: "text-xs text-[#ffffff] my-2",
+  checkbox: "bg-transparent accent-[#ff4400]  a mx-3",
+  recommend: "text-xs text-[#8d8d8d] my-2",
 };
 const Home = (props) => {
   const { width } = useWindowSize();
@@ -64,39 +64,39 @@ const Home = (props) => {
           <div className={style.allow1}>
             <div onClick={handle1}>
               {checked1 ? (
-                <Image src={"/c.png"} height={30} width={35} />
+                <Image src={"/c.png"} height={23} width={28} />
               ) : (
-                <Image src={"/a.png"} height={30} width={35} />
+                <Image src={"/a.png"} height={23} width={28} />
               )}
             </div>
-            <div onClick={handle1} className="mx-4">
+            <div onClick={handle1} className="mx-4 text-xs md:text-xs">
               By continuing, I agree with{" "}
               <Link href="/info/terms">
-                <span className="text-orange-600 cursor-pointer">
+                <span className="text-[#ff4400] cursor-pointer">
                   Terms of service
                 </span>
               </Link>
               ,{" "}
               <Link href="/info/privacy">
-                <span className="text-orange-600 cursor-pointer">
+                <span className="text-[#ff4400] cursor-pointer">
                   Privacy policy
                 </span>
               </Link>
               ,{" "}
               <Link href="/info/refund">
-                <span className="text-orange-600 cursor-pointer">
+                <span className="text-[#ff4400] cursor-pointer">
                   Refund policy
                 </span>
               </Link>
               ,{" "}
               <Link href="/info/subscription">
-                <span className="text-orange-600 cursor-pointer">
+                <span className="text-[#ff4400] cursor-pointer">
                   Subscription Terms
                 </span>
               </Link>
               ,{" "}
               <Link href="/info/cookie">
-                <span className="text-orange-600 cursor-pointer">
+                <span className="text-[#ff4400] cursor-pointer">
                   Cookie policy
                 </span>
               </Link>
@@ -105,30 +105,30 @@ const Home = (props) => {
           <div className={style.allow1}>
             <div onClick={handle2}>
               {checked2 ? (
-                <Image src={"/c.png"} height={30} width={35} />
+                <Image src={"/c.png"} height={23} width={28} />
               ) : (
-                <Image src={"/a.png"} height={30} width={35} />
+                <Image src={"/a.png"} height={23} width={28} />
               )}
             </div>
-            <div onClick={handle2} className="mx-4">
+            <div onClick={handle2} className="mx-4 text-xs md:text-xs">
               {" "}
               I would like to receive updates about products, services, and
               special offers from MadMuscles via email
             </div>
           </div>
+          {Error && Touch && (
+            <div className="bg-[#e22336] px-4 py-3 flex items-center justify-center max-w-fit my-2">
+              <BiErrorCircle className="text-[#ffffff] text-3xl mr-3" />
+              <p className="text-[#ffffff]">
+                To continue, please accept our terms and policies
+              </p>
+            </div>
+          )}
           <p className={style.recommend}>
             We recommend that you consult with your physician before beginning
             any exercise program
           </p>
           {/* for error of the home page */}
-          {Error && Touch && (
-            <div className="bg-red-500 px-4 py-3 flex items-center justify-center max-w-fit my-2">
-              <BiErrorCircle className="text-gray-50 text-3xl mr-3" />
-              <p className="text-gray-50">
-                To continue, please accept our terms and policies
-              </p>
-            </div>
-          )}
         </div>
       </div>
 
@@ -143,39 +143,47 @@ const Home = (props) => {
         <div className={style.allow1}>
           <div onClick={handle1}>
             {checked1 ? (
-              <Image src={"/c.png"} height={width<700?45:30} width={width<700?45:35} />
+              <Image
+                src={"/c.png"}
+                height={width < 700 ? 45 : 23}
+                width={width < 700 ? 45 : 28}
+              />
             ) : (
-              <Image src={"/a.png"} height={width<700?45:30} width={width<700?45:35} />
+              <Image
+                src={"/a.png"}
+                height={width < 700 ? 45 : 23}
+                width={width < 700 ? 45 : 28}
+              />
             )}
           </div>
           <div onClick={handle1} className="mx-4">
             By continuing, I agree with{" "}
             <Link href="/info/terms">
-              <span className="text-orange-600 cursor-pointer">
+              <span className="text-[#ff4400] cursor-pointer">
                 Terms of service
               </span>
             </Link>
             ,{" "}
             <Link href="/info/privacy">
-              <span className="text-orange-600 cursor-pointer">
+              <span className="text-[#ff4400] cursor-pointer">
                 Privacy policy
               </span>
             </Link>
             ,{" "}
             <Link href="/info/refund">
-              <span className="text-orange-600 cursor-pointer">
+              <span className="text-[#ff4400] cursor-pointer">
                 Refund policy
               </span>
             </Link>
             ,{" "}
             <Link href="/info/subscription">
-              <span className="text-orange-600 cursor-pointer">
+              <span className="text-[#ff4400] cursor-pointer">
                 Subscription Terms
               </span>
             </Link>
             ,{" "}
             <Link href="/info/cookie">
-              <span className="text-orange-600 cursor-pointer">
+              <span className="text-[#ff4400] cursor-pointer">
                 Cookie policy
               </span>
             </Link>
@@ -184,9 +192,17 @@ const Home = (props) => {
         <div className={style.allow1}>
           <div onClick={handle2}>
             {checked2 ? (
-              <Image src={"/c.png"} height={width<700?45:30} width={width<700?45:35} />
+              <Image
+                src={"/c.png"}
+                height={width < 700 ? 45 : 23}
+                width={width < 700 ? 45 : 28}
+              />
             ) : (
-              <Image src={"/a.png"} height={width<700?45:30} width={width<700?45:35} />
+              <Image
+                src={"/a.png"}
+                height={width < 700 ? 45 : 23}
+                width={width < 700 ? 45 : 28}
+              />
             )}
           </div>
           <div onClick={handle2} className="mx-4">
@@ -195,19 +211,19 @@ const Home = (props) => {
             special offers from MadMuscles via email
           </div>
         </div>
+        {Error && Touch && (
+          <div className="bg-[#e22336] px-4 py-3 flex items-center justify-center">
+            <BiErrorCircle className="text-[#ffffff] text-3xl mr-3" />
+            <p className="text-[#ffffff]">
+              To continue, please accept our terms and policies
+            </p>
+          </div>
+        )}
         <p className={style.recommend}>
           We recommend that you consult with your physician before beginning any
           exercise program
         </p>
         {/* for error of the home page */}
-        {Error && Touch && (
-          <div className="bg-red-500 px-4 py-3 flex items-center justify-center">
-            <BiErrorCircle className="text-gray-50 text-3xl mr-3" />
-            <p className="text-gray-50">
-              To continue, please accept our terms and policies
-            </p>
-          </div>
-        )}
       </div>
     </div>
   );

@@ -33,7 +33,11 @@ const LevelOfFat = (props) => {
           style={{ fontFamily: "Inter,sans-serif" }}
         >
           <div className={style.left}>
-            <Image src={`/Fat/${value}.${width>700?'webp':'png'}`} width={200} height={width>700?490:350} />
+            <Image
+              src={`/Fat/${value}.${width > 700 ? "webp" : "png"}`}
+              width={200}
+              height={width > 700 ? 490 : 350}
+            />
             {/* <Image src={`/Fat/bg.svg`} width={250} height={490} /> */}
           </div>
           <div className={style.right}>
@@ -45,6 +49,10 @@ const LevelOfFat = (props) => {
               <div className="my-8 md:my-24 mx-auto flex flex-col items-center justify-center">
                 <Box sx={{ width: "100%" }}>
                   <Slider
+                   sx={{
+            
+                    color: '#ff4400',
+                  }}
                     aria-label="Always-visible"
                     defaultValue={20}
                     getAriaValueText={valuetext}
@@ -54,7 +62,7 @@ const LevelOfFat = (props) => {
                     min={5}
                     onChange={handleChange}
                     max={40}
-                    color="warning"
+                    // color="warning"
                   />
                 </Box>
                 <div className="text-orange-600 flex w-[85%] md:w-[65%]">
