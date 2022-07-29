@@ -33,19 +33,19 @@ const LevelHormone = (props) => {
                   Our workout plan was created to ensure a balanced
                   testosterone/cortisol ratio.
                 </h2>
-                <p className="my-4 text-lg" style={{ fontWeight: 300 }}>
+                <p className="my-4 text-lg" style={{ fontWeight: 450 }}>
                   Both cortisol and testosterone levels increase linearly in
                   response to physical exercise.
                 </p>
-                <p className="my-4 text-lg" style={{ fontWeight: 300 }}>
+                <p className="my-4 text-lg" style={{ fontWeight: 450 }}>
                   However, it is of vital importance to consider them in order
                   to reach a specific threshold of exercise intensity.
                 </p>
-                <p className="my-4 text-lg" style={{ fontWeight: 300 }}>
+                <p className="my-4 text-lg" style={{ fontWeight: 450 }}>
                   Otherwise, physical stressors can result in excessive cortisol
                   secretion, which decreases the production of testosterone.
                 </p>
-                <p className="my-4 text-lg" style={{ fontWeight: 300 }}>
+                <p className="my-4 text-lg" style={{ fontWeight: 450 }}>
                   Overtraining and susceptibility to certain diseases and
                   disorders could be the result of an extreme stressor and a low
                   level of testosterone.
