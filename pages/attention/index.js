@@ -9,7 +9,7 @@ const style = {
   wrapper: "flex flex-col md:flex-row",
   left: "w-[100%] md:w-[50%] flex items-center justify-center",
   right:
-    "w-[100%] md:w-[50%] bg-[#181818] h-[60vh] md:h-[100vh] text-[#ffffff] flex flex-col justify-center px-4 md:px-12",
+    "w-[100%] md:w-[50%] bg-[#1e1e1e] h-[60vh] md:h-[100vh] text-[#ffffff] flex flex-col justify-center px-4 md:px-12",
 };
 const Attention = (props) => {
   props.which("home2");
