@@ -41,7 +41,7 @@ const LevelOfFat = (props) => {
             {/* <Image src={`/Fat/bg.svg`} width={250} height={490} /> */}
           </div>
           <div className={style.right}>
-            <div className="w-[70%] md:w-[50%]">
+            <div className="w-[70%] md:w-[73%]">
               <h2 className="text-2xl md:text-4xl text-gray-50 font-bold my-12">
                 Choose your level of body fat
               </h2>
