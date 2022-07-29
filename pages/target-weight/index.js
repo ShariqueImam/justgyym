@@ -15,7 +15,7 @@ const style = {
 };
 const TargetWeight = (props) => {
   const [Show, setShow] = useState(false);
-  const [Unit, setUnit] = useState("lb");
+  const [Unit, setUnit] = useState("kg");
   const [target, setTarget] = useState("");
   const [current, setCurrent] = useState("");
   const targetChangeHandler = (e) => {
@@ -62,7 +62,7 @@ const TargetWeight = (props) => {
               <h2 className="text-[#8d8d8d] flex-1">Units</h2>
               <div className="flex items-center justify-center">
                 <h2
-                  className={`text-stone-200 bg-[#212121] px-4 py-2 mx-1 border-[1px] border-transparent cursor-pointer hover:border-orange-600 ${
+                  className={`text-[#ffffff] bg-[#212121] px-4 py-2 mx-1 border-[1px] border-transparent cursor-pointer hover:border-orange-600 font-bold ${
                     Unit === "lb" && "border-orange-600"
                   }`}
                   onClick={() => handleUnit("lb")}
@@ -70,7 +70,7 @@ const TargetWeight = (props) => {
                   lb
                 </h2>
                 <h2
-                  className={`text-stone-200 bg-[#212121] px-4 py-2 mx-1 border-[1px] border-transparent cursor-pointer hover:border-orange-600 ${
+                  className={`text-[#ffffff] bg-[#212121] px-4 py-2 mx-1 border-[1px] border-transparent cursor-pointer hover:border-orange-600 font-bold${
                     Unit === "kg" && "border-orange-600"
                   }`}
                   onClick={() => handleUnit("kg")}
@@ -135,12 +135,12 @@ const TargetWeight = (props) => {
                 style={{ fontFamily: "Inter,sans-serif" }}
               >
                 <div className="flex items-center">
-                  <BiClipboard className="text-gray-100 text-xl " />
+                  <BiClipboard className="text-[#ffffff] text-xl " />
                   <h2 className="text-[#ffffff] mx-2 text-xl font-bold">
                     Great!
                   </h2>
                 </div>
-                <p className="text-gray-100 text-sm my-2 font-thin">
+                <p className="text-[#ffffff] text-sm my-2 font-thin">
                   We’re glad to see you’re already at your ideal weight.
                   MadMuscles can help to have a better quality of your body
                 </p>
