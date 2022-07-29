@@ -10,7 +10,7 @@ const style = {
   wrapper: "flex flex-col ",
   container: "mx-auto",
   input:
-    " my-4 ring-none outline-none px-5 py-3 border-[1px] bg-[#1E1E1E] placeholder:text-neutral-400 placeholder:font-thin w-[100%] text-[#ffffff] placeholder:text-neutral-400 text-lg",
+    " my-4 ring-none outline-none px-5 py-3 border-[1px] border-stone-500 bg-[#1E1E1E] placeholder:text-neutral-400 placeholder:font-thin w-[100%] text-[#ffffff] placeholder:text-neutral-400 text-lg",
   height: "text-gray-200 my-4 mx-6",
 };
 const TargetWeight = (props) => {
@@ -59,7 +59,7 @@ const TargetWeight = (props) => {
           >
             {/* UNITS  */}
             <div className="flex my-12 items-center justify-center">
-              <h2 className="text-[#8d8d8d] flex-1">Units</h2>
+              <h2 className="text-[#8d8d8d] flex-1 font-bold">Units</h2>
               <div className="flex items-center justify-center">
                 <h2
                   className={`text-[#ffffff] bg-[#212121] px-4 py-2 mx-1 border-[1px] border-transparent cursor-pointer hover:border-orange-600 font-bold ${
@@ -70,7 +70,7 @@ const TargetWeight = (props) => {
                   lb
                 </h2>
                 <h2
-                  className={`text-[#ffffff] bg-[#212121] px-4 py-2 mx-1 border-[1px] border-transparent cursor-pointer hover:border-orange-600 font-bold${
+                  className={`text-[#ffffff] bg-[#212121] px-4 py-2 mx-1 border-[1px] border-transparent cursor-pointer hover:border-orange-600 font-bold ${
                     Unit === "kg" && "border-orange-600"
                   }`}
                   onClick={() => handleUnit("kg")}
@@ -82,8 +82,8 @@ const TargetWeight = (props) => {
             <div className="my-12">
               <label
                 htmlFor="current"
-                className="text-[#ffffff] text-lg"
-                style={{ fontWeight: 400 }}
+                className="text-[#ffffff] text-lg font-bold"
+                style={{ fontWeight: 600 }}
               >
                 Current Weight({`${Unit === "lb" ? "lb" : "kg"}`})
               </label>
@@ -96,18 +96,18 @@ const TargetWeight = (props) => {
                 onChange={currentChangeHandler}
               />
               <p
-                className={`${
+                className={`font-bold ${
                   valid2 || !Show ? "hidden" : "flex"
                 }  text-red-500`}
               >
                 Weight must be less than or equal to 200 kg
               </p>
             </div>
-            <div className="my-12">
+            <div className="my-12 font-bold">
               <label
                 htmlFor="target"
-                className="text-[#ffffff] text-lg"
-                style={{ fontWeight: 400 }}
+                className="text-[#ffffff] text-lg font-bold"
+                style={{ fontWeight: 600 }}
               >
                 Target Weight({`${Unit === "lb" ? "lb" : "kg"}`})
               </label>

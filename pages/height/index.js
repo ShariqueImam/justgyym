@@ -16,14 +16,50 @@ const style = {
 
 const Height = (props) => {
   props.which("home1");
-
   const [Unit, setUnit] = useState("ft");
   const [height, setHeight] = useState("");
+  console.log(height[1])
   const [click, setClick] = useState(false);
-  const valid = /^[0-9]+$/.test(height) && +height < 300 && +height > 100;
+  const valid = Unit==='cm' ? /^[0-9]+$/.test(height[0]) && +height < 300 && +height > 100 : /^[0-9]+$/.test(height[0]) && +height[0] < 9 && +height[0] > 3 || /^[0-9]+$/.test(height[1]) && +height[1] < 9 && +height[1] > 3
   const heightChangeHandler = (e) => {
-    setHeight(e.target.value);
+    // setHeight(e.target.value);
+    if (Unit == 'ft') {
+      if (e.target.value.length < 9) {
+        if (
+          e.target.value.length < 9 &&
+          e.target.length !== 1 &&
+          e.target.length !== 7
+        ) {
+          setHeight(`${e.target.value}`);
+        }
+        if (e.target.value.length == 1) {
+          setHeight(`${e.target.value} ft `);
+        }
+        if (e.target.value.length == 6) {
+          setHeight(` ${e.target.value} in`);
+        }
+        if (e.target.value.length == 9) {
+          setHeight((prev) => {
+            if (prev.slice(-1) == "cm") {
+              return prev.slice(0, -1);
+            }
+            return prev;
+          });
+        }
+        if (e.target.value.length == 3) {
+          setHeight((prev) => {
+            if (prev.slice(-1) == "/") {
+              return prev.slice(0, -1);
+            }
+            return prev;
+          });
+        }
+      }
+    } else {
+      setHeight(e.target.value);
+    }
   };
+
   const handleClick = () => {
     if (Unit === "cm") {
       Cookies.set("height", height);
@@ -40,6 +76,7 @@ const Height = (props) => {
         return value;
       }
     });
+    setHeight('')
   };
   return (
     <>
@@ -54,7 +91,7 @@ const Height = (props) => {
           >
             {/* UNITS  */}
             <div className="flex my-12 items-center justify-center">
-              <h2 className="text-[#8d8d8d] flex-1">Units</h2>
+              <h2 className="text-[#8d8d8d] flex-1 font-bold">Units</h2>
               <div className="flex items-center justify-center">
                 <h2
                   className={`text-[#ffffff] bg-[#212121] px-4 py-2 mx-1 border-[1px] border-transparent cursor-pointer hover:border-orange-600 font-bold ${
@@ -62,7 +99,7 @@ const Height = (props) => {
                   }`}
                   onClick={() => handleUnit("ft")}
                 >
-                  ft
+                  ft,in
                 </h2>
                 <h2
                   className={`text-[#ffffff] bg-[#212121] px-4 py-2 mx-1 border-[1px] border-transparent cursor-pointer hover:border-orange-600 font-bold ${
@@ -74,8 +111,12 @@ const Height = (props) => {
                 </h2>
               </div>
             </div>
-            <label htmlFor="height" className="text-[#ffffff] my-4 text-lg font-bold" style={{fontWeight:500}}>
-              Height ({`${Unit=='cm'?'cm':'ft'}`}) 
+            <label
+              htmlFor="height"
+              className="text-[#ffffff] my-4 text-lg font-bold"
+              style={{ fontWeight: 600 }}
+            >
+              Height ({`${Unit == "cm" ? "cm" : "ft"}`})
             </label>
             <input
               id="height"
@@ -84,22 +125,28 @@ const Height = (props) => {
               className={style.input}
               value={`${height}`}
               onChange={heightChangeHandler}
-              style={{fontFamily:'Inter,sans-serif'}}
+              style={{ fontFamily: "Inter,sans-serif" }}
             />
             {click && Unit === "cm" && (
-              <p className={`${valid ? "hidden" : "flex"}  text-red-500`} style={{fontWeight:500}}>
+              <p
+                className={`${valid ? "hidden" : "flex"}  text-red-500`}
+                style={{ fontWeight: 500 }}
+              >
                 {" "}
                 Height should be between 100cm and 300cm
               </p>
             )}
             {click && Unit === "ft" && (
-              <p className={`${valid ? "hidden" : "flex"}  text-red-500`} style={{fontWeight:500}}>
+              <p
+                className={`${valid ? "hidden" : "flex"}  text-red-500`}
+                style={{ fontWeight: 500 }}
+              >
                 {" "}
                 Height should be between 3ft and 9ft
               </p>
             )}
             {/* YOUR HEIGHT BUTTON   */}
-{/* 
+            {/* 
             <h2 className={style.height}>
               Your Height: {height}
               {`${Unit === "cm" ? "cm" : "ft"}`}
