@@ -4,8 +4,8 @@ import Animator from "../../../components/UI/Animator";
 
 const style = {
   heading:
-    "text-gray-200 w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8 font-bold text-xl",
-  para: "text-gray-200 w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8",
+    "text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8 font-bold text-xl",
+  para: "text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8",
 };
 const Privacy = (props) => {
   props.which('home1')

@@ -15,20 +15,20 @@ const Privacy = (props) => {
       />
       <p
         style={{ fontFamily: "Inter,sans-serif" }}
-        className="text-gray-200 w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8"
+        className="text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8"
       >
         Right after payment you will instantly access your plan. Please, follow
         the instructions after payment.
       </p>
       <h1
         style={{ fontFamily: "Inter,sans-serif" }}
-        className="text-gray-200 w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8 font-bold text-xl"
+        className="text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8 font-bold text-xl"
       >
         1. LEGALLY BINDING AGREEMENT; AMENDMENTS
       </h1>
       <p
         style={{ fontFamily: "Inter,sans-serif" }}
-        className="text-gray-200 w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8"
+        className="text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8"
       >
         1.1. MadMuscles as a service and the content available via our websites
         and mobile apps is developed, operated and distributed by Amomama Media
@@ -40,13 +40,13 @@ const Privacy = (props) => {
       </p>
       <h1
         style={{ fontFamily: "Inter,sans-serif" }}
-        className="text-gray-200 w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8 font-bold text-xl"
+        className="text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8 font-bold text-xl"
       >
         2. IMPORTANT DISCLAIMERS
       </h1>
       <p
         style={{ fontFamily: "Inter,sans-serif" }}
-        className="text-gray-200 w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8"
+        className="text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8"
       >
         2.1. THE COMPANY DOES NOT OFFER OR PROVIDE ANY KIND OF MEDICAL ADVICE,
         HEALTH INSURANCE OR OTHER HEALTHCARE SERVICE, INCLUDING WITHOUT

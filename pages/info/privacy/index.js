@@ -11,7 +11,7 @@ const Privacy = (props) => {
       <SmallHeading text={"IMPORTANT PRIVACY INFORMATION"} />
       <p
         style={{ fontFamily: "Inter,sans-serif" }}
-        className="text-gray-200 w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8"
+        className="text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8"
       >
         In order to provide the service, we will ask you to enter your date of
         birth, gender, current weight and height, target weight, fitness level,
@@ -25,7 +25,7 @@ const Privacy = (props) => {
       </p>
       <p
         style={{ fontFamily: "Inter,sans-serif" }}
-        className="text-gray-200 w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8"
+        className="text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8"
       >
         For improving our service and serving ads, we use third party solutions.
         As a result, we may process data using solutions developed by Amplitude,
@@ -42,7 +42,7 @@ const Privacy = (props) => {
       </p>
       <p
         style={{ fontFamily: "Inter,sans-serif" }}
-        className="text-gray-200 w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8"
+        className="text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8"
       >
         BY USING THE SERVICE, YOU PROMISE US THAT (I) YOU HAVE READ, UNDERSTAND
         AND AGREE TO THIS PRIVACY POLICY, AND (II) YOU ARE OVER 16 YEARS OF AGE
