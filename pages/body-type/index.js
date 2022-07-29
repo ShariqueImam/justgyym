@@ -20,7 +20,7 @@ const BodyType = (props) => {
   return (
     <>
       <ProgessBar scrollLength={"8%"} val={2} link="/target-body" />
-      <div className="w-[95%] md:w-[34%] lg:w-[32%] mx-auto">
+      <div className="w-[95%] md:w-[38%] lg:w-[36%] mx-auto">
         <Animator>
           <div className="w-[95%] md:w-[80]">
             <MainHeading text={"Choose your body type"} />
