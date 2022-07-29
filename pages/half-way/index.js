@@ -17,20 +17,24 @@ const index = (props) => {
         <Image src={`/img.webp`} width={470} height={600} />
       </div>
       <div className={style.right}>
-        <div className="w-[95%] md:w-[60%] flex flex-col justify-center">
-          <h2
-            className="mx-4 text-2xl md:text-3xl lg:text-3xl font-bold my-7 text-gray-50"
-            style={{ fontFamily: "Inter,sans-serif" }}
-          >
-            Halfway there!
-          </h2>
-          <p className="mx-4 my-4 text-gray-50">
-            TWe won’t promise you quick results. Our program’s primary goal is
+        <div className="w-[95%] md:w-[85%]">
+        <h2
+              className="text-2xl md:text-3xl lg:text-4xl my-3 md:my-12  text-[#ffffff]"
+              style={{ fontFamily: "Inter,sans-serif", fontWeight: 700 }}
+            >
+                Halfway there!
+            </h2>
+            <p className="my-4 text-lg font-bold text-[#ffffff]" style={{ fontWeight: 500 }}>
+            We won’t promise you quick results. Our program’s primary goal is
             to change your lifestyle for the better.
-          </p>
-          <p className="mx-4 my-3 text-gray-300 w-[80%] md:w-[50%] ">
-            You’ll achieve much more than just a few weeks of exercising.
-          </p>
+            </p>
+            <p
+              className="my-3 text-[#ffffff] text-lg font-bold "
+              style={{ fontWeight: 450 }}
+            >
+              You’ll achieve much more than just a few weeks of exercising.
+            </p>
+        
           <Link href={"additional-goals"}>
             <div className="mx-4">
               <Button text={"Continue "} />
