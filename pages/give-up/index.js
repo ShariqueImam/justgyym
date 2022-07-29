@@ -21,7 +21,7 @@ const GiveUp = (props) => {
           <Image src={`${width<700?'/final/cs.png':'/final/c.webp'}`} width={200} height={width<700? 300:450} />
         </div>
         <div className={style.right}>
-          <div className="w-[95%] md:w-[80%]">
+          <div className="w-[95%] md:w-[85%]">
             <h2
               className="text-2xl md:text-3xl lg:text-4xl my-3 md:my-12"
               style={{ fontFamily: "Inter,sans-serif", fontWeight: 600 }}
