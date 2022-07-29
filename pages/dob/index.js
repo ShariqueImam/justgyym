@@ -67,7 +67,7 @@ const DOB = (props) => {
             <p className="text-2xl ml-3">✅ </p>
             <p
               className="text-gray-50 tracking-wide text-lg md:text-md my-1 mx-5"
-              style={{ fontWeight: 250 }}
+              style={{ fontWeight: 450 }}
             >
               Your workout and meal plan are almost ready!
             </p>
@@ -83,7 +83,7 @@ const DOB = (props) => {
             className={style.container}
             style={{ fontFamily: "Inter,sans-serif" }}
           >
-            <label htmlFor="name" className="text-gray-200 text-xl" style={{fontWeight:250}}>
+            <label htmlFor="name" className="text-gray-200 text-xl" style={{fontWeight:450}}>
               What is your date of birth?
             </label>
             <input

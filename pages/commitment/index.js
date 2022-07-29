@@ -37,7 +37,7 @@ const index = (props) => {
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
       {!Show && !Show1 && <Counter min={0} max={40} end={handleEnd} text={'Analyzing Data'}/>}
       {Show && !Show1 && (
-        <div className="bg-[#1e1e1e] w-[95vw] md:w-[62vw] lg:w-[45vw] h-[55vh] md:h-[75vh] lg:h-[60vh] px-7 py-8 md:px-20">
+        <div className="bg-[#1e1e1e] w-[95vw] md:w-[62vw] lg:w-[45vw] h-[75vh] md:h-[80vh] lg:h-[80vh] px-7 py-8 md:px-20">
           <div className="flex items-center jusitfy-center">
             <div className="flex items-center  flex-1">
               <Image src="/test.png" width={50} height={50}/>

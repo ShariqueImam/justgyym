@@ -32,7 +32,7 @@ const Name = (props) => {
         <Animator className={style.wrapper}>
           <div className="bg-[#1e1e1e] mx-auto py-2 flex items-center mb-7">
             <p className="text-2xl ml-3">✅ </p>
-            <p className="text-gray-50 tracking-wide text-lg md:text-md my-1 mx-5" style={{fontWeight:250}}>
+            <p className="text-gray-50 tracking-wide text-lg md:text-md my-1 mx-5" style={{fontWeight:450}}>
               Your workout and meal plan are almost ready!
             </p>
           </div>
@@ -47,7 +47,7 @@ const Name = (props) => {
             className={style.container}
             style={{ fontFamily: "Inter,sans-serif" }}
           >
-            <label htmlFor="name" className="text-gray-200 text-xl" style={{fontWeight:250}}>
+            <label htmlFor="name" className="text-gray-200 text-xl" style={{fontWeight:450}}>
               What should we call you?
             </label>
             <input

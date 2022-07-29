@@ -73,7 +73,7 @@ const Email = (props) => {
         >
          <div className="bg-[#1e1e1e] mx-auto py-2 flex items-center mb-7">
             <p className="text-2xl ml-3">✅ </p>
-            <p className="text-gray-50 tracking-wide text-lg md:text-md my-1 mx-5" style={{fontWeight:250}}>
+            <p className="text-gray-50 tracking-wide text-lg md:text-md my-1 mx-5" style={{fontWeight:450}}>
               Your workout and meal plan are almost ready!
             </p>
           </div>
@@ -81,14 +81,14 @@ const Email = (props) => {
             Let's create your account
           </h2>
           <div className={style.container}>
-            <ProgressBar1 scrollLength={"66%"} val={3} />
+            <ProgressBar1 scrollLength={"100%"} val={3} />
           </div>
 
           <div
             className={style.container}
             style={{ fontFamily: "Inter,sans-serif" }}
           >
-            <label htmlFor="name" className="text-gray-200 my-4">
+            <label htmlFor="name" className="text-gray-200 my-4" style={{fontWeight:450}}>
               Email
             </label>
             <input
@@ -106,7 +106,7 @@ const Email = (props) => {
                 Enter a valid email
               </p>
             )}
-            <h2 className="text-gray-100 text-lg mt-10 tracking-wide" style={{fontWeight:300}}>
+            <h2 className="text-gray-100 text-lg mt-10 tracking-wide" style={{fontWeight:450}}>
               We respect your privacy and take protecting it very seriously — no
               spam
             </h2>
