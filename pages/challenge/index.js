@@ -37,7 +37,7 @@ const Challenge = (props) => {
   return (
     <>
       <ProgressBar scrollLength={"88%"} val={21} link="/products" />
-      <div className="w-[95%] md:w-[41%] lg:w-[33%] mx-auto">
+      <div className="w-[95%] md:w-[41%] lg:w-[36%] mx-auto">
         <Animator>
           <MainHeading text="In addition to your goal, what challenge would you like to join?" />
           <div

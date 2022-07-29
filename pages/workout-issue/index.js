@@ -43,7 +43,7 @@ const WorkoutIssue = (props) => {
   return (
     <>
       <ProgressBar scrollLength={"36%"} val={10} link="/workouts" />
-      <div className="w-[95%] md:w-[39%] lg:w-[32%] mx-auto">
+      <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto">
         <Animator>
           <div className="w-[95%] md:w-[80%]">
             <MainHeading

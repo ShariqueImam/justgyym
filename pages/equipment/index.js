@@ -21,7 +21,7 @@ const WorkoutPlace = (props) => {
   return (
     <>
       <ProgressBar scrollLength={"60%"} val={15} link="/workout-place" />
-      <div className="w-[95%] md:w-[39%] lg:w-[32%] mx-auto">
+      <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto">
         <Animator>
           <MainHeading text="Which type of equipment do you have access to?" />
           <div onClick={() => handleClick("no")}>

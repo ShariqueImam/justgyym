@@ -44,7 +44,7 @@ const Height = (props) => {
   return (
     <>
       <ProgressBar scrollLength={"16%"} val={5} link="/problem-area" />
-      <div className="w-[95%] md:w-[34%] lg:w-[32%] mx-auto font-normal">
+      <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto font-normal">
         <Animator className={style.wrapper}>
           <MainHeading text={"What's your height?"} />
           {/* the unit box */}

@@ -27,7 +27,7 @@ const Water = (props) => {
   return (
     <>
       <ProgressBar scrollLength={"76%"} val={18} link="/level-hormone" />
-      <div className="w-[95%] md:w-[39%] lg:w-[32%] mx-auto">
+      <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto">
         <Animator>
           <MainHeading text="How much water do you drink daily?" />
           <div onClick={() => handleClick("0")}>

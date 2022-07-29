@@ -12,7 +12,7 @@ const LevelHormone = (props) => {
 
   return (
     <>
-      <div className="w-[95%] md:w-[33%] lg:w-[29 %] mx-auto">
+      <div className="w-[95%] md:w-[37%] lg:w-[35%] mx-auto">
         <Animator>
           <div
             className="flex flex-col "

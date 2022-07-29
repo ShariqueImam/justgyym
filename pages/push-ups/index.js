@@ -19,7 +19,7 @@ const Pushups = (props) => {
   return (
     <>
       <ProgressBar scrollLength={"52%"} val={12} link="/attention" />
-      <div className="w-[95%] md:w-[39%] lg:w-[32%] mx-auto">
+      <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto">
         <Animator>
           <div className="w-[95%] md:w-[80%]">
             <MainHeading text="How many push-ups can you do in one round?" />

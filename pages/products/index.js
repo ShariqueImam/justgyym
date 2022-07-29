@@ -16,7 +16,7 @@ const Products = (props) => {
   return (
     <>
       <ProgressBar scrollLength={"84%"} val={20} link="/meal-prep-time" />
-      <div className="w-[95%] md:w-[39%] lg:w-[33%] mx-auto">
+      <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto">
         <Animator>
           <MainHeading text="Let us create a meal plan based on your preferences" />
           <SmallHeading text="You can always adjust a meal plan later" />

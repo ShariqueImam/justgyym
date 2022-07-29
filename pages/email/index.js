@@ -68,7 +68,7 @@ const Email = (props) => {
 
       <Animator>
         <div
-          className="w-[95%] md:w-[42%] lg:w-[33%] mx-auto mt-4"
+          className="w-[95%] md:w-[42%] lg:w-[37%] mx-auto mt-4"
           style={{ fontFamily: "Inter,sans-serif" }}
         >
          <div className="bg-[#1e1e1e] mx-auto py-2 flex items-center mb-7">
