@@ -49,7 +49,7 @@ const LevelOfFitnes = (props) => {
   const handleChange = (e, event, h) => {
     setValue(event);
   };
-  props.which('home1')
+  props.which("home1");
 
   const content = fitness[value - 1];
   return (
@@ -73,7 +73,7 @@ const LevelOfFitnes = (props) => {
                 <p className="flex-1">1</p>
                 <p className="">10</p>
               </div>
-              <Box sx={{ width: '100%'}}>
+              <Box sx={{ width: "100%" }}>
                 <Slider
                   aria-label="Always-visible"
                   defaultValue={5}
@@ -83,7 +83,9 @@ const LevelOfFitnes = (props) => {
                   min={1}
                   onChange={handleChange}
                   max={10}
-                  color="warning"
+                  sx={{
+                    color: "#ff4400",
+                  }}
                   valueLabelDisplay="on"
                 />
               </Box>
