@@ -54,19 +54,19 @@ const index = (props) => {
           <div className="my-5">
             <h2
               onClick={handleClick}
-              className="hover:bg-neutral-500 bg-[#393939] text-[#ffffff] font-normal my-4 py-4 px-5 cursor-pointer"
+              className="hover:bg-neutral-500 bg-[#393939] text-[#ffffff] my-4 py-4 px-5 cursor-pointer font-bold"
             >
               Yes, I will do my first workout today👌.
             </h2>
             <h2
               onClick={handleClick}
-              className="hover:bg-neutral-500 bg-[#393939] text-[#ffffff] font-normal my-4 py-4 px-5 cursor-pointer"
+              className="hover:bg-neutral-500 bg-[#393939] text-[#ffffff] my-4 py-4 px-5 cursor-pointer font-bold"
             >
               Yes, I will do my first workout tomorrow😎.
             </h2>
             <h2
               onClick={handleClick}
-              className="hover:bg-neutral-500 bg-[#393939] text-[#ffffff] font-normal my-4 py-4 px-5 cursor-pointer"
+              className="hover:bg-neutral-500 bg-[#393939] text-[#ffffff]   my-4 py-4 px-5 cursor-pointer font-bold"
             >
               I am not ready for the commitment.
             </h2>

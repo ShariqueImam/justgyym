@@ -61,7 +61,7 @@ const Plan = () => {
         <Image src={"/final/a.webp"} height={500} width={200} />
       </div>
       <div className={style.right}>
-        <h2 className="text-xl text-[#ffffff] md:text-4xl font-semibold">
+        <h2 className="text-xl text-[#ffffff] md:text-4xl font-bold">
           Choose the best plan for you
         </h2>
         <div onClick={() => handleClick("3-MONTH PLAN", 49.99)}>

@@ -7,16 +7,16 @@ const style = {
 const FullPlan = () => {
   return (
     <div className={style.wrapper}>
-      <h2 className="text-3xl md:text-4xl text-[#ffffff] text-center font-semibold">Full Workout Plan</h2>
-      <p className={style.para} style={{fontWeight:250}}>
+      <h2 className="text-3xl md:text-4xl text-[#ffffff] text-center font-bold">Full Workout Plan</h2>
+      <p className={style.para} style={{fontWeight:500}}>
         <Image src={"/tick.png"} width={20} height={20} />
         Build a habit & form correct exercising techniques
       </p>
-      <p className={style.para} style={{fontWeight:250}}>
+      <p className={style.para} style={{fontWeight:500}}>
         <Image src={"/tick.png"} width={20} height={20} />
         Lose excessive body fat & improve workout intensity
       </p>
-      <p className={style.para} style={{fontWeight:250}}>
+      <p className={style.para} style={{fontWeight:500}}>
         {" "}
         <Image src={"/tick.png"} width={20} height={20} />
         Achieve your goal and change your life forever

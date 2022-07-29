@@ -22,12 +22,12 @@ const Counter = (props) => {
           ending={props.end}
         />
         {Time == 0 && (
-          <p className={style.counterText} style={{ fontWeight: 250 }}>
+          <p className={style.counterText} style={{ fontWeight: 500 }}>
            Meal Planning
           </p>
         )}
         {Time == 1 && (
-          <p className={style.counterText} style={{ fontWeight: 250 }}>
+          <p className={style.counterText} style={{ fontWeight: 500 }}>
             Your personalized workout plan is ready
           </p>
         )}

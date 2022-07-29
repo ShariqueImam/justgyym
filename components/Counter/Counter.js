@@ -22,8 +22,8 @@ const Counter = (props) => {
           duration={3}
           ending={props.end}
         />
-        {Time==0 && <p className={style.counterText} style={{fontWeight:250}}>Analyzing Data</p>}
-        {Time==1 && <p className={style.counterText} style={{fontWeight:250}}>Measuring Body Profiles</p>}
+        {Time==0 && <p className={style.counterText} style={{fontWeight:500}}>Analyzing Data</p>}
+        {Time==1 && <p className={style.counterText} style={{fontWeight:500}}>Measuring Body Profiles</p>}
         
       </div>
     </div>

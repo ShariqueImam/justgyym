@@ -13,19 +13,19 @@ const index = (props) => {
       <FinalPage />
       <Footer />
       <div
-        className="bg-[#171717] text-[#8d8d8d] py-1 text-center"
+        className="bg-[#171717] text-[#8d8d8d] py-1 text-center font-bold"
         style={{ fontFamily: "Inter,sans-serif" }}
       >
         Any questions? We're here to help.
       </div>
       <div
-        className="bg-[#2a2a2a] flex items-center justify-center"
+        className="bg-[#2a2a2a] flex items-center justify-center font-bold"
         style={{ fontFamily: "Inter,sans-serif" }}
       >
         <a
           href="/"
           className="block underline text-[#ffffff] py-3 text-sm md:text-xl mx-8 md:mx-16 mb-10 flex items-center justify-center"
-          style={{fontWeight:400}}
+          style={{fontWeight:500}}
         >
           <AiOutlineMail className="text-[#ffffff] mx-4"/>
           support@test.com
