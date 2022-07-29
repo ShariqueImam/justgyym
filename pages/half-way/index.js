@@ -6,7 +6,7 @@ const style = {
   wrapper: "flex flex-col md:flex-row z-10",
   left: "w-[100%] md:w-[50%] flex items-center justify-center mt-4 half-animation",
   right:
-    "w-[100%] md:w-[50%] bg-[#191919] h-[40vh] md:h-[100vh] flex flex-col md:px-8 lg:p-24 lg:py-36 justify-center",
+    "w-[100%] md:w-[50%] bg-[#191919] h-[40vh] md:h-[100vh] flex flex-col px-4 md:px-12 lg:p-24 lg:py-36 justify-center",
 };
 const index = (props) => {
   props.which("home2");
