@@ -19,7 +19,7 @@ const Attention = (props) => {
       {/* <Animator> */}
       <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
         <div className={style.left}>
-          <Image src={"/status.webp"} width={800} height={950} />
+          <Image src={"/status.webp"} width={700} height={750} />
         </div>
         <div className={style.right}>
           <div className="w-[95%] md:w-[85%]">
