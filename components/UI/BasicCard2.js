@@ -28,7 +28,7 @@ export const BasicCard2 = ({ cardText, isClick, cardPara }) => {
           >
             {cardText}
           </h3>
-          <p className="text-sm text-neutral-400" style={{ fontWeight: 500 }}>
+          <p className="text-sm text-[#ffffff]" style={{ fontWeight: 500 }}>
             {cardPara}
           </p>
         </div>

@@ -83,7 +83,7 @@ const Water = (props) => {
                   </h2>
                 </div>
                 <p
-                  className="text-gray-100 text-sm my-2 "
+                  className="text-gray-100 text-sm my-2 font-semibold"
                   style={{ fontWeight: 300 }}
                 >
                   {Click == "0"
@@ -100,7 +100,7 @@ const Water = (props) => {
             )}
             {Show && Click !== "0" && Click !== "2" && (
               <p
-                className="text-xs text-gray-100 mx-auto my-7 font-thin"
+                className="text-xs text-gray-100 mx-auto my-7 font-semibold"
                 style={{ fontFamily: "Inter,sans-serif" }}
               >
                 *users of JustGyym who took the quiz

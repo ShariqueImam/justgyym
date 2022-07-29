@@ -19,7 +19,7 @@ const Time = (props) => {
   return (
     <>
       <ProgressBar scrollLength={"80%"} val={19} link="/water" />
-      <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto">
+      <div className="w-[95%] md:w-[33%] lg:w-[33%] mx-auto">
         <Animator>
           <MainHeading text="How much time are you ready to spend per one meal prep?" />
           <div onClick={() => handleClick("30")}>
