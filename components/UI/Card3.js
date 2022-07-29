@@ -12,7 +12,7 @@ export const Card3 = ({ cardText, imgUrl, isClick }) => {
     // make the container of the card to display 'flex or flex-wrap'
     <div
       className={cardStyle.card}
-      style={{ fontFamily: "Inter,sans-serif", fontWeight: 450 }}
+      style={{ fontFamily: "Inter,sans-serif", fontWeight: 600 }}
     >
       {isClick ? (
         <Image src={"/c.png"} height={20} width={22} />

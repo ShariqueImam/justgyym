@@ -13,7 +13,7 @@ export const Card2 = ({ cardText,para, imgUrl ,isClick}) => {
   };
   return (
     // make the container of the card to display 'flex or flex-wrap'
-    <div className={cardStyle.card}  style={{fontFamily:'Inter,sans-serif',fontWeight:450}}>
+    <div className={cardStyle.card}  style={{fontFamily:'Inter,sans-serif',fontWeight:600}}>
       <div className={cardStyle.infoContainer}>
         <h3 className={cardStyle.smallHeading}>{cardText}</h3>
         <p className={cardStyle.para}>{para}</p>

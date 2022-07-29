@@ -26,7 +26,7 @@ export const BasicCard4 = ({ cardText, isClick }) => {
         <h3
           className={cardStyle.smallHeading}
           onClick={handleClick}
-          style={{ fontWeight: 450 }}
+          style={{ fontWeight: 600 }}
         >
           {cardText}
         </h3>

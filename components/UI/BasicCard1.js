@@ -21,7 +21,7 @@ export const BasicCard1 = ({ cardText, isClick }) => {
           <ImCross className="mx-3 text-orange-700 text-xl" />
         )}
 
-        <h3 className={cardStyle.smallHeading}  style={{fontWeight:450}}>
+        <h3 className={cardStyle.smallHeading}  style={{fontWeight:600}}>
           {cardText}
         </h3>
       </div>

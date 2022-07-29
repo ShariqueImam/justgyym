@@ -24,11 +24,11 @@ export const BasicCard2 = ({ cardText, isClick, cardPara }) => {
         <div className="flex flex-col items-start">
           <h3
             className={cardStyle.smallHeading}
-            style={{ fontWeight: 450 }}
+            style={{ fontWeight: 600 }}
           >
             {cardText}
           </h3>
-          <p className="text-sm text-neutral-400" style={{ fontWeight: 350 }}>
+          <p className="text-sm text-neutral-400" style={{ fontWeight: 400 }}>
             {cardPara}
           </p>
         </div>

@@ -9,7 +9,7 @@ export const StartCard = ({ cardText, imgUrl , isClick }) => {
     };
   return (
     // make the container of the card to display 'flex or flex-wrap'
-    <div className={cardStyle.card}  style={{fontFamily:'Inter,sans-serif',fontWeight:450}} >
+    <div className={cardStyle.card}  style={{fontFamily:'Inter,sans-serif',fontWeight:600}} >
       <h3 className={cardStyle.smallHeading}>{cardText}</h3>
       <Image src={imgUrl} width={120} height={150} />
     </div>
