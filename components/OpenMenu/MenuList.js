@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
 const style = {
-  wrapper: "px-4 md:px-8 py-6",
-  list: "text-xl border-b-[1px] border-stone-600 my-3 py-2 cursor-pointer",
-  question:'bg-[#1e1e1e] px-2 py-2 text-[#8d8d8d]'
+  wrapper: "px-4 md:px-8 py-6 font-bold",
+  list: "text-xl border-b-[1px] border-stone-600 my-3 py-2 cursor-pointer font-bold",
+  question:'bg-[#1e1e1e] px-2 py-2 text-[#8d8d8d] font-bold'
 };
 const MenuList = (props) => {
   return (

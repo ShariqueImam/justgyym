@@ -57,7 +57,7 @@ const Height = (props) => {
               <h2 className="text-[#8d8d8d] flex-1">Units</h2>
               <div className="flex items-center justify-center">
                 <h2
-                  className={`text-[#ffffff]bg-[#212121] px-4 py-2 mx-1 border-[1px] border-transparent cursor-pointer hover:border-orange-600 font-bold ${
+                  className={`text-[#ffffff] bg-[#212121] px-4 py-2 mx-1 border-[1px] border-transparent cursor-pointer hover:border-orange-600 font-bold ${
                     Unit === "ft" && "border-orange-600"
                   }`}
                   onClick={() => handleUnit("ft")}
@@ -87,13 +87,13 @@ const Height = (props) => {
               style={{fontFamily:'Inter,sans-serif'}}
             />
             {click && Unit === "cm" && (
-              <p className={`${valid ? "hidden" : "flex"}  text-red-500`} style={{fontWeight:400}}>
+              <p className={`${valid ? "hidden" : "flex"}  text-red-500`} style={{fontWeight:500}}>
                 {" "}
                 Height should be between 100cm and 300cm
               </p>
             )}
             {click && Unit === "ft" && (
-              <p className={`${valid ? "hidden" : "flex"}  text-red-500`} style={{fontWeight:400}}>
+              <p className={`${valid ? "hidden" : "flex"}  text-red-500`} style={{fontWeight:500}}>
                 {" "}
                 Height should be between 3ft and 9ft
               </p>
