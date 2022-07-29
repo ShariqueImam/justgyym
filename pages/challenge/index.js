@@ -37,9 +37,9 @@ const Challenge = (props) => {
   return (
     <>
       <ProgressBar scrollLength={"88%"} val={21} link="/products" />
-      <div className="w-[95%] md:w-[41%] lg:w-[36%] mx-auto">
+      <div className="w-[95%] md:w-[41%] lg:w-[33%] mx-auto">
         <Animator>
-          <MainHeading text="In addition to your goal, what challenge would you like to join?" />
+          <h2 className="text-[#ffffff] text-3xl md:text-3xl lg:text-4xl my-8 font-bold leading-[30px] md:leading-[35px] lg:leading-[45px]">In addition to your goal, what challenge would you like to join?</h2>
           <div
             onClick={() => handleClick("1")}
             style={{ fontFamily: "Inter,sans-serif" }}
