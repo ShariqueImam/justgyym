@@ -13,7 +13,7 @@ const style = {
   right: "md:w-[45%]",
   tag: "flex flex-col flex-1 w-[95%] md:w-[80%]",
   heading:
-    "leading-[50px] md:leading-[60px] lg:leading-[60px] mx-3 font-extrabold text-4xl md:text-5xl lg:text-5xl w-[80%] md:w-[70%] my-4 md:my-12 tracking-wide",
+    "leading-[50px] md:leading-[60px] lg:leading-[60px] mx-3 font-extrabold text-4xl md:text-5xl lg:text-5xl w-[80%] md:w-[85%] my-4 md:my-12 tracking-wide",
   para: "text-sm mx-3",
   allow: "hidden md:flex flex-col ",
   allow1: "flex items-center my-4 w-[90%] md:w-[70%]",
