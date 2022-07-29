@@ -13,7 +13,7 @@ const style = {
   right: "md:w-[47%]",
   tag: "flex flex-col flex-1 mx-auto",
   heading:
-    " font-bold text-5xl md:text-4xl lg:text-4xl mx-auto md:mx-0 w-[80%] md:w-[70%] my-4 md:my-12 tracking-wide",
+    " font-bold text-5xl md:text-5xl lg:text-5xl mx-auto md:mx-0 w-[80%] md:w-[70%] my-4 md:my-12 tracking-wide",
   para: "text-sm text-center md:text-left",
   allow: "hidden md:flex flex-col ",
   allow1: "flex items-center my-4 w-[90%] md:w-[70%]",
