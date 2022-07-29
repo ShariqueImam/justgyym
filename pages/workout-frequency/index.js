@@ -74,7 +74,7 @@ const WorkoutFrequency = (props) => {
                     % of users*
                   </h2>
                 </div>
-                <p className="text-gray-100 text-sm my-2 " style={{fontWeight:250}}>
+                <p className="text-gray-100 text-sm my-2" style={{fontWeight:450}}>
                   It will be easier for you to maintain a workout plan.
                 </p>
               </div>
