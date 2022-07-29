@@ -2,7 +2,7 @@ import React from 'react'
 
 
 const style ={
-  mainHeading:'text-[#ffffff] text-3xl md:text-3xl lg:text-4xl my-8 font-bold',
+  mainHeading:'text-[#ffffff] text-3xl md:text-3xl lg:text-3xl my-8 font-bold',
   smallHeading:'text-[#ffffff] text-sm my-3',
 }
 
