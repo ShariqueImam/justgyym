@@ -34,9 +34,9 @@ const Food = ({ auto, valuess }) => {
     ${
       auto
         ? "bg-neutral-900 text-neutral-600"
-        : "hover:border-orange-[#ff4400]:bg-[#2a2a2a] font-semibold curs[#ff4400] bg-[#2a2a2a] font-semibold text-gray-200"
+        : "hover:border-orange-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold text-gray-200"
     } ${Click.includes("")} `,
-    heading: "text-3xl text-[#ffffff] my-8 font-bold",
+    heading: "text-3xl text-[#ffffff] my-8 font-bold flex-1",
   };
   return (
     <div className={style.wrapper}>
@@ -45,7 +45,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("1") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("1") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("1")}
         >
@@ -54,7 +57,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("2") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("2") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("2")}
         >
@@ -63,7 +69,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("3") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("3") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("3")}
         >
@@ -72,7 +81,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("4") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("4") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("4")}
         >
@@ -81,7 +93,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("5") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("5") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("5")}
         >
@@ -90,7 +105,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("6") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("6") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("6")}
         >
@@ -99,7 +117,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("7") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("7") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("7")}
         >
@@ -108,7 +129,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("8") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("8") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("8")}
         >
@@ -117,7 +141,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("9") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("9") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("9")}
         >
@@ -126,7 +153,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("10") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("10") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("10")}
         >
@@ -138,7 +168,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("11") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("11") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("11")}
         >
@@ -147,7 +180,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("12") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("12") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("12")}
         >
@@ -156,7 +192,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("13") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("13") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("13")}
         >
@@ -165,7 +204,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("14") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("14") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("14")}
         >
@@ -174,7 +216,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("15") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("15") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("15")}
         >
@@ -183,7 +228,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("16") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("16") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("16")}
         >
@@ -192,7 +240,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("17") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("17") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("17")}
         >
@@ -201,7 +252,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("18") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("18") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("18")}
         >
@@ -210,7 +264,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("19") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("19") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("19")}
         >
@@ -222,7 +279,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("20") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("20") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("20")}
         >
@@ -231,7 +291,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("21") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("21") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("21")}
         >
@@ -240,7 +303,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("22") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("22") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("22")}
         >
@@ -249,7 +315,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("23") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("23") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("23")}
         >
@@ -258,7 +327,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("24") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("24") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("24")}
         >
@@ -267,7 +339,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("25") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("25") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("25")}
         >
@@ -276,7 +351,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("26") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("26") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("26")}
         >
@@ -285,7 +363,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("27") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("27") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("27")}
         >
@@ -294,7 +375,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("28") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("28") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("28")}
         >
@@ -303,7 +387,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("29") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("29") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("29")}
         >
@@ -312,19 +399,28 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("100") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("100") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("100")}
         >
           Vegan protein powder
         </p>
       </div>
-      <h2 className={style.heading}>Meat & Fish (Optional)</h2>
+      <div className="flex items-center">
+        <h2 className={style.heading}>Meat & Fish </h2>
+        <p className="text-[#6a6a6a] ">Optional</p>
+      </div>
       <div className={style.container}>
         <p
           className={
             style.item +
-            `${Click.includes("30") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("30") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("30")}
         >
@@ -333,7 +429,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("31") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("31") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("31")}
         >
@@ -342,7 +441,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("32") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("32") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("32")}
         >
@@ -351,7 +453,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("33") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("33") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("33")}
         >
@@ -360,19 +465,28 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("34") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("34") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("34")}
         >
           Fish
         </p>
       </div>
-      <h2 className={style.heading}>Fruit & Berries (Optional)</h2>
+      <div className="flex items-center">
+        <h2 className={style.heading}>Fruit & Berries </h2>
+        <p className="text-[#6a6a6a] ">Optional</p>
+      </div>
       <div className={style.container}>
         <p
           className={
             style.item +
-            `${Click.includes("35") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("35") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("35")}
         >
@@ -381,7 +495,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("36") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("36") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("36")}
         >
@@ -390,7 +507,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("37") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("37") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("37")}
         >
@@ -399,7 +519,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("38") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("38") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("38")}
         >
@@ -408,7 +531,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("39") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("39") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("39")}
         >
@@ -417,7 +543,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("40") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("40") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("40")}
         >
@@ -426,7 +555,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("41") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("41") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("41")}
         >
@@ -435,7 +567,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("42") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("42") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("42")}
         >
@@ -444,7 +579,10 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("43") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("43") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("43")}
         >
@@ -453,20 +591,26 @@ const Food = ({ auto, valuess }) => {
         <p
           className={
             style.item +
-            `${Click.includes("45") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("45") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("45")}
         >
- Pomegranate
+          Pomegranate
         </p>
         <p
           className={
             style.item +
-            `${Click.includes("44") && "border-[#ff4400] bg-[#2a2a2a] font-semibold"}`
+            `${
+              Click.includes("44") &&
+              "border-[#ff4400] cursor-pointer hover:bg-neutral-700 bg-[#2a2a2a] font-semibold"
+            }`
           }
           onClick={() => handleClick("44")}
         >
-         Tropical fruits (pineapple, mango, papaya, pitahaya)
+          Tropical fruits (pineapple, mango, papaya, pitahaya)
         </p>
       </div>
     </div>
