@@ -16,7 +16,7 @@ const Products = (props) => {
   return (
     <>
       <ProgressBar scrollLength={"84%"} val={20} link="/meal-prep-time" />
-      <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto">
+      <div className="w-[95%] md:w-[34%] lg:w-[33%] mx-auto">
         <Animator>
           <MainHeading text="Let us create a meal plan based on your preferences" />
           <SmallHeading text="You can always adjust a meal plan later" />
@@ -25,8 +25,8 @@ const Products = (props) => {
             className="flex flex-col mx-auto my-12 border-b-[1px] border-t-[1px] border-stone-700 py-3 my-4"
           >
             <div className="flex items-center justify-between my-4">
-              <div className="text-2xl text-gray-100 tracking-wide">
-                LET MADMUSCLE CHOOSE
+              <div className="text-lg text-gray-100 font-bold">
+                Let JustGyym choose
               </div>
               <Switch
                 bigger
@@ -37,7 +37,7 @@ const Products = (props) => {
                 onClick={() => setChecked((prev) => !prev)}
               ></Switch>
             </div>
-            <p className="text-gray-200 text-xs">
+            <p className="text-gray-200 text-xs font-semibold">
               We create a balanced meal plan for you, which supplies you with
               the nutrients your body needs to work out effectively
             </p>
