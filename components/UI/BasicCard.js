@@ -4,7 +4,7 @@ import { ImCross } from "react-icons/im";
 export const BasicCard = ({ cardText, isClick }) => {
   const cardStyle = {
     card: `border-2 border-transparent ${
-      isClick ? "border-[#ff4400]" : ""
+      isClick ? "border-orange-600" : ""
     }  px-8 py-3 my-5 flex items-center justify-center bg-[#1E1E1E] hover:bg-[#292929] cursor-pointer transition duration-[10ms]`,
     smallHeading: "text-lg md:text-lg flex-1 text-[#ffffff] font-bold",
   };

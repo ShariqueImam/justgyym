@@ -1,10 +1,10 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 
 export const StartCard = ({ cardText, imgUrl , isClick }) => {
 
     const cardStyle = {
-      card: `${isClick ? ' border-[#ff4400]':''} px-8 py-3 my-5 flex items-center justify-center bg-[#1E1E1E] hover:bg-[#292929]cursor-pointer transition duration-[10ms] border-2 border-transparent`,
+      card: `${isClick ? ' border-orange-600':''} px-8 py-2 my-5 flex items-center justify-center bg-[#1E1E1E] hover:bg-[#292929] cursor-pointer transition duration-[10ms] border-2 border-transparent`,
       smallHeading: "text-2xl md:text-2xl flex-1 text-[#ffffff] font-bold",
     };
   return (
