@@ -36,7 +36,7 @@ const Summary = () => {
       <div className={style.container}>
         <p className="text-[#ffffff] text-lg md:text-xl font-bold">Current BMI</p>
         <h1 className="text-[#ffffff] text-lg md:text-3xl font-bold">{BMI} BMI</h1>
-        <div className="mt-8 md:mt-8 w-[85%] md:w-[90%] mx-auto flex items-center justify-center font-bold">
+        <div className="mt-8 md:mt-8 flex items-center justify-center font-bold">
           <Box sx={{ width: '100%' }}>
             <Slider
               aria-label="Fat"
