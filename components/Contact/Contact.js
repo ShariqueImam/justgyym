@@ -3,13 +3,13 @@ import ContactForm from "./ContactForm";
 import { NextSeo } from "next-seo";
 import { AiOutlineMail } from "react-icons/ai";
 const style = {
-  wrapper: "flex flex-col ",
+  wrapper: "flex flex-col w-[95%] md:w-[40%] mx-auto",
   contactContainer:
-    "px-3 md:px-5 py-5 md:py-6 w-[90%] md:w-[50%] lg:w-[40%] mx-auto my-16",
+    "px-3 md:px-5 py-5 md:py-6 my-16",
   smallHeading:
-    "border-b-2 border-stone-200 text-2xl md:text-3xl max-w-fit mx-auto py-2 text-[#ffffff] my-6 font-bold",
+    "border-stone-200 text-2xl md:text-3xl max-w-fit py-2 text-[#ffffff] my-6 font-bold",
   singleContactContainer:
-    "flex items-center text-[#ffffff] mx-auto justify-center",
+    "flex items-center text-[#ffffff]",
   para: "text-[#ffffff] text-sm md:text-sm my-2 md:my-4 hover:text-stone-900",
   contactContent: "text-center font-bold",
 };

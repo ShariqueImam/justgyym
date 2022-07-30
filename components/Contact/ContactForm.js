@@ -4,11 +4,11 @@ import axios from "axios";
 const style = {
   wrapper: "",
   smallHeading:
-    "font-bold border-b-2 border-stone-200 text-2xl md:text-3xl max-w-fit mx-auto py-2 text-gray-200 my-8 md:my-10",
+    "font-bold text-2xl md:text-3xl max-w-fit py-2 text-gray-200 my-8 md:my-10",
   formContainer: "flex flex-col",
   input:
-    "px-3  md:px-4 py-2 md:py-3 placeholder:text-gray-900 ring-none outline-none bg-[rgba(7,0,41,0.03)]  my-4 w-[90%] md:w-[85%] mx-auto border-2 border-stone-400 bg-stone-200",
-  btn: "bg-opacity-[0.8] hover:bg-opacity-[0.95] transition duration-[300ms] my-6 bg-orange-600 mx-auto px-8 md:px-12 py-2 md:py-3 text-gray-200 font-bold tracking-wide",
+    "bg-[#1e1e1e] px-3  md:px-4 py-2 md:py-3 placeholder:text-stone-500 ring-none outline-none bg-[rgba(7,0,41,0.03)]  my-4  border-2 border-stone-400 ",
+  btn: "bg-opacity-[0.8] hover:bg-opacity-[0.95] transition duration-[300ms] my-6 bg-[#ff4400] ml-auto px-8 md:px-12 py-2 md:py-3 text-[#ffffff] font-bold tracking-wide",
 };
 
 const ContactForm = () => {
@@ -92,7 +92,7 @@ const ContactForm = () => {
   return (
     <div
       className={style.wrapper}
-      style={{ fontFamily: "Poppins, sans-serif" }}
+      style={{ fontFamily: "Inter, sans-serif" }}
     >
       <h2 className={style.smallHeading}>Send Message</h2>
       <form
@@ -101,22 +101,36 @@ const ContactForm = () => {
         onSubmit={submitHandler}
         style={{ fontFamily: "Poppins, sans-serif" }}
       >
+        <label htmlFor="name" className="text-[#ffffff]">
+          Name
+        </label>
         <input
+          id="name"
           type="name"
           className={style.input}
           placeholder="Your Name here..."
           value={name}
           onChange={nameChangeHandler}
         />
+        <label htmlFor="email" className="text-[#ffffff]">
+          Email
+        </label>
+
         <input
           type="email"
+          id="email"
           className={style.input}
           placeholder="Your Email here... "
           value={email}
           onChange={emailChangeHandler}
         />
+        <label htmlFor="message" className="text-[#ffffff]">
+          Message
+        </label>
+
         <textarea
           rows="10"
+          id="message"
           col="20"
           className={style.input}
           placeholder="Your Message here... "
@@ -124,7 +138,7 @@ const ContactForm = () => {
           onChange={messageChangeHandler}
         ></textarea>
         <button className={style.btn} type="submit">
-          Send Message
+          Send
         </button>
       </form>
     </div>

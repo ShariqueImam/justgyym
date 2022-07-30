@@ -7,7 +7,7 @@ const Privacy = (props) => {
 
   return (
     <Animator>
-      <div className="w-[90%] md:w-[50%] mx-auto">
+      <div className="w-[90%] md:w-[44%] mx-auto">
         <MainHeading text={"Terms Of Service"} />
         <SmallHeading
           text={
