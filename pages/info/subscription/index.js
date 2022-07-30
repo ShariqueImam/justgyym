@@ -5,15 +5,17 @@ import Animator from "../../../components/UI/Animator";
 const style = {
   heading:
     "text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8 font-bold text-xl",
-  para: "text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8",
+  para: "text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8 font-semibold",
 };
 const Privacy = (props) => {
-  props.which('home1')
+  props.which("home1");
 
   return (
     <Animator>
       <div style={{ fontFamily: "Inter,sans-serif" }}>
-        <MainHeading text={"Subscription Terms"} />
+        <div className="flex items-center justify-center flex-col">
+          <MainHeading text={"Subscription Terms"} />
+        </div>
         <h1 className={style.heading}>Free trial</h1>
         <p className={style.para}>
           We may offer a free trial subscription for service. Unless you cancel

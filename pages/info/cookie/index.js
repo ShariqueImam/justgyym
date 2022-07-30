@@ -4,15 +4,17 @@ import Animator from "../../../components/UI/Animator";
 
 const style = {
   heading:
-    "text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8 font-bold text-xl",
-  para: "text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8",
+    "text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8  text-xl font-bold",
+  para: "text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8 font-semibold",
 };
 const Cookie = (props) => {
   props.which("home1");
   return (
     <Animator>
       <div style={{ fontFamily: "Inter,sans-serif" }}>
-        <MainHeading text={"Cookie Policy"} />
+        <div className="flex items-center justify-center">
+          <MainHeading text={"Cookie Policy"} />
+        </div>
         <p className={style.para}>
           This cookie policy explains how we use cookies and other similar
           technologies when you use our service, what tracking technologies are

@@ -5,7 +5,7 @@ import Animator from "../../../components/UI/Animator";
 const style = {
   heading:
     "text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8 font-bold text-xl",
-  para: "text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8",
+  para: "text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8 font-semibold",
 };
 const Privacy = (props) => {
   props.which('home1')
@@ -13,7 +13,9 @@ const Privacy = (props) => {
   return (
     <Animator>
       <div style={{ fontFamily: "Inter,sans-serif" }}>
+      <div className="flex items-center justify-center flex-col">
         <MainHeading text={"Refund Policy"} />
+      </div>
         <h1 className={style.heading}>1. MONEY-BACK GUARANTEE RULES</h1>
         <p className={style.para}>
           In addition to refund rights available under applicable laws, if you

@@ -4,7 +4,7 @@ import axios from "axios";
 const style = {
   wrapper: "",
   smallHeading:
-    "border-b-2 border-stone-200 text-2xl md:text-3xl max-w-fit mx-auto py-2 text-gray-200 my-8 md:my-10",
+    "font-bold border-b-2 border-stone-200 text-2xl md:text-3xl max-w-fit mx-auto py-2 text-gray-200 my-8 md:my-10",
   formContainer: "flex flex-col",
   input:
     "px-3  md:px-4 py-2 md:py-3 placeholder:text-gray-900 ring-none outline-none bg-[rgba(7,0,41,0.03)]  my-4 w-[90%] md:w-[85%] mx-auto border-2 border-stone-400 bg-stone-200",

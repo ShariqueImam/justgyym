@@ -7,11 +7,11 @@ const style = {
   contactContainer:
     "px-3 md:px-5 py-5 md:py-6 w-[90%] md:w-[50%] lg:w-[40%] mx-auto my-16",
   smallHeading:
-    "border-b-2 border-stone-200 text-2xl md:text-3xl max-w-fit mx-auto py-2 text-[#ffffff] my-6",
+    "border-b-2 border-stone-200 text-2xl md:text-3xl max-w-fit mx-auto py-2 text-[#ffffff] my-6 font-bold",
   singleContactContainer:
     "flex items-center text-[#ffffff] mx-auto justify-center",
   para: "text-[#ffffff] text-sm md:text-sm my-2 md:my-4 hover:text-stone-900",
-  contactContent: "text-center",
+  contactContent: "text-center font-bold",
 };
 const Contact = () => {
   return (
@@ -28,7 +28,7 @@ const Contact = () => {
         <div className={style.singleContactContainer}>
           <a href="mailto:webmaster@example.com" className="flex">
           <AiOutlineMail className="text-[#ffffff] text-2xl mx-3"/>
-            <h2 className={style.contactContent}>support@test.com</h2>
+            <h2 className={style.contactContent}>support@justgyym.com</h2>
           </a>
         </div>
         {/* contact form */}

@@ -30,7 +30,7 @@ const MenuList = (props) => {
         <p className={style.list}onClick={()=>props.menu()}>Contact Us</p>
       </Link>
       <Link href="">
-        <p className={style.question} style={{fontWeight:300}}>Any questions? We're here to help.</p>
+        <p className={style.question} style={{fontWeight:500}}>Any questions? We're here to help.</p>
       </Link>
 
       <a href="/" className="block underline my-4">support@test.com</a>

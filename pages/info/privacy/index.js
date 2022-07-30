@@ -3,15 +3,17 @@ import { MainHeading, SmallHeading } from "../../../components/UI/Heading";
 import Animator from "../../../components/UI/Animator";
 
 const Privacy = (props) => {
-  props.which('home1')
+  props.which("home1");
 
   return (
     <Animator>
-      <MainHeading text={"Privacy Policy"} />
-      <SmallHeading text={"IMPORTANT PRIVACY INFORMATION"} />
+      <div className="flex items-center justify-center flex-col">
+        <MainHeading text={"Privacy Policy"} />
+        <SmallHeading text={"IMPORTANT PRIVACY INFORMATION"} />
+      </div>
       <p
         style={{ fontFamily: "Inter,sans-serif" }}
-        className="text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8"
+        className="text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8 font-semibold"
       >
         In order to provide the service, we will ask you to enter your date of
         birth, gender, current weight and height, target weight, fitness level,
@@ -25,7 +27,7 @@ const Privacy = (props) => {
       </p>
       <p
         style={{ fontFamily: "Inter,sans-serif" }}
-        className="text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8"
+        className="text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8 font-semibold"
       >
         For improving our service and serving ads, we use third party solutions.
         As a result, we may process data using solutions developed by Amplitude,
@@ -42,7 +44,7 @@ const Privacy = (props) => {
       </p>
       <p
         style={{ fontFamily: "Inter,sans-serif" }}
-        className="text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8"
+        className="text-[#ffffff] w-[90%] md:w-[45%] lg:w-[40%] mx-auto my-8 font-semibold"
       >
         BY USING THE SERVICE, YOU PROMISE US THAT (I) YOU HAVE READ, UNDERSTAND
         AND AGREE TO THIS PRIVACY POLICY, AND (II) YOU ARE OVER 16 YEARS OF AGE
