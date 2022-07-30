@@ -6,7 +6,7 @@ import Animator from "../../components/UI/Animator";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 
 const style = {
-  wrapper: "flex flex-col md:flex-row h-[100vh]",
+  wrapper: "flex flex-col md:flex-row h-[100vh] overflow-y-hidden",
   left: "w-[100%] md:w-[50%] flex items-center justify-center",
   right:
     "w-[100%] md:w-[50%] bg-[#1e1e1e] h-[70vh] md:h-[100vh] text-[#ffffff] flex flex-col justify-center px-4 md:px-12",
@@ -21,7 +21,7 @@ const Attention = (props) => {
       {/* <Animator> */}
       <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
         <div className={style.left}>
-          <Image src={"/status.webp"} width={750} height={750} />
+          <Image src={"/status.webp"} width={750} height={740} />
         </div>
         <div className={style.right}>
           <div className="w-[95%] md:w-[85%]">
