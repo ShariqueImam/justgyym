@@ -23,7 +23,7 @@ const Review = () => {
         to achieve their dream physique
       </p>
       {/* adding the review */}
-      <div className="w-[95%] md:w-[60%] mx-auto flex font-bold">
+      <div className="w-[95%] md:w-[83%] mx-auto flex font-bold">
         <Swiper
           spaceBetween={10}
           onSlideChange={() => console.log("slide change")}

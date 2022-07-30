@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 const style = {
   wrapper:
-    "my-12 bg-[#1e1e1e] border-2 border-stone-400 px-12 md:px-24 py-6 md:py-16 flex flex-col md:flex-row w-[95%] md:w-[80%] lg:w-[60%] mx-auto items-center",
+    "my-12 bg-[#1e1e1e] border-2 border-stone-400 px-12 md:px-24 py-6 md:py-16 flex flex-col md:flex-row w-[95%] md:w-[80%] lg:w-[83%] mx-auto items-center",
   container: "flex flex-col my-6",
   heading: "text-[#ffffff] text-3xl md:text-4xl my-8 font-bold",
   para: "text-[#ffffff] mr-12 text-lg font-bold",
