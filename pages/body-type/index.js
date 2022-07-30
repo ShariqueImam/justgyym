@@ -20,7 +20,7 @@ const BodyType = (props) => {
   return (
     <>
       <ProgessBar scrollLength={"8%"} val={2} link="/target-body" />
-      <div className="w-[95%] md:w-[38%] lg:w-[36%] mx-auto">
+      <div className="w-[95%] md:w-[38%] lg:w-[36%] mx-auto" style={{fontFamily:'Inter,sans-serif'}}>
         <Animator>
           <div className="w-[95%] md:w-[80]">
             <MainHeading text={"Choose your body type"} />
@@ -53,9 +53,9 @@ const BodyType = (props) => {
               isClick={click === "endomorph" ? true : false}
             />
           </div>
-          <div className="rounded border-2 border-stone-700 mx-auto text-gray-200 px-6 py-8 ">
+          <div className="rounded border-2 border-stone-700 mx-auto text-[#ffffff] px-6 py-8 ">
             <div className="flex items-center">
-              <h2 className="text-2xl text-gray-100">
+              <h2 className="text-2xl text-[#ffffff] font-bold">
                 Test to determine your body type
               </h2>
               <Image
@@ -64,21 +64,21 @@ const BodyType = (props) => {
                 width={130}
               />
             </div>
-            <p className="text-stone-300 text-sm my-6">
+            <p className="text-[#d6d3d1]  text-sm my-6">
               Grip your opposite wrist using the thumb and an index finger. If
               you’re right-handed, use your right hand to grab your left wrist.
             </p>
             <p>Thumb and index finger:</p>
-            <p className="text-stone-300 my-1 ">
-              <span className="font-bold text-gray-50">Ectomorph — </span>{" "}
+            <p className="text-[#ffffff] my-1 ">
+              <span className="font-bold text-[#ffffff]">Ectomorph — </span>{" "}
               wrapping around with ease.
             </p>
-            <p className="text-stone-300 my-1 ">
-              <span className="font-bold text-gray-50">Mesomorph — </span>{" "}
+            <p className="text-[#d6d3d1] my-1 ">
+              <span className="font-bold text-[#ffffff]">Mesomorph — </span>{" "}
               touching each other.
             </p>
-            <p className="text-stone-300 my-1 ">
-              <span className="font-bold text-gray-50">Endomorph — </span>{" "}
+            <p className="text-[#d6d3d1] my-1 ">
+              <span className="font-bold text-[#ffffff]">Endomorph — </span>{" "}
               doesn’t come into contact.
             </p>
           </div>
