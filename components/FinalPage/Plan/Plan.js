@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import SinglePlanCard from "./SinglePlanCard";
+import S1 from "./S1";
 import { Button } from "../../UI/Button";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
@@ -64,16 +65,6 @@ const Plan = () => {
         <h2 className="text-xl text-[#ffffff] md:text-4xl font-bold">
           Choose the best plan for you
         </h2>
-        <div onClick={() => handleClick("3-MONTH PLAN", 49.99)}>
-          {/* <Link href={"/download"}> */}
-          <SinglePlanCard
-            text={"3-MONTH PLAN"}
-            total={49.99}
-            per={0.54}
-            isClick={isClick === "3" ? true : false}
-          />
-          {/* </Link> */}
-        </div>
         <div onClick={() => handleClick("6-MONTH PLAN", 59.99)}>
           {/* <Link href={"/download"}> */}
           <SinglePlanCard
@@ -82,6 +73,17 @@ const Plan = () => {
             per={0.33}
             isClick={isClick === "6" ? true : false}
           />
+          {/* </Link> */}
+        </div>
+        <div onClick={() => handleClick("3-MONTH PLAN", 49.99)} className="">
+          {/* <Link href={"/download"}> */}
+          <S1
+            text={"3-MONTH PLAN"}
+            total={49.99}
+            per={0.54}
+            isClick={isClick === "3" ? true : false}
+          />
+   
           {/* </Link> */}
         </div>
         <div onClick={() => handleClick("1-MONTH PLAN", 29.99)}>

@@ -16,28 +16,32 @@ function valuetext(value) {
   return `${value}°C`;
 }
 const Summary = () => {
-  const [Height, setHeight] = useState(1);
-  const [Weight, setWeight] = useState(1);
-  const [BMI, setBMI] = useState(0);
+  const [Height, setHeight] = useState(
+    Cookies.get("height") ? Cookies.get("height").replace("cm","") : 81
+  );
+  const [Weight, setWeight] = useState(Cookies.get("target-weight") || 102);
+  const [BMI, setBMI] = useState(40);
+  console.log(Height);
+  console.log(Weight);
   useEffect(() => {
-    setHeight(Cookies.get("height")||80);
-    setWeight(Cookies.get("target-weight")||100);
-  }, []);
-  useEffect(() => {
-    setBMI((+Weight / (0.01 * +Height * 0.01 * +Height)).toFixed(1));
+    let val = Height.replace("cm", "");
+    setBMI((+Weight / (0.01 * +val * 0.01 * +Height)).toFixed(1));
   }, [Height, Weight]);
 
   return (
-    <div
-      className={style.wrapper}
-      style={{ fontFamily: "Inter, sans-serif" }}
-    >
-      <h2 className="text-3xl md:text-5xl text-[#ffffff] font-bold">Personal summary based on your answers</h2>
+    <div className={style.wrapper} style={{ fontFamily: "Inter, sans-serif" }}>
+      <h2 className="text-3xl md:text-5xl text-[#ffffff] font-bold">
+        Personal summary based on your answers
+      </h2>
       <div className={style.container}>
-        <p className="text-[#ffffff] text-lg md:text-xl font-bold">Current BMI</p>
-        <h1 className="text-[#ffffff] text-lg md:text-3xl font-bold">{BMI} BMI</h1>
+        <p className="text-[#ffffff] text-lg md:text-xl font-bold">
+          Current BMI
+        </p>
+        <h1 className="text-[#ffffff] text-lg md:text-3xl font-bold">
+          {BMI} BMI
+        </h1>
         <div className="mt-8 md:mt-8 flex items-center justify-center font-bold">
-          <Box sx={{ width: '100%' }}>
+          <Box sx={{ width: "100%" }}>
             <Slider
               aria-label="Fat"
               defaultValue={
@@ -72,7 +76,9 @@ const Summary = () => {
           <div className="flex mb-6 font-bold">
             <h2 className="text-4xl md:text-5xl font-bold">🍔</h2>
             <div className="flex flex-col items-center justify-center mx-8 font-bold">
-              <h2 className="text-[#ffffff] text-lg font-bold">Daily calorie intake</h2>
+              <h2 className="text-[#ffffff] text-lg font-bold">
+                Daily calorie intake
+              </h2>
               <p className="text-[#ffffff] text-xl font-bold">2335 kcal</p>
             </div>
           </div>
@@ -88,7 +94,9 @@ const Summary = () => {
           <div className="flex mb-6 font-bold">
             <h2 className="text-4xl md:text-5xl">💧</h2>
             <div className="flex flex-col items-center justify-center mx-8 font-bold">
-              <h2 className="text-[#ffffff] text-lg font-bold">Daily Water intake</h2>
+              <h2 className="text-[#ffffff] text-lg font-bold">
+                Daily Water intake
+              </h2>
               <p className="text-[#ffffff] text-xl font-bold">1.7L</p>
             </div>
           </div>
