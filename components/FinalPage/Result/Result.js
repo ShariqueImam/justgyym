@@ -11,7 +11,7 @@ const style = {
   rightContainer:
     "w-[50%] flex flex-col justify-center items-center md:items-start px-4 md:px-12 py-7 font-bold",
 };
-const Result = ({fat}) => {
+const Result = ({ fat }) => {
   return (
     <div
       className={style.wrapper}
@@ -20,9 +20,9 @@ const Result = ({fat}) => {
       {/* img container */}
       <div className={style.imgContainer}>
         <Image src={"/final/d.webp"} width={120} height={270} />
-        <Image src={"/arr.png"} width={260} height={180} />
+        {/* <Image src={"/arr.png"} width={260} height={180} /> */}
 
-        {/* <MdDoubleArrow className="text-neutral-800 text-8xl md:text-9xl mx-1 md:mx-6 lg:mx-24 font-bold" /> */}
+        <MdDoubleArrow className="text-neutral-800 text-8xl scale-[2] md:text-9xl mx-1 md:mx-6 lg:mx-24 font-bold" />
         <Image src={"/final/s.webp"} width={120} height={270} />
       </div>
       {/* the buttons */}
@@ -34,10 +34,12 @@ const Result = ({fat}) => {
           6 Months
         </h2>
       </div>
-      <div className={style.container1} >
+      <div className={style.container1}>
         <div className={style.leftContainer}>
           <h2 className="text-gray-100 font-bold">Body Fat</h2>
-          <h3 className="text-orange-600 text-xl font-bold">{+fat+20}%-{+fat+20+5}%</h3>
+          <h3 className="text-orange-600 text-xl font-bold">
+            {+fat + 20}%-{+fat + 20 + 5}%
+          </h3>
           <h3 className="text-gray-200 text-sm my-3 font-bold">Body Muscles</h3>
           <div className="flex ">
             <p className="w-[3vw] md:w-[1.5vw] bg-[#ff4400] h-[0.5vh] mx-1"></p>
@@ -49,7 +51,9 @@ const Result = ({fat}) => {
         </div>
         <div className={style.rightContainer}>
           <h2 className="text-[#ffffff] text-xl font-bold">Body Fat</h2>
-          <h3 className="text-orange-600 text-xl font-bold">{+fat+20-20}%-{+fat+20-20+5}%</h3>
+          <h3 className="text-orange-600 text-xl font-bold">
+            {+fat + 20 - 20}%-{+fat + 20 - 20 + 5}%
+          </h3>
           <h3 className="text-gray-200 text-sm my-3 font-bold">Body Muscles</h3>
           <div className="flex ">
             <p className="w-[3vw] md:w-[1.5vw] bg-[#ff4400] h-[0.5vh] mx-1"></p>
@@ -60,7 +64,10 @@ const Result = ({fat}) => {
           </div>
         </div>
       </div>
-      <p className="text-xs text-center my-4 text-[#8d8d8d] font-normal" style={{fontWeight:300}}>
+      <p
+        className="text-xs text-center my-4 text-[#8d8d8d] font-normal"
+        style={{ fontWeight: 300 }}
+      >
         *The image is not intended to represent the user. Results vary per
         person and are not guaranteed.
       </p>
