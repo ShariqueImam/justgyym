@@ -16,14 +16,18 @@ const style = {
 
 const Height = (props) => {
   props.which("home1");
-  const [Unit, setUnit] = useState("ft");
+  const [Unit, setUnit] = useState("cm");
   const [height, setHeight] = useState("");
-  console.log(height[1])
   const [click, setClick] = useState(false);
-  const valid = Unit==='cm' ? /^[0-9]+$/.test(height[0]) && +height < 300 && +height > 100 : /^[0-9]+$/.test(height[0]) && +height[0] < 9 && +height[0] > 3 || /^[0-9]+$/.test(height[1]) && +height[1] < 9 && +height[1] > 3
+  const valid =
+    Unit === "cm"
+      ? /^[0-9]+$/.test(height[0]) && +height < 300 && +height > 100
+      : (/^[0-9]+$/.test(height[0]) && +height[0] < 9 && +height[0] > 3) ||
+        (/^[0-9]+$/.test(height[1]) && +height[1] < 9 && +height[1] > 3);
   const heightChangeHandler = (e) => {
+    console.log(e.target.value);
     // setHeight(e.target.value);
-    if (Unit == 'ft') {
+    if (Unit == "ft") {
       if (e.target.value.length < 9) {
         if (
           e.target.value.length < 9 &&
@@ -56,7 +60,16 @@ const Height = (props) => {
         }
       }
     } else {
-      setHeight(e.target.value);
+      if (e.target.value.length == 0) {
+        setHeight(e.target.value);
+      }
+      if (e.target.value.length == 1) {
+        setHeight(e.target.value + "cm");
+      }
+      if (e.target.value.length == 3) {
+        e.target.value = e.target.value.slice(0, -3);
+        setHeight(e.target.value + "cm");
+      }
     }
   };
 
@@ -76,7 +89,7 @@ const Height = (props) => {
         return value;
       }
     });
-    setHeight('')
+    setHeight("");
   };
   return (
     <>
