@@ -19,7 +19,7 @@ const Video = () => {
       className="flex items-center justify-center flex-col my-12"
       style={{ fontFamily: "Inter,sans-serif" }}
     >
-      <h2 className="text-[#ffffff] font-bold text-4xl text-4xl lg:text-5xl w-[90%] md:w-[50%] mx-auto">
+      <h2 className="text-[#ffffff] font-bold text-4xl text-4xl lg:text-5xl w-[90%] md:w-[55%] mx-auto">
         Start reaching your goals with our workouts
       </h2>
       <p className="text-[#ffffff] my-12 w-[90%] md:w-[50%] mx-auto text-sm font-bold">
