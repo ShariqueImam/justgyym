@@ -20,9 +20,9 @@ const Result = ({ fat }) => {
       {/* img container */}
       <div className={style.imgContainer}>
         <Image src={"/final/d.webp"} width={120} height={270} />
-        {/* <Image src={"/arr.png"} width={260} height={180} /> */}
+        <Image src={"/arr.png"} width={260} height={180} />
 
-        <MdDoubleArrow className="text-neutral-800 text-8xl scale-[2] md:text-9xl mx-1 md:mx-6 lg:mx-24 font-bold" />
+        {/* <MdDoubleArrow className="text-neutral-800 text-8xl scale-[2] md:text-9xl mx-1 md:mx-6 lg:mx-24 font-bold" /> */}
         <Image src={"/final/s.webp"} width={120} height={270} />
       </div>
       {/* the buttons */}
