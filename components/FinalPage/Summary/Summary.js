@@ -6,7 +6,7 @@ import Slider from "@mui/material/Slider";
 import { TbGlassFull } from "react-icons/tb";
 const style = {
   wrapper: "my-12 md:my-28 w-[95%] md:w-[55%] mx-auto font-bold",
-  container: "mx-auto mt-16 bg-[#2a2a2a] px-12 py-8   font-bold",
+  container: "mx-auto mt-16 bg-[#2a2a2a] px-5 md:px-12 py-8   font-bold",
   container1:
     "mx-auto my-1 py-3 flex flex-col md:flex-row items-center justify-center font-bold",
   side: "bg-[#2a2a2a] mx-2 px-4  flex flex-col py-6 w-[100%] my-3 font-bold",
@@ -53,7 +53,7 @@ const Summary = () => {
             />
           </Box>
         </div>
-        <div className="w-[85%] md:w-[90%] mx-auto flex items-center justify-between font-bold">
+        <div className="flex items-center justify-between font-bold">
           <h2 className="text-[#ffffff] font-bold">Underwight</h2>
           <h2 className="text-[#ffffff] font-bold">Obese</h2>
         </div>
