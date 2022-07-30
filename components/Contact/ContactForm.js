@@ -8,7 +8,7 @@ const style = {
   formContainer: "flex flex-col",
   input:
     "bg-[#1e1e1e] px-3  md:px-4 py-2 md:py-3 placeholder:text-stone-500 ring-none outline-none bg-[rgba(7,0,41,0.03)]  my-4  border-2 border-stone-400 ",
-  btn: "bg-opacity-[0.8] hover:bg-opacity-[0.95] transition duration-[300ms] my-6 bg-[#ff4400] ml-auto px-8 md:px-12 py-2 md:py-3 text-[#ffffff] font-bold tracking-wide",
+  btn: "transition duration-[300ms] my-6 bg-[#ff4400] hover:bg-orange-500  ml-auto px-8 md:px-12 py-2 md:py-3 text-[#ffffff] font-bold tracking-wide",
 };
 
 const ContactForm = () => {
