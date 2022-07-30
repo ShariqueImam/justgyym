@@ -20,8 +20,8 @@ const Summary = () => {
   const [Weight, setWeight] = useState(1);
   const [BMI, setBMI] = useState(0);
   useEffect(() => {
-    setHeight(Cookies.get("height"));
-    setWeight(Cookies.get("target-weight"));
+    setHeight(Cookies.get("height")||80);
+    setWeight(Cookies.get("target-weight")||100);
   }, []);
   useEffect(() => {
     setBMI((+Weight / (0.01 * +Height * 0.01 * +Height)).toFixed(1));

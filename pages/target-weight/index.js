@@ -140,7 +140,7 @@ const TargetWeight = (props) => {
                     Great!
                   </h2>
                 </div>
-                <p className="text-[#ffffff] text-sm my-2 font-thin">
+                <p className="text-[#ffffff] text-sm my-2 font-semibold">
                   We’re glad to see you’re already at your ideal weight.
                   MadMuscles can help to have a better quality of your body
                 </p>
