@@ -16,7 +16,9 @@ const BodyType = (props) => {
     });
   };
   props.which("home1");
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <ProgessBar scrollLength={"8%"} val={2} link="/target-body" />

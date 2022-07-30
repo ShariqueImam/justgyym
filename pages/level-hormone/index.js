@@ -9,7 +9,9 @@ import ProgressBar from "../../components/ProgressBar/ProgressBar";
 
 const LevelHormone = (props) => {
   props.which("home1");
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="w-[95%] md:w-[37%] lg:w-[35%] mx-auto">

@@ -30,6 +30,9 @@ const Email = (props) => {
   const emailChangeHandler = (e) => {
     setEmail(e.target.value);
   };
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
   const handleClick = () => {
     const sendData = async () => {

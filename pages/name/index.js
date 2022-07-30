@@ -24,7 +24,9 @@ const Name = (props) => {
     setName("");
   };
   props.which('home1')
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       {/* <ProgressBar scrollLength={"92%"} val={23} /> */}

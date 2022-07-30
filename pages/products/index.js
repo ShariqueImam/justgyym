@@ -12,7 +12,9 @@ const Products = (props) => {
   const [checked, setChecked] = useState(false);
   const [Click, setClick] = useState([]);
   props.which('home1')
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <ProgressBar scrollLength={"84%"} val={20} link="/meal-prep-time" />

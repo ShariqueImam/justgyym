@@ -6,7 +6,9 @@ import Cookies from "js-cookie";
 import { AiOutlineMail } from "react-icons/ai";
 const index = (props) => {
   props.which("home1");
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Animator>
       {/* <a href={`${props.data[0].FileURL}?dl=latexhseet-a4.pdf`} className="text-gray-100">Download Me</a> */}

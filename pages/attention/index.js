@@ -13,7 +13,9 @@ const style = {
 };
 const Attention = (props) => {
   props.which("home2");
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       {/* <Animator> */}

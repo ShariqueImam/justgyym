@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { MainHeading } from "../../components/UI/Heading";
 import { BasicCard } from "../../components/UI/BasicCard";
 import { BasicCard4 } from "../../components/UI/BasicCard4";
@@ -34,7 +34,9 @@ const Workouts = (props) => {
       }
     }
   };
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <ProgressBar scrollLength={"32%"} val={9} link="/loh" />

@@ -19,6 +19,9 @@ const Height = (props) => {
   const [Unit, setUnit] = useState("cm");
   const [height, setHeight] = useState("");
   const [click, setClick] = useState(false);
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const valid =
     Unit === "cm"
       ? /^[0-9]+$/.test(height[0]) && +height < 300 && +height > 100

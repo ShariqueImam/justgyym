@@ -13,6 +13,9 @@ const style = {
 const GiveUp = (props) => {
   props.which("home2");
   const { width } = useWindowSize();
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       {/* <Animator> */}

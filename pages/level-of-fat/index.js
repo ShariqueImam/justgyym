@@ -24,6 +24,9 @@ const LevelOfFat = (props) => {
   };
   props.which("home");
   const { width } = useWindowSize();
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <ProgressBar scrollLength={"12%"} val={3} link="/body-type" />

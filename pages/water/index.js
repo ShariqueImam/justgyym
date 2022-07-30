@@ -23,7 +23,9 @@ const Water = (props) => {
     setShow(true);
   };
   props.which('home1')
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <ProgressBar scrollLength={"76%"} val={18} link="/level-hormone" />

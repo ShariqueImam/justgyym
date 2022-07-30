@@ -15,6 +15,7 @@ const style = {
   text: "text-gray-200 mt-3",
   imgContainer: "flex items-center justify-center my-5",
 };
+
 const index = (props) => {
   const router = useRouter();
   const [img, setImg] = useState(1);
@@ -22,7 +23,9 @@ const index = (props) => {
     setImg((prev) => prev + 1);
   };
   props.which('home1')
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     setTimeout(() => {
       img > 5 && router.push("/workouts");

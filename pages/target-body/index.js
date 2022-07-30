@@ -16,7 +16,9 @@ const TargetBody = (props) => {
     setHandle(Cookies.get("goal"));
   }, []);
   props.which("home1");
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <ProgressBar scrollLength={"4%"} val={1} link="/" />

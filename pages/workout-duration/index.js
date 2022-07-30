@@ -15,7 +15,9 @@ const WorkoutDuration = (props) => {
     });
   };
   props.which("home1");
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <ProgressBar scrollLength={"68%"} val={17} link="/workout-frequency" />

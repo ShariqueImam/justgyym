@@ -13,6 +13,9 @@ const style = {
 
 const DOB = (props) => {
   const [dob, setDob] = useState(Cookies.get("dob") ? Cookies.get("dob") : "");
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const dobChangeHandler = (e) => {
     if (
       e.target.value.length < 11 &&

@@ -19,9 +19,9 @@ export const BasicCard = ({ cardText, isClick }) => {
       {/* cardText !== "None of the above" &&  */}
       {/* above for the img to be changed */}
       {isClick ? (
-        <Image src={"/c.png"} height={20} width={22} />
+        <Image src={"/t.png"} height={20} width={22} />
       ) : (
-        <Image src={"/a.png"} height={20} width={25} />
+        <Image src={"/n.png"} height={20} width={22} />
       )}
       <div className="flex-1 flex items-center justify-center mx-4">
         {cardText == "None of the above" && (

@@ -18,7 +18,9 @@ const ProblemArea = (props) => {
     }
   };
   props.which('home1')
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <ProgressBar  scrollLength={"12%"} val={4} link="/level-of-fat" />

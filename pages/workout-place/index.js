@@ -16,7 +16,9 @@ const WorkoutPlace = (props) => {
     });
   };
   props.which('home1')
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <ProgressBar scrollLength={"60%"} val={14} link="/pull-ups" />

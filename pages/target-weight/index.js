@@ -25,7 +25,9 @@ const TargetWeight = (props) => {
     setCurrent(e.target.value);
   };
   props.which('home1')
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const valid1 = /^[0-9]+$/.test(target) && +target < 200 ;
   const valid2 = /^[0-9]+$/.test(current) && +current < 200;
   const handleClick = () => {

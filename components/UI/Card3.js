@@ -15,9 +15,9 @@ export const Card3 = ({ cardText, imgUrl, isClick }) => {
       style={{ fontFamily: "Inter,sans-serif", fontWeight: 600 }}
     >
       {isClick ? (
-        <Image src={"/c.png"} height={20} width={22} />
+        <Image src={"/t.png"} height={20} width={22} />
       ) : (
-        <Image src={"/a.png"} height={20} width={25} />
+        <Image src={"/n.png"} height={20} width={22} />
       )}
 
       <h3 className={cardStyle.smallHeading}>{cardText}</h3>

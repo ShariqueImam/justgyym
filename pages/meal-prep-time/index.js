@@ -15,7 +15,9 @@ const Time = (props) => {
     });
   };
   props.which('home1')
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <ProgressBar scrollLength={"80%"} val={19} link="/water" />

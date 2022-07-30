@@ -33,7 +33,9 @@ const Challenge = (props) => {
     }
   };
   props.which("home1");
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <ProgressBar scrollLength={"88%"} val={21} link="/products" />

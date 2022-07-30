@@ -6,6 +6,9 @@ const App = (props) => {
     props.setData({ types: "goal", value: value });
   };
   props.which("home");
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Animator className="overflow-x-hidden">
       <div className="">

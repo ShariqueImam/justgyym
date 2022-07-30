@@ -4,7 +4,9 @@ import Animator from "../../../components/UI/Animator";
 
 const Privacy = (props) => {
   props.which("home1");
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Animator>
       <div className="w-[90%] md:w-[44%] mx-auto">

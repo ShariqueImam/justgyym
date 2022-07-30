@@ -13,7 +13,9 @@ const index = (props) => {
   const [Show1, setShow1] = useState(false);
   const [Show2, setShow2] = useState(false);
   props.which("home1");
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const router = useRouter();
   const handleEnd = () => {

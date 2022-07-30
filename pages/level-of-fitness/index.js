@@ -45,12 +45,14 @@ function valuetext(value) {
   return `${value}°C`;
 }
 const LevelOfFitnes = (props) => {
-  const [value, setValue] = useState(1);
+  const [value, setValue] = useState(5);
   const handleChange = (e, event, h) => {
     setValue(event);
   };
   props.which("home1");
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const content = fitness[value - 1];
   return (
     <>

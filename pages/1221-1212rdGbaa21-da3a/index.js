@@ -4,11 +4,13 @@ import Animator from "../../components/UI/Animator";
 import Cookies from "js-cookie";
 
 const index = (props) => {
-  const [Val, setVal] = useState(Cookies.get("target-body")||'slim');
+  const [Val, setVal] = useState(Cookies.get("target-body") || "slim");
   const [Code, setCode] = useState(-1);
   const [Got, setGot] = useState(false);
   props.which("home1");
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   if (Val === "slim" && Got == false) {
     setCode(0);
     setGot(true);
@@ -58,7 +60,10 @@ const index = (props) => {
           <h2 className="text-gray-50 text-lg text-center">
             Download You Plan after the payment.
           </h2>
-          <button disabled className="cursor-not-allowed bg-orange-900 text-gray-50 px-6 md:px-8 py-3 md:py-4 max-w-fit mx-auto my-12 tracking-wide">
+          <button
+            disabled
+            className="cursor-not-allowed bg-orange-900 text-gray-50 px-6 md:px-8 py-3 md:py-4 max-w-fit mx-auto my-12 tracking-wide"
+          >
             Download Plan
           </button>
         </div>

@@ -22,7 +22,9 @@ const WorkoutFrequency = (props) => {
     setShow(false);
   };
   props.which('home1')
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <ProgressBar scrollLength={"64%"} val={16} link="/workout-place" />

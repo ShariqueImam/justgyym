@@ -34,6 +34,9 @@ const AdditionalGoals = (props) => {
       }
     }
   };
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <ProgressBar scrollLength={"44%"} val={11} link="/give-up" />

@@ -15,7 +15,9 @@ const Pushups = (props) => {
     });
   };
   props.which("home1");
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <ProgressBar scrollLength={"52%"} val={12} link="/attention" />

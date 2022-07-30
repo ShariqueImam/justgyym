@@ -19,7 +19,7 @@ const SingleFeature = ({ Icon, heading, text }) => {
 export const SingleFeature1 = ({ Icon, heading, text }) => {
   return (
     <div className={style.wrapper1} style={{fontFamily:'Inter,sans-serif'}}>
-            <h2 className=" font-bold text-3xl p-3 bg-[#292929] flex items-center justify-center  border-[1px] border-stone-500">{Icon}</h2>
+            <h2 className=" font-bold text-3xl p-3 bg-transparent flex items-center justify-center  border-[1px] border-stone-500">{Icon}</h2>
       {/* <Icon className="text-5xl text-orange-600 border-2 border-stone-500 p-3"/> */}
       <div className="ffont-bold flex-1 mx-5">
         <p className="font-boldv text-[#dadada] font-bold">{heading}</p>
