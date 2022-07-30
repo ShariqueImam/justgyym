@@ -56,7 +56,7 @@ const Plan = () => {
     }
   };
   return (
-    <div className={style.wrapper}>
+    <div className={style.wrapper} style={{fontFamily:'Inter,sans-serif'}}>
       <div className={style.left}>
         <Image src={"/final/a.webp"} height={500} width={200} />
       </div>
