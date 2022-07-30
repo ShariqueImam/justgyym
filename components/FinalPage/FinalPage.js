@@ -15,7 +15,7 @@ const style = {
 const FinalPage = () => {
   const [fat, setFat] = useState(25);
   useEffect(() => {
-    setFat(Cookies.get("level-of-fat"));
+    setFat(Cookies.get("level-of-fat")||25);
   }, []);
 
   return (
