@@ -1,7 +1,6 @@
-import React from "react";
+import React , {useState,useEffect} from "react";
 import Image from "next/image";
-import { MdDoubleArrow } from "react-icons/md";
-
+import Cookies from "js-cookie";
 const style = {
   wrapper: "w-[90%] md:w-[50%] lg:w-[45%] mx-auto font-bold",
   imgContainer: "flex items-center justify-center font-bold",
@@ -12,6 +11,9 @@ const style = {
     "w-[50%] flex flex-col justify-center items-center md:items-start px-4 md:px-12 py-7 font-bold",
 };
 const Result = ({ fat }) => {
+const [Type, setType] = useState(Cookies.get('body-type')|| 'ectomorph');
+const [Target, setTarget] = useState(Cookies.get('target-body')|| 'beachbody');
+
   return (
     <div
       className={style.wrapper}
@@ -19,11 +21,10 @@ const Result = ({ fat }) => {
     >
       {/* img container */}
       <div className={style.imgContainer}>
-        <Image src={"/final/d.webp"} width={120} height={270} />
+        <Image src={`${Type=='ectomorph' ? '/type/3.png':Type=='mesomorph'?'/type/2.png':'/type/1.png'}`} width={150} height={260} />
         <Image src={"/arr.png"} width={260} height={180} />
-
         {/* <MdDoubleArrow className="text-neutral-800 text-8xl scale-[2] md:text-9xl mx-1 md:mx-6 lg:mx-24 font-bold" /> */}
-        <Image src={"/final/s.webp"} width={120} height={270} />
+        <Image src={`${Target=='slim'?'/SLIM_BODY.webp' :Target=='slimshredded'?'/SLIM_SHREDDED_BODY.webp':Target=='athlete'?'/ATHLETE.webp':Target=='hero'?'/HERO.webp':Target=='bodybuilder'?'/BODYBUILDER.webp':Target=='beachbody'?'/BEACH_BODY.webp':Target=='workoutbody'?'/WORKOUT_BODY.webp':'/CROSS_FIT_BODY.webp'}`} width={160} height={260} />
       </div>
       {/* the buttons */}
       <div className={style.container1}>

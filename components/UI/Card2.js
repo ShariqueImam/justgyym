@@ -8,7 +8,7 @@ export const Card2 = ({ cardText,para, imgUrl ,isClick}) => {
       isClick ? "border-orange-600" : ""
     } mx-auto  px-6  my-5 flex items-center justify-center bg-[#1E1E1E] hover:bg-[#292929] cursor-pointer transition duration-[10ms]  border-2 border-transparent`,
     smallHeading: "text-2xl md:text-2xl flex-1 text-[#ffffff] font-extrabold py-3",
-    infoContainer:'flex flex-col ',
+    infoContainer:'flex flex-col mr-3',
     para:'text-[#dadada] text-sm my-4 font-semibold'
   };
   return (

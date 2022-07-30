@@ -17,19 +17,19 @@ const style = {
 const Height = (props) => {
   props.which("home1");
   const [Unit, setUnit] = useState("cm");
-  const [height, setHeight] = useState("");
+  let [height, setHeight] = useState("");
   const [click, setClick] = useState(false);
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+let val = height.replace('cm','')
   const valid =
     Unit === "cm"
-      ? /^[0-9]+$/.test(height[0]) && +height < 300 && +height > 100
+      ? /^[0-9]+$/.test(val) && +val < 300 && +val > 100
       : (/^[0-9]+$/.test(height[0]) && +height[0] < 9 && +height[0] > 3) ||
         (/^[0-9]+$/.test(height[1]) && +height[1] < 9 && +height[1] > 3);
   const heightChangeHandler = (e) => {
-    console.log(e.target.value);
-    // setHeight(e.target.value);
     if (Unit == "ft") {
       if (e.target.value.length < 9) {
         if (
@@ -63,19 +63,16 @@ const Height = (props) => {
         }
       }
     } else {
-      if (e.target.value.length == 0) {
-        setHeight(e.target.value);
-      }
-      if (e.target.value.length == 1) {
-        setHeight(e.target.value + "cm");
-      }
-      if (e.target.value.length == 3) {
-        e.target.value = e.target.value.slice(0, -3);
-        setHeight(e.target.value + "cm");
+      console.log(e.target.value)
+      if (e.target.value.length >= 3) {
+        e.target.value = e.target.value.replace('c','')
+        e.target.value = e.target.value.replace('m','')
+        setHeight(`${e.target.value}cm`);
+      }else{
+        setHeight(`${e.target.value}cm`)
       }
     }
   };
-
   const handleClick = () => {
     if (Unit === "cm") {
       Cookies.set("height", height);

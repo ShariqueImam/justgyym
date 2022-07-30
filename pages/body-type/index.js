@@ -35,7 +35,7 @@ const BodyType = (props) => {
             <Card2
               cardText={"Ectomorph"}
               para="Little body fat and muscle. Have a hard time gaining weight."
-              imgUrl="/1.webp"
+              imgUrl="/type/3.png"
               isClick={click === "ectomorph" ? true : false}
             />
           </div>
@@ -43,7 +43,7 @@ const BodyType = (props) => {
             <Card2
               cardText={"Mesomorph"}
               para="Little body fat and muscle. Have a hard time gaining weight."
-              imgUrl="/1.webp"
+              imgUrl="/type/2.png"
               isClick={click === "mesomorph" ? true : false}
             />
           </div>
@@ -51,7 +51,7 @@ const BodyType = (props) => {
             <Card2
               cardText={"Endomorph"}
               para="Little body fat and muscle. Have a hard time gaining weight."
-              imgUrl="/1.webp"
+              imgUrl="/type/1.png"
               isClick={click === "endomorph" ? true : false}
             />
           </div>
