@@ -1,8 +1,8 @@
 import React from "react";
 
 const style = {
-  wrapper: " flex items-center justify-center bg-[#1e1e1e] w-[100%] md:w-[45%] px-4 py-3 my-2",
-  wrapper1: " flex items-center justify-center bg-[#1e1e1e] w-[100%] md:w-[100%] px-4 py-3 my-2 md:mr-9 lg:mr-12",
+  wrapper: " flex items-center justify-center bg-[#1e1e1e] w-[100%] md:w-[45%] px-4 py-3 my-0",
+  wrapper1: " flex items-center justify-center bg-[#1e1e1e] w-[100%] md:w-[100%] px-4 py-3 my-0 md:mr-9 lg:mr-12",
 };
 const SingleFeature = ({ Icon, heading, text }) => {
   return (

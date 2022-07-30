@@ -13,7 +13,7 @@ const style = {
   wrapper: "",
 };
 const FinalPage = () => {
-  const [fat, setFat] = useState("25");
+  const [fat, setFat] = useState(25);
   useEffect(() => {
     setFat(Cookies.get("level-of-fat"));
   }, []);
