@@ -14,8 +14,8 @@ const style = {
 };
 const Get = () => {
   return (
-    <div className={style.wrapper} style={{ fontFamily: "Poppins,sans-serif" }}>
-      <h2 className="text-3xl md:text-5xl text-[#ffffff] font-bold text-center font-bold">What you get:</h2>
+    <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
+      <h2 className="text-3xl md:text-6xl text-[#ffffff] font-bold text-center font-bold">What you get:</h2>
       <div className={style.container}> 
         <div className={style.left}>
           <div className={style.singleGet}>
