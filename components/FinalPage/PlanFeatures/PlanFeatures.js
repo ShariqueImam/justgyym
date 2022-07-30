@@ -17,13 +17,12 @@ const PlanFeatures = () => {
 
   useEffect(() => {
     setGoal(Cookies.get("goal"));
-    setPlace(Cookies.get("workout-place") || 'home');
+    setPlace(Cookies.get("workout-place") || 'Home');
     setDuration(Cookies.get("workout-duration")|| 'One hour');
   }, []);
 
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
-     
       <h2 className="text-3xl md:text-5xl text-[#ffffff] font-bold my-8"> Shredded Plan for <span className="text-[#ff4400]">${Name}</span> is ready!</h2>
       <div className={style.container}>
         <SingleFeature Icon={'🎯'} heading={"Goal"} text={`${Goal}`} />
