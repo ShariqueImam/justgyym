@@ -23,7 +23,7 @@ const Height = (props) => {
     window.scrollTo(0, 0);
   }, []);
 
-let val = height.replace('cm','')
+  let val = height.replace("cm", "");
   const valid =
     Unit === "cm"
       ? /^[0-9]+$/.test(val) && +val < 300 && +val > 100
@@ -63,14 +63,16 @@ let val = height.replace('cm','')
         }
       }
     } else {
-      console.log(e.target.value)
-      if (e.target.value.length >= 3) {
-        e.target.value = e.target.value.replace('c','')
-        e.target.value = e.target.value.replace('m','')
-        setHeight(`${e.target.value}cm`);
-      }else{
-        setHeight(`${e.target.value}cm`)
-      }
+      // if (e.target.value.length >= 3) {
+      //   e.target.value = e.target.value.replace('c','')
+      //   e.target.value = e.target.value.replace('m','')
+      //   setHeight(`${e.target.value}cm`);
+      // }else{
+      //   setHeight(`${e.target.value}cm`)
+      // }
+      let val = e.target.value.replace("c", "");
+      val = val.replace("m", "");
+      setHeight(val);
     }
   };
   const handleClick = () => {
@@ -136,7 +138,7 @@ let val = height.replace('cm','')
               type="text"
               placeholder={`${Unit === "cm" ? "__cm" : "__ft"}`}
               className={style.input}
-              value={`${height}`}
+              value={`${height}cm`}
               onChange={heightChangeHandler}
               style={{ fontFamily: "Inter,sans-serif" }}
             />
