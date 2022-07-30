@@ -15,8 +15,10 @@ const style = {
 const Get = () => {
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
-      <h2 className="text-3xl md:text-6xl text-[#ffffff] font-bold text-center font-bold">What you get:</h2>
-      <div className={style.container}> 
+      <h2 className="text-3xl md:text-6xl text-[#ffffff] font-bold text-center font-bold">
+        What you get:
+      </h2>
+      <div className={style.container}>
         <div className={style.left}>
           <div className={style.singleGet}>
             <GiMuscleUp className="text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full" />
@@ -39,7 +41,7 @@ const Get = () => {
         </div>
         {/* adding the phone */}
         <div className={style.right}>
-          <Image src={'/final/2.webp'} width={300} height={700}/>
+          <Image src={"/edited.png"} width={230} height={550} />
         </div>
       </div>
     </div>
