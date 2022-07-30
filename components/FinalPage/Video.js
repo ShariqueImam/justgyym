@@ -4,8 +4,8 @@ import useWindowSize from "../hooks/windowSize";
 const Video = () => {
   const { width } = useWindowSize();
   const opts = {
-    height: `${width < 700 ? 390 :500}`,
-    width: `${width < 700 ? 430 :690}`,
+    height: `${width < 700 ? 390 : width > 1500 ? 800 : 500}`,
+    width: `${width < 700 ? 430 : width > 1500 ? 1000 : 690}`,
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
@@ -26,11 +26,7 @@ const Video = () => {
         Try exercises designed to help you build your dream body. Each workout
         combines different training according to your level and problem areas.
       </p>
-      <YouTube
-        videoId={"sM7tdlFGpUA"}
-        opts={opts}
-        onReady={handleReady}
-      />
+      <YouTube videoId={"sM7tdlFGpUA"} opts={opts} onReady={handleReady} />
     </div>
   );
 };
