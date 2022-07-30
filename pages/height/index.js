@@ -17,7 +17,7 @@ const style = {
 const Height = (props) => {
   props.which("home1");
   const [Unit, setUnit] = useState("cm");
-  let [height, setHeight] = useState("");
+  const [height, setHeight] = useState("");
   const [click, setClick] = useState(false);
   React.useEffect(() => {
     window.scrollTo(0, 0);

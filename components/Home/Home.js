@@ -64,9 +64,9 @@ const Home = (props) => {
           <div className={style.allow1}>
             <div onClick={handle1}>
               {checked1 ? (
-                <Image src={"/c.png"} height={23} width={28} />
+                <Image src={"/type/tt.png"} height={23} width={28} />
               ) : (
-                <Image src={"/a.png"} height={23} width={28} />
+                <Image src={"/type/nn.png"} height={23} width={28} />
               )}
             </div>
             <div onClick={handle1} className="mx-4 text-xs md:text-xs">
@@ -105,9 +105,9 @@ const Home = (props) => {
           <div className={style.allow1}>
             <div onClick={handle2}>
               {checked2 ? (
-                <Image src={"/c.png"} height={23} width={28} />
+                <Image src={"/type/tt.png"} height={23} width={28} />
               ) : (
-                <Image src={"/a.png"} height={23} width={28} />
+                <Image src={"/type/nn.png"} height={23} width={28} />
               )}
             </div>
             <div onClick={handle2} className="mx-4 text-xs md:text-xs">
@@ -144,13 +144,13 @@ const Home = (props) => {
           <div onClick={handle1}>
             {checked1 ? (
               <Image
-                src={"/c.png"}
+                src={"/type/tt.png"}
                 height={width < 700 ? 45 : 23}
                 width={width < 700 ? 45 : 28}
               />
             ) : (
               <Image
-                src={"/a.png"}
+                src={"/type/nn.png"}
                 height={width < 700 ? 45 : 23}
                 width={width < 700 ? 45 : 28}
               />
@@ -193,13 +193,13 @@ const Home = (props) => {
           <div onClick={handle2}>
             {checked2 ? (
               <Image
-                src={"/c.png"}
+                src={"/type/tt.png"}
                 height={width < 700 ? 45 : 23}
                 width={width < 700 ? 45 : 28}
               />
             ) : (
               <Image
-                src={"/a.png"}
+                src={"/type/nn.png"}
                 height={width < 700 ? 45 : 23}
                 width={width < 700 ? 45 : 28}
               />
