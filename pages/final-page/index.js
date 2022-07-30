@@ -24,11 +24,11 @@ const index = (props) => {
       >
         <a
           href="/"
-          className="block underline text-[#ffffff] py-3 text-sm md:text-xl mx-8 md:mx-16 mb-10 flex items-center justify-center"
-          style={{fontWeight:500}}
+          className=" block underline text-[#ffffff] py-3 text-sm md:text-xl mx-8 md:mx-16 mb-10 flex items-center justify-center"
+          style={{fontWeight:400}}
         >
-          <AiOutlineMail className="text-[#ffffff] mx-4"/>
-          support@test.com
+          <AiOutlineMail className="text-[#ffffff] mx-4 "/>
+          support@justgyym.com
         </a>
       </div>
     </Animator>
