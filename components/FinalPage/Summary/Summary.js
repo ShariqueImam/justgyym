@@ -8,7 +8,7 @@ const style = {
   wrapper: "my-12 md:my-28 w-[95%] md:w-[55%] mx-auto font-bold",
   container: "mx-auto mt-16 bg-[#2a2a2a] px-12 py-8   font-bold",
   container1:
-    "mx-auto my-4 py-8 flex flex-col md:flex-row items-center justify-center font-bold",
+    "mx-auto my-1 py-3 flex flex-col md:flex-row items-center justify-center font-bold",
   side: "bg-[#2a2a2a] mx-2 px-4  flex flex-col py-6 w-[100%] my-3 font-bold",
 };
 
@@ -30,14 +30,14 @@ const Summary = () => {
   return (
     <div
       className={style.wrapper}
-      style={{ fontFamily: "Poppins, sans-serif" }}
+      style={{ fontFamily: "Inter, sans-serif" }}
     >
       <h2 className="text-3xl md:text-5xl text-[#ffffff] font-bold">Personal summary based on your answers</h2>
       <div className={style.container}>
         <p className="text-[#ffffff] text-lg md:text-xl font-bold">Current BMI</p>
         <h1 className="text-[#ffffff] text-lg md:text-3xl font-bold">{BMI} BMI</h1>
         <div className="mt-8 md:mt-8 w-[85%] md:w-[90%] mx-auto flex items-center justify-center font-bold">
-          <Box sx={{ width: 650 }}>
+          <Box sx={{ width: '100%' }}>
             <Slider
               aria-label="Fat"
               defaultValue={

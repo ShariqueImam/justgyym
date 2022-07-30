@@ -12,7 +12,7 @@ const SinglePlanCard = ({ text, per, total, isClick }) => {
     text4: "text-[#b3b3b3] text-xs",
   };
   return (
-    <div className={style.wrapper}>
+    <div className={style.wrapper} style={{fontFamily:'Inter,sans-serif'}}>
       <div
         className={`${
           isClick ? "font-bold border-[#f0410f]" : "border-neutral-500"

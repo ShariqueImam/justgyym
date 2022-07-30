@@ -7,7 +7,7 @@ const style = {
 };
 const Footer = () => {
   return (
-    <div className={style.wrapper}> style={{fontFamily:'Inter,sans-serif'}}
+    <div className={style.wrapper} style={{fontFamily:'Inter,sans-serif'}}>
       <div className="mx-auto flex items-center justify-center flex-col">
         <h2 className="text-2xl md:text-4xl text-[#ffffff] font-bold my-6">Follow Us</h2>
         <p className="text-md tracking-wide md:text-lg text-[#b3b3b3]" style={{fontWeight:500}}>to skyrocket your result!</p>
