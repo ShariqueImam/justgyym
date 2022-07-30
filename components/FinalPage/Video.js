@@ -1,10 +1,11 @@
 import React from "react";
 import YouTube from "react-youtube";
-
+import useWindowSize from "../hooks/windowSize";
 const Video = () => {
+  const { width } = useWindowSize();
   const opts = {
-    height: "390",
-    width: "450",
+    height: `${width < 700 ? 390 :500}`,
+    width: `${width < 700 ? 430 :700}`,
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
