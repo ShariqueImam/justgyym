@@ -16,13 +16,13 @@ const Video = () => {
   };
   return (
     <div
-      className="flex items-center justify-center flex-col my-12 w-[90%] md:w-[55%]"
+      className="flex flex-col my-12 w-[90%] md:w-[55%] mx-auto"
       style={{ fontFamily: "Inter,sans-serif" }}
     >
       <h2 className="text-[#ffffff] font-bold text-4xl text-4xl lg:text-5xl  mx-auto">
         Start reaching your goals with our workouts
       </h2>
-      <p className="text-[#ffffff] my-12 w-[90%] md:w-[50%] mx-auto text-sm font-bold">
+      <p className="text-[#ffffff] my-12 mx-auto text-sm font-bold">
         Try exercises designed to help you build your dream body. Each workout
         combines different training according to your level and problem areas.
       </p>
