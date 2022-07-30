@@ -6,7 +6,7 @@ const style = {
 };
 const FullPlan = () => {
   return (
-    <div className={style.wrapper}>
+    <div className={style.wrapper} style={{fontFamily:'Inter,sans-serif'}}>
       <h2 className="text-3xl md:text-4xl text-[#ffffff] text-center font-bold">Full Workout Plan</h2>
       <p className={style.para} style={{fontWeight:500}}>
         <Image src={"/tick.png"} width={20} height={20} />

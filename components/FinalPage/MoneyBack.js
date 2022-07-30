@@ -10,7 +10,7 @@ const style = {
 };
 const MoneyBack = () => {
   return (
-    <div className={style.wrapper}>
+    <div className={style.wrapper} style={{fontFamily:'Inter,sans-serif'}}>
       <div className={style.container}>
         <h2 className={style.heading}>Money-Back Guarantee</h2>
         <p className={style.para} style={{fontWeight:500}}>
