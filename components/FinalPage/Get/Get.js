@@ -10,7 +10,7 @@ const style = {
   left: "w-[95%] md:w-[60%] mx-auto",
   right: "w-[95%] md:w-[45%] mx-auto flex items-center justify-center ",
   singleGet: "my-24",
-  text: "text-[#ffffff] text-xl md:text-2xl my-8 text-center md:text-left",
+  text: "text-[#ffffff] text-xl md:text-2xl my-8 text-center md:text-left font-bold",
 };
 const Get = () => {
   return (
@@ -19,21 +19,21 @@ const Get = () => {
       <div className={style.container}> 
         <div className={style.left}>
           <div className={style.singleGet}>
-            <GiMuscleUp className="font-bold text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full" />
+            <GiMuscleUp className="text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full" />
             <h2 className={style.text}>Personalized workout program</h2>
           </div>
           <div className={style.singleGet}>
-            <BsFillCalendar2CheckFill className="font-bold text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full" />
+            <BsFillCalendar2CheckFill className="text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full" />
             <h2 className={style.text}>
               Clear and easy to follow workout plan
             </h2>
           </div>
           <div className={style.singleGet}>
-            <GiGrowth className=" text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full font-bold" />
+            <GiGrowth className=" text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full font-extrabold" />
             <h2 className={style.text}>Visible results after first month</h2>
           </div>
           <div className={style.singleGet}>
-            <DiGoogleAnalytics className=" text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full font-bold" />
+            <DiGoogleAnalytics className=" text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full font-extrabold" />
             <h2 className={style.text}>Progress tracking and analysis</h2>
           </div>
         </div>
