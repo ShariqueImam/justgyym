@@ -14,18 +14,11 @@ export const Button = ({ dis, text }) => {
       dis ? "cursor-not-allowed" : "cursor-pointer"
     }`,
   };
-  const [isEnter, setIsEnter] = useState(false);
-  const handleEnter = () => {
-    setIsEnter(true);
-  };
-  const handleLeave = () => {
-    setIsEnter(false);
-  };
+
   return (
     <div
       className={style.wrapper}
-      onMouseEnter={handleEnter}
-      onMouseLeave={handleLeave}
+
     >
       <button className={style.btn} disabled={dis}>
         {text}

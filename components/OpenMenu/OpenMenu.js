@@ -11,8 +11,8 @@ const OpenMenu = (props) => {
   const style = {
     wrapper:
       `${props.pos==='home2'?'mt-12':'mt-0'} flex z-10 bg-opacity-[0.5] font-bold bg-[rgba(0,0,0,0.7)] w-[100vw] h-[90vh] text-[#ffffff]`,
-    container1: "w-[0%] md:w-[0%] h-[90vh] font-bold",
-    container2: "w-[100%] md:w-[100%] text-stone-300 bg-neutral-800 h-[90vh] font-bold",
+    container1: "w-[0%] md:w-[0%] h-[90vh] font-bold mt-16 md:mt-24",
+    container2: "w-[100%] md:w-[100%] text-stone-300 bg-neutral-800 h-[90vh] font-bold mt-16 md:mt-24",
   };
   return (
     <motion.div

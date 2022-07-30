@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";
-import { MainHeading } from "../../UI/Heading";
-import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
+import Box from "@mui/material/Box";
 import { TbGlassFull } from "react-icons/tb";
 const style = {
   wrapper: "my-12 md:my-28 w-[95%] md:w-[55%] mx-auto font-bold",
   container: "mx-auto mt-16 bg-[#2a2a2a] px-5 md:px-12 py-8   font-bold",
   container1:
     "mx-auto my-1 py-3 flex flex-col md:flex-row items-center justify-center font-bold",
-  side: "bg-[#2a2a2a] mx-2 px-4  flex flex-col py-6 w-[100%] my-3 font-bold",
+  side: "bg-[#2a2a2a] mx-2 flex flex-col pb-6 w-[100%] my-3 font-bold",
 };
 
 function valuetext(value) {
@@ -17,12 +16,13 @@ function valuetext(value) {
 }
 const Summary = () => {
   const [Height, setHeight] = useState(
-    Cookies.get("height") ? Cookies.get("height").replace("cm","") : 81
+    Cookies.get("height") ? Cookies.get("height").replace("cm", "") : 81
   );
+  let controller = Math.random() * 50;
+  console.log(controller);
   const [Weight, setWeight] = useState(Cookies.get("target-weight") || 102);
   const [BMI, setBMI] = useState(40);
-  console.log(Height);
-  console.log(Weight);
+
   useEffect(() => {
     let val = Height.replace("cm", "");
     setBMI((+Weight / (0.01 * +val * 0.01 * +Height)).toFixed(1));
@@ -69,38 +69,75 @@ const Summary = () => {
           </p>
         </div>
       </div>
-
       {/* adding the next two boxes */}
       <div className={style.container1}>
         <div className={style.side}>
-          <div className="flex mb-6 font-bold">
-            <h2 className="text-4xl md:text-5xl font-bold">🍔</h2>
-            <div className="flex flex-col items-center justify-center mx-8 font-bold">
-              <h2 className="text-[#ffffff] text-lg font-bold">
-                Daily calorie intake
-              </h2>
-              <p className="text-[#ffffff] text-xl font-bold">2335 kcal</p>
+          <div className="flex flex-col mb-6 font-bold">
+            <div className="border-2 border-[#ff4400] max-w-fit px-6 text-xs text-[#ffffff] py-1 ml-auto">
+              Recommended
+            </div>
+            <div className="flex px-4">
+              <h2 className="text-4xl md:text-5xl font-bold">🍔</h2>
+              <div className="flex flex-col items-center justify-center mx-6 font-bold">
+                <h2 className="text-[#ffffff] text-lg font-bold">
+                  Daily calorie intake
+                </h2>
+                <p className="text-[#ffffff] text-2xl font-bold">
+                  {controller < 20
+                    ? 1880
+                    : (controller > 20) & (controller < 40)
+                    ? 2540
+                    : 3210}{" "}
+                  kcal
+                </p>
+              </div>
             </div>
           </div>
-          <div className="flex my-1 mx-auto py-[0.8rem] font-bold">
-            <p className="w-[6vw] md:w-[1.5vw] bg-[#ff4400] h-[0.5vh] mx-1"></p>
-            <p className="w-[6vw] md:w-[1.5vw] bg-[#ff4400] h-[0.5vh] mx-1"></p>
-            <p className="w-[6vw] md:w-[1.5vw] bg-[#ff4400] h-[0.5vh] mx-1"></p>
-            <p className="w-[6vw] md:w-[1.5vw] bg-orange-900 h-[0.5vh] mx-1"></p>
-            <p className="w-[6vw] md:w-[1.5vw] bg-orange-900 h-[0.5vh] mx-1"></p>
+          <div className="flex my-1 font-bold flex items-center justify-between flex-col px-4">
+            <input
+              type="range"
+              min={1000}
+              max={5000}
+              step={200}
+              value={
+                controller < 20
+                  ? 1880
+                  : (controller > 20) & (controller < 40)
+                  ? 2540
+                  : 3210
+              }
+              className="slider"
+              disabled
+            />
+            <div className="flex items-center justify-between w-[100%]">
+              <p className="text-[#ffffff]">1000kcal</p>
+              <p className="text-[#ffffff]">5000kcal</p>
+            </div>
           </div>
         </div>
         <div className={style.side}>
-          <div className="flex mb-6 font-bold">
-            <h2 className="text-4xl md:text-5xl">💧</h2>
-            <div className="flex flex-col items-center justify-center mx-8 font-bold">
-              <h2 className="text-[#ffffff] text-lg font-bold">
-                Daily Water intake
-              </h2>
-              <p className="text-[#ffffff] text-xl font-bold">1.7L</p>
+          <div className="flex flex-col mb-6 font-bold">
+            <div className="border-2 border-[#ff4400] max-w-fit px-6 text-xs text-[#ffffff] py-1 ml-auto">
+              Recommended
+            </div>
+            <div className="flex">
+              <h2 className="text-4xl md:text-5xl">💧</h2>
+              <div className="flex flex-col items-center justify-center mx-8 font-bold">
+                <h2 className="text-[#ffffff] text-lg font-bold">
+                  Daily Water intake
+                </h2>
+                <p className="text-[#ffffff] text-xl font-bold">
+                  {controller < 20
+                    ? 3.2
+                    : (controller > 20) & (controller < 40)
+                    ? 1.9
+                    : 2.3}{" "}
+                  L
+                </p>
+              </div>
             </div>
           </div>
-          <div className="flex my-1 mx-auto">
+          <div className="flex my-1 mx-auto pb-3">
             <TbGlassFull className="text-3xl text-blue-300" />
             <TbGlassFull className="text-3xl text-blue-300" />
             <TbGlassFull className="text-3xl text-blue-300" />

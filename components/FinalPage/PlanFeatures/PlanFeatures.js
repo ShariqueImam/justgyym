@@ -14,6 +14,7 @@ const PlanFeatures = () => {
   const [Place, setPlace] = useState("Gym");
   const [Duration, setDuration] = useState("1");
   const [Name, setName] = useState(Cookies.get("name"));
+  const [Frequency, setFrequency] = useState(Cookies.get("workout-frequency") || '2');
 
   useEffect(() => {
     setGoal(Cookies.get("goal") || 'Lose Weight');
@@ -52,7 +53,7 @@ const PlanFeatures = () => {
         <SingleFeature1
           Icon={'📆'}
           heading={"Workout Frequency"}
-          text={`${Place}`}
+          text={`${Frequency=='0'?'Not at all':Frequency=='2'?'1-2 Times a week':Frequency=='3'?'3 Times a week':'More than three times a week'}`}
         />
       </div>
       <div className="mx-auto">

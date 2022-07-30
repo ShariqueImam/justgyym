@@ -5,8 +5,8 @@ import { BsFillCalendar2CheckFill } from "react-icons/bs";
 import { DiGoogleAnalytics } from "react-icons/di";
 import Image from "next/image";
 const style = {
-  wrapper: "",
-  container: "w-[95%] md:w-[55%] mx-auto flex flex-col md:flex-row",
+  wrapper: "bgorange",
+  container: "w-[95%] md:w-[55%] mx-auto flex flex-col md:flex-row relative",
   left: "w-[95%] md:w-[60%] mx-auto",
   right: "w-[95%] md:w-[45%] mx-auto flex items-center justify-center ",
   singleGet: "my-24",
@@ -15,7 +15,7 @@ const style = {
 const Get = () => {
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
-      <h2 className="text-3xl md:text-5xl text-[#ffffff] font-bold text-center font-bold">
+      <h2 className="text-3xl md:text-5xl text-[#ffffff] font-bold text-center font-bold ">
         What you get:
       </h2>
       <div className={style.container}>
@@ -24,16 +24,17 @@ const Get = () => {
             <GiMuscleUp className="text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full" />
             <h2 className={style.text}>Personalized workout program</h2>
           </div>
-          <div className={style.singleGet}>
-            <BsFillCalendar2CheckFill className="text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full" />
-            <h2 className={style.text}>
-              Clear and easy to follow workout plan
-            </h2>
-          </div>
-          <div className={style.singleGet}>
-            <GiGrowth className=" text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full font-extrabold" />
-            <h2 className={style.text}>Visible results after first month</h2>
-          </div>
+            <div className={style.singleGet}>
+              <BsFillCalendar2CheckFill className="text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full" />
+              <h2 className={style.text}>
+                Clear and easy to follow workout plan
+              </h2>
+            </div>
+            <div className={style.singleGet}>
+              <GiGrowth className=" text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full font-extrabold" />
+              <h2 className={style.text}>Visible results after first month</h2>
+            </div>
+  
           <div className={style.singleGet}>
             <DiGoogleAnalytics className=" text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full font-extrabold" />
             <h2 className={style.text}>Progress tracking and analysis</h2>
