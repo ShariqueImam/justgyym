@@ -100,13 +100,13 @@ const Plan = () => {
             <Button text={"Continue"} />
           </div>
         </Link>
-        <p className="text-gray-200 text-xs my-12">
+        <p className="text-[#ffffff] text-xs my-12 font-bold">
           By continuing, you agree that if you don't cancel at least 24 hours
           prior to the end of the current period, you will automatically be
           charged 49.99 USD every 3 months until you cancel in settings. Learn
           more about our cancellation and refund policy in Subscription Terms
         </p>
-        <div className="text-gray-200 text-xs">
+        <div className="text-[#ffffff] text-xs font-bold">
           By continuing, I agree with{" "}
           <Link href="/info/terms">
             <span className="text-orange-600 cursor-pointer">
