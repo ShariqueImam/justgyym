@@ -41,7 +41,7 @@ const Get = () => {
         </div>
         {/* adding the phone */}
         <div className={style.right}>
-          <Image src={"/edited.png"} width={230} height={550} />
+          <Image src={"/edited.png"} width={200} height={500} />
         </div>
       </div>
     </div>
