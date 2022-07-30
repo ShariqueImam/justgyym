@@ -68,7 +68,7 @@ const BodyType = (props) => {
               Grip your opposite wrist using the thumb and an index finger. If
               you’re right-handed, use your right hand to grab your left wrist.
             </p>
-            <p>Thumb and index finger:</p>
+            <p className="text-[#ffffff] font-bold">Thumb and index finger:</p>
             <p className="text-[#ffffff] my-1 ">
               <span className="font-bold text-[#ffffff]">Ectomorph — </span>{" "}
               wrapping around with ease.
