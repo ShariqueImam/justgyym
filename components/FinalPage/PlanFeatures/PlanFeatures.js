@@ -17,8 +17,8 @@ const PlanFeatures = () => {
 
   useEffect(() => {
     setGoal(Cookies.get("goal"));
-    setPlace(Cookies.get("workout-place"));
-    setDuration(Cookies.get("workout-duration"));
+    setPlace(Cookies.get("workout-place") || 'home');
+    setDuration(Cookies.get("workout-duration")|| 'One hour');
   }, []);
 
   return (
