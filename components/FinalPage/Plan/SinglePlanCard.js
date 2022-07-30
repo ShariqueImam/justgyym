@@ -27,10 +27,10 @@ const SinglePlanCard = ({ text, per, total, isClick }) => {
       <div className="flex w-[100%]">
         <div className={style.container1}>
           <h2 className={style.text1}>{text}</h2>
-          <h2 className={style.text2}>{total}USD</h2>
+          <h2 className={style.text2}>{total} USD</h2>
         </div>
         <div className={style.container2}>
-          <h2 className={style.text3}>{per.toFixed(2)}USD</h2>
+          <h2 className={style.text3}>{per.toFixed(2)} USD</h2>
           <h2 className={style.text4}>per day</h2>
         </div>
       </div>
