@@ -7,7 +7,7 @@
   -webkit-appearance: none;
   width: 100%;
   height: 25px;
-  background: linear-gradient(to right ,#5827a7,#403ab0,#6097cf,#63c97b,#cecd66,#c26e3e,#e14949);
+  background: linear-gradient(to right ,#6e49aa,#5a55a9,#87a9ca,#8fca9d,#dad98c,#c47a50,#da6868);
   outline: none;
 }
 
@@ -21,6 +21,7 @@
   border: 10px solid transparent;
   border-top: 0;
   border-bottom: 15px solid rgb(255, 255, 255);
+
 }
 
 .slider1::-moz-range-thumb {
