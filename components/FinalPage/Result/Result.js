@@ -21,10 +21,10 @@ const [Target, setTarget] = useState(Cookies.get('target-body')|| 'beachbody');
     >
       {/* img container */}
       <div className={style.imgContainer}>
-        <Image src={`${Type=='ectomorph' ? '/type/3.png':Type=='mesomorph'?'/type/2.png':'/type/1.png'}`} width={150} height={260} />
+        <Image src={`${Type=='ectomorph' ? '/type/3.png':Type=='mesomorph'?'/type/2.png':'/type/1.png'}`} width={150} height={220} />
         <Image src={"/arr.png"} width={260} height={180} />
         {/* <MdDoubleArrow className="text-neutral-800 text-8xl scale-[2] md:text-9xl mx-1 md:mx-6 lg:mx-24 font-bold" /> */}
-        <Image src={`${Target=='slim'?'/SLIM_BODY.webp' :Target=='slimshredded'?'/SLIM_SHREDDED_BODY.webp':Target=='athlete'?'/ATHLETE.webp':Target=='hero'?'/HERO.webp':Target=='bodybuilder'?'/BODYBUILDER.webp':Target=='beachbody'?'/BEACH_BODY.webp':Target=='workoutbody'?'/WORKOUT_BODY.webp':'/CROSS_FIT_BODY.webp'}`} width={160} height={260} />
+        <Image src={`${Target=='slim'?'/SLIM_BODY.webp' :Target=='slimshredded'?'/SLIM_SHREDDED_BODY.webp':Target=='athlete'?'/ATHLETE.webp':Target=='hero'?'/HERO.webp':Target=='bodybuilder'?'/BODYBUILDER.webp':Target=='beachbody'?'/BEACH_BODY.webp':Target=='workoutbody'?'/WORKOUT_BODY.webp':'/CROSS_FIT_BODY.webp'}`} width={160} height={220} />
       </div>
       {/* the buttons */}
       <div className={style.container1}>
