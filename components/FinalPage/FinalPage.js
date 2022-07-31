@@ -28,12 +28,12 @@ const FinalPage = () => {
       <Get fat={fat} />
       <Video />
       <FullPlan fat={fat} />
-      <div id="#plan">
+      <div id="plan">
         <Plan fat={fat} />
       </div>
       <MoneyBack fat={fat} />
       <Review fat={fat} />
-      <Link href="/#plan" passHref>
+      <Link href="#plan">
         <div className="hover:bg-orange-500 bg-[#ff4400] px-4 md:px-6 py-3 md:py-4 text-[#ffffff] font-bold fixed top-[90%] md:top-[87%] left-[25%] md:left-[42%] flex items-center ">
           <button className="flex-1 pr-12">Get my plan</button>
           <AiOutlineArrowRight className={"text-2xl"} />

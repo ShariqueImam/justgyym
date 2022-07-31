@@ -19,7 +19,6 @@ const Summary = () => {
     Cookies.get("height") ? Cookies.get("height").replace("cm", "") : 81
   );
   let controller = Math.random() * 50;
-  console.log(controller);
   const [Weight, setWeight] = useState(Cookies.get("target-weight") || 102);
   const [BMI, setBMI] = useState(40);
 
@@ -120,7 +119,7 @@ const Summary = () => {
             <div className="border-2 border-[#ff4400] max-w-fit px-6 text-xs text-[#ff4400] py-1 ml-auto font-normal mb-3">
               recommended
             </div>
-            <div className="flex px-4">
+            <div className="flex px-4 py-1">
               <h2 className="text-4xl md:text-5xl border-[1px] border-stone-400 px-3 py-3">💧</h2>
               <div className="flex flex-col items-center justify-center mx-8 font-bold">
                 <h2 className="text-[#ffffff] text-lg font-bold">

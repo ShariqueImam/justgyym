@@ -7,7 +7,6 @@ const Video = () => {
     height: `${width < 700 ? 300 : width > 1500 ? 800 : 500}`,
     width: `${width < 700 ? 430 : width > 1500 ? 1000 : 690}`,
     playerVars: {
-      // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
     },
   };
