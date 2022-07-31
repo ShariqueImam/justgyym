@@ -109,7 +109,7 @@ const Summary = () => {
               className="slider"
               disabled
             />
-            <div className="flex items-center justify-between w-[100%]">
+            <div className="flex items-center justify-between w-[100%] font-normal mt-2">
               <p className="text-[#ffffff]">1000kcal</p>
               <p className="text-[#ffffff]">5000kcal</p>
             </div>
@@ -126,7 +126,7 @@ const Summary = () => {
                 <h2 className="text-[#ffffff] text-lg font-bold">
                   Daily Water intake
                 </h2>
-                <p className="text-[#ffffff] text-xl font-bold">
+                <p className="text-[#ffffff] text-2xl font-bold">
                   {controller < 20
                     ? 3.2
                     : (controller > 20) & (controller < 40)

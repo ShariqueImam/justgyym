@@ -9,7 +9,8 @@ import Summary from "./Summary/Summary";
 import Cookies from "js-cookie";
 import Video from "./Video";
 import Review from "./Review/Review";
-import {AiOutlineArrowRight} from 'react-icons/ai'
+import { AiOutlineArrowRight } from "react-icons/ai";
+import Link from "next/link";
 const style = {
   wrapper: "",
 };
@@ -27,14 +28,17 @@ const FinalPage = () => {
       <Get fat={fat} />
       <Video />
       <FullPlan fat={fat} />
-      <Plan fat={fat} />
+      <div id="#plan">
+        <Plan fat={fat} />
+      </div>
       <MoneyBack fat={fat} />
       <Review fat={fat} />
-      <div className="hover:bg-orange-500 bg-[#ff4400] px-4 md:px-6 py-3 md:py-4 text-[#ffffff] font-bold fixed top-[90%] md:top-[87%] left-[25%] md:left-[42%] flex items-center ">
-        <button className="flex-1 pr-12">Get my plan</button>
-        <AiOutlineArrowRight className={'text-2xl'}/>
-      </div>
-  
+      <Link href="/#plan" passHref>
+        <div className="hover:bg-orange-500 bg-[#ff4400] px-4 md:px-6 py-3 md:py-4 text-[#ffffff] font-bold fixed top-[90%] md:top-[87%] left-[25%] md:left-[42%] flex items-center ">
+          <button className="flex-1 pr-12">Get my plan</button>
+          <AiOutlineArrowRight className={"text-2xl"} />
+        </div>
+      </Link>
     </div>
   );
 };
