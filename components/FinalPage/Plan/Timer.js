@@ -48,7 +48,7 @@ const Timer = (props) => {
             </h1>
           )}
         </p>
-        <AiFillClockCircle className="" />
+        <AiFillClockCircle className="text-xl" />
       </div>
     </div>
   );
