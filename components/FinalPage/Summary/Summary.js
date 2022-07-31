@@ -40,23 +40,23 @@ const Summary = () => {
           {BMI} BMI
         </h1>
         <div className="mt-8 md:mt-8 flex items-center justify-center font-bold">
-          <Box sx={{ width: "100%" }}>
-            <Slider
-              aria-label="Fat"
-              defaultValue={
-                Weight > 100 ? 6 : Weight < 100 && Weight > 80 ? 5 : 3
-              }
-              getAriaValueText={valuetext}
-              valueLabelDisplay="auto"
-              step={1}
-              min={1}
-              max={9}
-              color="warning"
-              disabled
-            />
-          </Box>
+          <input
+            type="range"
+            min={0}
+            max={10}
+            step={2}
+            value={
+              controller < 20
+                ? 3
+                : (controller > 20) & (controller < 40)
+                ? 6
+                : 8
+            }
+            className="slider1"
+            disabled
+          />
         </div>
-        <div className="flex items-center justify-between font-bold">
+        <div className="flex items-center justify-between font-bold mt-2">
           <h2 className="text-[#ffffff] font-bold">Underwight</h2>
           <h2 className="text-[#ffffff] font-bold">Obese</h2>
         </div>
@@ -76,7 +76,9 @@ const Summary = () => {
               recommended
             </div>
             <div className="flex px-4">
-              <h2 className="text-4xl md:text-5xl font-bold border-2 border-stone-500 px-3 py-3">🍔</h2>
+              <h2 className="text-4xl md:text-5xl font-bold border-2 border-stone-500 px-3 py-3">
+                🍔
+              </h2>
               <div className="flex flex-col items-center justify-center mx-6 font-bold">
                 <h2 className="text-[#ffffff] text-lg font-bold">
                   Daily calorie intake
@@ -120,7 +122,9 @@ const Summary = () => {
               recommended
             </div>
             <div className="flex px-4 py-1">
-              <h2 className="text-4xl md:text-5xl border-2 border-stone-500 px-3 py-3">💧</h2>
+              <h2 className="text-4xl md:text-5xl border-2 border-stone-500 px-3 py-3">
+                💧
+              </h2>
               <div className="flex flex-col items-center justify-center mx-8 font-bold">
                 <h2 className="text-[#ffffff] text-lg font-bold">
                   Daily Water intake

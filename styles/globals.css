@@ -3,6 +3,31 @@
 @tailwind utilities;
 ::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
+}.slider1 {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: linear-gradient(to right ,#5827a7,#403ab0,#6097cf,#63c97b,#cecd66,#c26e3e,#e14949);
+  outline: none;
+}
+
+.slider1::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: 20px;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  border: 10px solid transparent;
+  border-top: 0;
+  border-bottom: 15px solid rgb(255, 255, 255);
+}
+
+.slider1::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
 }
 .slider {
   -webkit-appearance: none;
@@ -11,7 +36,6 @@
   background: linear-gradient(to right ,#111111,#ff4400);
   outline: none;
 }
-
 
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
