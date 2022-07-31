@@ -76,7 +76,7 @@ const Summary = () => {
               recommended
             </div>
             <div className="flex px-4">
-              <h2 className="text-4xl md:text-5xl font-bold border-[1px] border-stone-400 px-3 py-3">🍔</h2>
+              <h2 className="text-4xl md:text-5xl font-bold border-2 border-stone-500 px-3 py-3">🍔</h2>
               <div className="flex flex-col items-center justify-center mx-6 font-bold">
                 <h2 className="text-[#ffffff] text-lg font-bold">
                   Daily calorie intake
@@ -120,7 +120,7 @@ const Summary = () => {
               recommended
             </div>
             <div className="flex px-4 py-1">
-              <h2 className="text-4xl md:text-5xl border-[1px] border-stone-400 px-3 py-3">💧</h2>
+              <h2 className="text-4xl md:text-5xl border-2 border-stone-500 px-3 py-3">💧</h2>
               <div className="flex flex-col items-center justify-center mx-8 font-bold">
                 <h2 className="text-[#ffffff] text-lg font-bold">
                   Daily Water intake
