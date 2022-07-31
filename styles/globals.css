@@ -74,7 +74,7 @@
   /* background: red; */
 }
 .bgorange { 
-  background: radial-gradient(rgba(241, 99, 47,0.4),  #111111,#111111,#111111,#111111);
+  background: radial-gradient(rgba(241, 99, 47,0.35),  #111111,#111111,#111111,#111111);
 }
 .fading {
   opacity: 1;
