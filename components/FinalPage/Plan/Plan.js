@@ -6,13 +6,15 @@ import { Button } from "../../UI/Button";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 import Link from "next/link";
+import Timer from "./Timer";
 const style = {
   wrapper:
     "bg-neutral-900 px-3 md:px-12 py-8 md:py-24 flex flex-col md:flex-row w-[95%] md:w-[80%] lg:w-[85%] mx-auto",
-  left: "w-[95%] md:w-[50%] flex items-center justify-center",
+  left: "w-[95%] md:w-[50%] flex items-center justify-center flex-col",
   right: "w-[95%] md:w-[50%] ",
 };
 const Plan = () => {
+  const [TimerEnd, setTimerEnd] = useState(false);
   const [isClick, setIsClick] = useState("3");
   const [item, setItem] = useState({
     name: "Just Gyym Plans",
@@ -34,7 +36,7 @@ const Plan = () => {
     }
     setItem({
       name,
-      price,
+      price: TimerEnd ? price : price - 10,
       description: "Best Fitness Plan for your healthy life",
       image:
         "https://res.cloudinary.com/shariqcloud/image/upload/v1658561808/Just%20Gyym/logo_imfqah.webp",
@@ -56,9 +58,14 @@ const Plan = () => {
       alert(result.error.message);
     }
   };
+  const handleEndTimer = () => {
+    setTimerEnd(true);
+  };
   return (
-    <div className={style.wrapper} style={{fontFamily:'Inter,sans-serif'}}>
+    <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
       <div className={style.left}>
+        {/* adding the counter */}
+        <Timer endTimer={handleEndTimer} />
         <Image src={"/final/a.webp"} height={500} width={200} />
       </div>
       <div className={style.right}>
@@ -72,6 +79,7 @@ const Plan = () => {
             total={59.99}
             per={0.33}
             isClick={isClick === "6" ? true : false}
+            TimerEnd={TimerEnd}
           />
           {/* </Link> */}
         </div>
@@ -82,8 +90,9 @@ const Plan = () => {
             total={49.99}
             per={0.54}
             isClick={isClick === "3" ? true : false}
+            TimerEnd={TimerEnd}
           />
-   
+
           {/* </Link> */}
         </div>
         <div onClick={() => handleClick("1-MONTH PLAN", 29.99)}>
@@ -93,6 +102,7 @@ const Plan = () => {
             total={29.99}
             per={1.0}
             isClick={isClick === "1" ? true : false}
+            TimerEnd={TimerEnd}
           />
           {/* </Link> */}
         </div>

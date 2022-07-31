@@ -34,7 +34,7 @@ const FinalPage = () => {
       <MoneyBack fat={fat} />
       <Review fat={fat} />
       <Link href="#plan">
-        <div className="hover:bg-orange-500 bg-[#ff4400] px-4 md:px-10 py-3 md:py-4 text-[#ffffff] font-bold fixed top-[90%] md:top-[87%] left-[25%] md:left-[42%] flex">
+        <div className="cursor-pointer hover:bg-orange-500 bg-[#ff4400] px-4 md:px-10 py-3 md:py-4 text-[#ffffff] font-bold fixed top-[90%] md:top-[87%] left-[25%] md:left-[42%] flex">
           <button className="flex-1 pr-16">Get my plan</button>
           <AiOutlineArrowRight className={"text-2xl"} />
         </div>

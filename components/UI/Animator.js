@@ -23,7 +23,7 @@ const Animator = ({ children }) => {
       initial="hidden"
       animate="show"
       exit="exit"
-      className="pt-24"
+      // className="pt-24"
   
     >
       {children}
