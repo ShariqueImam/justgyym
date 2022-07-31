@@ -5,7 +5,7 @@ const S1 = ({ text, per, total, isClick, TimerEnd }) => {
       isClick ? "bg-[#1e1e1e] border-[#ff4400]" : ""
     }`,
     container1: "flex flex-col flex-1 font-bold",
-    container2: "shadow-xl  px-4 py-2 font-bold",
+    container2: "shadow-xl  px-4 py-2 font-bold  bg-[#2a2a2a]",
     text1: "text-[#ffffff]  font-bold",
     text2: `text-[#ff4400] font-bold ${
       TimerEnd ? "" : "line-through text-[#b3b3b3]"
