@@ -11,7 +11,7 @@ import useWindowSize from "../../hooks/windowSize";
 const Review = () => {
   const { width } = useWindowSize();
   return (
-    <div className="mt-24 bg-neutral-900 py-12 font-bold">
+    <div className="mt-24 bg-[#1e1e1e] py-12 font-bold">
       <p className="text-center my-5 text-[#ffffff] text-xl md:text-xl font-semibold font-bold" >
         We helped over
       </p>
@@ -22,7 +22,7 @@ const Review = () => {
         to achieve their dream physique
       </p>
       {/* adding the review */}
-      <div className="w-[95%] md:w-[83%] xl:w-[65%] mx-auto flex font-bold">
+      <div className="w-[95%] md:w-[83%] xl:w-[65%] mx-auto flex font-bold z-10">
         <Swiper
           spaceBetween={10}
           onSlideChange={() => console.log("slide change")}
@@ -48,6 +48,12 @@ const Review = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Image src={"/review/6.png"} width={350} height={120} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image src={"/review/7.png"} width={350} height={120} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image src={"/review/8.png"} width={350} height={120} />
           </SwiperSlide>
         </Swiper>
       </div>

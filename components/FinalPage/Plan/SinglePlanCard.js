@@ -1,7 +1,7 @@
 import React from "react";
 const SinglePlanCard = ({ text, per, total, isClick, TimerEnd }) => {
   const style = {
-    wrapper: `border-b-[2px] transition duration-[10ms] cursor-pointer my-4 flex px-3 md:px-7 py-3 md:py-4 border-2 border-stone-600 bg-[#1e1e1e] hover:bg-[#292929] ${
+    wrapper: `border-b-[2px] transition duration-[10ms] cursor-pointer my-4 flex px-3 md:px-7 py-3 md:py-2 border-2 border-stone-600 bg-[#1e1e1e] hover:bg-[#292929] ${
       isClick ? "bg-[#1e1e1e] border-[#ff4400]" : ""
     }`,
     container1: "flex flex-col flex-1 font-bold",

@@ -42,7 +42,7 @@ const S1 = ({ text, per, total, isClick, TimerEnd }) => {
           </div>
         </div>
       </div>
-      <p className="bg-[#ff4400] text-center text-[#ffffff] font-bold">
+      <p className="bg-[#ff4400] text-center text-[#ffffff] font-bold text-sm tracking-wide">
         MOST POPULAR
       </p>
     </div>

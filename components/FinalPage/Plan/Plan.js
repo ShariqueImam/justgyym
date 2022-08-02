@@ -112,40 +112,40 @@ const Plan = () => {
             <Button text={"Continue"} />
           </div>
         </Link>
-        <p className="text-[#ffffff] text-xs my-12 font-bold">
+        <p className="text-[#ffffff] text-xs my-12 font-normal" style={{fontWeight:500}}>
           By continuing, you agree that if you don't cancel at least 24 hours
           prior to the end of the current period, you will automatically be
           charged 49.99 USD every 3 months until you cancel in settings. Learn
           more about our cancellation and refund policy in Subscription Terms
         </p>
-        <div className="text-[#ffffff] text-xs font-bold">
+        <div className="text-[#ffffff] text-xs font-normal">
           By continuing, I agree with{" "}
           <Link href="/info/terms">
-            <span className="text-orange-600 cursor-pointer">
+            <span className="text-orange-600 cursor-pointer font-normal">
               Terms of service
             </span>
           </Link>
           ,{" "}
           <Link href="/info/privacy">
-            <span className="text-orange-600 cursor-pointer">
+            <span className="text-orange-600 cursor-pointer font-normal">
               Privacy policy
             </span>
           </Link>
           ,{" "}
           <Link href="/info/refund">
-            <span className="text-orange-600 cursor-pointer">
+            <span className="text-orange-600 cursor-pointer font-normal">
               Refund policy
             </span>
           </Link>
           ,{" "}
           <Link href="/info/subscription">
-            <span className="text-orange-600 cursor-pointer">
+            <span className="text-orange-600 cursor-pointer font-normal">
               Subscription Terms
             </span>
           </Link>
           ,{" "}
           <Link href="/info/cookie">
-            <span className="text-orange-600 cursor-pointer">
+            <span className="text-orange-600 cursor-pointer font-normal">
               Cookie policy
             </span>
           </Link>
