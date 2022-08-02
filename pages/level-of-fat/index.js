@@ -39,7 +39,7 @@ const LevelOfFat = (props) => {
             <Image
               src={`/Fat/${value}.${width > 700 ? "webp" : "png"}`}
               width={200}
-              height={width > 700 ? 490 : 350}
+              height={width > 700 ? 490 : 280}
             />
             {/* <Image src={`/Fat/bg.svg`} width={250} height={490} /> */}
           </div>
