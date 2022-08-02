@@ -25,7 +25,7 @@ const ProblemArea = (props) => {
     <>
       <ProgressBar  scrollLength={"12%"} val={4} link="/level-of-fat" />
       <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto">
-        <Animator>
+        <div>
           <MainHeading text="Select problem areas" />
           <div onClick={() => handleClick("weakchest")}>
             <Card3
@@ -62,7 +62,7 @@ const ProblemArea = (props) => {
               <Button dis={click.length > 0 ? false : true} text={"Continue"} />
             </div>
           </Link>
-        </Animator>
+        </div>
       </div>
     </>
   );
