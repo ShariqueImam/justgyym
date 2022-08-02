@@ -21,7 +21,7 @@ const Video = () => {
       <h2 className="text-[#ffffff] font-bold text-4xl text-5xl lg:text-6xl  ">
         Start reaching your goals with our workouts
       </h2>
-      <p className="text-[#ffffff] my-12  text-sm font-bold">
+      <p className="text-[#ffffff] my-12 text-md" style={{fontWeight:400}}>
         Try exercises designed to help you build your dream body. Each workout
         combines different training according to your level and problem areas.
       </p>
