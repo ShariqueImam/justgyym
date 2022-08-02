@@ -103,7 +103,7 @@ const LevelOfFitnes = (props) => {
             <Link href="/loh">
               <div
                 onClick={Cookies.set("level-of-fitness", value)}
-                className="fmd:bg-transparent ixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e]"
+                className="md:bg-transparent fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e]"
               >
                 <Button text={"Continue"} />
               </div>
