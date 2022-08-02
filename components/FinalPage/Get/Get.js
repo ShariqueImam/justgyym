@@ -11,7 +11,7 @@ const style = {
   left: "w-[95%] md:w-[50%] mx-auto",
   right: "w-[95%] md:w-[45%] mx-auto flex items-center justify-center",
   singleGet: "my-24",
-  text: "text-[#ffffff] text-xl md:text-xl my-8 text-center md:text-left font-bold",
+  text: "text-[#ffffff] text-xl md:text-xl my-8 text-center md:text-left font-extrabold",
 };
 const Get = () => {
   return (
