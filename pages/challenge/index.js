@@ -40,11 +40,11 @@ const Challenge = (props) => {
     <>
       <ProgressBar scrollLength={"88%"} val={21} link="/products" />
       <div className="w-[95%] md:w-[41%] lg:w-[33%] mx-auto">
-        <Animator>
+        <div>
           <h2 className="text-[#ffffff] text-3xl md:text-3xl lg:text-4xl my-8 font-bold leading-[30px] md:leading-[35px] lg:leading-[45px]">In addition to your goal, what challenge would you like to join?</h2>
           <div
             onClick={() => handleClick("1")}
-            style={{ fontFamily: "Inter,sans-serif" }}
+            style={{ fontFamily:  "Inter,sans-serif" }}
           >
             <BasicCard2
               cardText="No excuse! 😎"
@@ -79,13 +79,13 @@ const Challenge = (props) => {
             />
           </div>
           <Link href={`${Click.length > 0 ? "/name" : ""}`}>
-            <div
+            <div  className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent "
               onClick={() => Cookies.set("challenge", JSON.stringify(Click))}
             >
               <Button dis={Click.length > 0 ? false : true} text={"Continue"} />
             </div>
           </Link>
-        </Animator>
+        </div>
       </div>
     </>
   );

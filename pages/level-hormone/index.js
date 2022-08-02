@@ -11,11 +11,11 @@ const LevelHormone = (props) => {
   props.which("home1");
   React.useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, []); 
   return (
     <>
       <div className="w-[95%] md:w-[37%] lg:w-[35%] mx-auto">
-        <Animator>
+        <div>
           <div
             className="flex flex-col "
             style={{ fontFamily: "Inter,sans-serif" }}
@@ -55,12 +55,12 @@ const LevelHormone = (props) => {
               {/* </div> */}
             </div>
             <Link href="/water">
-              <div>
+              <div  className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent">
                 <Button text={"Got it"} />
               </div>
             </Link>
           </div>
-        </Animator>
+        </div>
       </div>
     </>
   );

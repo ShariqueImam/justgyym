@@ -6,10 +6,12 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import OpenMenu from "../components/OpenMenu/OpenMenu";
 import Cookies from "js-cookie";
+// import { ParallaxProvider } from "react-scroll-parallax";
+
 function MyApp({ Component, pageProps }) {
   const { asPath } = useRouter();
   const [isOpen, setIsOpen] = useState(false);
-  const [Which, setWhich] = useState('');
+  const [Which, setWhich] = useState("");
   const handleMenu = () => {
     setIsOpen((prev) => !prev);
   };
@@ -23,7 +25,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title key={"title"}>Just Gyym | You personalized workout program</title>
+        <title key={"title"}>
+          Just Gyym | You personalized workout program
+        </title>
         {/* <link rel="icon" href="/logo.webp" className="transform scale-[0.5]"/> */}
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
@@ -32,21 +36,25 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <div
-        className={`overflow-x-hidden scroll-smooth ${Which==='home' || Which==='home2' ? 'home-bg':'home-bg1'}  z-0 w-[100vw]`}
+        className={`overflow-x-hidden scroll-smooth ${
+          Which === "home" || Which === "home2" ? "home-bg" : "home-bg1"
+        }  z-0 w-[100vw]`}
         style={{ fontDisplay: "swap" }}
       >
         <AnimatePresence exitBeforeEnter>
           <div key={asPath}>
-            <Navbar menu={handleMenu} pos={Which}/>
-            {isOpen && <OpenMenu menu={handleMenu} pos={Which}/>}
-            {!isOpen && (
-              <Component
-                {...pageProps}
-                onClick={handleMenu}
-                setData={handleData}
-                which={handelWhich}
-              />
-            )}
+            <Navbar menu={handleMenu} pos={Which} />
+            {/* <ParallaxProvider> */}
+              {isOpen && <OpenMenu menu={handleMenu} pos={Which} />}
+              {!isOpen && (
+                <Component
+                  {...pageProps}
+                  onClick={handleMenu}
+                  setData={handleData}
+                  which={handelWhich}
+                />
+              )}
+            {/* </ParallaxProvider> */}
           </div>
         </AnimatePresence>
       </div>

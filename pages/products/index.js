@@ -19,7 +19,7 @@ const Products = (props) => {
     <>
       <ProgressBar scrollLength={"84%"} val={20} link="/meal-prep-time" />
       <div className="w-[95%] md:w-[34%] lg:w-[33%] mx-auto">
-        <Animator>
+        <div>
           <MainHeading text="Let us create a meal plan based on your preferences" />
           <SmallHeading text="You can always adjust a meal plan later" />
           <div
@@ -46,14 +46,14 @@ const Products = (props) => {
           </div>
           <Food auto={checked} valuess={(value) => setClick([...value])} />
           <Link href={`${Click.length > 0 || checked ? "/challenge" : ""}`}>
-            <div>
+            <div  className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent ">
               <Button1
                 dis={Click.length > 0 || checked ? false : true}
                 text={"Continue"}
               />
             </div>
           </Link>
-        </Animator>
+        </div>
       </div>
     </>
   );

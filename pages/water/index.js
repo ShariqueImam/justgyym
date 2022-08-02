@@ -30,7 +30,7 @@ const Water = (props) => {
     <>
       <ProgressBar scrollLength={"76%"} val={18} link="/level-hormone" />
       <div className="w-[95%] md:w-[34%] lg:w-[32%] mx-auto">
-        <Animator>
+        <div>
           <MainHeading text="How much water do you drink daily?" />
           <div onClick={() => handleClick("0")}>
             <BasicCard1
@@ -110,18 +110,18 @@ const Water = (props) => {
             )}
           </div>
           {!Show && (
-            <div onClick={handleClick1}>
+            <div onClick={handleClick1}  className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent ">
               <Button dis={Click.length > 0 ? false : true} text={"Continue"} />
             </div>
           )}
           {Show && (
             <Link href={`${Click.length > 0 ? "/meal-prep-time" : ""}`}>
-              <div onClick={() => Cookies.set("water", Click)}>
+              <div onClick={() => Cookies.set("water", Click)}  className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent">
                 <Button dis={Click.length > 0 ? false : true} text={"Got it"} />
               </div>
             </Link>
           )}
-        </Animator>
+        </div>
       </div>
     </>
   );

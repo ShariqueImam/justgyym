@@ -31,7 +31,7 @@ const Name = (props) => {
     <>
       {/* <ProgressBar scrollLength={"92%"} val={23} /> */}
       <div className="w-[95%] md:w-[42%] lg:w-[33%] mx-auto mt-4" style={{fontFamily:'Inter,sans-serif'}}>
-        <Animator className={style.wrapper}>
+        <div className={style.wrapper}>
           <div className="bg-[#1e1e1e] mx-auto py-2 flex items-center mb-7">
             <p className="text-2xl ml-3">✅ </p>
             <p className="text-gray-50 tracking-wide text-lg md:text-md my-1 mx-5" style={{fontWeight:450}}>
@@ -63,11 +63,11 @@ const Name = (props) => {
             />
           </div>
           <Link href={`${name.length > 0 ? "/dob" : ""}`}>
-            <div onClick={handleClick} className="mt-64 md:mt-2">
+            <div onClick={handleClick}  className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent ">
               <Button dis={name.length > 0 ? false : true} text={"Continue"} />
             </div>
           </Link>
-        </Animator>
+        </div>
       </div>
     </>
   );

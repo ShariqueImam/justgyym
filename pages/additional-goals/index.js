@@ -41,7 +41,7 @@ const AdditionalGoals = (props) => {
     <>
       <ProgressBar scrollLength={"44%"} val={11} link="/give-up" />
       <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto">
-        <Animator>
+        <div>
           <div className="w-[95%] md:w-[90%]">
             <SmallHeading text="We're sure you want not only a better body, but to improve your lifestyle too." />
             <MainHeading text="Tick your additional goals below:" />
@@ -88,6 +88,7 @@ const AdditionalGoals = (props) => {
           </div>
           <Link href={`${Click.length > 0 ? "/attention" : ""}`}>
             <div
+            className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent "
               onClick={() =>
                 Cookies.set("additional-goals", JSON.stringify(Click))
               }
@@ -95,7 +96,7 @@ const AdditionalGoals = (props) => {
               <Button dis={Click.length > 0 ? false : true} text={"Continue"} />
             </div>
           </Link>
-        </Animator>
+        </div>
       </div>
     </>
   );

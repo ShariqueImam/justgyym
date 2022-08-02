@@ -23,7 +23,7 @@ const Pullups = (props) => {
     <>
       <ProgressBar scrollLength={"56%"} val={13} link="/push-ups" />
       <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto">
-        <Animator>
+        <div>
           <div className="w-[95%] md:w-[80%]">
             <MainHeading text="How many pull-ups can you do in one round?" />
           </div>
@@ -54,12 +54,12 @@ const Pullups = (props) => {
           <Link href={`${Click.length > 0 ? "/workout-place" : ""}`}>
             <div
               onClick={() => Cookies.set("pull-ups", Click)}
-              className="mt-36 md:mt-2"
+              className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent "
             >
               <Button dis={Click.length > 0 ? false : true} text={"Continue"} />
             </div>
           </Link>
-        </Animator>
+        </div>
       </div>
     </>
   );

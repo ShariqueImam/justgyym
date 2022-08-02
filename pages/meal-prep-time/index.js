@@ -22,7 +22,7 @@ const Time = (props) => {
     <>
       <ProgressBar scrollLength={"80%"} val={19} link="/water" />
       <div className="w-[95%] md:w-[30%] lg:w-[31%] mx-auto">
-        <Animator>
+        <div>
           <MainHeading text="How much time are you ready to spend on per one meal prep?" />
           <div onClick={() => handleClick("30")}>
             <BasicCard1
@@ -51,12 +51,12 @@ const Time = (props) => {
           <Link href={`${Click.length > 0 ? "/products" : ""}`}>
             <div
               onClick={() => Cookies.set("meal-prep-time", Click)}
-              className={` mt-4 mt-24 md:mt-4 `}
+              className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent "
             >
               <Button dis={Click.length > 0 ? false : true} text={"Continue"} />
             </div>
           </Link>
-        </Animator>
+        </div>
       </div>
     </>
   );

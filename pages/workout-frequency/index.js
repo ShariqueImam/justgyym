@@ -29,7 +29,7 @@ const WorkoutFrequency = (props) => {
     <>
       <ProgressBar scrollLength={"64%"} val={16} link="/workout-place" />
       <div className="w-[95%] md:w-[30%] lg:w-[32%] mx-auto">
-        <Animator>
+        <div>
           <MainHeading text="How many times per week have you trained in the last 3 months?" />
           <div
             onClick={() => handleClick("0")}
@@ -90,9 +90,7 @@ const WorkoutFrequency = (props) => {
           {!Show && (
             <div
               onClick={handleClick1}
-              className={`${
-                Show ? "mt-4" : "mt-24"
-              } md:mt-4 mx-auto`}
+              className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent "
             >
               <Button dis={Click.length > 0 ? false : true} text={"Continue"} />
             </div>
@@ -101,9 +99,7 @@ const WorkoutFrequency = (props) => {
             <Link href={`${Click.length > 0 ? "/workout-duration" : ""}`}>
               <div
                 onClick={() => Cookies.set("workout-frequency", Click)}
-                className={`${
-                  Show ? "mt-4" : "mt-36"
-                } md:mt-4 mx-auto`}
+                className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent "
               >
                 <Button
                   dis={Click.length > 0 ? false : true}
@@ -112,7 +108,7 @@ const WorkoutFrequency = (props) => {
               </div>
             </Link>
           )}
-        </Animator>
+        </div>
       </div>
     </>
   );

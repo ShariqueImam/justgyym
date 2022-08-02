@@ -46,7 +46,7 @@ const WorkoutIssue = (props) => {
     <>
       <ProgressBar scrollLength={"36%"} val={10} link="/workouts" />
       <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto">
-        <Animator>
+        <div>
           <div className="w-[95%] md:w-[80%]">
             <MainHeading
               text={
@@ -111,7 +111,7 @@ const WorkoutIssue = (props) => {
           {Click[0] !== "none" && (
             <div>
               {!Show && (
-                <div onClick={handleClick1}>
+                <div onClick={handleClick1} className="md:bg-transparent fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e]">
                   <Button
                     dis={Click.length > 0 ? false : true}
                     text={"Continue"}
@@ -121,6 +121,7 @@ const WorkoutIssue = (props) => {
               {Show && (
                 <Link href={`${Click.length > 0 ? "/give-up" : ""}`}>
                   <div
+                  className="fmd:bg-transparent ixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e]"
                     onClick={() =>
                       Cookies.set("workout-issue", JSON.stringify(Click))
                     }
@@ -138,7 +139,7 @@ const WorkoutIssue = (props) => {
             <div>
               {!Show && (
                 <Link href={`${Click.length > 0 ? "/give-up" : ""}`}>
-                  <div onClick={handleClick1}>
+                  <div onClick={handleClick1} className="md:bg-transparent fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e]">
                     <Button
                       dis={Click.length > 0 ? false : true}
                       text={"Continue"}
@@ -148,7 +149,7 @@ const WorkoutIssue = (props) => {
               )}
             </div>
           )}
-        </Animator>
+        </div>
       </div>
     </>
   );

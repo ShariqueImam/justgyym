@@ -58,7 +58,7 @@ const LevelOfFitnes = (props) => {
     <>
       <ProgressBar scrollLength={"24%"} val={7} link="/target-weight" />
       <div className="w-[95%] md:w-[34%] lg:w-[39%] mx-auto">
-        <Animator>
+        <div>
           <div className="mx-auto" style={{ fontFamily: "Inter,sans-serif" }}>
             <MainHeading text={"What's your level of fitness?"} />
             <SmallHeading
@@ -103,13 +103,13 @@ const LevelOfFitnes = (props) => {
             <Link href="/loh">
               <div
                 onClick={Cookies.set("level-of-fitness", value)}
-                className="mt-48 md:mt-2"
+                className="fmd:bg-transparent ixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e]"
               >
                 <Button text={"Continue"} />
               </div>
             </Link>
           </div>
-        </Animator>
+        </div>
       </div>
     </>
   );

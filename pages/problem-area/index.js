@@ -56,7 +56,7 @@ const ProblemArea = (props) => {
             />
           </div>
           <Link href={`${click.length > 0 ? "/height" : ""}`}>
-            <div
+            <div className="md:bg-transparent fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e]"
               onClick={() => Cookies.set("problem-area", JSON.stringify(click))}
             >
               <Button dis={click.length > 0 ? false : true} text={"Continue"} />

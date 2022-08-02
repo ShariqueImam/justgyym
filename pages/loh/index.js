@@ -49,7 +49,7 @@ const index = (props) => {
     <>
       <ProgressBar scrollLength={"28%"} val={8} link="/level-of-fitness" />
       <div className="w-[95%] md:w-[38%] lg:w-[29%] mx-auto">
-        <Animator>
+        <div>
           <div className={style.wrapper}>
             {/* adding the images */}
             <MainHeading text={"Like or dislike it."} />
@@ -122,7 +122,7 @@ const index = (props) => {
               </div>
             </div>
           </div>
-        </Animator>
+        </div>
       </div>
     </>
   );

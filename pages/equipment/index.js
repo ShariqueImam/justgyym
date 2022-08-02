@@ -24,7 +24,7 @@ const WorkoutPlace = (props) => {
     <>
       <ProgressBar scrollLength={"60%"} val={15} link="/workout-place" />
       <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto">
-        <Animator>
+        <div>
           <MainHeading text="Which type of equipment do you have access to?" />
           <div onClick={() => handleClick("no")}>
             <BasicCard1
@@ -49,12 +49,12 @@ const WorkoutPlace = (props) => {
           <Link href={`${Click.length > 0 ? "/workout-frequency" : ""}`}>
             <div
               onClick={() => Cookies.set("equipment", Click)}
-              className="mt-72 md:mt-2"
+              className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent "
             >
               <Button dis={Click.length > 0 ? false : true} text={"Continue"} />
             </div>
           </Link>
-        </Animator>
+        </div>
       </div>
     </>
   );

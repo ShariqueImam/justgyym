@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
 ::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }.slider1 {
@@ -131,5 +134,6 @@
     url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox='0 0 20 22' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23264626' fill-opacity='0.9'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
   /* background:linear-gradient(rgba(0, 0, 0, 0.93), rgba(0, 0, 0, 1)), url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox='0 0 20 22' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23505050' fill-opacity='0.63'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
   background-color: #111111;
+  z-index: 0;
   /* background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 1)); */
 }

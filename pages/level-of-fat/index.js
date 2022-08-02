@@ -74,7 +74,7 @@ const LevelOfFat = (props) => {
               </div>
               <Link href={"/problem-area"}>
                 {/* setting the cookies to the fat that is provided by the user */}
-                <div onClick={Cookies.set("level-of-fat", value)}>
+                <div onClick={Cookies.set("level-of-fat", value)} className="md:bg-transparent fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e]">
                   <Button text={"Continue"} />
                 </div>
               </Link>

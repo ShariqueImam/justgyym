@@ -2,17 +2,9 @@ import React, { useState } from "react";
 import { MainHeading } from "../../components/UI/Heading";
 import { Button } from "../../components/UI/Button";
 import Link from "next/link";
-import Animator from "../../components/UI/Animator";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Cookies from "js-cookie";
-
-const style = {
-  wrapper: "flex flex-col",
-  container: "mx-auto",
-  input:
-    "bg-[#1E1E1E] my-4 ring-none outline-none px-5 py-3 bg-transparent border-[1px] border-stone-500 placeholder:font-thin placeholder:text-neutral-400 w-[100%] text-[#ffffff]",
-  height: "text-[#ffffff] my-8 mx-6",
-};
+import NumberFormat from "react-number-format";
 
 const Height = (props) => {
   props.which("home1");
@@ -29,52 +21,7 @@ const Height = (props) => {
       ? /^[0-9]+$/.test(val) && +val < 300 && +val > 100
       : (/^[0-9]+$/.test(height[0]) && +height[0] < 9 && +height[0] > 3) ||
         (/^[0-9]+$/.test(height[1]) && +height[1] < 9 && +height[1] > 3);
-  const heightChangeHandler = (e) => {
-    if (Unit == "ft") {
-      if (e.target.value.length < 9) {
-        if (
-          e.target.value.length < 9 &&
-          e.target.length !== 1 &&
-          e.target.length !== 7
-        ) {
-          setHeight(`${e.target.value}`);
-        }
-        if (e.target.value.length == 1) {
-          setHeight(`${e.target.value} ft `);
-        }
-        if (e.target.value.length == 6) {
-          setHeight(` ${e.target.value} in`);
-        }
-        if (e.target.value.length == 9) {
-          setHeight((prev) => {
-            if (prev.slice(-1) == "cm") {
-              return prev.slice(0, -1);
-            }
-            return prev;
-          });
-        }
-        if (e.target.value.length == 3) {
-          setHeight((prev) => {
-            if (prev.slice(-1) == "/") {
-              return prev.slice(0, -1);
-            }
-            return prev;
-          });
-        }
-      }
-    } else {
-      // if (e.target.value.length >= 3) {
-      //   e.target.value = e.target.value.replace('c','')
-      //   e.target.value = e.target.value.replace('m','')
-      //   setHeight(`${e.target.value}cm`);
-      // }else{
-      //   setHeight(`${e.target.value}cm`)
-      // }
-      let val = e.target.value.replace("c", "");
-      val = val.replace("m", "");
-      setHeight(val);
-    }
-  };
+
   const handleClick = () => {
     if (Unit === "cm") {
       Cookies.set("height", height);
@@ -93,11 +40,20 @@ const Height = (props) => {
     });
     setHeight("");
   };
+  const style = {
+    wrapper: "flex flex-col",
+    container: "",
+    input: `bg-[#1E1E1E] my-4 ring-none outline-none px-5 py-3 bg-transparent border-[1px] placeholder:font-thin placeholder:text-neutral-400 w-[100%] text-[#ffffff] border-stone-500    ${
+      !valid && click && "border-[#ec3e4f]"
+    }`,
+    height: "text-[#ffffff] my-8 mx-6",
+  };
+
   return (
     <>
       <ProgressBar scrollLength={"16%"} val={5} link="/problem-area" />
       <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto font-normal">
-        <Animator className={style.wrapper}>
+        <div className={style.wrapper}>
           <MainHeading text={"What's your height?"} />
           {/* the unit box */}
           <div
@@ -133,19 +89,24 @@ const Height = (props) => {
             >
               Height ({`${Unit == "cm" ? "cm" : "ft"}`})
             </label>
-            <input
-              id="height"
-              type="text"
-              placeholder={`${Unit === "cm" ? "__cm" : "__ft"}`}
+            <NumberFormat
+              format={Unit == "ft" ? "## ft ## in" : false}
+              value={height}
+              thousandSeparator={true}
+              suffix={"cm"}
+              onValueChange={(values) => {
+                const { formattedValue, value } = values;
+                setHeight(formattedValue);
+              }}
               className={style.input}
-              value={`${height}cm`}
-              onChange={heightChangeHandler}
-              style={{ fontFamily: "Inter,sans-serif" }}
+              placeholder={Unit == "cm" ? "_cm" : "_ft _in"}
             />
             {click && Unit === "cm" && (
               <p
-                className={`${valid ? "hidden" : "flex"}  text-red-500`}
-                style={{ fontWeight: 500 }}
+                className={`${
+                  valid ? "hidden" : "flex"
+                }  text-[#ec3e4f] text-xs`}
+                style={{ fontWeight: 400 }}
               >
                 {" "}
                 Height should be between 100cm and 300cm
@@ -153,29 +114,29 @@ const Height = (props) => {
             )}
             {click && Unit === "ft" && (
               <p
-                className={`${valid ? "hidden" : "flex"}  text-red-500`}
-                style={{ fontWeight: 500 }}
+                className={`${
+                  valid ? "hidden" : "flex"
+                }  text-[#ec3e4f] text-xs`}
+                style={{ fontWeight: 400 }}
               >
                 {" "}
                 Height should be between 3ft and 9ft
               </p>
             )}
             {/* YOUR HEIGHT BUTTON   */}
-            {/* 
-            <h2 className={style.height}>
-              Your Height: {height}
-              {`${Unit === "cm" ? "cm" : "ft"}`}
-            </h2> */}
           </div>
           <Link href={`${valid ? "/target-weight" : ""}`}>
-            <div onClick={handleClick} className={`mt-72 md:mt-2`}>
+            <div
+              onClick={handleClick}
+              className="md:bg-transparent fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e]"
+            >
               <Button
                 text={"Continue"}
                 dis={height.length > 0 ? false : true}
               />
             </div>
           </Link>
-        </Animator>
+        </div>
       </div>
     </>
   );

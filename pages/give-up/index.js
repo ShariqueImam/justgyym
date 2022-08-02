@@ -18,7 +18,7 @@ const GiveUp = (props) => {
   }, []);
   return (
     <>
-      {/* <Animator> */}
+      <div>
       <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
         <div className={style.left}>
           <Image src={`${width<700?'/final/cs.png':'/final/c.webp'}`} width={200} height={width<700? 300:450} />
@@ -48,14 +48,14 @@ const GiveUp = (props) => {
               to change your lifestyle for the better.
             </p>
             <Link href={"half-way"}>
-              <div className="mt-6">
+              <div className="md:bg-transparent fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent ">
                 <Button text={"Got it "} />
               </div>
             </Link>
           </div>
         </div>
       </div>
-      {/* </Animator> */}
+      </div>
     </>
   );
 };

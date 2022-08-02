@@ -61,7 +61,7 @@ const DOB = (props) => {
   return (
     <>
       {/* <ProgressBar scrollLength={"96%"} val={24} /> */}
-      <Animator>
+      <div>
         <div
           className="w-[95%] md:w-[42%] lg:w-[37%] mx-auto mt-4"
           style={{ fontFamily: "Inter,sans-serif" }}
@@ -99,7 +99,7 @@ const DOB = (props) => {
             />
           </div>
           <Link href={`${dob.length > 0 ? "/email" : ""}`}>
-            <div onClick={handleClick}>
+            <div onClick={handleClick}  className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent ">
               <Button
                 dis={dob.length > 0 ? false : true}
                 text={"Continue"}
@@ -108,7 +108,7 @@ const DOB = (props) => {
             </div>
           </Link>
         </div>
-      </Animator>
+      </div>
     </>
   );
 };

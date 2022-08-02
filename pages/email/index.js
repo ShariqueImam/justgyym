@@ -69,7 +69,7 @@ const Email = (props) => {
     <>
       {/* <ProgressBar scrollLength={"100%"} val={25} /> */}
 
-      <Animator>
+      <div>
         <div
           className="w-[95%] md:w-[42%] lg:w-[37%] mx-auto mt-4"
           style={{ fontFamily: "Inter,sans-serif" }}
@@ -115,12 +115,12 @@ const Email = (props) => {
             </h2>
           </div>
           <Link href={`${valid > 0 ? "/commitment" : ""}`}>
-            <div onClick={handleClick}>
+            <div onClick={handleClick}  className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent ">
               <Button dis={email.length > 0 ? false : true} text={"Continue"} />
             </div>
           </Link>
         </div>
-      </Animator>
+      </div >
     </>
   );
 };
