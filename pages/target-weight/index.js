@@ -70,7 +70,7 @@ const TargetWeight = (props) => {
         className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto"
         style={{ fontFamily: "Inter,sans-serif" }}
       >
-        <div>
+        <div className="pb-24">
           <MainHeading text={"What's your current and target weight?"} />
           <div
             className={style.container}
