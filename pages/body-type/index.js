@@ -23,7 +23,7 @@ const BodyType = (props) => {
         className="w-[95%] md:w-[38%] lg:w-[36%] mx-auto"
         style={{ fontFamily: "Inter,sans-serif" }}
       >
-        <Animator>
+        <div>
           <div className="w-[95%] md:w-[80]">
             <MainHeading text={"Choose your body type"} />
             <SmallHeading text="Choose the one that is most similar to yours now. There are no good or bad body types." />
@@ -103,7 +103,7 @@ const BodyType = (props) => {
               doesn’t come into contact.
             </p>
           </div>
-        </Animator>
+        </div>
       </div>
     </>
   );
