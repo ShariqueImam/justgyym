@@ -31,7 +31,7 @@ const GiveUp = (props) => {
             >
               Why do people give up on exercise?
             </h2>
-            <p className="my-4 text-lg font-thin" style={{ fontWeight: 600 }}>
+            <p className="my-4 text-lg font-thin" style={{ fontWeight: 700 }}>
               The #1 reason is starting too big too quickly
             </p>
             <p
