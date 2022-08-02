@@ -90,7 +90,7 @@ const Height = (props) => {
               Height ({`${Unit == "cm" ? "cm" : "ft"}`})
             </label>
             <NumberFormat
-              format={Unit == "ft" ? "## ft ## in" : false}
+              format={Unit == "ft" ? "# ft ## in" : false}
               value={height}
               thousandSeparator={true}
               suffix={"cm"}

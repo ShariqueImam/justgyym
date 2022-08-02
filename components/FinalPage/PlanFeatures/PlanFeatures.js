@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import SingleFeature from "./SingleFeature";
 import { SingleFeature1 } from "./SingleFeature";
 import Cookies from "js-cookie";
-import { GiConfirmed} from "react-icons/gi";
+import { AiOutlineCheckCircle } from "react-icons/ai";
 
 const style = {
   wrapper: "w-[95%] md:w-[55%] mx-auto mb-12 font-bold",
@@ -14,26 +14,32 @@ const PlanFeatures = () => {
   const [Place, setPlace] = useState("Gym");
   const [Duration, setDuration] = useState("1");
   const [Name, setName] = useState(Cookies.get("name"));
-  const [Frequency, setFrequency] = useState(Cookies.get("workout-frequency") || '2');
+  const [Frequency, setFrequency] = useState(
+    Cookies.get("workout-frequency") || "2"
+  );
 
   useEffect(() => {
-    setGoal(Cookies.get("goal") || 'Lose Weight');
-    setPlace(Cookies.get("workout-place") || 'Home');
-    setDuration(Cookies.get("workout-duration")|| 'One hour');
+    setGoal(Cookies.get("goal") || "Lose Weight");
+    setPlace(Cookies.get("workout-place") || "Home");
+    setDuration(Cookies.get("workout-duration") || "One hour");
   }, []);
 
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
-      <h2 className="text-3xl md:text-5xl text-[#ffffff] font-bold my-8"> Shredded Plan for <span className="text-[#ff4400]">{Name}</span> is ready!</h2>
+      <h2 className="text-3xl md:text-5xl text-[#ffffff] font-bold my-8">
+        {" "}
+        Shredded Plan for <span className="text-[#ff4400]">{Name}</span> is
+        ready!
+      </h2>
       <div className={style.container}>
-        <SingleFeature Icon={'🎯'} heading={"Goal"} text={`${Goal}`} />
+        <SingleFeature Icon={"🎯"} heading={"Goal"} text={`${Goal}`} />
         <SingleFeature
-          Icon={'⌛️'}
+          Icon={"⌛️"}
           heading={"Duration"}
           text={`${Duration} Hour`}
         />
         <SingleFeature
-          Icon={'💪'}
+          Icon={"💪"}
           heading={"Fitness Level"}
           text={`${
             Goal === "Lose Weight"
@@ -44,16 +50,24 @@ const PlanFeatures = () => {
           }`}
         />
         <SingleFeature
-          Icon={'👟'}
+          Icon={"👟"}
           heading={"Place to Work"}
           text={`${Place}`}
         />
         <p className="border-t-[1px] border-stone-600 w-[100%] md:mr-10 lg:mr-12"></p>
 
         <SingleFeature1
-          Icon={'📆'}
+          Icon={"📆"}
           heading={"Workout Frequency"}
-          text={`${Frequency=='0'?'Not at all':Frequency=='2'?'1-2 Times a week':Frequency=='3'?'3 Times a week':'More than three times a week'}`}
+          text={`${
+            Frequency == "0"
+              ? "Not at all"
+              : Frequency == "2"
+              ? "1-2 Times a week"
+              : Frequency == "3"
+              ? "3 Times a week"
+              : "More than three times a week"
+          }`}
         />
       </div>
       <div className="mx-auto">
@@ -61,8 +75,10 @@ const PlanFeatures = () => {
           Goals for the next 6 months also include:
         </p>
         <div className="flex">
-          <GiConfirmed className="text-[#ff4400] text-2xl" />
-          <p className="text-[#ffffff] mx-4" style={{fontWeight:500}}>Reduce Stress</p>
+          <AiOutlineCheckCircle className="text-3xl text-[#ff4400]"/>
+          <p className="text-[#ffffff] mx-4" style={{ fontWeight: 500 }}>
+            Reduce Stress
+          </p>
         </div>
       </div>
     </div>
