@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 const style = {
-  wrapper: "my-28 bg1 py-12",
-  para: "text-[#ffffff] text-lg my-8 w-[90%] md:w-[40%] lg:w-[35%] mx-auto flex items-center gap-4",
+  wrapper: "my-28 bg1 py-12 w-[90%] md:w-[45%] lg:w-[45%] mx-auto",
+  para: "text-[#ffffff] text-sm my-8 mx-auto flex items-center gap-4 mx-auto md:mx-16",
 };
 const FullPlan = () => {
   return (
