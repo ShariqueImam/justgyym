@@ -12,7 +12,7 @@ const TargetWeight = (props) => {
   const [Show, setShow] = useState(false);
   const [Unit, setUnit] = useState("kg");
   const [target, setTarget] = useState("");
-  const [current, setCurrent] = useState("");
+  const [current, setCurrent] = useState(Cookies.get("target-weight-kg") || "");
   props.which("home1");
   React.useEffect(() => {
     window.scrollTo(0, 0);
@@ -32,9 +32,9 @@ const TargetWeight = (props) => {
       : /^[0-9]+$/.test(val2) && +val2 < 400;
   const handleClick = () => {
     if (Unit === "lb") {
-      Cookies.set("target-weight", val2 * 0.453592);
+      Cookies.set("target-weight-lb", val2 * 0.453592);
     } else {
-      Cookies.set("target-weight", val2);
+      Cookies.set("target-weight-kg", val2);
     }
   };
   const handleClick1 = () => {

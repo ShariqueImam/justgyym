@@ -9,7 +9,7 @@ import NumberFormat from "react-number-format";
 const Height = (props) => {
   props.which("home1");
   const [Unit, setUnit] = useState("cm");
-  const [height, setHeight] = useState("");
+  const [height, setHeight] = useState(Cookies.get("height") || "");
   const [click, setClick] = useState(false);
   React.useEffect(() => {
     window.scrollTo(0, 0);
