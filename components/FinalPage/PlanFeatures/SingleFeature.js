@@ -10,7 +10,7 @@ const SingleFeature = ({ Icon, heading, text }) => {
       <h2 className=" font-bold text-3xl px-2 py-1 bg-[#292929] flex items-center justify-center border-[1px] border-stone-500">{Icon}</h2>
       {/* <Icon className="text-5xl text-orange-600 border-2 border-stone-500 p-3"/> */}
       <div className="font-boldv flex-1 mx-5">
-        <p className="text-[#dadada]" style={{fontWeight:500}}>{heading}</p>
+        <p className="text-[#dadada] text-sm" style={{fontWeight:500}}>{heading}</p>
         <p className="text-[#ffffff] text-lg">{text}</p>
       </div>
     </div>
@@ -22,7 +22,7 @@ export const SingleFeature1 = ({ Icon, heading, text }) => {
             <h2 className=" font-bold text-3xl px-2 py-1 bg-transparent flex items-center justify-center  border-[1px] border-stone-500">{Icon}</h2>
       {/* <Icon className="text-5xl text-orange-600 border-2 border-stone-500 p-3"/> */}
       <div className="ffont-bold flex-1 mx-5">
-        <p className="font-boldv text-[#dadada]" style={{fontWeight:500}}>{heading}</p>
+        <p className="font-bold text-sm text-[#dadada]" style={{fontWeight:500}}>{heading}</p>
         <p className="font-bold text-[#ff4400] text-lg ">{text}</p>
       </div>
     </div>

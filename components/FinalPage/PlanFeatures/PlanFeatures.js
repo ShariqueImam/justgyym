@@ -71,7 +71,7 @@ const PlanFeatures = () => {
         />
       </div>
       <div className="mx-auto">
-        <p className="text-[#ffffff] text-lg my-5 font-semibold">
+        <p className="text-[#ffffff] text-lg my-5 font-bold">
           Goals for the next 6 months also include:
         </p>
         <div className="flex">
