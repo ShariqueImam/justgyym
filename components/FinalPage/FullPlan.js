@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 const style = {
   wrapper: "my-28 bg1 py-12 w-[90%] md:w-[45%] lg:w-[45%] mx-auto",
-  para: "text-[#ffffff] text-sm my-8 mx-auto flex items-center gap-4 mx-auto md:mx-16",
+  para: "text-[#ffffff] text-sm my-8 mx-auto flex items-center gap-4 mx-auto md:mx-24",
 };
 const FullPlan = () => {
   return (
