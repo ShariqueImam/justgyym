@@ -4,48 +4,151 @@ import Animator from "../../components/UI/Animator";
 import Cookies from "js-cookie";
 
 const index = (props) => {
-  const [Val, setVal] = useState(Cookies.get("target-body") || "slim");
-  const [Code, setCode] = useState(-1);
-  const [Got, setGot] = useState(false);
   props.which("home1");
+  const [Goal, setGoal] = useState(Cookies.get("goal"));
+  const [Place, setPlace] = useState(Cookies.get("workout-place"));
+  const [Weight, setWeight] = useState(Cookies.get("target-weight"));
+  const [Unit, setUnit] = useState(Cookies.get("target-weight-unit"));
+  const [Code, setCode] = useState(-1);
+  // const [Got, setGot] = useState(false);
+  console.log(
+    props.data.sort(function (a, b) {
+      return a.name - b.name;
+    })
+  );
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  if (Val === "slim" && Got == false) {
-    setCode(0);
-    setGot(true);
+  // 0-7
+  if (Place == "gym") {
+    if (Goal == "Lose Wieght" || Goal == "Get Shredded") {
+      if (Unit == "kg") {
+        if (+Weight <= 65) {
+          setCode(0);
+        }
+        if (+Weight > 65 && +Weight <= 74) {
+          setCode(1);
+        }
+        if (+Weight > 74 && +Weight <= 84) {
+          setCode(2);
+        }
+        if (+Weight > 84) {
+          setCode(3);
+        }
+      }
+      if (Unit == "lb") {
+        if (+Weight * 0.4535 <= 65) {
+          setCode(0);
+        }
+        if (+Weight * 0.4535 > 65 && +Weight * 0.4535 <= 74) {
+          setCode(1);
+        }
+        if (+Weight * 0.4535 > 74 && +Weight * 0.4535 <= 84) {
+          setCode(2);
+        }
+        if (+Weight * 0.4535 > 84) {
+          setCode(3);
+        }
+      }
+    }
+    if (Goal == "Gain Weight") {
+      if (Unit == "kg") {
+        if (+Weight <= 65) {
+          setCode(4);
+        }
+        if (+Weight > 65 && +Weight <= 74) {
+          setCode(5);
+        }
+        if (+Weight > 74 && +Weight <= 84) {
+          setCode(6);
+        }
+        if (+Weight > 84) {
+          setCode(7);
+        }
+      }
+      if (Unit == "lb") {
+        if (+Weight * 0.4535 <= 65) {
+          setCode(4);
+        }
+        if (+Weight * 0.4535 > 65 && +Weight * 0.4535 <= 74) {
+          setCode(5);
+        }
+        if (+Weight * 0.4535 > 74 && +Weight * 0.4535 <= 84) {
+          setCode(6);
+        }
+        if (+Weight * 0.4535 > 84) {
+          setCode(7);
+        }
+      }
+    }
   }
-  if (Val === "slimshredded" && Got == false) {
-    setCode(1);
-    setGot(true);
+  // 8-15
+  if (Place == "home") {
+    if (Goal == "Lose Wieght" || Goal == "Get Shredded") {
+      if (Unit == "kg") {
+        if (+Weight <= 65) {
+          setCode(8);
+        }
+        if (+Weight > 65 && +Weight <= 74) {
+          setCode(9);
+        }
+        if (+Weight > 74 && +Weight <= 84) {
+          setCode(10);
+        }
+        if (+Weight > 84) {
+          setCode(11);
+        }
+      }
+      if (Unit == "lb") {
+        if (+Weight * 0.4535 <= 65) {
+          setCode(8);
+        }
+        if (+Weight * 0.4535 > 65 && +Weight * 0.4535 <= 74) {
+          setCode(9);
+        }
+        if (+Weight * 0.4535 > 74 && +Weight * 0.4535 <= 84) {
+          setCode(10);
+        }
+        if (+Weight * 0.4535 > 84) {
+          setCode(11);
+        }
+      }
+    }
+    if (Goal == "Gain Weight") {
+      if (Unit == "kg") {
+        if (+Weight <= 65) {
+          setCode(12);
+        }
+        if (+Weight > 65 && +Weight <= 74) {
+          setCode(13);
+        }
+        if (+Weight > 74 && +Weight <= 84) {
+          setCode(14);
+        }
+        if (+Weight > 84) {
+          setCode(15);
+        }
+      }
+      if (Unit == "lb") {
+        if (+Weight * 0.4535 <= 65) {
+          setCode(12);
+        }
+        if (+Weight * 0.4535 > 65 && +Weight * 0.4535 <= 74) {
+          setCode(13);
+        }
+        if (+Weight * 0.4535 > 74 && +Weight * 0.4535 <= 84) {
+          setCode(14);
+        }
+        if (+Weight * 0.4535 > 84) {
+          setCode(15);
+        }
+      }
+    }
   }
-  if (Val === "athlete" && Got == false) {
-    setCode(2);
-    setGot(true);
-  }
-  if (Val === "hero" && Got == false) {
-    setCode(3);
-    setGot(true);
-  }
-  if (Val === "bodybuilder" && Got == false) {
-    setCode(4);
-    setGot(true);
-  }
-  if (Val === "beachbody" && Got == false) {
-    setCode(5);
-    setGot(true);
-  }
-  if (Val === "workoutbody" && Got == false) {
-    setCode(6);
-    setGot(true);
-  }
-  if (Val === "crossfitbody") {
-    setCode(7);
-    setGot(true);
-  }
+
   return (
     <Animator>
-      {!Code == -1 && (
+      {Code == -1 && (
         <div
           className=" w-[95%] md:w-[75%] lg:w-[45%] mx-auto flex flex-col"
           style={{ fontFamily: "Inter,sans-serif" }}

@@ -9,38 +9,45 @@ import { BiClipboard } from "react-icons/bi";
 import NumberFormat from "react-number-format";
 
 const TargetWeight = (props) => {
-  const [Show, setShow] = useState(false);
-  const [Unit, setUnit] = useState("kg");
-  const [target, setTarget] = useState("");
-  const [current, setCurrent] = useState(Cookies.get("target-weight-kg") || "");
   props.which("home1");
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const [Show, setShow] = useState(false);
+  const [Unit, setUnit] = useState(
+    Cookies.get("target-weight-unit") ? Cookies.get("target-weight-unit") : "kg"
+  );
+  const [target, setTarget] = useState(
+    Cookies.get("target-weight") ? Cookies.get("target-weight") : ""
+  );
+  const [current, setCurrent] = useState(
+    Cookies.get("current-weight") ? Cookies.get("current-weight") : ""
+  );
+
   let val1 = current.replace("kg", "");
   val1 = val1.replace("lb", "");
-
   let val2 = target.replace("kg", "");
   val2 = val2.replace("lb", "");
   const valid1 =
     Unit == "kg"
-      ? /^[0-9]+$/.test(val2) && +val2 < 200
-      : /^[0-9]+$/.test(val2) && +val2 < 400;
+      ? /^[0-9]+$/.test(val1) && +val1 < 200
+      : /^[0-9]+$/.test(val1) && +val1 < 400;
   const valid2 =
     Unit == "kg"
-      ? /^[0-9]+$/.test(val1) && +val1 < 200
+      ? /^[0-9]+$/.test(val2) && +val2 < 200
       : /^[0-9]+$/.test(val2) && +val2 < 400;
   const handleClick = () => {
-    if (Unit === "lb") {
-      Cookies.set("target-weight-lb", val2 * 0.453592);
-    } else {
-      Cookies.set("target-weight-kg", val2);
-    }
+    Cookies.set("current-weight", val1);
+    Cookies.set("target-weight", val2);
   };
+
   const handleClick1 = () => {
     setShow(true);
+    Cookies.set("current-weight", val1);
+    Cookies.set("target-weight", val2);
   };
   const handleUnit = (value) => {
+    Cookies.set("target-weight-unit", value);
     setUnit((prev) => {
       if (value === prev) {
         return "";
@@ -56,10 +63,10 @@ const TargetWeight = (props) => {
     wrapper: "flex flex-col ",
     container: "mx-auto",
     input1: ` my-4 ring-none outline-none px-5 py-3 border-[1px] border-stone-500 bg-[#1E1E1E] placeholder:text-neutral-400 placeholder:font-thin w-[100%] text-[#ffffff] placeholder:text-neutral-400 text-lg ${
-      !valid2 && Show && "border-[#ec3e4f]"
+      !valid1 && Show && "border-[#ec3e4f]"
     }`,
     input2: ` my-4 ring-none outline-none px-5 py-3 border-[1px] border-stone-500 bg-[#1E1E1E] placeholder:text-neutral-400 placeholder:font-thin w-[100%] text-[#ffffff] placeholder:text-neutral-400 text-lg ${
-      !valid1 && Show && "border-[#ec3e4f]"
+      !valid2 && Show && "border-[#ec3e4f]"
     }`,
     height: "text-[#ffffff  ] my-4 mx-6",
   };
@@ -119,7 +126,7 @@ const TargetWeight = (props) => {
               />
               <p
                 className={`font-normal ${
-                  valid2 || !Show ? "hidden" : "flex"
+                  valid1 || !Show ? "hidden" : "flex"
                 }  text-[#ec3e4f] text-xs`}
               >
                 {Unit == "kg"
@@ -148,7 +155,7 @@ const TargetWeight = (props) => {
               />
               <p
                 className={`${
-                  valid1 || !Show ? "hidden" : "flex"
+                  valid2 || !Show ? "hidden" : "flex"
                 }  text-[#ec3e4f] text-xs`}
               >
                 {Unit == "kg"

@@ -6,7 +6,7 @@ import useWindowSize from "../../components/hooks/windowSize";
 
 const style = {
   wrapper: "flex flex-col md:flex-row z-10",
-  left: "w-[100%] md:w-[50%] flex items-center justify-center mt-24 ",
+  left: "w-[100%] md:w-[50%] flex items-center justify-center mt-24",
   right:
     "w-[100%] md:w-[50%] bg-[#191919] h-[60vh] md:h-[100vh] text-[#ffffff] flex flex-col justify-center px-4 md:px-12",
 };
