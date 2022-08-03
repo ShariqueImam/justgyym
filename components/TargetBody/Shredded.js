@@ -13,7 +13,7 @@ const Shredded = () => {
     <div>
       <SmallHeading text={"Ok, so your goal is to Get Shredded"} />
       <MainHeading text={"Choose the body you want"} />
-      <Link href={`${click.length > 0 ? "/body-type" : ""}`}>
+      <Link href={`${ "/body-type"}`}>
         <div
           onClick={() => {
             handleClick("beachbody");
@@ -27,7 +27,7 @@ const Shredded = () => {
           />
         </div>
       </Link>
-      <Link href={`${click.length > 0 ? "/body-type" : ""}`}>
+      <Link href={`${"/body-type"}`}>
         <div
           onClick={() => {
             handleClick("workoutbody");
@@ -42,7 +42,7 @@ const Shredded = () => {
         </div>
       </Link>
 
-      <Link href={`${click.length > 0 ? "/body-type" : ""}`}>
+      <Link href={`${ "/body-type"}`}>
         <div
           onClick={() => {
             handleClick("crossfitbody");

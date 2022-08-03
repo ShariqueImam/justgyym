@@ -14,7 +14,7 @@ const Lose = () => {
     <div>
       <SmallHeading text={"Ok, so your goal is to Lose Weight"} />
       <MainHeading text={"Choose the body you want"} />
-      <Link href={`${click.length > 0 ? "/body-type" : ""}`}>
+      <Link href={`${"/body-type"}`}>
         <div
           onClick={() => {
             handleClick("slim");
@@ -28,7 +28,7 @@ const Lose = () => {
           />
         </div>
       </Link>
-      <Link href={`${click.length > 0 ? "/body-type" : ""}`}>
+      <Link href={`${ "/body-type"}`}>
         <div
           onClick={() => {
             handleClick("slimshredded");

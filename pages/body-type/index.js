@@ -28,7 +28,7 @@ const BodyType = (props) => {
             <MainHeading text={"Choose your body type"} />
             <SmallHeading text="Choose the one that is most similar to yours now. There are no good or bad body types." />
           </div>
-          <Link href={`${click.length > 0 ? "/level-of-fat" : ""}`}>
+          <Link href={`${"/level-of-fat"}`}>
             <div
               onClick={() => {
                 handleClick("ectomorph");
@@ -44,7 +44,7 @@ const BodyType = (props) => {
               />
             </div>
           </Link>
-          <Link href={`${click.length > 0 ? "/level-of-fat" : ""}`}>
+          <Link href={`${"/level-of-fat"}`}>
             <div
               onClick={() => {
                 handleClick("mesomorph");
@@ -59,7 +59,7 @@ const BodyType = (props) => {
               />
             </div>
           </Link>
-          <Link href={`${click.length > 0 ? "/level-of-fat" : ""}`}>
+          <Link href={`${ "/level-of-fat" }`}>
             <div
               onClick={() => {
                 handleClick("endomorph");

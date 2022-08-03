@@ -16,7 +16,7 @@ const Gain = () => {
     <div>
       <SmallHeading text={"Ok, so your goal is to Gain Weight"} />
       <MainHeading text={"Choose the body you want"} />
-      <Link href={`${click.length > 0 ? "/body-type" : ""}`}>
+      <Link href={`${ "/body-type"}`}>
         <div
           onClick={() => {
             handleClick("athlete");
@@ -30,7 +30,7 @@ const Gain = () => {
           />
         </div>
       </Link>
-      <Link href={`${click.length > 0 ? "/body-type" : ""}`}>
+      <Link href={`${"/body-type"}`}>
         <div
           onClick={() => {
             handleClick("hero");
@@ -45,7 +45,7 @@ const Gain = () => {
         </div>
       </Link>
 
-      <Link href={`${click.length > 0 ? "/body-type" : ""}`}>
+      <Link href={`${"/body-type"}`}>
         <div
           onClick={() => {
             handleClick("bodybuilder");
