@@ -26,7 +26,7 @@ const index = (props) => {
         >
           <a
             href="/"
-            className=" block underline text-[#ffffff] py-3 text-sm md:text-xl mx-8 md:mx-16 mb-10 flex items-center justify-center"
+            className=" block underline text-[#ffffff] py-3 text-sm md:text-xl mx-8 md:mx-16 flex items-end justify-end"
             style={{ fontWeight: 400 }}
           >
             <AiOutlineMail className="text-[#ffffff] mx-4 " />
