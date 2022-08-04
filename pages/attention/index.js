@@ -17,7 +17,7 @@ const Attention = (props) => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="mb-28 md:mb-0">
+    <div className="mb-20 md:mb-0">
       {/* <Animator> */}
       <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
         <div className={style.left}>
