@@ -43,7 +43,7 @@ const Attention = (props) => {
             </ol>
             <p className="my-3 text-[#ffffff] text-lg" style={{fontWeight:300}}>
               Please contact your physician before starting to follow the
-              MadMuscles program.
+              JustGyym program.
             </p>
             <Link href={"/push-ups"}>
               <div className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent ">

@@ -83,7 +83,7 @@ const WorkoutFrequency = (props) => {
             )}
             {Show && (
               <p className="text-xs text-gray-50 mx-auto my-7">
-                *users of MadMuscles who took the quiz
+                *users of JustGyym who took the quiz
               </p>
             )}
           </div>
