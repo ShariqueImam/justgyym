@@ -142,14 +142,20 @@ const Summary = () => {
             </div>
           </div>
           <div className="flex my-1 mx-auto pb-3">
-            {/* <Image /> */}
-            <TbGlassFull className="text-3xl text-blue-300" />
+            <Image src={'/glass_full.svg'} height={50} width={50}/>
+            <Image src={'/glass_full.svg'} height={50} width={50}/>
+            <Image src={'/glass_full.svg'} height={50} width={50}/>
+            <Image src={'/glass_full.svg'} height={50} width={50}/>
+            <Image src={'/glass_full.svg'} height={50} width={50}/>
+            <Image src={'/glass_empty.svg'} height={50} width={50}/>
+            <Image src={'/glass_empty.svg'} height={50} width={50}/>
+            {/* <TbGlassFull className="text-3xl text-blue-300" />
             <TbGlassFull className="text-3xl text-blue-300" />
             <TbGlassFull className="text-3xl text-blue-300" />
             <TbGlassFull className="text-3xl text-blue-300" />
             <TbGlassFull className="text-3xl text-blue-300" />
             <TbGlassFull className="text-3xl text-gray-300" />
-            <TbGlassFull className="text-3xl text-gray-300" />
+            <TbGlassFull className="text-3xl text-gray-300" /> */}
           </div>
         </div>
       </div>
