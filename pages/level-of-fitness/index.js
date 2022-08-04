@@ -76,8 +76,8 @@ const LevelOfFitnes = (props) => {
               style={{ fontFamily: "Inter,sans-serif" }}
             >
               <div className="text-gray-50 flex font-thin mb-4 w-[100%]">
-                <p className="flex-1">1</p>
-                <p className="">10</p>
+                <p className="flex-1 font-semibold ">1</p>
+                <p className=" font-semibold ">10</p>
               </div>
               <Box sx={{ width: "100%" }}>
                 <Slider
@@ -96,8 +96,8 @@ const LevelOfFitnes = (props) => {
                 />
               </Box>
               <div className="text-gray-50 flex font-thin w-[100%]">
-                <p className="flex-1">Worst Shape</p>
-                <p className="">I'm on fire</p>
+                <p className="flex-1 font-semibold">Worst Shape</p>
+                <p className=" font-semibold">I'm on fire</p>
               </div>
             </div>
             <div className="text-gray-100 mx-auto bg-neutral-900 px-3 py-3">
