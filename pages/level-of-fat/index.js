@@ -67,7 +67,7 @@ const LevelOfFat = (props) => {
                     // color="warning"
                   />
                 </Box>
-                <div className="text-orange-600 flex w-[85%] md:w-[100%]">
+                <div className="text-white flex w-[85%] md:w-[100%]">
                   <p className="flex-1">5-9%</p>
                   <p className=""> &gt;40%</p>
                 </div>

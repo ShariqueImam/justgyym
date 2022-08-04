@@ -3,6 +3,7 @@ import Cookies from "js-cookie";
 import Slider from "@mui/material/Slider";
 import Box from "@mui/material/Box";
 import { TbGlassFull } from "react-icons/tb";
+import Image from "next/image";
 const style = {
   wrapper: "my-12 md:my-28 w-[95%] md:w-[55%] mx-auto font-bold",
   container: "mx-auto mt-16 bg-[#2a2a2a] px-5 md:px-12 py-8   font-bold",
@@ -141,6 +142,7 @@ const Summary = () => {
             </div>
           </div>
           <div className="flex my-1 mx-auto pb-3">
+            {/* <Image /> */}
             <TbGlassFull className="text-3xl text-blue-300" />
             <TbGlassFull className="text-3xl text-blue-300" />
             <TbGlassFull className="text-3xl text-blue-300" />
