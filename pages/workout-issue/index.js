@@ -98,7 +98,7 @@ const WorkoutIssue = (props) => {
                     Thanks for sharing!
                   </h2>
                 </div>
-                <p className="text-gray-100 text-sm my-2 font-thin">
+                <p className="text-gray-100 text-sm my-2 font-normal" style={{fontWeight:500}}>
                   We learned that a lot of people have faced the same as well.
                   MadMuscles has a clear workout plan that is easy to follow.
                   Also, the program will help you with motivation during this
