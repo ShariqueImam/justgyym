@@ -44,7 +44,7 @@ const Time = (props) => {
           </div>
           <div onClick={() => handleClick("0")}>
             <BasicCard1
-              cardText="I prefer to order meals or go out to eat "
+              cardText="I prefer to order meals or go out to eat 📦"
               isClick={Click === "0" ? true : false}
             />
           </div>
