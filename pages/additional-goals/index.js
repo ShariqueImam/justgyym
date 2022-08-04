@@ -38,7 +38,7 @@ const AdditionalGoals = (props) => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <>
+    <div className="mb-32 md:mb-0">
       <ProgressBar scrollLength={"44%"} val={11} link="/give-up" />
       <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto">
         <div>
@@ -98,7 +98,7 @@ const AdditionalGoals = (props) => {
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
