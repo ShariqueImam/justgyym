@@ -16,7 +16,7 @@ const Products = (props) => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <>
+    <div className="mb-28 md:mb-0">
       <ProgressBar scrollLength={"84%"} val={20} link="/meal-prep-time" />
       <div className="w-[95%] md:w-[34%] lg:w-[33%] mx-auto">
         <div>
@@ -55,7 +55,7 @@ const Products = (props) => {
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
