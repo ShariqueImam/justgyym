@@ -23,8 +23,12 @@ const LevelHormone = (props) => {
             <div className="w-[95%] md:w-[80%]">
               <MainHeading text={"Level of Cortisol & Testosterone"} />
             </div>
-            <div className="flex mx-auto">
-              <Image src="/level.webp" height={220} width={400} />
+            <div className="flex mx-auto flex-col">
+              <Image src="/level.webp" height={220} width={450} />
+              <div className="flex justify-between mt-3">
+                <p className="text-white text-lg">Now</p>
+                <p className="text-white text-lg">6 months</p>
+              </div>
             </div>
             <div
               className="flex flex-col text-gray-50 mt-8 mx-auto"
