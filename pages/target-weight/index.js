@@ -60,7 +60,7 @@ const TargetWeight = (props) => {
     setShow(false);
   };
   const style = {
-    wrapper: "flex flex-col ",
+    wrapper: "flex flex-col scroll-smooth",
     container: "mx-auto",
     input1: ` my-4 ring-none outline-none px-5 py-3 border-[1px] border-stone-500 bg-[#1E1E1E] placeholder:text-neutral-400 placeholder:font-thin w-[100%] text-[#ffffff] placeholder:text-neutral-400 text-lg ${
       !valid1 && Show && "border-[#ec3e4f]"

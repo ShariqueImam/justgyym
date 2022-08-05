@@ -13,7 +13,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import Link from "next/link";
 
 const style = {
-  wrapper: "",
+  wrapper: "scroll-smooth",
 };
 const FinalPage = () => {
   const [fat, setFat] = useState(25);

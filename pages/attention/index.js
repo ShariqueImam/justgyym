@@ -6,10 +6,10 @@ import Animator from "../../components/UI/Animator";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 
 const style = {
-  wrapper: "flex flex-col md:flex-row overflow-y-hidden",
+  wrapper: "flex flex-col md:flex-row overflow-y-hidden pb-20 scroll-smooth",
   left: "w-[100%] md:w-[50%] flex items-center justify-center",
   right:
-    "w-[100%] md:w-[50%] bg-[#191919] h-[60vh] md:h-[100vh] text-[#ffffff] flex flex-col justify-center px-4 md:px-12",
+    "w-[100%] md:w-[50%] bg-[#191919] h-[75vh] md:h-[100vh] text-[#ffffff] flex flex-col justify-center px-4 md:px-12",
 };
 const Attention = (props) => {
   props.which("home2");
@@ -17,7 +17,7 @@ const Attention = (props) => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="mb-20 md:mb-0">
+    <div className="md:mb-0">
       {/* <Animator> */}
       <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
         <div className={style.left}>

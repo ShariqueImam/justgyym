@@ -21,7 +21,7 @@ const WorkoutDuration = (props) => {
   return (
     <>
       <ProgressBar scrollLength={"68%"} val={17} link="/workout-frequency" />
-      <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto">
+      <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto scroll-smooth">
         <div>
           <div className="w-[95%] md:w-[80%]">
             <MainHeading text="How much time are you willing to spend on a workout?" />

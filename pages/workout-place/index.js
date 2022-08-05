@@ -22,7 +22,7 @@ const WorkoutPlace = (props) => {
   return (
     <>
       <ProgressBar scrollLength={"60%"} val={14} link="/pull-ups" />
-      <div className="w-[95%] md:w-[34%] lg:w-[36%] mx-auto">
+      <div className="w-[95%] md:w-[34%] lg:w-[36%] mx-auto scroll-smooth">
         <div>
           <MainHeading text="Choose the place for your workouts" />
           <div onClick={() => handleClick("Home")}>

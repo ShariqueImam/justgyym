@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { ImCross} from "react-icons/im";
 import Image from "next/image";
 const style = {
-  wrapper: "flex items-center justify-center mx-auto h-[80vh] w-[100vw]",
+  wrapper: "flex items-center justify-center mx-auto h-[80vh] w-[100vw] scroll-smooth",
 };
 const index = (props) => {
   const [Show, setShow] = useState(false);

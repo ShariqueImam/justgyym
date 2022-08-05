@@ -15,7 +15,7 @@ const index = (props) => {
         <FinalPage />
         <Footer />
         <div
-          className="bg-[#171717] text-[#8d8d8d] py-1 text-center font-bold"
+          className="bg-[#171717] text-[#8d8d8d] py-1 text-center font-bold scroll-smooth"
           style={{ fontFamily: "Inter,sans-serif" }}
         >
           Any questions? We're here to help.

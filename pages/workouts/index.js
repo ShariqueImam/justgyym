@@ -40,7 +40,7 @@ const Workouts = (props) => {
   return (
     <>
       <ProgressBar scrollLength={"32%"} val={9} link="/loh" />
-      <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto">
+      <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto scroll-smooth">
         <div>
           <div className="w-[95%] md:w-[80%]">
             <MainHeading text={"What sports are you interested in?"} />

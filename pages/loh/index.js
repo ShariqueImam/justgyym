@@ -48,7 +48,7 @@ const index = (props) => {
   return (
     <>
       <ProgressBar scrollLength={"28%"} val={8} link="/level-of-fitness" />
-      <div className="w-[95%] md:w-[38%] lg:w-[29%] mx-auto">
+      <div className="w-[95%] md:w-[38%] lg:w-[29%] mx-auto scroll-smooth">
         <div>
           <div className={style.wrapper}>
             {/* adding the images */}

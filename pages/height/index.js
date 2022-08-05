@@ -41,7 +41,7 @@ const Height = (props) => {
     setHeight("");
   };
   const style = {
-    wrapper: "flex flex-col",
+    wrapper: "flex flex-col scroll-smooth",
     container: "",
     input: `bg-[#1E1E1E] my-4 ring-none outline-none px-5 py-3 bg-transparent border-[1px] placeholder:font-thin placeholder:text-neutral-400 w-[100%] text-[#ffffff] border-stone-500    ${
       !valid && click && "border-[#ec3e4f]"

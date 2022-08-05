@@ -61,7 +61,7 @@ const LevelOfFitnes = (props) => {
   return (
     <>
       <ProgressBar scrollLength={"24%"} val={7} link="/target-weight" />
-      <div className="w-[95%] md:w-[34%] lg:w-[39%] mx-auto">
+      <div className="w-[95%] md:w-[34%] lg:w-[39%] mx-auto scroll-smooth">
         <div>
           <div className="mx-auto" style={{ fontFamily: "Inter,sans-serif" }}>
             <MainHeading text={"What's your level of fitness?"} />
