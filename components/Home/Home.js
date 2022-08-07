@@ -26,21 +26,20 @@ const Home = (props) => {
   const handleClick = (value) => {
     props.goal(value);
   };
-  const [checked1, setChecked1] = React.useState(false);
-  const [checked2, setChecked2] = React.useState(false);
+  const [checked1, setChecked1] = React.useState(true);
   const [Error, setError] = React.useState(false);
   const [Touch, setTouch] = React.useState(false);
   const handleTouch = (val) => {
     console.log(val);
-    setError((val && !checked1) || !checked2);
+    setError(val && !checked1);
     setTouch(true);
   };
   const handle1 = () => {
-    setError(!checked1 && !checked2);
+    setError(!checked1);
     setChecked1((prev) => !prev);
   };
   const handle2 = () => {
-    setError(!checked1 && !checked2);
+    setError(!checked1);
     setChecked2((prev) => !prev);
   };
   return (
@@ -102,20 +101,7 @@ const Home = (props) => {
               </Link>
             </div>
           </div>
-          <div className={style.allow1}>
-            <div onClick={handle2}>
-              {checked2 ? (
-                <Image src={"/ok.png"} height={23} width={28} />
-              ) : (
-                <Image src={"/not.png"} height={23} width={28} />
-              )}
-            </div>
-            <div onClick={handle2} className="mx-4 text-xs md:text-xs">
-              {" "}
-              I would like to receive updates about products, services, and
-              special offers from MadMuscles via email
-            </div>
-          </div>
+
           {Error && Touch && (
             <div className="bg-[#e22336] px-4 py-3 flex items-center justify-center max-w-fit my-2">
               <BiErrorCircle className="text-[#ffffff] text-3xl mr-3" />
@@ -133,11 +119,7 @@ const Home = (props) => {
       </div>
 
       <div className={style.right}>
-        <Goal
-          goal={handleClick}
-          isTrue={checked1 && checked2}
-          touch={handleTouch}
-        />
+        <Goal goal={handleClick} isTrue={checked1} touch={handleTouch} />
       </div>
       <div className={style.allowSmall}>
         <div className={style.allow1}>
@@ -190,21 +172,6 @@ const Home = (props) => {
           </div>
         </div>
         <div className={style.allow1}>
-          <div onClick={handle2}>
-            {checked2 ? (
-              <Image
-                src={"/ok.png"}
-                height={width < 700 ? 45 : 23}
-                width={width < 700 ? 45 : 28}
-              />
-            ) : (
-              <Image
-                src={"/not.png"}
-                height={width < 700 ? 45 : 23}
-                width={width < 700 ? 45 : 28}
-              />
-            )}
-          </div>
           <div onClick={handle2} className="mx-4">
             {" "}
             I would like to receive updates about products, services, and
