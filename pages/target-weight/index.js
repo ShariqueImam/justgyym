@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { MainHeading } from "../../components/UI/Heading";
 import { Button } from "../../components/UI/Button";
 import Link from "next/link";
-import Animator from "../../components/UI/Animator";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Cookies from "js-cookie";
 import { BiClipboard } from "react-icons/bi";

@@ -14,7 +14,6 @@ const SinglePlanCard = ({ text, per, total, isClick, TimerEnd }) => {
     text4: "text-[#b3b3b3] text-xs",
     text5: `text-[#ff4400] ${TimerEnd ? "hidden" : "flex"} mx-3`,
   };
-  console.log(TimerEnd);
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
       <div
@@ -33,7 +32,7 @@ const SinglePlanCard = ({ text, per, total, isClick, TimerEnd }) => {
           <h2 className={style.text1}>{text}</h2>
           <div className="flex items-center">
             <h2 className={style.text2}>{total} USD</h2>
-            <h2 className={style.text5}>{total - 10} USD</h2>
+            <h2 className={style.text5}>{(total - 10).toFixed(2)} USD</h2>
           </div>{" "}
         </div>
         <div className={style.container2}>

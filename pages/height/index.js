@@ -9,7 +9,9 @@ import NumberFormat from "react-number-format";
 const Height = (props) => {
   props.which("home1");
   const [Unit, setUnit] = useState("cm");
-  const [height, setHeight] = useState(Cookies.get("height") || "");
+  const [height, setHeight] = useState("");
+  // const [CM, setCM] = useState(Cookies.get("height-cm") || "");
+  // const [FT, setFT] = useState(Cookies.get("height-ft") || "");
   const [click, setClick] = useState(false);
   React.useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,9 +26,19 @@ const Height = (props) => {
 
   const handleClick = () => {
     if (Unit === "cm") {
-      Cookies.set("height", height);
+      // Cookies.set("height-cm", height);
+      let h = height.replace("cm", "");
+      Cookies.set("height", +h * 0.01);
     } else {
-      Cookies.set("height", height * 0.3048);
+      // Cookies.set("height-ft", height);
+      let h = height.replace("in", "");
+      let inch = h.slice(-3);
+      h = h.replace(inch, "");
+      h = h.replace("ft", "");
+      let ft = h.slice(-1);
+      let finalInch = 12 * +ft + +inch;
+      let finalcm = finalInch * 2.54;
+      Cookies.set("height", +finalcm * 0.01);
     }
     setClick(true);
   };
@@ -90,7 +102,7 @@ const Height = (props) => {
               Height ({`${Unit == "cm" ? "cm" : "ft"}`})
             </label>
             <NumberFormat
-              format={Unit == "ft" ? "# ft ## in" : false}
+              format={Unit == "ft" ? "#ft## in" : false}
               value={height}
               thousandSeparator={true}
               suffix={"cm"}

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";
-import Slider from "@mui/material/Slider";
-import Box from "@mui/material/Box";
 import { TbGlassFull } from "react-icons/tb";
 import Image from "next/image";
 const style = {
@@ -16,17 +14,62 @@ function valuetext(value) {
   return `${value}°C`;
 }
 const Summary = () => {
+  // getting height in meter
   const [Height, setHeight] = useState(
-    Cookies.get("height") ? Cookies.get("height").replace("cm", "") : 81
+    Cookies.get("height") ? Cookies.get("height") : "0"
   );
-  let controller = Math.random() * 50;
-  const [Weight, setWeight] = useState(Cookies.get("target-weight") || 102);
-  const [BMI, setBMI] = useState(40);
+  const [Goal, setGoal] = useState(Cookies.get("goal") || "");
+  const [Weight, setWeight] = useState(Cookies.get("target-weight") || "");
+  const [WeightUnit, setWeightUnit] = useState(
+    Cookies.get("target-weight-unit") || ""
+  );
+  const [Calorie, setCalorie] = useState("");
 
+  const [BMI, setBMI] = useState("");
+  let controller = Math.random() * 50;
   useEffect(() => {
-    let val = Height.replace("cm", "");
-    setBMI((+Weight / (0.01 * +val * 0.01 * +Height)).toFixed(1));
-  }, [Height, Weight]);
+    if (WeightUnit == "kg") {
+      setWeight(Weight);
+    }
+    if (WeightUnit == "lb") {
+      setWeight(Weight * 2.2);
+    }
+  }, []);
+  useEffect(() => {
+    let a = +Weight / (+Height * +Height);
+    a = a.toFixed(1);
+    setBMI(a);
+  }, [Weight]);
+  setTimeout(() => {
+    setBMI((prev) => prev);
+  }, 1000);
+
+  // calculating the calories
+  useEffect(() => {
+    console.log(Goal);
+    if (Goal == "Lose Weight" || Goal == "Get Shredded") {
+      if (Weight < 65) {
+        setCalorie(1553);
+      } else if (Weight > 65 && Weight < 74) {
+        setCalorie(1756);
+      } else if (Weight > 74 && Weight < 84) {
+        setCalorie(1960);
+      } else if (Weight > 84) {
+        setCalorie(2209);
+      }
+    }
+    if (Goal == "Gain Weight") {
+      if (Weight < 65) {
+        setCalorie(2601);
+      } else if (Weight > 65 && Weight < 74) {
+        setCalorie(2923);
+      } else if (Weight > 74 && Weight < 84) {
+        setCalorie(3343);
+      } else if (Weight > 84) {
+        setCalorie(3754);
+      }
+    }
+  }, [Weight, Goal]);
 
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter, sans-serif" }}>
@@ -41,21 +84,25 @@ const Summary = () => {
           {BMI} BMI
         </h1>
         <div className="mt-8 md:mt-8 flex items-center justify-center font-bold">
-          <input
-            type="range"
-            min={0}
-            max={10}
-            step={2}
-            value={
-              controller < 20
-                ? 3
-                : (controller > 20) & (controller < 40)
-                ? 6
-                : 8
-            }
-            className="slider1"
-            disabled
-          />
+          {BMI && (
+            <input
+              type="range"
+              min={0}
+              max={10}
+              step={1}
+              value={
+                BMI < 18.4
+                  ? 2
+                  : BMI > 18.5 && BMI < 24.9
+                  ? 5
+                  : BMI > 25 && BMI < 39.89
+                  ? 7
+                  : 9
+              }
+              className="slider1"
+              disabled
+            />
+          )}
         </div>
         <div className="flex items-center justify-between font-bold mt-2">
           <h2 className="text-[#ffffff] font-bold">Underwight</h2>
@@ -85,12 +132,8 @@ const Summary = () => {
                   Daily calorie intake
                 </h2>
                 <p className="text-[#ffffff] text-2xl font-bold">
-                  {controller < 20
-                    ? 1880
-                    : (controller > 20) & (controller < 40)
-                    ? 2540
-                    : 3210}{" "}
-                  kcal
+                  {Calorie}
+                   Kcal
                 </p>
               </div>
             </div>
@@ -131,31 +174,26 @@ const Summary = () => {
                   Daily Water intake
                 </h2>
                 <p className="text-[#ffffff] text-2xl font-bold">
-                  {controller < 20
-                    ? 3.2
-                    : (controller > 20) & (controller < 40)
-                    ? 1.9
-                    : 2.3}{" "}
+                  {controller < 10
+                    ? 2.1
+                    : (controller > 10) & (controller < 30)
+                    ? 2.3
+                    : (controller > 30) & (controller < 50)
+                    ? 2.4
+                    : 2.6}
                   L
                 </p>
               </div>
             </div>
           </div>
           <div className="flex my-1 mx-auto pb-3">
-            <Image src={'/glass_full.svg'} height={50} width={50}/>
-            <Image src={'/glass_full.svg'} height={50} width={50}/>
-            <Image src={'/glass_full.svg'} height={50} width={50}/>
-            <Image src={'/glass_full.svg'} height={50} width={50}/>
-            <Image src={'/glass_full.svg'} height={50} width={50}/>
-            <Image src={'/glass_empty.svg'} height={50} width={50}/>
-            <Image src={'/glass_empty.svg'} height={50} width={50}/>
-            {/* <TbGlassFull className="text-3xl text-blue-300" />
-            <TbGlassFull className="text-3xl text-blue-300" />
-            <TbGlassFull className="text-3xl text-blue-300" />
-            <TbGlassFull className="text-3xl text-blue-300" />
-            <TbGlassFull className="text-3xl text-blue-300" />
-            <TbGlassFull className="text-3xl text-gray-300" />
-            <TbGlassFull className="text-3xl text-gray-300" /> */}
+            <Image src={"/glass_full.svg"} height={50} width={50} />
+            <Image src={"/glass_full.svg"} height={50} width={50} />
+            <Image src={"/glass_full.svg"} height={50} width={50} />
+            <Image src={"/glass_full.svg"} height={50} width={50} />
+            <Image src={"/glass_full.svg"} height={50} width={50} />
+            <Image src={"/glass_empty.svg"} height={50} width={50} />
+            <Image src={"/glass_empty.svg"} height={50} width={50} />
           </div>
         </div>
       </div>
@@ -164,3 +202,13 @@ const Summary = () => {
 };
 
 export default Summary;
+
+{
+  /* <TbGlassFull className="text-3xl text-blue-300" />
+            <TbGlassFull className="text-3xl text-blue-300" />
+            <TbGlassFull className="text-3xl text-blue-300" />
+            <TbGlassFull className="text-3xl text-blue-300" />
+            <TbGlassFull className="text-3xl text-blue-300" />
+            <TbGlassFull className="text-3xl text-gray-300" />
+            <TbGlassFull className="text-3xl text-gray-300" /> */
+}

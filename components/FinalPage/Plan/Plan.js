@@ -25,13 +25,7 @@ const Plan = () => {
     price: 30,
   });
   const handleClick = (name, price) => {
-    if (price == 49.99) {
-      setIsClick("3");
-    }
-    if (price == 59.99) {
-      setIsClick("6");
-    }
-    if (price == 29.99) {
+    if (price == 39.99) {
       setIsClick("1");
     }
     setItem({
@@ -72,19 +66,16 @@ const Plan = () => {
         <h2 className="text-xl text-[#ffffff] md:text-4xl font-bold">
           Choose the best plan for you
         </h2>
-        <div onClick={() => handleClick("6-MONTH PLAN", 59.99)}>
-          {/* <Link href={"/download"}> */}
+        <div onClick={() => handleClick("1-MONTH PLAN", 39.99)}>
           <SinglePlanCard
-            text={"6-MONTH PLAN"}
-            total={59.99}
+            text={"1-MONTH PLAN"}
+            total={39.99}
             per={0.33}
-            isClick={isClick === "6" ? true : false}
+            isClick={isClick === "1" ? true : false}
             TimerEnd={TimerEnd}
           />
-          {/* </Link> */}
         </div>
-        <div onClick={() => handleClick("3-MONTH PLAN", 49.99)} className="">
-          {/* <Link href={"/download"}> */}
+        {/* <div onClick={() => handleClick("3-MONTH PLAN", 49.99)} className="">
           <S1
             text={"3-MONTH PLAN"}
             total={49.99}
@@ -92,11 +83,8 @@ const Plan = () => {
             isClick={isClick === "3" ? true : false}
             TimerEnd={TimerEnd}
           />
-
-          {/* </Link> */}
-        </div>
-        <div onClick={() => handleClick("1-MONTH PLAN", 29.99)}>
-          {/* <Link href={"/download"}> */}
+        </div> */}
+        {/* <div onClick={() => handleClick("1-MONTH PLAN", 29.99)}>
           <SinglePlanCard
             text={"1-MONTH PLAN"}
             total={29.99}
@@ -104,15 +92,17 @@ const Plan = () => {
             isClick={isClick === "1" ? true : false}
             TimerEnd={TimerEnd}
           />
-          {/* </Link> */}
-        </div>
+        </div> */}
 
         <Link href="">
           <div onClick={createCheckOutSession}>
             <Button text={"Continue"} />
           </div>
         </Link>
-        <p className="text-[#ffffff] text-xs my-12 font-normal" style={{fontWeight:500}}>
+        <p
+          className="text-[#ffffff] text-xs my-12 font-normal"
+          style={{ fontWeight: 500 }}
+        >
           By continuing, you agree that if you don't cancel at least 24 hours
           prior to the end of the current period, you will automatically be
           charged 49.99 USD every 3 months until you cancel in settings. Learn

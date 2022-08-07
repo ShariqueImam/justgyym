@@ -11,14 +11,17 @@ import useWindowSize from "../../hooks/windowSize";
 const Review = () => {
   const { width } = useWindowSize();
   return (
-    <div className="mt-24 bg-[#1e1e1e] py-12 font-bold">
-      <p className="text-center my-5 text-[#ffffff] text-xl md:text-xl font-semibold font-bold" >
+    <div className="mt-24 bg-[#1e1e1e] py-12 font-bold" style={{ zIndex: 0 }}>
+      <p className="text-center my-5 text-[#ffffff] text-xl md:text-xl font-semibold font-bold">
         We helped over
       </p>
       <h2 className="text-center my-5 text-[#ffffff] text-3xl md:text-5xl font-semibold font-bold">
         85000+ people
       </h2>
-      <p className="text-center my-5 text-[#b3b3b3] text-md md:text-lg tracking-wide" style={{fontWeight:500}}>
+      <p
+        className="text-center my-5 text-[#b3b3b3] text-md md:text-lg tracking-wide"
+        style={{ fontWeight: 500 }}
+      >
         to achieve their dream physique
       </p>
       {/* adding the review */}
@@ -28,7 +31,9 @@ const Review = () => {
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-          slidesPerView={width > 1000 &&width<1200 ? 2 : width>1200?3:1}
+          slidesPerView={
+            width > 1000 && width < 1200 ? 2 : width > 1200 ? 3 : 1
+          }
           scrollbar={true}
         >
           <SwiperSlide>

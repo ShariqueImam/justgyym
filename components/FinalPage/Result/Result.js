@@ -11,11 +11,86 @@ const style = {
     "w-[50%] flex flex-col justify-center items-center md:items-start px-4 md:px-12 py-7 font-bold",
 };
 const Result = ({ fat }) => {
-  const [Type, setType] = useState(Cookies.get("body-type") || "ectomorph");
-  const [Target, setTarget] = useState(
-    Cookies.get("target-body") || "beachbody"
-  );
+  const [Type, setType] = useState(Cookies.get("body-type") || "");
+  const [Goal, setGoal] = useState(Cookies.get("goal") || "");
+  const [Target, setTarget] = useState(Cookies.get("target-body") || "");
+  const [FatLevel, setFatLevel] = useState(Cookies.get("level-of-fat") || "");
+  const [Array, setArray] = useState([]);
+  const [FatArray, setFatArray] = useState([]);
 
+  useEffect(() => {
+    console.log(FatLevel);
+    if (+FatLevel <= 19) {
+      setFatArray([
+        <FilledLine />,
+        <FilledLine />,
+        <EmptyLine />,
+        <EmptyLine />,
+        <EmptyLine />,
+      ]);
+    }
+    if (+FatLevel >= 20) {
+      setFatArray([
+        <FilledLine />,
+        <EmptyLine />,
+        <EmptyLine />,
+        <EmptyLine />,
+        <EmptyLine />,
+      ]);
+    }
+  }, [FatLevel]);
+  useEffect(() => {
+    if (Goal == "Lose Weight") {
+      setArray([
+        <FilledLine />,
+        <FilledLine />,
+        <FilledLine />,
+        <FilledLine />,
+        <EmptyLine />,
+      ]);
+    }
+    if (Goal == "Gain Weight") {
+      if (Target == "athlete") {
+        setArray([
+          <FilledLine />,
+          <FilledLine />,
+          <FilledLine />,
+          <FilledLine />,
+          <EmptyLine />,
+        ]);
+      }
+      if (Target == "hero" || Target == "bodybuilder") {
+        setArray([
+          <FilledLine />,
+          <FilledLine />,
+          <FilledLine />,
+          <FilledLine />,
+          <FilledLine />,
+        ]);
+      }
+    }
+    if (Goal == "Get Shredded") {
+      if (Target == "beachbody") {
+        setArray([
+          <FilledLine />,
+          <FilledLine />,
+          <FilledLine />,
+          <FilledLine />,
+          <EmptyLine />,
+        ]);
+      }
+      if (Target == "workoutbody" || Target == "crossfitbody") {
+        setArray([
+          <FilledLine />,
+          <FilledLine />,
+          <FilledLine />,
+          <FilledLine />,
+          <FilledLine />,
+        ]);
+      }
+    }
+  }, [Goal, Target]);
+  console.log(Array);
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter, sans-serif" }}>
       {/* img container */}
@@ -70,34 +145,36 @@ const Result = ({ fat }) => {
         <div className={style.leftContainer}>
           <h2 className="text-gray-100 font-bold">Body Fat</h2>
           <h3 className="text-orange-600 text-xl font-bold">
-            {+fat + 20}%-{+fat + 20 + 5}%
+            {+fat }%-{+fat + 5}%
           </h3>
           <h3 className="text-[#ffffff] text-sm my-3 font-bold">
             Body Muscles
           </h3>
-          <div className="flex ">
-            <p className="w-[3vw] md:w-[1.5vw] bg-[#ff4400] h-[0.5vh] mx-1"></p>
-            <p className="w-[3vw] md:w-[1.5vw] bg-orange-900 h-[0.5vh] mx-1"></p>
-            <p className="w-[3vw] md:w-[1.5vw] bg-orange-900 h-[0.5vh] mx-1"></p>
-            <p className="w-[3vw] md:w-[1.5vw] bg-orange-900 h-[0.5vh] mx-1"></p>
-            <p className="w-[3vw] md:w-[1.5vw] bg-orange-900 h-[0.5vh] mx-1"></p>
-          </div>
+          <div className="flex ">{FatArray.map((i) => i)}</div>
         </div>
         <div className={style.rightContainer}>
           <h2 className="text-[#ffffff]  font-bold">Body Fat</h2>
           <h3 className="text-orange-600 text-xl font-bold">
-            {+fat + 20 - 20}%-{+fat + 20 - 20 + 5}%
+            {Target == "slim"
+              ? "10-12%"
+              : Target == "slimshredded"
+              ? "8-10%"
+              : Target == "athlete"
+              ? "7-9%"
+              : Target == "hero"
+              ? "8-10%"
+              : Target == "bodybuilder"
+              ? "6-8%"
+              : Target == "beachbody"
+              ? "8-10%"
+              : Target == "workoutbody"
+              ? "10-12%"
+              : "9-11%"}
           </h3>
           <h3 className="text-[#ffffff] text-sm my-3 font-bold">
             Body Muscles
           </h3>
-          <div className="flex ">
-            <p className="w-[3vw] md:w-[1.5vw] bg-[#ff4400] h-[0.5vh] mx-1"></p>
-            <p className="w-[3vw] md:w-[1.5vw] bg-[#ff4400] h-[0.5vh] mx-1"></p>
-            <p className="w-[3vw] md:w-[1.5vw] bg-[#ff4400] h-[0.5vh] mx-1"></p>
-            <p className="w-[3vw] md:w-[1.5vw] bg-[#ff4400] h-[0.5vh] mx-1"></p>
-            <p className="w-[3vw] md:w-[1.5vw] bg-orange-900 h-[0.5vh] mx-1"></p>
-          </div>
+          <div className="flex ">{Array.map((i) => i)}</div>
         </div>
       </div>
       <p
@@ -112,3 +189,10 @@ const Result = ({ fat }) => {
 };
 
 export default Result;
+
+const FilledLine = () => {
+  return <p className="w-[3vw] md:w-[1.5vw] bg-[#ff4400] h-[0.5vh] mx-1"></p>;
+};
+const EmptyLine = () => {
+  return <p className="w-[3vw] md:w-[1.5vw] bg-orange-900 h-[0.5vh] mx-1"></p>;
+};
