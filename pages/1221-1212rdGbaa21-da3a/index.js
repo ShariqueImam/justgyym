@@ -245,7 +245,7 @@ const index = (props) => {
             Payment Successful.
           </h2>
           <h2 className="text-gray-50 text-lg text-center">
-            Download You Plan from the DOWNLOAD button.
+          Download your plan by clicking on the download button.
           </h2>
           (
           <button className="bg-orange-600 text-gray-50 px-6 md:px-8 py-3 md:py-4 max-w-fit mx-auto my-12 tracking-wide">
