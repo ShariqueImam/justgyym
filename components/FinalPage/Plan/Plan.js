@@ -60,7 +60,7 @@ const Plan = () => {
       <div className={style.left}>
         {/* adding the counter */}
         <Timer endTimer={handleEndTimer} />
-        <Image src={"/final/a.webp"} height={500} width={200} />
+        <Image src={"/final/a.webp"} height={430} width={180} />
       </div>
       <div className={style.right}>
         <h2 className="text-xl text-[#ffffff] md:text-4xl font-bold">
