@@ -10,7 +10,7 @@ const style = {
   container: "w-[95%] md:w-[55%] mx-auto flex flex-col md:flex-row  ",
   left: "w-[95%] md:w-[50%] mx-auto",
   right: "w-[95%] md:w-[45%] mx-auto flex items-center justify-center",
-  singleGet: "my-24",
+  singleGet: "my-24 flex flex-col items-center md:items-start",
   text: "text-[#ffffff] text-xl md:text-xl my-8 text-center md:text-left font-extrabold",
 };
 const Get = () => {
