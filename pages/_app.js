@@ -34,6 +34,13 @@ function MyApp({ Component, pageProps }) {
           name="description"
           content="sharique Imam Portfolio sharique shariq sharriq"
         />
+        <meta
+          name="viewport"
+          content="height=device-height, 
+                      width=device-width, initial-scale=1.0, 
+                      minimum-scale=1.0, maximum-scale=1.0, 
+                      user-scalable=no, target-densitydpi=device-dpi"
+        ></meta>
       </Head>
       <div
         className={`overflow-x-hidden scroll-smooth ${
@@ -45,15 +52,15 @@ function MyApp({ Component, pageProps }) {
           <div key={asPath}>
             <Navbar menu={handleMenu} pos={Which} />
             {/* <ParallaxProvider> */}
-              {isOpen && <OpenMenu menu={handleMenu} pos={Which} />}
-              {!isOpen && (
-                <Component
-                  {...pageProps}
-                  onClick={handleMenu}
-                  setData={handleData}
-                  which={handelWhich}
-                />
-              )}
+            {isOpen && <OpenMenu menu={handleMenu} pos={Which} />}
+            {!isOpen && (
+              <Component
+                {...pageProps}
+                onClick={handleMenu}
+                setData={handleData}
+                which={handelWhich}
+              />
+            )}
             {/* </ParallaxProvider> */}
           </div>
         </AnimatePresence>

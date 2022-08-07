@@ -27,7 +27,7 @@ const WorkoutFrequency = (props) => {
   }, []);
   return (
     <div className="mb-32 md:mb-0 scroll-smooth">
-      <ProgressBar scrollLength={"64%"} val={16} link="/workout-place" />
+      <ProgressBar scrollLength={"64%"} val={15} link="/workout-place" />
       <div className="w-[95%] md:w-[30%] lg:w-[32%] mx-auto">
         <div>
           <MainHeading text="How many times per week have you trained in the last 3 months?" />

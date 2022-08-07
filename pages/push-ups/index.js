@@ -20,7 +20,7 @@ const Pushups = (props) => {
   }, []);
   return (
     <>
-      <ProgressBar scrollLength={"52%"} val={12} link="/attention" />
+      <ProgressBar scrollLength={"52%"} val={11} link="/attention" />
       <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto scroll-smooth">
         <div>
           <div className="w-[95%] md:w-[80%]">

@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { BsEmojiExpressionlessFill,BsFillHandThumbsDownFill,BsFillHandThumbsUpFill } from "react-icons/bs";
+import {
+  BsEmojiExpressionlessFill,
+  BsFillHandThumbsDownFill,
+  BsFillHandThumbsUpFill,
+} from "react-icons/bs";
 import { useRouter } from "next/router";
-import Animator from "../../components/UI/Animator";
 import { MainHeading } from "../../components/UI/Heading";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 
@@ -22,13 +25,13 @@ const index = (props) => {
   const handleClick = () => {
     setImg((prev) => prev + 1);
   };
-  props.which('home1')
+  props.which("home1");
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   useEffect(() => {
     setTimeout(() => {
-      img > 5 && router.push("/workouts");
+      img > 5 && router.push("/workout-issue");
     }, 100);
   }, [img]);
   const imgVariants = {

@@ -4,7 +4,6 @@ import { Button } from "../../components/UI/Button";
 import { BasicCard1 } from "../../components/UI/BasicCard1";
 import { BasicCard2 } from "../../components/UI/BasicCard2";
 import Link from "next/link";
-import Animator from "../../components/UI/Animator";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Cookies from "js-cookie";
 import { CgGlass } from "react-icons/cg";
@@ -22,13 +21,13 @@ const Water = (props) => {
   const handleClick1 = () => {
     setShow(true);
   };
-  props.which('home1')
+  props.which("home1");
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
-      <ProgressBar scrollLength={"76%"} val={18} link="/level-hormone" />
+      <ProgressBar scrollLength={"76%"} val={17} link="/level-hormone" />
       <div className="w-[95%] md:w-[34%] lg:w-[32%] mx-auto scroll-smooth">
         <div className="pb-24">
           <MainHeading text="How much water do you drink daily?" />
@@ -110,13 +109,19 @@ const Water = (props) => {
             )}
           </div>
           {!Show && (
-            <div onClick={handleClick1}  className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent ">
+            <div
+              onClick={handleClick1}
+              className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent "
+            >
               <Button dis={Click.length > 0 ? false : true} text={"Continue"} />
             </div>
           )}
           {Show && (
-            <Link href={`${Click.length > 0 ? "/meal-prep-time" : ""}`}>
-              <div onClick={() => Cookies.set("water", Click)}  className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent">
+            <Link href={`${Click.length > 0 ? "/challenge" : ""}`}>
+              <div
+                onClick={() => Cookies.set("water", Click)}
+                className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent"
+              >
                 <Button dis={Click.length > 0 ? false : true} text={"Got it"} />
               </div>
             </Link>
