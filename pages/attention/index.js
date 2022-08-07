@@ -31,17 +31,17 @@ const Attention = (props) => {
             >
               We care about your health
             </h2>
-            <p className="my-4 text-lg" style={{fontWeight:300}}>If you have any of the following conditions:</p>
+            <p className="my-4 text-lg" style={{fontWeight:500}}>If you have any of the following conditions:</p>
             <ol>
-              <li className="tracking-wide my-3 text-lg" style={{fontWeight:300}}>&#183; Heart disease</li>
-              <li className="tracking-wide my-3 text-lg" style={{fontWeight:300}}>&#183; Severe scoliosis</li>
-              <li className="tracking-wide my-3 text-lg" style={{fontWeight:300}}>&#183; Spinal damage</li>
-              <li className="tracking-wide my-3 text-lg" style={{fontWeight:300}}>
+              <li className="tracking-wide my-3 text-lg" style={{fontWeight:500}}>&#183; Heart disease</li>
+              <li className="tracking-wide my-3 text-lg" style={{fontWeight:500}}>&#183; Severe scoliosis</li>
+              <li className="tracking-wide my-3 text-lg" style={{fontWeight:500}}>&#183; Spinal damage</li>
+              <li className="tracking-wide my-3 text-lg" style={{fontWeight:500}}>
                 &#183; Benign or malignant tumor
               </li>
-              <li className="tracking-wide my-3 text-lg" style={{fontWeight:300}}>&#183; Hypertension</li>
+              <li className="tracking-wide my-3 text-lg" style={{fontWeight:500}}>&#183; Hypertension</li>
             </ol>
-            <p className="my-3 text-[#ffffff] text-lg" style={{fontWeight:300}}>
+            <p className="my-3 text-[#ffffff] text-lg" style={{fontWeight:500}}>
               Please contact your physician before starting to follow the
               JustGyym program.
             </p>

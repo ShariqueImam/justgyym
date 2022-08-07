@@ -18,7 +18,9 @@ function valuetext(value) {
   return `${value}-${value - 5}`;
 }
 const LevelOfFat = (props) => {
-  const [value, setValue] = useState(20);
+  const [value, setValue] = useState(
+    Cookies.get("level-of-fat") ? +Cookies.get("level-of-fat") : 20
+  );
   const handleChange = (e, value, a) => {
     setValue(value);
   };
@@ -52,11 +54,11 @@ const LevelOfFat = (props) => {
               <div className="my-8 md:my-24 mx-auto flex flex-col items-center justify-center">
                 <Box sx={{ width: "100%" }}>
                   <Slider
-                   sx={{
-                    color: '#ff4400',
-                  }}
+                    sx={{
+                      color: "#ff4400",
+                    }}
                     aria-label="Always-visible"
-                    defaultValue={20}
+                    defaultValue={value}
                     getAriaValueText={valuetext}
                     valueLabelDisplay="on"
                     step={5}
@@ -74,7 +76,10 @@ const LevelOfFat = (props) => {
               </div>
               <Link href={"/problem-area"}>
                 {/* setting the cookies to the fat that is provided by the user */}
-                <div onClick={Cookies.set("level-of-fat", value)} className="md:bg-transparent fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e]">
+                <div
+                  onClick={Cookies.set("level-of-fat", value)}
+                  className="md:bg-transparent fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e]"
+                >
                   <Button text={"Continue"} />
                 </div>
               </Link>
