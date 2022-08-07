@@ -43,10 +43,11 @@ function MyApp({ Component, pageProps }) {
         ></meta>
       </Head>
       <div
-        className={`overflow-x-hidden scroll-smooth ${
-          Which === "home" || Which === "home2" ? "home-bg" : "home-bg1"
-        }  z-0 w-[100vw]`}
-        style={{ fontDisplay: "swap" }}
+        className={`
+         overflow-x-hidden scroll-smooth ${
+           Which === "home" || Which === "home2" ? "home-bg" : "home-bg1"
+         }  z-0 w-[100vw]`}
+        style={{ fontDisplay: "swap", width: "calc(100% - 1px)" }}
       >
         <AnimatePresence exitBeforeEnter>
           <div key={asPath}>

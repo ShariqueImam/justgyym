@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import SinglePlanCard from "./SinglePlanCard";
-import S1 from "./S1";
+// import S1 from "./S1";
 import { Button } from "../../UI/Button";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
@@ -115,19 +115,19 @@ const Plan = () => {
               Terms of service
             </span>
           </Link>
-          ,{" "}
+          ,
           <Link href="/info/privacy">
             <span className="text-orange-600 cursor-pointer font-normal">
               Privacy policy
             </span>
           </Link>
-          ,{" "}
+          ,
           <Link href="/info/refund">
             <span className="text-orange-600 cursor-pointer font-normal">
               Refund policy
             </span>
           </Link>
-          ,{" "}
+          ,
           <Link href="/info/subscription">
             <span className="text-orange-600 cursor-pointer font-normal">
               Subscription Terms
