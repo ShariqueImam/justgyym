@@ -89,7 +89,7 @@ const WorkoutIssue = (props) => {
             {/* adding the thanks page */}
             {Show && Click != "none" && (
               <div
-                className="bg-[#2563eb] px-5 py-3 mx-auto"
+                className="bg-[#2563eb] px-5 py-3 mb-32 mt-4 md:mb-1 md:mt-1"
                 style={{ fontFamily: "Inter,sans-serif" }}
               >
                 <div className="flex items-center">
@@ -121,7 +121,7 @@ const WorkoutIssue = (props) => {
               {Show && (
                 <Link href={`${Click.length > 0 ? "/give-up" : ""}`}>
                   <div
-                  className="md:bg-transparent ixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e]"
+                  className="md:bg-transparent fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e]"
                     onClick={() =>
                       Cookies.set("workout-issue", JSON.stringify(Click))
                     }
