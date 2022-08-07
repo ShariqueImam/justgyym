@@ -23,26 +23,22 @@ const Get = () => {
         <div className={style.left}>
           {/* <Parallax speed={10}> */}
           <div className={style.singleGet}>
-            {/* <GiMuscleUp className="text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full" /> */}
-            <Image src={'/svg/0.svg'} height={50} width={50}/>
+            <Image src={"/svg/0.svg"} height={50} width={50} />
             <h2 className={style.text}>Personalized workout program</h2>
           </div>
           <div className={style.singleGet}>
-            {/* <BsFillCalendar2CheckFill className="text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full" /> */}
-            <Image src={'/svg/2.svg'} height={50} width={50}/>
+            <Image src={"/svg/2.svg"} height={50} width={50} />
             <h2 className={style.text}>
               Clear and easy to follow workout plan
             </h2>
           </div>
           <div className={style.singleGet}>
-            {/* <GiGrowth className=" text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full font-extrabold" /> */}
-            <Image src={'/svg/3.svg'} height={50} width={50}/>
+            <Image src={"/svg/3.svg"} height={50} width={50} />
             <h2 className={style.text}>Visible results after first month</h2>
           </div>
 
           <div className={style.singleGet}>
-            {/* <DiGoogleAnalytics className=" text-6xl mx-auto md:mx-0 md:text-6xl p-4 bg-[#ff4400] text-[#ffffff] rounded-full font-extrabold" /> */}
-            <Image src={'/svg/1.svg'} height={50} width={50}/>
+            <Image src={"/svg/1.svg"} height={50} width={50} />
             <h2 className={style.text}>Progress tracking and analysis</h2>
           </div>
           {/* </Parallax> */}
