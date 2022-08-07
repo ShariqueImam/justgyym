@@ -7,7 +7,7 @@ const style = {
   container: "mx-auto mt-16 bg-[#2a2a2a] px-5 md:px-12 py-8   font-bold",
   container1:
     "mx-auto my-1 py-3 flex flex-col md:flex-row items-center justify-center font-bold",
-  side: "bg-[#2a2a2a] mx-2 flex flex-col pb-6 w-[100%] my-3 font-bold h-[30vh]",
+  side: "bg-[#2a2a2a] mx-2 flex flex-col pb-6 w-[100%] my-3 font-bold h-[28vh] md:h-[30vh]",
 };
 
 function valuetext(value) {
