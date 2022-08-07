@@ -165,7 +165,7 @@ const TargetWeight = (props) => {
             {/* adding the thanks page */}
             {Show && target === current && valid1 && valid2 && (
               <div
-                className="bg-[#2563eb] px-5 py-3"
+                className="bg-[#2563eb] px-5 py-3 mb-7 md:mb-1"
                 style={{ fontFamily: "Inter,sans-serif" }}
               >
                 <div className="flex items-center">
@@ -174,7 +174,7 @@ const TargetWeight = (props) => {
                     Great!
                   </h2>
                 </div>
-                <p className="text-[#ffffff] text-sm my-2 font-normal">
+                <p className="text-[#ffffff] text-sm my-2 font-normal ">
                   We’re glad to see you’re already at your ideal weight.
                   MadMuscles can help to have a better quality of your body
                 </p>
