@@ -34,9 +34,8 @@ const index = (props) => {
   if (Show1 === true) {
     setTimeout(() => {
       router.push("/final-page");
-    }, 4000);
+    }, 2700);
   }
-
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
       {!Show && !Show1 && (
