@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import { TbGlassFull } from "react-icons/tb";
+import SingleCounter from "./SingleCounter";
+import SingleCounter1 from "./SingleCounter1";
 import Image from "next/image";
 const style = {
   wrapper: "my-12 md:my-28 w-[95%] md:w-[55%] mx-auto font-bold",
@@ -9,7 +11,6 @@ const style = {
     "mx-auto my-1 py-3 flex flex-col md:flex-row items-center justify-center font-bold",
   side: "bg-[#2a2a2a] mx-2 flex flex-col pb-6 w-[100%] my-3 font-bold h-[28vh] md:h-[38vh]",
 };
-
 function valuetext(value) {
   return `${value}°C`;
 }
@@ -81,7 +82,7 @@ const Summary = () => {
           Current BMI
         </p>
         <h1 className="text-[#ffffff] text-lg md:text-3xl font-bold">
-          {BMI} BMI
+          <SingleCounter start={0} end={BMI} duration={2} />
         </h1>
         <div className="mt-8 md:mt-8 flex items-center justify-center font-bold">
           {BMI && (
@@ -110,7 +111,10 @@ const Summary = () => {
         </div>
         <div>
           <h2 className="text-[#ff4400] text-2xl mt-8 font-bold"> BMI</h2>
-          <p className="text-[#ffffff] mt-4 font-semibold" style={{fontWeight:500}}>
+          <p
+            className="text-[#ffffff] mt-4 font-semibold"
+            style={{ fontWeight: 500 }}
+          >
             The body mass index (BMI) is a measure that uses your height and
             weight to work out if your weight is healthy.
           </p>
@@ -132,8 +136,7 @@ const Summary = () => {
                   Daily calorie intake
                 </h2>
                 <p className="text-[#ffffff] text-2xl font-bold">
-                  {Calorie}
-                   Kcal
+                  <SingleCounter1 start={0} end={Calorie} duration={2} />
                 </p>
               </div>
             </div>
@@ -181,7 +184,7 @@ const Summary = () => {
                     : (controller > 30) & (controller < 50)
                     ? 2.4
                     : 2.6}
-                   <p className="ml-1">l</p>
+                  <p className="ml-1">l</p>
                 </p>
               </div>
             </div>
