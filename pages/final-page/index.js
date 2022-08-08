@@ -15,13 +15,13 @@ const index = (props) => {
         <FinalPage />
         <Footer />
         <div
-          className="bg-[#171717] text-[#8d8d8d] py-1 text-center font-bold scroll-smooth"
+          className="bg-[#171717] text-[#8d8d8d] py-1 text-center font-normal scroll-smooth text-sm"
           style={{ fontFamily: "Inter,sans-serif" }}
         >
           Any questions? We're here to help.
         </div>
         <div
-          className="bg-[#2a2a2a] flex items-center justify-center font-bold"
+          className="bg-[#2a2a2a] flex items-center justify-center font-bold pb-3"
           style={{ fontFamily: "Inter,sans-serif" }}
         >
           <a
