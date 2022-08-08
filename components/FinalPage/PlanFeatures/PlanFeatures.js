@@ -36,7 +36,7 @@ const PlanFeatures = () => {
         <SingleFeature
           Icon={"⌛️"}
           heading={"Duration"}
-          text={`${Duration} Hour`}
+          text={`${Duration} `}
         />
         <SingleFeature
           Icon={"💪"}
