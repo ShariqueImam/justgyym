@@ -28,8 +28,8 @@ const PlanFeatures = () => {
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
       <h2 className="text-3xl md:text-5xl text-[#ffffff] font-bold my-8">
         {" "}
-        Shredded Plan for <span className="text-[#ff4400]">{Name}</span> is
-        ready!
+        Shredded Plan for {Name} is
+        <span className="text-[#ff4400] mx-2">ready!</span>
       </h2>
       <div className={style.container}>
         <SingleFeature Icon={"🎯"} heading={"Goal"} text={`${Goal}`} />
@@ -75,7 +75,7 @@ const PlanFeatures = () => {
           Goals for the next 6 months also include:
         </p>
         <div className="flex">
-          <AiOutlineCheckCircle className="text-3xl text-[#ff4400]"/>
+          <AiOutlineCheckCircle className="text-3xl text-[#ff4400]" />
           <p className="text-[#ffffff] mx-4" style={{ fontWeight: 500 }}>
             Reduce Stress
           </p>

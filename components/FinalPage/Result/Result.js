@@ -4,9 +4,9 @@ import Cookies from "js-cookie";
 const style = {
   wrapper: "w-[90%] md:w-[50%] lg:w-[45%] mx-auto font-bold",
   imgContainer: "flex items-center justify-center font-bold ",
-  container1: "flex border-b-2 border-stone-500 font-bold",
+  container1: "flex border-b-2 border-neutral-700 font-bold",
   leftContainer:
-    "w-[50%] flex flex-col  justify-center items-center md:items-start px-4 md:px-12 py-7 border-r-2 border-stone-500 font-bold",
+    "w-[50%] flex flex-col  justify-center items-center md:items-start px-4 md:px-12 py-7 border-r-2 border-neutral-700 font-bold",
   rightContainer:
     "w-[50%] flex flex-col justify-center items-center md:items-start px-4 md:px-12 py-7 font-bold",
 };
@@ -19,7 +19,6 @@ const Result = ({ fat }) => {
   const [FatArray, setFatArray] = useState([]);
 
   useEffect(() => {
-    console.log(FatLevel);
     if (+FatLevel <= 19) {
       setFatArray([
         <FilledLine />,
@@ -134,10 +133,10 @@ const Result = ({ fat }) => {
       </div>
       {/* the buttons */}
       <div className={style.container1}>
-        <h2 className="text-[#ffffff] text-xl bg-[#1e1e1e] w-[50%] mx-auto text-center py-2 font-bold">
+        <h2 className="text-[#ffffff] text-xl  bg-[#2a2a2a] w-[50%] mx-auto text-center py-2 font-bold border-r-2 border-neutral-700">
           Now
         </h2>
-        <h2 className="text-[#ffffff] text-xl bg-[#1e1e1e] w-[50%] mx-auto text-center py-2 font-bold">
+        <h2 className="text-[#ffffff] text-xl  bg-[#2a2a2a] w-[50%] mx-auto text-center py-2 font-bold">
           6 Months
         </h2>
       </div>

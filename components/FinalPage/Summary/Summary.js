@@ -77,7 +77,7 @@ const Summary = () => {
         Personal summary based on your answers
       </h2>
       <div className={style.container}>
-        <p className="text-[#ffffff] text-lg md:text-xl font-bold">
+        <p className="text-[#ffffff] text-sm md:text-sm font-bold">
           Current BMI
         </p>
         <h1 className="text-[#ffffff] text-lg md:text-3xl font-bold">
@@ -110,7 +110,7 @@ const Summary = () => {
         </div>
         <div>
           <h2 className="text-[#ff4400] text-2xl mt-8 font-bold"> BMI</h2>
-          <p className="text-[#ffffff] mt-4 font-semibold">
+          <p className="text-[#ffffff] mt-4 font-semibold" style={{fontWeight:500}}>
             The body mass index (BMI) is a measure that uses your height and
             weight to work out if your weight is healthy.
           </p>
@@ -173,7 +173,7 @@ const Summary = () => {
                 <h2 className="text-[#ffffff] text-lg font-bold">
                   Daily Water intake
                 </h2>
-                <p className="text-[#ffffff] text-2xl font-bold">
+                <p className="text-[#ffffff] text-2xl font-bold flex">
                   {controller < 10
                     ? 2.1
                     : (controller > 10) & (controller < 30)
@@ -181,7 +181,7 @@ const Summary = () => {
                     : (controller > 30) & (controller < 50)
                     ? 2.4
                     : 2.6}
-                  L
+                   <p className="ml-1">l</p>
                 </p>
               </div>
             </div>

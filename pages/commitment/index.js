@@ -35,7 +35,7 @@ const index = (props) => {
    
     setTimeout(() => {
       router.push("/final-page");
-    },2700);
+    },5700);
   }
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
