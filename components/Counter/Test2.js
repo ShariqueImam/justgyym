@@ -55,7 +55,7 @@ function CircularStatic(props) {
     //   clearInterval(timer);
     // };
   }, []);
-  if (progress == 100) {
+  if (progress == 99) {
     props.ending();
   }
   return <CircularProgressWithLabel value={progress} />;

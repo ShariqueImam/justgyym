@@ -8,9 +8,9 @@ const style = {
 };
 const Counter = (props) => {
   const [Time, setTime] = useState(0);
-  // setTimeout(() => {
-  //   setTime(1);
-  // }, 3000);
+  setTimeout(() => {
+    setTime(1);
+  }, 3000);
 
   return (
     <div className={style.counterContainer}>
@@ -33,7 +33,7 @@ const Counter = (props) => {
             Suggesting workout wrogram
           </p>
         )}
-        {Time == 2 && (
+        {/* {Time == 2 && (
           <p className={style.counterText} style={{ fontWeight: 500 }}>
             Meal planning
           </p>
@@ -42,7 +42,7 @@ const Counter = (props) => {
           <p className={style.counterText} style={{ fontWeight: 500 }}>
             Your personalized workout plan is ready
           </p>
-        )}
+        )} */}
       </div>
     </div>
   );

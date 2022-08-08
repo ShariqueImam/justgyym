@@ -32,9 +32,10 @@ const index = (props) => {
   const handleEnd2 = () => {};
 
   if (Show1 === true) {
+   
     setTimeout(() => {
       router.push("/final-page");
-    }, 2700);
+    },2700);
   }
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>

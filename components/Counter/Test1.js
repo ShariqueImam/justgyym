@@ -55,7 +55,6 @@ function CircularStatic(props) {
     //   clearInterval(timer);
     // };
   }, []);
-  console.log(progress)
   if (progress == 69) {
     props.ending();
   }
