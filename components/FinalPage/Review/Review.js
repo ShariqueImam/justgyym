@@ -11,7 +11,7 @@ import useWindowSize from "../../hooks/windowSize";
 const Review = () => {
   const { width } = useWindowSize();
   return (
-    <div className="mt-24 bg-[#1e1e1e] py-12 font-bold" style={{ zIndex: 0 }}>
+    <div className="mt-24 bg-[#1e1e1e] py-12 font-bold review-bg" style={{ zIndex: 0 }}>
       <p className="text-center my-5 text-[#ffffff] text-xl md:text-xl font-semibold font-bold">
         We helped over
       </p>
