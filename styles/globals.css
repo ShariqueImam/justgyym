@@ -110,7 +110,7 @@
 @media only screen and (max-width: 700px) {
   .bg2 {
     background: radial-gradient(
-      100% 50% at center,
+      100% 40% at center,
       rgb(6, 41, 54),
       rgb(6, 41, 54),
       #111111,
