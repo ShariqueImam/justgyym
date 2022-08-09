@@ -12,7 +12,6 @@ const style = {
 };
 const Get = () => {
   const [scrollY, setScrollY] = useState(0);
-
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
