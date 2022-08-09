@@ -131,7 +131,7 @@ const Summary = () => {
               <h2 className="text-4xl md:text-5xl font-bold border-2 border-stone-500 px-3 py-3">
                 🍔
               </h2>
-              <div className="flex flex-col items-center justify-center mx-6 font-bold">
+              <div className="flex flex-col items-start justify-center mx-6 font-bold">
                 <h2 className="text-[#ffffff] text-sm font-bold">
                   Daily calorie intake
                 </h2>
@@ -172,11 +172,11 @@ const Summary = () => {
               <h2 className="text-4xl md:text-5xl border-2 border-stone-500 px-3 py-3">
                 💧
               </h2>
-              <div className="flex flex-col items-center justify-center mx-8 font-bold">
+              <div className="flex flex-col items-start justify-center mx-8 font-bold">
                 <h2 className="text-[#ffffff] text-sm font-bold">
                   Daily Water intake
                 </h2>
-                <p className="text-[#ffffff] text-2xl font-bold flex">
+                <p className="text-[#ffffff] text-2xl font-bold flex text">
                   {controller < 10
                     ? 2.1
                     : (controller > 10) & (controller < 30)
