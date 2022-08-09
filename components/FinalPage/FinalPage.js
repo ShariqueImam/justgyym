@@ -41,10 +41,15 @@ const FinalPage = () => {
       <Link href="#plan">
         <div
           style={{ zIndex: 10 }}
-          className="cursor-pointer hover:bg-orange-500 bg-[#ff4400] px-4 md:px-10 py-3 md:py-4 text-[#ffffff] font-bold fixed top-[90%] md:top-[87%] left-[25%] md:left-[42%] flex"
+          // className="cursor-pointer hover:bg-orange-500 bg-[#ff4400] px-4 md:px-10 py-3 md:py-4 text-[#ffffff] font-bold fixed top-[90%] md:top-[87%] left-[25%] md:left-[42%] flex "
+          className="fixed bottom-[0px] left-[0px] md:top-[95%] md:left-[42%] border-t-[2px] w-[100vw] md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent cursor-pointer hover:bg-orange-500 text-[#ffffff] font-bold flex  items-center"
         >
-          <button className="flex-1 pr-16">Get my plan</button>
-          <AiOutlineArrowRight className={"text-2xl"} />
+          <div className="flex items-center justify-center flex-1 mx-4 bg-[#ff4400] my-2 px-4 py-1"> 
+            <button className="flex-1 pr-16 px-4 md:px-10 py-3 md:py-3 text-start md:text-center ">
+              Get my plan
+            </button>
+            <AiOutlineArrowRight className={"text-2xl"} />
+          </div>
         </div>
       </Link>
     </div>
@@ -52,3 +57,8 @@ const FinalPage = () => {
 };
 
 export default FinalPage;
+
+<div
+  onClick={() => Cookies.set("meal-prep-time", Click)}
+  className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent "
+></div>;
