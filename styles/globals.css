@@ -98,6 +98,26 @@
     );
   }
 }
+.bg2 {
+  background: radial-gradient(
+    60% 80% at center,
+    rgb(6, 41, 54),
+    rgb(6, 41, 54),
+    #111111,
+    #111111
+  );
+}
+@media only screen and (max-width: 700px) {
+  .bg2 {
+    background: radial-gradient(
+      100% 50% at center,
+      rgb(6, 41, 54),
+      rgb(6, 41, 54),
+      #111111,
+      #111111
+    );
+  }
+}
 .bgorange {
   background: radial-gradient(
     60% 40% at center,

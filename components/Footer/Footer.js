@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 const style = {
-  wrapper: "bg1 py-36",
+  wrapper: "bg2 py-16 md:py-36",
   container: "flex items-center justify-center",
 };
 const Footer = () => {
