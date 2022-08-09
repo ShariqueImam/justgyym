@@ -5,7 +5,7 @@ const Video = () => {
   const { width } = useWindowSize();
   const opts = {
     height: `${width < 700 ? 300 : width > 1500 ? 800 : 500}`,
-    width: `${width < 700 ? 430 : width > 1500 ? 1000 : 690}`,
+    width: `${width < 700 ? 350 : width > 1500 ? 1000 : 690}`,
     playerVars: {
       autoplay: 1,
     },
@@ -15,7 +15,7 @@ const Video = () => {
   };
   return (
     <div
-      className="flex flex-col my-12 w-[90%] md:w-[55%] mx-auto"
+      className="flex flex-col mt-12 w-[90%] md:w-[55%] mx-auto"
       style={{ fontFamily: "Inter,sans-serif" }}
     >
       <h2 className="text-[#ffffff] font-bold text-4xl text-5xl lg:text-6xl  ">

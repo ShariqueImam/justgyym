@@ -15,7 +15,7 @@ const style = {
 };
 const Plan = () => {
   const [TimerEnd, setTimerEnd] = useState(false);
-  const [isClick, setIsClick] = useState("3");
+  const [isClick, setIsClick] = useState("1");
   const [item, setItem] = useState({
     name: "Just Gyym Plans",
     description: "Best Fitness Plan for your healthy life",
@@ -64,7 +64,7 @@ const Plan = () => {
       </div>
       <div className={style.right}>
         <h2 className="text-xl text-[#ffffff] md:text-4xl font-bold">
-          Choose the best plan for you
+          Start your journey now
         </h2>
         <div onClick={() => handleClick("1-MONTH PLAN", 39.99)}>
           <SinglePlanCard

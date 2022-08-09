@@ -72,7 +72,7 @@
   height: 35px;
 }
 .review-bg {
-  background: radial-gradient(rgba(0, 0, 0, 1), #1e1e1e,#1e1e1e);
+  background: radial-gradient(rgba(0, 0, 0, 1), #1e1e1e, #1e1e1e);
 }
 .bg {
   background: radial-gradient(rgba(56, 21, 3, 0.9), rgba(0, 0, 0, 1));
@@ -85,11 +85,14 @@
 .bgorange {
   background: radial-gradient(
     rgba(241, 99, 47, 0.35),
+    rgba(126, 57, 32, 0.35),
     #111111,
     #111111,
     #111111,
     #111111
   );
+  background-attachment: fixed;
+  overflow: hidden;
 }
 .fading {
   opacity: 1;

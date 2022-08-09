@@ -8,7 +8,7 @@ import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Cookies from "js-cookie";
 import { CgGlass } from "react-icons/cg";
 const Water = (props) => {
-  const [Show, setShow] = useState(false);
+  const [Show, setShow] = useState(true);
 
   const [Click, setClick] = useState("");
   const handleClick = (value) => {
@@ -20,10 +20,14 @@ const Water = (props) => {
   };
   const handleClick1 = () => {
     setShow(true);
+    // window.scrollTo(0,500);
   };
   props.which("home1");
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 100,
+      behavior: "smooth",
+    });
   }, []);
   return (
     <>
@@ -69,7 +73,7 @@ const Water = (props) => {
                 className="bg-[#2563eb]  px-5 py-3 mx-auto"
                 style={{ fontFamily: "Inter,sans-serif" }}
               >
-                <div className="flex items-center">
+                <div className="flex items-center ">
                   <CgGlass className="text-gray-100 text-xl " />
                   <h2 className="text-gray-100 mx-2 text-lg font-bold">
                     {Click == "0"
@@ -119,7 +123,9 @@ const Water = (props) => {
           {Show && (
             <Link href={`${Click.length > 0 ? "/challenge" : ""}`}>
               <div
-                onClick={() => Cookies.set("water", Click)}
+                onClick={() => {
+                  Cookies.set("water", Click);
+                }}
                 className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent"
               >
                 <Button dis={Click.length > 0 ? false : true} text={"Got it"} />
