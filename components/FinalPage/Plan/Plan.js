@@ -64,7 +64,7 @@ const Plan = () => {
         <Image
           src={`${width > 700 ? "/final/a.webp" : "/final/apng.png"}`}
           height={width > 700 ? 430 : 300}
-          width={180}
+          width={200}
         />
       </div>
       <div className={style.right}>

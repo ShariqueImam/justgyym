@@ -6,7 +6,7 @@ const SingleCounter = (props) => {
   const [completed, setCompleted] = React.useState(false);
   const handleEnd = () => {};
   return (
-    <div className="text-white text-xl sm:text-3xl md:text-4xl font-semibold mt-1">
+    <div className="text-white text-3xl sm:text-3xl md:text-4xl font-semibold mt-1">
       <CountUp
         start={props.start}
         end={props.end}

@@ -9,7 +9,7 @@ const style = {
   container: "mx-auto mt-16 bg-[#2a2a2a] px-5 md:px-12 py-8   font-bold",
   container1:
     "mx-auto my-1 py-3 flex flex-col md:flex-row items-center justify-center font-bold",
-  side: "bg-[#2a2a2a] mx-2 flex flex-col pb-6 w-[100%] my-3 font-bold h-[28vh] md:h-[38vh]",
+  side: "bg-[#2a2a2a] mx-2 flex flex-col pb-6 w-[100%] my-3 font-bold h-[25vh] md:h-[35vh]",
 };
 function valuetext(value) {
   return `${value}°C`;
@@ -112,7 +112,7 @@ const Summary = () => {
         <div>
           <h2 className="text-[#ff4400] text-2xl mt-8 font-bold"> BMI</h2>
           <p
-            className="text-[#ffffff] mt-4 font-normal"
+            className="text-[#ffffff] mt-4 font-normal text-sm"
             style={{ fontWeight: 400 }}
           >
             The body mass index (BMI) is a measure that uses your height and
@@ -124,7 +124,7 @@ const Summary = () => {
       <div className={style.container1}>
         <div className={style.side}>
           <div className="flex flex-col mb-6 font-bold">
-            <div className="border-2 border-[#ff4400] max-w-fit px-6 text-xs text-[#ff4400] py-1 ml-auto font-normal  mb-3">
+            <div className="border-2 border-[#ff7c4b] max-w-fit px-6 text-xs text-[#ff7c4b] py-1 ml-auto font-normal  mb-3">
               recommended
             </div>
             <div className="flex px-4">
@@ -157,7 +157,7 @@ const Summary = () => {
               className="slider"
               disabled
             />
-            <div className="flex items-center justify-between w-[100%] font-normal mt-2">
+            <div className="flex items-center justify-between w-[100%] font-thin mt-2">
               <p className="text-[#ffffff]">1000kcal</p>
               <p className="text-[#ffffff]">5000kcal</p>
             </div>
@@ -165,7 +165,7 @@ const Summary = () => {
         </div>
         <div className={style.side}>
           <div className="flex flex-col mb-6 font-bold">
-            <div className="border-2 border-[#ff4400] max-w-fit px-6 text-xs text-[#ff4400] py-1 ml-auto font-normal mb-3">
+            <div className="border-2 border-[#ff7c4b] max-w-fit px-6 text-xs text-[#ff7c4b] py-1 ml-auto font-normal mb-3">
               recommended
             </div>
             <div className="flex px-4 py-1">
@@ -190,13 +190,13 @@ const Summary = () => {
             </div>
           </div>
           <div className="flex my-1 mx-auto pb-3">
-            <Image src={"/glass_full.svg"} height={50} width={50} />
-            <Image src={"/glass_full.svg"} height={50} width={50} />
-            <Image src={"/glass_full.svg"} height={50} width={50} />
-            <Image src={"/glass_full.svg"} height={50} width={50} />
-            <Image src={"/glass_full.svg"} height={50} width={50} />
-            <Image src={"/glass_empty.svg"} height={50} width={50} />
-            <Image src={"/glass_empty.svg"} height={50} width={50} />
+            <Image src={"/glass_full.svg"} height={35} width={35} />
+            <Image src={"/glass_full.svg"} height={35} width={35} />
+            <Image src={"/glass_full.svg"} height={35} width={35} />
+            <Image src={"/glass_full.svg"} height={35} width={35} />
+            <Image src={"/glass_full.svg"} height={35} width={35} />
+            <Image src={"/glass_empty.svg"} height={35} width={35} />
+            <Image src={"/glass_empty.svg"} height={35} width={35} />
           </div>
         </div>
       </div>

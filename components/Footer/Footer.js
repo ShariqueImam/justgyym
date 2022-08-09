@@ -13,10 +13,10 @@ const Footer = () => {
         <p className="text-md tracking-wide md:text-lg text-[#b3b3b3]" style={{fontWeight:400}}>to skyrocket your result!</p>
         {/* add the social icons */}
         <div className={style.container}>
-          <a href='https://www.instagram.com' target="_blank" className="mx-4 my-4 rounded-full cursor-pointer p-5 flex items-center justify-center bg-[#2a2a2a]">
+          <a href='https://www.instagram.com' target="_blank" className="border-[1px] border-stone-700 mx-4 my-4 rounded-full cursor-pointer p-5 flex items-center justify-center bg-[#2a2a2a]">
             <Image src={"/new.png"} width={30} height={30} />
           </a>
-          <a href='https://www.facebook.com' target="_blank" className="mx-4 my-4 rounded-full cursor-pointer p-5 flex items-center justify-center bg-[#2a2a2a] ">
+          <a href='https://www.facebook.com' target="_blank" className="border-[1px] border-stone-700 mx-4 my-4 rounded-full cursor-pointer p-5 flex items-center justify-center bg-[#2a2a2a] ">
             <Image src={"/new1.png"} width={30} height={30} />
           </a>
         </div>
