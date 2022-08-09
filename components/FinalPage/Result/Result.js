@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Cookies from "js-cookie";
 const style = {
-  wrapper: "w-[90%] md:w-[50%] lg:w-[45%] mx-auto font-bold",
+  wrapper: "w-[90%] md:w-[48%]  mx-auto font-bold",
   imgContainer: "flex items-center justify-center font-bold ",
   container1: "flex border-b-2 border-neutral-700 font-bold",
   leftContainer:
