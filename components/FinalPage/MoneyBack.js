@@ -5,8 +5,8 @@ import useWindowSize from "../hooks/windowSize";
 const style = {
   wrapper:
     "my-12 bg-[#1e1e1e] border-[1px] border-neutral-700 px-7 md:px-24 py-3 md:py-16 flex flex-col md:flex-row w-[95%] md:w-[80%] lg:w-[83%] mx-auto items-center",
-  container: "flex flex-col my-6 w-[100%] md:w-[70%]",
-  heading: "text-[#ffffff] text-xl md:text-4xl my-8 font-bold mr-5",
+  container: "flex flex-col my-2 w-[100%] md:w-[70%]",
+  heading: "text-[#ffffff] text-xl md:text-3xl my-8 font-bold mr-5",
   para: "text-[#ffffff] mr-3 md:mr-12 text-lg font-bold py-6 md:py-1",
 };
 const MoneyBack = () => {
@@ -17,7 +17,7 @@ const MoneyBack = () => {
         <div className="flex">
           <h2 className={style.heading}>Money-Back Guarantee</h2>
           <div className="flex md:hidden">
-            <Image src={"/download.svg"} width={150} height={150} />
+            <Image src={"/download.svg"} width={130} height={130} />
           </div>
         </div>
         <p className={style.para} style={{ fontWeight: 450 }}>

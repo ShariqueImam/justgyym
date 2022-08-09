@@ -78,7 +78,7 @@ const Summary = () => {
         Personal summary based on your answers
       </h2>
       <div className={style.container}>
-        <p className="text-[#ffffff] text-sm md:text-sm font-bold">
+        <p className="text-[#ffffff] text-sm md:text-sm font-semibold">
           Current BMI
         </p>
         <h1 className="text-[#ffffff] text-lg md:text-3xl font-bold">
@@ -106,14 +106,14 @@ const Summary = () => {
           )}
         </div>
         <div className="flex items-center justify-between font-bold mt-2">
-          <h2 className="text-[#ffffff] font-bold">Underwight</h2>
-          <h2 className="text-[#ffffff] font-bold">Obese</h2>
+          <h2 className="text-[#ffffff] font-normal">Underwight</h2>
+          <h2 className="text-[#ffffff] font-normal">Obese</h2>
         </div>
         <div>
           <h2 className="text-[#ff4400] text-2xl mt-8 font-bold"> BMI</h2>
           <p
-            className="text-[#ffffff] mt-4 font-semibold"
-            style={{ fontWeight: 500 }}
+            className="text-[#ffffff] mt-4 font-normal"
+            style={{ fontWeight: 400 }}
           >
             The body mass index (BMI) is a measure that uses your height and
             weight to work out if your weight is healthy.
@@ -206,12 +206,3 @@ const Summary = () => {
 
 export default Summary;
 
-{
-  /* <TbGlassFull className="text-3xl text-blue-300" />
-            <TbGlassFull className="text-3xl text-blue-300" />
-            <TbGlassFull className="text-3xl text-blue-300" />
-            <TbGlassFull className="text-3xl text-blue-300" />
-            <TbGlassFull className="text-3xl text-blue-300" />
-            <TbGlassFull className="text-3xl text-gray-300" />
-            <TbGlassFull className="text-3xl text-gray-300" /> */
-}

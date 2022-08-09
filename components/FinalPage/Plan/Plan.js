@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import SinglePlanCard from "./SinglePlanCard";
-// import S1 from "./S1";
 import { Button } from "../../UI/Button";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 import Link from "next/link";
 import Timer from "./Timer";
+import useWindowSize from "../../hooks/windowSize";
 const style = {
   wrapper:
     "bg-neutral-900 px-3 md:px-12 py-8 md:py-24 flex flex-col md:flex-row w-[95%] md:w-[80%] lg:w-[85%] mx-auto",
@@ -55,15 +55,20 @@ const Plan = () => {
   const handleEndTimer = () => {
     setTimerEnd(true);
   };
+  const { width } = useWindowSize();
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
       <div className={style.left}>
         {/* adding the counter */}
         <Timer endTimer={handleEndTimer} />
-        <Image src={"/final/a.webp"} height={430} width={180} />
+        <Image
+          src={`${width > 700 ? "/final/a.webp" : "/final/apng.png"}`}
+          height={width > 700 ? 430 : 300}
+          width={180}
+        />
       </div>
       <div className={style.right}>
-        <h2 className="text-xl text-[#ffffff] md:text-4xl font-bold">
+        <h2 className="text-xl text-[#ffffff] md:text-4xl font-bold text-center md:text-left">
           Start your journey now
         </h2>
         <div onClick={() => handleClick("1-MONTH PLAN", 39.99)}>

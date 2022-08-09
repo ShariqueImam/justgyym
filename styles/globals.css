@@ -79,11 +79,28 @@
   /* background: red; */
 }
 .bg1 {
-  background: radial-gradient(rgb(7, 61, 81), #111111, #111111);
-  /* background: red; */
+  background: radial-gradient(
+    60% 80% at center,
+    rgb(6, 41, 54),
+    rgb(6, 41, 54),
+    #111111,
+    #111111
+  );
+}
+@media only screen and (max-width: 700px) {
+  .bg1 {
+    background: radial-gradient(
+      100% 90% at center,
+      rgb(6, 41, 54),
+      rgb(6, 41, 54),
+      #111111,
+      #111111
+    );
+  }
 }
 .bgorange {
   background: radial-gradient(
+    60% 40% at center,
     rgba(241, 99, 47, 0.35),
     rgba(126, 57, 32, 0.35),
     #111111,
@@ -93,6 +110,21 @@
   );
   background-attachment: fixed;
   overflow: hidden;
+}
+@media only screen and (max-width: 700px) {
+  .bgorange {
+    background: radial-gradient(
+      110% 50% at center,
+      rgba(241, 99, 47, 0.35),
+      rgba(126, 57, 32, 0.35),
+      #111111,
+      #111111,
+      #111111,
+      #111111
+    );
+    background-attachment: fixed;
+    overflow: hidden;
+  }
 }
 .fading {
   opacity: 1;
