@@ -37,28 +37,28 @@ const Review = () => {
           scrollbar={true}
         >
           <SwiperSlide>
-            <Image src={"/review/1.png"} width={350} height={130} />
+            <Image src={"/review/1.png"} width={280} height={100} />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={"/review/2.png"} width={350} height={130} />
+            <Image src={"/review/2.png"} width={280} height={100} />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={"/review/3.png"} width={350} height={130} />
+            <Image src={"/review/3.png"} width={280} height={100} />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={"/review/4.png"} width={350} height={130} />
+            <Image src={"/review/4.png"} width={280} height={100} />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={"/review/5.png"} width={350} height={130} />
+            <Image src={"/review/5.png"} width={280} height={100} />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={"/review/6.png"} width={350} height={130} />
+            <Image src={"/review/6.png"} width={280} height={100} />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={"/review/7.png"} width={350} height={130} />
+            <Image src={"/review/7.png"} width={280} height={100} />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={"/review/8.png"} width={350} height={130} />
+            <Image src={"/review/8.png"} width={280} height={100} />
           </SwiperSlide>
         </Swiper>
       </div>
