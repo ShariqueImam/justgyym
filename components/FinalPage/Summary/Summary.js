@@ -132,7 +132,7 @@ const Summary = () => {
                 🍔
               </h2>
               <div className="flex flex-col items-center justify-center mx-6 font-bold">
-                <h2 className="text-[#ffffff] text-lg font-bold">
+                <h2 className="text-[#ffffff] text-sm font-bold">
                   Daily calorie intake
                 </h2>
                 <p className="text-[#ffffff] text-2xl font-bold">
@@ -173,7 +173,7 @@ const Summary = () => {
                 💧
               </h2>
               <div className="flex flex-col items-center justify-center mx-8 font-bold">
-                <h2 className="text-[#ffffff] text-lg font-bold">
+                <h2 className="text-[#ffffff] text-sm font-bold">
                   Daily Water intake
                 </h2>
                 <p className="text-[#ffffff] text-2xl font-bold flex">
