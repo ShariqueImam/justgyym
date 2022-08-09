@@ -10,20 +10,11 @@ const style = {
     "flex flex-wrap  mx-auto items-center justify-start gap-6 font-bold",
 };
 const PlanFeatures = () => {
-  const [Goal, setGoal] = useState("Lose");
-  const [Place, setPlace] = useState("Gym");
-  const [Duration, setDuration] = useState("1");
+  const [Goal, setGoal] = useState(Cookies.get("goal") || "Lose Weight");
+  const [Place, setPlace] = useState(Cookies.get("workout-place") || "Gym");
   const [Name, setName] = useState(Cookies.get("name"));
-  const [Frequency, setFrequency] = useState(
-    Cookies.get("workout-frequency") || "2"
-  );
 
-  useEffect(() => {
-    setGoal(Cookies.get("goal") || "Lose Weight");
-    setPlace(Cookies.get("workout-place") || "Home");
-    setDuration(Cookies.get("workout-duration") || "One hour");
-  }, []);
-
+  console.log();
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
       <h2 className="text-3xl md:text-5xl text-[#ffffff] font-bold my-8">
@@ -33,11 +24,7 @@ const PlanFeatures = () => {
       </h2>
       <div className={style.container}>
         <SingleFeature Icon={"🎯"} heading={"Goal"} text={`${Goal}`} />
-        <SingleFeature
-          Icon={"⌛️"}
-          heading={"Duration"}
-          text={`${Duration} `}
-        />
+        <SingleFeature Icon={"⌛️"} heading={"Duration"} text={`One Hour`} />
         <SingleFeature
           Icon={"💪"}
           heading={"Fitness Level"}
@@ -59,15 +46,7 @@ const PlanFeatures = () => {
         <SingleFeature1
           Icon={"📆"}
           heading={"Workout Frequency"}
-          text={`${
-            Frequency == "0"
-              ? "Not at all"
-              : Frequency == "2"
-              ? "1-2 Times a week"
-              : Frequency == "3"
-              ? "3 Times a week"
-              : "More than three times a week"
-          }`}
+          text={`4 Times a week`}
         />
       </div>
       <div className="mx-auto">

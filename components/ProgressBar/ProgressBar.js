@@ -31,7 +31,7 @@ const ProgressBar = (props) => {
       {/* <div className="bg-stone-800 p-1 flex items-center justify-center mx-2">
           <MdArrowBackIos className="text-xl text-gray-100" />
         </div> */}
-      <h2 className="text-neutral-500 text-xs mx-2">{props.val}/21</h2>
+      <h2 className="text-neutral-500 text-xs mx-2">{props.val}/19</h2>
       {/* </div> */}
     </div>
   );

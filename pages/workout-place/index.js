@@ -15,7 +15,7 @@ const WorkoutPlace = (props) => {
       return value;
     });
   };
-  props.which('home1')
+  props.which("home1");
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -37,7 +37,7 @@ const WorkoutPlace = (props) => {
               isClick={Click === "Gym" ? true : false}
             />
           </div>
-          <Link href={`${Click.length > 0 ? "/equipment" : ""}`}>
+          <Link href={`${Click.length > 0 ? "/workout-frequency" : ""}`}>
             <div
               onClick={() => Cookies.set("workout-place", Click)}
               className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent "

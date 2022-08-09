@@ -27,7 +27,7 @@ const WorkoutFrequency = (props) => {
   }, []);
   return (
     <div className="mb-32 md:mb-0 scroll-smooth">
-      <ProgressBar scrollLength={"64%"} val={15} link="/workout-place" />
+      <ProgressBar scrollLength={"64%"} val={14} link="/workout-place" />
       <div className="w-[95%] md:w-[30%] lg:w-[32%] mx-auto">
         <div>
           <MainHeading text="How many times per week have you trained in the last 3 months?" />
@@ -96,7 +96,7 @@ const WorkoutFrequency = (props) => {
             </div>
           )}
           {Show && (
-            <Link href={`${Click.length > 0 ? "/workout-duration" : ""}`}>
+            <Link href={`${Click.length > 0 ? "/level-hormone" : ""}`}>
               <div
                 onClick={() => Cookies.set("workout-frequency", Click)}
                 className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent "
