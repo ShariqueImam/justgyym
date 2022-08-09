@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { MainHeading } from "../../components/UI/Heading";
 import { BasicCard } from "../../components/UI/BasicCard";
 import { BasicCard4 } from "../../components/UI/BasicCard4";
-import Animator from "../../components/UI/Animator";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Cookies from "js-cookie";
 import { Button } from "../../components/UI/Button";
@@ -11,6 +10,13 @@ import { AiOutlineStock } from "react-icons/ai";
 const WorkoutIssue = (props) => {
   const [Click, setClick] = useState([]);
   const [Show, setShow] = useState(false);
+  const messagesEndRef = useRef(null);
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  useEffect(() => {
+    scrollToBottom();
+  }, [Show]);
   const handleClick = (value) => {
     setShow(false);
     if (value !== "none") {
@@ -89,6 +95,7 @@ const WorkoutIssue = (props) => {
             {/* adding the thanks page */}
             {Show && Click != "none" && (
               <div
+              ref={messagesEndRef}
                 className="bg-[#2563eb] px-5 py-3 mb-32 mt-4 md:mb-1 md:mt-1"
                 style={{ fontFamily: "Inter,sans-serif" }}
               >
@@ -98,7 +105,10 @@ const WorkoutIssue = (props) => {
                     Thanks for sharing!
                   </h2>
                 </div>
-                <p className="text-gray-100 text-sm my-2 font-normal" style={{fontWeight:500}}>
+                <p
+                  className="text-gray-100 text-sm my-2 font-normal"
+                  style={{ fontWeight: 500 }}
+                >
                   We learned that a lot of people have faced the same as well.
                   MadMuscles has a clear workout plan that is easy to follow.
                   Also, the program will help you with motivation during this
@@ -111,7 +121,10 @@ const WorkoutIssue = (props) => {
           {Click[0] !== "none" && (
             <div>
               {!Show && (
-                <div onClick={handleClick1} className="md:bg-transparent fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e]">
+                <div
+                  onClick={handleClick1}
+                  className="md:bg-transparent fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e]"
+                >
                   <Button
                     dis={Click.length > 0 ? false : true}
                     text={"Continue"}
@@ -121,7 +134,7 @@ const WorkoutIssue = (props) => {
               {Show && (
                 <Link href={`${Click.length > 0 ? "/give-up" : ""}`}>
                   <div
-                  className="md:bg-transparent fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e]"
+                    className="md:bg-transparent fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e]"
                     onClick={() =>
                       Cookies.set("workout-issue", JSON.stringify(Click))
                     }
@@ -139,7 +152,10 @@ const WorkoutIssue = (props) => {
             <div>
               {!Show && (
                 <Link href={`${Click.length > 0 ? "/give-up" : ""}`}>
-                  <div onClick={handleClick1} className="md:bg-transparent fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e]">
+                  <div
+                    onClick={handleClick1}
+                    className="md:bg-transparent fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e]"
+                  >
                     <Button
                       dis={Click.length > 0 ? false : true}
                       text={"Continue"}

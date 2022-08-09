@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { MainHeading } from "../../components/UI/Heading";
 import { Button } from "../../components/UI/Button";
 import Animator from "../../components/UI/Animator";
@@ -11,6 +11,13 @@ import { GiMuscleUp } from "react-icons/gi";
 const WorkoutFrequency = (props) => {
   const [Show, setShow] = useState(false);
   const [Click, setClick] = useState("");
+  const messagesEndRef = useRef(null);
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  useEffect(() => {
+    scrollToBottom();
+  }, [Show]);
   const handleClick1 = () => {
     setShow(true);
   };
@@ -21,7 +28,7 @@ const WorkoutFrequency = (props) => {
     });
     setShow(false);
   };
-  props.which('home1')
+  props.which("home1");
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -59,7 +66,11 @@ const WorkoutFrequency = (props) => {
               isClick={Click === "4" ? true : false}
             />
             {Show && (
-              <div className="bg-[#2563eb]  px-5 py-3 mx-auto" style={{fontFamily:'Inter,sans-serif'}}>
+              <div
+              ref={messagesEndRef}
+                className="bg-[#2563eb]  px-5 py-3 mx-auto"
+                style={{ fontFamily: "Inter,sans-serif" }}
+              >
                 <div className="flex items-center">
                   <GiMuscleUp className="text-gray-100 text-xl " />
                   <h2 className="text-gray-100 mx-2 text-lg font-bold">
@@ -76,7 +87,10 @@ const WorkoutFrequency = (props) => {
                     % of users*
                   </h2>
                 </div>
-                <p className="text-gray-100 text-sm my-2 mx-6 md:mx-8" style={{fontWeight:450}}>
+                <p
+                  className="text-gray-100 text-sm my-2 mx-6 md:mx-8"
+                  style={{ fontWeight: 450 }}
+                >
                   It will be easier for you to maintain a workout plan.
                 </p>
               </div>
@@ -101,10 +115,7 @@ const WorkoutFrequency = (props) => {
                 onClick={() => Cookies.set("workout-frequency", Click)}
                 className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent "
               >
-                <Button
-                  dis={Click.length > 0 ? false : true}
-                  text={"Got it"}
-                />
+                <Button dis={Click.length > 0 ? false : true} text={"Got it"} />
               </div>
             </Link>
           )}

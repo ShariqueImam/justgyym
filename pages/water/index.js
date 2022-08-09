@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { MainHeading } from "../../components/UI/Heading";
 import { Button } from "../../components/UI/Button";
 import { BasicCard1 } from "../../components/UI/BasicCard1";
@@ -8,7 +8,8 @@ import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Cookies from "js-cookie";
 import { CgGlass } from "react-icons/cg";
 const Water = (props) => {
-  const [Show, setShow] = useState(true);
+  const [Show, setShow] = useState(false);
+  const messagesEndRef = useRef(null);
 
   const [Click, setClick] = useState("");
   const handleClick = (value) => {
@@ -19,11 +20,16 @@ const Water = (props) => {
     setShow(false);
   };
   const handleClick1 = () => {
-    if (typeof window === "object") scrollTo({ bottom: 0, behavior: "smooth" });
     setShow(true);
   };
   props.which("home1");
-  React.useEffect(() => {}, []);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  useEffect(() => {
+    scrollToBottom();
+  }, [Show]);
   return (
     <>
       <ProgressBar scrollLength={"76%"} val={15} link="/level-hormone" />
@@ -83,6 +89,7 @@ const Water = (props) => {
                   </h2>
                 </div>
                 <p
+                  ref={messagesEndRef}
                   className="text-gray-100 text-sm my-2 font-semibold"
                   style={{ fontWeight: 300 }}
                 >

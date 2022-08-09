@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { MainHeading } from "../../components/UI/Heading";
 import { Button } from "../../components/UI/Button";
 import Link from "next/link";
@@ -12,6 +12,8 @@ const TargetWeight = (props) => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const messagesEndRef = useRef(null);
+
   const [Show, setShow] = useState(false);
   const [Unit, setUnit] = useState(
     Cookies.get("target-weight-unit") ? Cookies.get("target-weight-unit") : "kg"
@@ -58,6 +60,12 @@ const TargetWeight = (props) => {
     setCurrent("");
     setShow(false);
   };
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  useEffect(() => {
+    scrollToBottom();
+  }, [Show]);
   const style = {
     wrapper: "flex flex-col scroll-smooth",
     container: "mx-auto",
@@ -165,6 +173,7 @@ const TargetWeight = (props) => {
             {/* adding the thanks page */}
             {Show && target === current && valid1 && valid2 && (
               <div
+                ref={messagesEndRef}
                 className="bg-[#2563eb] px-5 py-3 mb-7 md:mb-1"
                 style={{ fontFamily: "Inter,sans-serif" }}
               >
