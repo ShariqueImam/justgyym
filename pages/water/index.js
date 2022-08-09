@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MainHeading } from "../../components/UI/Heading";
 import { Button } from "../../components/UI/Button";
 import { BasicCard1 } from "../../components/UI/BasicCard1";
@@ -19,16 +19,11 @@ const Water = (props) => {
     setShow(false);
   };
   const handleClick1 = () => {
+    if (typeof window === "object") scrollTo({ bottom: 0, behavior: "smooth" });
     setShow(true);
-    // window.scrollTo(0,500);
   };
   props.which("home1");
-  React.useEffect(() => {
-    window.scrollTo({
-      top: 100,
-      behavior: "smooth",
-    });
-  }, []);
+  React.useEffect(() => {}, []);
   return (
     <>
       <ProgressBar scrollLength={"76%"} val={15} link="/level-hormone" />
