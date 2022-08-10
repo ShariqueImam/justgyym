@@ -15,7 +15,7 @@ const Video = () => {
   };
   return (
     <div
-      className="flex flex-col mt-12 w-[90%] md:w-[48%] mx-auto"
+      className="flex flex-col mt-12 w-[90%] md:w-[43%] mx-auto"
       style={{ fontFamily: "Inter,sans-serif" }}
     >
       <h2 className="text-[#ffffff] font-bold text-4xl text-5xl lg:text-6xl  ">

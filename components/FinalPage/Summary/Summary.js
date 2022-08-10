@@ -5,7 +5,7 @@ import SingleCounter from "./SingleCounter";
 import SingleCounter1 from "./SingleCounter1";
 import Image from "next/image";
 const style = {
-  wrapper: "my-12 md:my-28 w-[95%] md:w-[48%] mx-auto font-bold",
+  wrapper: "my-12 md:my-28 w-[95%] md:w-[43%] mx-auto font-bold",
   container: "mx-auto mt-16 bg-[#2a2a2a] px-5 md:px-12 py-8   font-bold",
   container1:
     "mx-auto my-1 py-3 flex flex-col md:flex-row items-center justify-center font-bold",

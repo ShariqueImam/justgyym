@@ -5,7 +5,7 @@ import Cookies from "js-cookie";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 
 const style = {
-  wrapper: "w-[95%] md:w-[48%] mx-auto mb-12 font-bold",
+  wrapper: "w-[95%] md:w-[43%] mx-auto mb-12 font-bold",
   container:
     "flex flex-wrap  mx-auto items-center justify-start gap-6 font-bold",
 };
