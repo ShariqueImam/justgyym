@@ -4,7 +4,7 @@ import Link from "next/link";
 import useWindowSize from "../hooks/windowSize";
 const style = {
   wrapper:
-    "my-12 bg-[#1e1e1e] border-[1px] border-neutral-700 px-7 md:px-24 py-3 md:py-16 flex flex-col md:flex-row w-[95%] md:w-[80%] lg:w-[83%] mx-auto items-center",
+    "my-6 bg-[#1e1e1e] border-[1px] border-neutral-700 px-7 md:px-24 py-3 md:py-16 flex flex-col md:flex-row w-[95%] md:w-[80%] lg:w-[83%] mx-auto items-center",
   container: "flex flex-col my-2 w-[100%] md:w-[70%]",
   heading: "text-[#ffffff] text-xl md:text-3xl my-8 font-bold mr-5",
   para: "text-[#ffffff] mr-3 md:mr-12 text-lg font-bold py-6 md:py-1",
@@ -26,11 +26,11 @@ const MoneyBack = () => {
           30 days after purchase if you don’t get visible results and can
           demonstrate that you have followed our plan.{" "}
           <div className="flex">
-            <span className="block">
+            <span className="">
               Find out more about the applicable limitations in our{" "}
             </span>
             <Link href="/info/refund">
-              <span className="text-[#ff4400] inline mx-2">money-back policy </span>
+              <span className="text-[#ff4400] inline mx-2 cursor-pointer">money-back policy </span>
             </Link>
           </div>
         </p>
