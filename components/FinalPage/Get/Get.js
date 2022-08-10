@@ -4,7 +4,7 @@ import Image from "next/image";
 // import { Parallax } from "react-scroll-parallax";
 const style = {
   wrapper: "",
-  container: "w-[85%] md:w-[47`%] mx-auto flex ",
+  container: "w-[85%] md:w-[47%] mx-auto flex ",
   left: "w-[95%] md:w-[50%] mx-auto",
   right: "w-[95%] md:w-[45%] mx-auto flex items-center justify-center",
   singleGet: "my-24 flex flex-col items-start md:items-start",
