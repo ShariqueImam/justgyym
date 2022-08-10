@@ -13,14 +13,17 @@ const PlanFeatures = () => {
   const [Goal, setGoal] = useState(Cookies.get("goal") || "Lose Weight");
   const [Place, setPlace] = useState(Cookies.get("workout-place") || "Gym");
   const [Name, setName] = useState(Cookies.get("name"));
-
-  console.log();
+  const [WhatGoals, setWhatGoals] = useState(
+    (Cookies.get("additional-goals") &&
+      JSON.parse(Cookies.get("additional-goals"))) ||
+      []
+  );
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
       <h2 className="text-3xl md:text-5xl text-[#ffffff] font-bold my-8">
         {" "}
         Shredded Plan for {Name} is
-        <span className="text-[#ff4400] mx-2">ready!</span>
+        <span className="text-[#ff6025] mx-2">ready!</span>
       </h2>
       <div className={style.container}>
         <SingleFeature Icon={"🎯"} heading={"Goal"} text={`${Goal}`} />
@@ -54,10 +57,14 @@ const PlanFeatures = () => {
           Goals for the next 6 months also include:
         </p>
         <div className="flex">
-          <AiOutlineCheckCircle className="text-3xl text-[#ff4400]" />
-          <p className="text-[#ffffff] mx-4" style={{ fontWeight: 500 }}>
-            Reduce Stress
-          </p>
+          {WhatGoals.map((singleGoal) => (
+            <div className="flex items-center justify-center">
+              <AiOutlineCheckCircle className="text-3xl text-[#ff6025]" />
+              <p className="text-[#ffffff] mx-4" style={{ fontWeight: 500 }}>
+                {singleGoal}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

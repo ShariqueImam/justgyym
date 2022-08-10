@@ -23,7 +23,7 @@ export const SingleFeature1 = ({ Icon, heading, text }) => {
       {/* <Icon className="text-5xl text-orange-600 border-2 border-stone-500 p-3"/> */}
       <div className="ffont-bold flex-1 mx-5">
         <p className="font-bold text-sm text-[#dadada]" style={{fontWeight:500}}>{heading}</p>
-        <p className="font-bold text-[#ff4400] text-lg ">{text}</p>
+        <p className="font-bold text-[#ff6025] text-lg ">{text}</p>
       </div>
     </div>
   );

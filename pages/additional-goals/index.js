@@ -47,36 +47,36 @@ const AdditionalGoals = (props) => {
             <MainHeading text="Tick your additional goals below:" />
           </div>
           <div
-            onClick={() => handleClick("sleep")}
+            onClick={() => handleClick("Improve sleep")}
             style={{ fontFamily: "Inter,sans-serif" }}
           >
             <BasicCard
               cardText={"Improve sleep"}
-              isClick={Click.includes("sleep") ? true : false}
+              isClick={Click.includes("Improve sleep") ? true : false}
             />
           </div>{" "}
-          <div onClick={() => handleClick("habit")}>
+          <div onClick={() => handleClick("Form a physical habit")}>
             <BasicCard
               cardText={"Form a physical habit"}
-              isClick={Click.includes("habit") ? true : false}
+              isClick={Click.includes("Form a physical habit") ? true : false}
             />
           </div>{" "}
-          <div onClick={() => handleClick("discipline")}>
+          <div onClick={() => handleClick("Self-discipline")}>
             <BasicCard
               cardText={"Self-discipline"}
-              isClick={Click.includes("discipline") ? true : false}
+              isClick={Click.includes("Self-discipline") ? true : false}
             />
           </div>{" "}
-          <div onClick={() => handleClick("healthy")}>
+          <div onClick={() => handleClick("Feel more healthy")}>
             <BasicCard
               cardText={"Feel more healthy"}
-              isClick={Click.includes("healthy") ? true : false}
+              isClick={Click.includes("Feel more healthy") ? true : false}
             />
           </div>{" "}
-          <div onClick={() => handleClick("stress")}>
+          <div onClick={() => handleClick("Reduce Stress")}>
             <BasicCard
               cardText={"Reduce Stress"}
-              isClick={Click.includes("stress") ? true : false}
+              isClick={Click.includes("Reduce Stress") ? true : false}
             />
           </div>{" "}
           <p className="border-t-[1px] border-stone-500 mx-auto"></p>
