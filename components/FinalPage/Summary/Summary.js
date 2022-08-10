@@ -135,7 +135,7 @@ const Summary = (props) => {
               recommended
             </div>
             <div className="flex px-4">
-              <h2 className="text-4xl md:text-5xl font-bold border-2 border-stone-500 px-3 py-3">
+              <h2 className="text-2xl md:text-3xl font-bold border-2 border-stone-500 px-3 py-3">
                 🍔
               </h2>
               <div className="flex flex-col items-start justify-center mx-6 font-bold">
@@ -176,7 +176,7 @@ const Summary = (props) => {
               recommended
             </div>
             <div className="flex px-4 py-1">
-              <h2 className="text-4xl md:text-5xl border-2 border-stone-500 px-3 py-3">
+              <h2 className="text-2xl md:text-3xl border-2 border-stone-500 px-3 py-3">
                 💧
               </h2>
               <div className="flex flex-col items-start justify-center mx-8 font-bold">
