@@ -46,7 +46,7 @@ const FinalPage = () => {
         <Link href="#plan">
           <div
             style={{ zIndex: 10 }}
-            className="fixed bottom-[0px] left-[0px] md:bottom-[0px] md:left-[40%] border-t-[2px] w-[100vw] md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent cursor-pointer text-[#ffffff] font-bold flex  items-center"
+            className="fixed bottom-[0px] left-[0px] md:bottom-[100px] md:left-[40%] border-t-[2px] w-[100vw] md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent cursor-pointer text-[#ffffff] font-bold flex  items-center"
           >
             <div className="flex items-center justify-center flex-1 mx-4 bg-[#ff4400] my-2 px-4 py-1">
               <button className="flex-1 pr-16 px-4 md:px-10 py-3 md:py-3 text-start md:text-center ">
