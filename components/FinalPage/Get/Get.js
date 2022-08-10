@@ -4,11 +4,11 @@ import Image from "next/image";
 // import { Parallax } from "react-scroll-parallax";
 const style = {
   wrapper: "",
-  container: "w-[95%] md:w-[43%] mx-auto flex ",
+  container: "w-[85%] md:w-[43%] mx-auto flex ",
   left: "w-[95%] md:w-[50%] mx-auto",
   right: "w-[95%] md:w-[45%] mx-auto flex items-center justify-center",
-  singleGet: "my-24 flex flex-col items-center md:items-start",
-  text: "text-[#ffffff] text-xl md:text-xl my-8  font-extrabold",
+  singleGet: "my-24 flex flex-col items-start md:items-start",
+  text: "text-[#ffffff] text-md md:text-xl my-8  font-extrabold",
 };
 const Get = () => {
   const [scrollY, setScrollY] = useState(0);

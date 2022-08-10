@@ -5,7 +5,7 @@ import Cookies from "js-cookie";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 
 const style = {
-  wrapper: "w-[95%] md:w-[43%] mx-auto mb-12 font-bold",
+  wrapper: "w-[85%] md:w-[43%] mx-auto mb-12 font-bold",
   container:
     "flex flex-wrap  mx-auto items-center justify-start gap-6 font-bold",
 };
@@ -53,12 +53,12 @@ const PlanFeatures = () => {
         />
       </div>
       <div className="mx-auto">
-        <p className="text-[#ffffff] text-lg my-5 font-bold">
+        <p className="text-[#ffffff] text-lg my-5 font-bold w-[70%] md:w-[100%]">
           Goals for the next 6 months also include:
         </p>
-        <div className="flex">
+        <div className="flex flex-wrap">
           {WhatGoals.map((singleGoal) => (
-            <div className="flex items-center justify-center">
+            <div className="flex items-center w-[100%] md:w-[40%] my-2">
               <AiOutlineCheckCircle className="text-3xl text-[#ff6025]" />
               <p className="text-[#ffffff] mx-4" style={{ fontWeight: 500 }}>
                 {singleGoal}
