@@ -18,7 +18,7 @@ const Video = () => {
       className="flex flex-col mt-12 w-[90%] md:w-[47%] mx-auto"
       style={{ fontFamily: "Inter,sans-serif" }}
     >
-      <h2 className="text-[#ffffff] font-bold text-3xl text-4xl   ">
+      <h2 className="text-[#ffffff] font-bold text-3xl md:text-4xl   ">
         Start reaching your goals with our workouts
       </h2>
       <p className="text-[#ffffff] my-12 text-md" style={{fontWeight:400}}>
