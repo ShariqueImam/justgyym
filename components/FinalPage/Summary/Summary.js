@@ -8,8 +8,8 @@ const style = {
   wrapper: "my-12 md:my-28 w-[85%] md:w-[48%] mx-auto font-bold",
   container: "mx-auto mt-16 bg-[#2a2a2a] px-5 md:px-12 py-8   font-bold",
   container1:
-    "mx-auto my-1 py-3 flex flex-col md:flex-row items-center justify-between font-bold",
-  side: "bg-[#2a2a2a] mx-2 flex flex-col pb-3 w-[100%] my-3 font-bold h-[25vh] md:h-[35vh]",
+    " my-1 py-3 flex flex-col md:flex-row items-center justify-between font-bold",
+  side: "bg-[#2a2a2a] flex flex-col pb-3 w-[100%] md:w-[48%] my-3 font-bold h-[25vh] md:h-[35vh]",
 };
 function valuetext(value) {
   return `${value}°C`;

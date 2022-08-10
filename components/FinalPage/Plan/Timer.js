@@ -36,14 +36,14 @@ const Timer = (props) => {
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
       <h2 className="text-[#ffffff] font-bold">Discount expires in:</h2>
-      <div className="flex items-center justify-center text-[#ff4400]">
+      <div className="flex items-center justify-center text-[#ff6025]">
         <p>
           {minutes === 0 && seconds === 0 ? (
-            <h1 className=" text-[#ff4400] font-bold text-xl md:text-2xl mx-3">
+            <h1 className=" text-[#ff6025] font-bold text-xl md:text-2xl mx-3">
               {'00'}:{'00'}
             </h1>
           ) : (
-            <h1 className=" text-[#ff4400] font-bold text-xl md:text-2xl mx-3">
+            <h1 className=" text-[#ff6025] font-bold text-xl md:text-2xl mx-3">
               {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
             </h1>
           )}
