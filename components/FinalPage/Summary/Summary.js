@@ -202,6 +202,7 @@ const Summary = (props) => {
             <Image src={"/glass_full.svg"} height={35} width={35} />
             <Image src={"/glass_full.svg"} height={35} width={35} />
             <Image src={"/glass_full.svg"} height={35} width={35} />
+            <Image src={"/glass_full.svg"} height={35} width={35} />
             <Image src={"/glass_empty.svg"} height={35} width={35} />
             <Image src={"/glass_empty.svg"} height={35} width={35} />
           </div>
