@@ -17,7 +17,7 @@ const style = {
   wrapper: "scroll-smooth",
 };
 const FinalPage = () => {
-  const [Pop, setPop] = useState(true);
+  const [Pop, setPop] = useState(false);
   const [fat, setFat] = useState(25);
   // const [scrollY, setScrollY] = useState(0);
   const scrollY = useScrollYPosition();
