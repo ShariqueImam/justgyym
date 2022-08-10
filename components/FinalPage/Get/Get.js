@@ -23,9 +23,9 @@ const Get = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  setInterval(() => {
-    setShowImage((prev) => !prev);
-  }, 5000);
+  // setInterval(() => {
+  //   setShowImage((prev) => !prev);
+  // }, 5000);
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
       <h2 className="text-3xl md:text-5xl text-[#ffffff] font-bold text-center font-bold ">

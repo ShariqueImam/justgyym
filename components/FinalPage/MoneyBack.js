@@ -17,18 +17,22 @@ const MoneyBack = () => {
         <div className="flex">
           <h2 className={style.heading}>Money-Back Guarantee</h2>
           <div className="flex md:hidden">
-            <Image src={"/download.svg"} width={130} height={130} />
+            <Image src={"/download.svg"} width={115} height={115} />
           </div>
         </div>
         <p className={style.para} style={{ fontWeight: 450 }}>
           We believe that our plan may work for you and you’ll get visible
           results in 4 weeks! We are even ready to completely refund you within
           30 days after purchase if you don’t get visible results and can
-          demonstrate that you have followed our plan. Find out more about the
-          applicable limitations in our{" "}
-          <Link href="/info/refund">
-            <span className="text-[#ff4400]">money-back policy </span>
-          </Link>
+          demonstrate that you have followed our plan.{" "}
+          <div className="flex">
+            <span className="block">
+              Find out more about the applicable limitations in our{" "}
+            </span>
+            <Link href="/info/refund">
+              <span className="text-[#ff4400] inline mx-2">money-back policy </span>
+            </Link>
+          </div>
         </p>
       </div>
       {/* <GiConfirmed className="text-5xl md:text-9xl text-orange-600 scale-[3] md:scale-[4] lg:scale-[3.2] my-12 md:my-0"/> */}
