@@ -12,6 +12,7 @@ const style = {
 };
 const Get = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [ShowImage, setShowImage] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -22,7 +23,9 @@ const Get = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  setInterval(() => {
+    setShowImage((prev) => !prev);
+  }, 5000);
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
       <h2 className="text-3xl md:text-5xl text-[#ffffff] font-bold text-center font-bold ">
@@ -54,8 +57,11 @@ const Get = () => {
         </div>
         {/* adding the phone */}
         <div className={style.right}>
-          <Image src={"/edited.png"} width={200} height={500} />
-          <Image src={"/aaa.png"} width={200} height={500} />
+          {ShowImage ? (
+            <Image src={"/edited.png"} width={200} height={500} />
+          ) : (
+            <Image src={"/aaa.png"} width={200} height={500} />
+          )}
         </div>
       </div>
     </div>

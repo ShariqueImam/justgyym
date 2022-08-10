@@ -9,7 +9,7 @@ const style = {
   container: "mx-auto mt-16 bg-[#2a2a2a] px-5 md:px-12 py-8   font-bold",
   container1:
     " my-1 py-3 flex flex-col md:flex-row items-center justify-between font-bold",
-  side: "bg-[#2a2a2a] flex flex-col pb-3 w-[100%] md:w-[48%] my-3 font-bold h-[25vh] md:h-[35vh]",
+  side: "bg-[#2a2a2a] flex flex-col pb-1 w-[100%] md:w-[48%] my-3 font-bold h-[25vh] md:h-[33vh]",
 };
 function valuetext(value) {
   return `${value}°C`;
