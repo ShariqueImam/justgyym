@@ -24,18 +24,15 @@ const MoneyBack = () => {
           We believe that our plan may work for you and you’ll get visible
           results in 4 weeks! We are even ready to completely refund you within
           30 days after purchase if you don’t get visible results and can
-          demonstrate that you have followed our plan.{" "}
-          <div className="flex">
-            <span className="">
-              Find out more about the applicable limitations in our{" "}
+          demonstrate that you have followed our plan.<br></br> Find out more about the
+          applicable limitations in our{" "}
+          <Link href="/info/refund">
+            <span className="text-[#ff4400] inline mx-2 cursor-pointer">
+              money-back policy{" "}
             </span>
-            <Link href="/info/refund">
-              <span className="text-[#ff4400] inline mx-2 cursor-pointer">money-back policy </span>
-            </Link>
-          </div>
+          </Link>
         </p>
       </div>
-      {/* <GiConfirmed className="text-5xl md:text-9xl text-orange-600 scale-[3] md:scale-[4] lg:scale-[3.2] my-12 md:my-0"/> */}
       <div className="hidden md:flex">
         <Image
           src={"/download.svg"}
