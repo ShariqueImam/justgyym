@@ -12,23 +12,27 @@ import Review from "./Review/Review";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Link from "next/link";
 import { useScrollYPosition } from "react-use-scroll-position";
-
+import Popup from "./Pop";
 const style = {
   wrapper: "scroll-smooth",
 };
 const FinalPage = () => {
+  const [Pop, setPop] = useState(true);
   const [fat, setFat] = useState(25);
   // const [scrollY, setScrollY] = useState(0);
   const scrollY = useScrollYPosition();
   useEffect(() => {
     setFat(Cookies.get("level-of-fat") || 25);
   }, []);
-
-
+  const handlePop = () => {
+    setPop((prev) => !prev);
+  };
+console.log(Pop)
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
+      {Pop && <Popup handlePop={handlePop} />}
       <Result fat={fat} />
-      <Summary fat={fat} />
+      <Summary fat={fat} handlePop={handlePop} />
       <PlanFeatures fat={fat} />
       <div className="bgorange">
         <Get fat={fat} />

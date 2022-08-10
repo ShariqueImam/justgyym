@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";
-import { TbGlassFull } from "react-icons/tb";
+import { AiOutlineExclamationCircle } from "react-icons/ai";
 import SingleCounter from "./SingleCounter";
 import SingleCounter1 from "./SingleCounter1";
 import Image from "next/image";
@@ -14,7 +14,7 @@ const style = {
 function valuetext(value) {
   return `${value}°C`;
 }
-const Summary = () => {
+const Summary = (props) => {
   // getting height in meter
   const [Height, setHeight] = useState(
     Cookies.get("height") ? Cookies.get("height") : "0"
@@ -78,12 +78,19 @@ const Summary = () => {
         Personal summary based on your answers
       </h2>
       <div className={style.container}>
-        <p className="text-[#ffffff] text-sm md:text-sm font-semibold">
-          Current BMI
-        </p>
-        <h1 className="text-[#ffffff] text-lg md:text-3xl font-bold">
-          <SingleCounter start={0} end={BMI} duration={2} />
-        </h1>
+        <div className="flex">
+          <div className="flex-1">
+            <p className="text-[#ffffff] text-sm md:text-sm font-semibold">
+              Current BMI
+            </p>
+            <h1 className="text-[#ffffff] text-lg md:text-3xl font-bold">
+              <SingleCounter start={0} end={BMI} duration={2} />
+            </h1>
+          </div>
+          <p onClick={() => props.handlePop()}>
+            <AiOutlineExclamationCircle className="text-3xl text-gray-400 cursor-pointer" />
+          </p>
+        </div>
         <div className="mt-8 md:mt-8 flex items-center justify-center font-bold">
           {BMI && (
             <input
@@ -205,4 +212,3 @@ const Summary = () => {
 };
 
 export default Summary;
-
