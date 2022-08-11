@@ -113,8 +113,8 @@ const Summary = (props) => {
           )}
         </div>
         <div className="flex items-center justify-between font-bold mt-2">
-          <h2 className="text-[#ffffff] font-normal">Underwight</h2>
-          <h2 className="text-[#ffffff] font-normal">Obese</h2>
+          <h2 className="text-[#ffffff] font-normal text-sm">Underwight</h2>
+          <h2 className="text-[#ffffff] font-normal text-sm">Obese</h2>
         </div>
         <div>
           <h2 className="text-[#ff4400] text-2xl mt-8 font-bold"> BMI</h2>
@@ -131,11 +131,11 @@ const Summary = (props) => {
       <div className={style.container1}>
         <div className={style.side}>
           <div className="flex flex-col mb-6 font-bold">
-            <div className="border-2 border-[#ff7c4b] max-w-fit px-6 text-xs text-[#ff7c4b] py-1 ml-auto font-normal  mb-3">
+            <div className="border-2 border-[#ff7c4b] max-w-fit px-6 text-xs text-[#ff7c4b] py-0 ml-auto font-normal mb-2">
               recommended
             </div>
             <div className="flex px-4">
-              <h2 className="text-2xl md:text-3xl font-bold border-2 border-stone-500 px-3 py-3">
+              <h2 className="text-2xl md:text-2xl font-bold border-2 border-stone-500 px-3 py-3">
                 🍔
               </h2>
               <div className="flex flex-col items-start justify-center mx-6 font-bold">
@@ -165,18 +165,18 @@ const Summary = (props) => {
               disabled
             />
             <div className="flex items-center justify-between w-[100%] font-thin mt-2">
-              <p className="text-[#ffffff]">1000kcal</p>
-              <p className="text-[#ffffff]">5000kcal</p>
+              <p className="text-[#ffffff] text-xs">1000kcal</p>
+              <p className="text-[#ffffff] text-xs">5000kcal</p>
             </div>
           </div>
         </div>
         <div className={style.side}>
           <div className="flex flex-col mb-6 font-bold">
-            <div className="border-2 border-[#ff7c4b] max-w-fit px-6 text-xs text-[#ff7c4b] py-1 ml-auto font-normal mb-3">
+            <div className="border-2 border-[#ff7c4b] max-w-fit px-6 text-xs text-[#ff7c4b] py-0 ml-auto font-normal mb-3">
               recommended
             </div>
             <div className="flex px-4 py-1">
-              <h2 className="text-2xl md:text-3xl border-2 border-stone-500 px-3 py-3">
+              <h2 className="text-2xl md:text-2xl border-2 border-stone-500 px-3 py-3">
                 💧
               </h2>
               <div className="flex flex-col items-start justify-center mx-8 font-bold">
