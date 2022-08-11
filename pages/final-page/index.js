@@ -30,7 +30,7 @@ const index = (props) => {
             style={{ fontWeight: 300 }}
           >
             <AiOutlineMail className="text-[#ffffff] mx-4 text-2xl" />
-            <p className=" border-b-2">support@justgyym.com</p>
+            <p className=" border-b-2" style={{fontWeight:500}}>support@justgyym.com</p>
           </a>
         </div>
       </div>

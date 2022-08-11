@@ -11,38 +11,53 @@ const style = {
   text: "text-[#ffffff] text-md md:text-xl my-8  font-extrabold",
 };
 const Get = () => {
-  const [scrollY, setScrollY] = useState(0);
-  const [ShowImage, setShowImage] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  setTimeout(() => {
-    setShowImage(prev=>!prev)
-  }, 6000);
-  setTimeout(() => {
-    setShowImage(prev=>!prev)
-  }, 10000);
-  setTimeout(() => {
-    setShowImage(prev=>!prev)
-  }, 20000);
-  setTimeout(() => {
-    setShowImage(prev=>!prev)
-  }, 26000);
-  setTimeout(() => {
-    setShowImage(prev=>!prev)
-  }, 30000);
-  setTimeout(() => {
-    setShowImage(prev=>!prev)
-  }, 36000);
-
+  const [ShowImage, setShowImage] = useState("1");
+  if (ShowImage === "1") {
+    setTimeout(() => {
+      setShowImage("2");
+    }, 3000);
+  }
+  if (ShowImage === "2") {
+    setTimeout(() => {
+      setShowImage("3");
+    }, 4000);
+  }
+  if (ShowImage === "3") {
+    setTimeout(() => {
+      setShowImage("4");
+    }, 4000);
+  }
+  if (ShowImage === "4") {
+    setTimeout(() => {
+      setShowImage("5");
+    }, 4000);
+  }
+  if (ShowImage === "5") {
+    setTimeout(() => {
+      setShowImage("6");
+    }, 4000);
+  }
+  if (ShowImage === "6") {
+    setTimeout(() => {
+      setShowImage("7");
+    }, 4000);
+  }
+  if (ShowImage === "7") {
+    setTimeout(() => {
+      setShowImage("8");
+    }, 4000);
+  }
+  if (ShowImage === "8") {
+    setTimeout(() => {
+      setShowImage("9");
+    }, 4000);
+  }
+  if (ShowImage === "9") {
+    setTimeout(() => {
+      setShowImage("10");
+    }, 4000);
+  }
+  console.log(ShowImage);
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
       <h2 className="text-3xl md:text-5xl text-[#ffffff] font-bold text-center font-bold ">
@@ -74,11 +89,44 @@ const Get = () => {
         </div>
         {/* adding the phone */}
         <div className={style.right}>
-          {ShowImage ? (
+          {ShowImage == "1" && (
             <Image src={"/edited.png"} width={200} height={600} />
-          ) : (
+          )}
+          {ShowImage == "3" && (
+            <Image src={"/edited.png"} width={200} height={600} />
+          )}
+          {ShowImage == "5" && (
+            <Image src={"/edited.png"} width={200} height={600} />
+          )}
+          {ShowImage == "7" && (
+            <Image src={"/edited.png"} width={200} height={600} />
+          )}
+          {ShowImage == "9" && (
+            <Image src={"/edited.png"} width={200} height={600} />
+          )}
+          {ShowImage == "2" && (
             <Image src={"/aaa.png"} width={200} height={600} />
           )}
+          {ShowImage == "4" && (
+            <Image src={"/aaa.png"} width={200} height={600} />
+          )}
+          {ShowImage == "6" && (
+            <Image src={"/aaa.png"} width={200} height={600} />
+          )}
+          {ShowImage == "8" && (
+            <Image src={"/aaa.png"} width={200} height={600} />
+          )}
+          {ShowImage == "10" && (
+            <Image src={"/aaa.png"} width={200} height={600} />
+          )}
+
+          {/* {ShowImage == "2" ||
+            ShowImage == "4" ||
+            ShowImage == "6" ||
+            ShowImage == "8" ||
+            (ShowImage == "10" && (
+              <Image src={"/aaa.png"} width={200} height={600} />
+            ))} */}
         </div>
       </div>
     </div>
