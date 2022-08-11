@@ -143,7 +143,7 @@ const Result = ({ fat }) => {
       <div className={style.container1}>
         <div className={style.leftContainer}>
           <h2 className="text-gray-100 font-bold">Body Fat</h2>
-          <h3 className="text-orange-600 text-xl font-bold">
+          <h3 className="text-orange-600 text-md font-bold">
             {+fat }%-{+fat + 5}%
           </h3>
           <h3 className="text-[#ffffff] text-sm my-3 font-bold">
@@ -153,7 +153,7 @@ const Result = ({ fat }) => {
         </div>
         <div className={style.rightContainer}>
           <h2 className="text-[#ffffff]  font-bold">Body Fat</h2>
-          <h3 className="text-orange-600 text-xl font-bold">
+          <h3 className="text-orange-600 text-md font-bold">
             {Target == "slim"
               ? "10-12%"
               : Target == "slimshredded"
