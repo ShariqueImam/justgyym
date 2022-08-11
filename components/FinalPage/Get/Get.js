@@ -5,7 +5,7 @@ import Image from "next/image";
 const style = {
   wrapper: "",
   container: "w-[85%] md:w-[47%] mx-auto flex ",
-  left: "w-[95%] md:w-[50%] mx-auto",
+  left: "w-[95%] md:w-[60%] mx-auto",
   right: "w-[95%] md:w-[45%] mx-auto flex items-center justify-center",
   singleGet: "my-24 flex flex-col items-start md:items-start",
   text: "text-[#ffffff] text-md md:text-xl my-8  font-extrabold",
@@ -26,7 +26,7 @@ const Get = () => {
 
   setTimeout(() => {
     setShowImage(prev=>!prev)
-  }, 5000);
+  }, 6000);
   setTimeout(() => {
     setShowImage(prev=>!prev)
   }, 10000);
@@ -35,13 +35,13 @@ const Get = () => {
   }, 20000);
   setTimeout(() => {
     setShowImage(prev=>!prev)
-  }, 25000);
+  }, 26000);
   setTimeout(() => {
     setShowImage(prev=>!prev)
   }, 30000);
   setTimeout(() => {
     setShowImage(prev=>!prev)
-  }, 35000);
+  }, 36000);
 
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
@@ -52,22 +52,22 @@ const Get = () => {
         <div className={style.left}>
           {/* <Parallax speed={10}> */}
           <div className={style.singleGet}>
-            <Image src={"/svg/0.svg"} height={50} width={50} />
+            <Image src={"/svg/0.svg"} height={60} width={60} />
             <h2 className={style.text}>Personalized workout program</h2>
           </div>
           <div className={style.singleGet}>
-            <Image src={"/svg/2.svg"} height={50} width={50} />
+            <Image src={"/svg/2.svg"} height={60} width={60} />
             <h2 className={style.text}>
               Clear and easy to follow workout plan
             </h2>
           </div>
           <div className={style.singleGet}>
-            <Image src={"/svg/3.svg"} height={50} width={50} />
+            <Image src={"/svg/3.svg"} height={60} width={60} />
             <h2 className={style.text}>Visible results after first month</h2>
           </div>
 
           <div className={style.singleGet}>
-            <Image src={"/svg/1.svg"} height={50} width={50} />
+            <Image src={"/svg/1.svg"} height={60} width={60} />
             <h2 className={style.text}>Progress tracking and analysis</h2>
           </div>
           {/* </Parallax> */}
@@ -75,9 +75,9 @@ const Get = () => {
         {/* adding the phone */}
         <div className={style.right}>
           {ShowImage ? (
-            <Image src={"/edited.png"} width={200} height={500} />
+            <Image src={"/edited.png"} width={200} height={600} />
           ) : (
-            <Image src={"/aaa.png"} width={200} height={500} />
+            <Image src={"/aaa.png"} width={200} height={600} />
           )}
         </div>
       </div>
