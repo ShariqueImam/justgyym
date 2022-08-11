@@ -18,10 +18,10 @@ const Video = () => {
       className="flex flex-col mt-12 w-[90%] md:w-[47%] mx-auto"
       style={{ fontFamily: "Inter,sans-serif" }}
     >
-      <h2 className="text-[#ffffff] font-bold text-3xl md:text-4xl   ">
+      <h2 className="text-[#ffffff] font-bold text-3xl md:text-5xl">
         Start reaching your goals with our workouts
       </h2>
-      <p className="text-[#ffffff] my-12 text-md" style={{fontWeight:400}}>
+      <p className="text-[#ffffff] my-12 text-lg" style={{fontWeight:400}}>
         Try exercises designed to help you build your dream body. Each workout
         combines different training according to your level and problem areas.
       </p>
