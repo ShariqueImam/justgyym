@@ -27,7 +27,7 @@ const FinalPage = () => {
   const handlePop = () => {
     setPop((prev) => !prev);
   };
-console.log(Pop)
+
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
       {Pop && <Popup handlePop={handlePop} />}

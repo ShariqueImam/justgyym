@@ -25,7 +25,7 @@ const Plan = () => {
     price: 30,
   });
   const handleClick = (name, price) => {
-    if (price == 39.99) {
+    if (price == 29.99) {
       setIsClick("1");
     }
     setItem({
@@ -63,41 +63,23 @@ const Plan = () => {
         <Timer endTimer={handleEndTimer} />
         <Image
           src={`${width > 700 ? "/final/a.webp" : "/final/apng.png"}`}
-          height={width > 700 ? 430 : 300}
-          width={200}
+          height={width > 700 ? 360 : 300}
+          width={160}
         />
       </div>
       <div className={style.right}>
         <h2 className="text-xl text-[#ffffff] md:text-4xl font-bold text-center md:text-left">
           Start your journey now
         </h2>
-        <div onClick={() => handleClick("1-MONTH PLAN", 39.99)}>
+        <div onClick={() => handleClick("1-MONTH PLAN", 29.99)}>
           <SinglePlanCard
             text={"1-MONTH PLAN"}
-            total={39.99}
+            total={29.99}
             per={0.33}
             isClick={isClick === "1" ? true : false}
             TimerEnd={TimerEnd}
           />
         </div>
-        {/* <div onClick={() => handleClick("3-MONTH PLAN", 49.99)} className="">
-          <S1
-            text={"3-MONTH PLAN"}
-            total={49.99}
-            per={0.54}
-            isClick={isClick === "3" ? true : false}
-            TimerEnd={TimerEnd}
-          />
-        </div> */}
-        {/* <div onClick={() => handleClick("1-MONTH PLAN", 29.99)}>
-          <SinglePlanCard
-            text={"1-MONTH PLAN"}
-            total={29.99}
-            per={1.0}
-            isClick={isClick === "1" ? true : false}
-            TimerEnd={TimerEnd}
-          />
-        </div> */}
 
         <Link href="">
           <div onClick={createCheckOutSession}>
@@ -151,3 +133,26 @@ const Plan = () => {
 };
 
 export default Plan;
+
+{
+  /* <div onClick={() => handleClick("3-MONTH PLAN", 49.99)} className="">
+          <S1
+            text={"3-MONTH PLAN"}
+            total={49.99}
+            per={0.54}
+            isClick={isClick === "3" ? true : false}
+            TimerEnd={TimerEnd}
+          />
+        </div> */
+}
+{
+  /* <div onClick={() => handleClick("1-MONTH PLAN", 29.99)}>
+          <SinglePlanCard
+            text={"1-MONTH PLAN"}
+            total={29.99}
+            per={1.0}
+            isClick={isClick === "1" ? true : false}
+            TimerEnd={TimerEnd}
+          />
+        </div> */
+}
