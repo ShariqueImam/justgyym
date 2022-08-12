@@ -117,9 +117,9 @@ const Summary = (props) => {
           <h2 className="text-[#ffffff] font-normal text-sm">Obese</h2>
         </div>
         <div>
-          <h2 className="text-[#ff4400] text-2xl mt-8 font-bold"> BMI</h2>
+          <h2 className="text-[#ff4400] text-2xl mt-2 font-bold"> BMI</h2>
           <p
-            className="text-[#ffffff] mt-4 font-normal text-sm"
+            className="text-[#ffffff] mt-1 font-normal text-sm"
             style={{ fontWeight: 400 }}
           >
             The body mass index (BMI) is a measure that uses your height and
