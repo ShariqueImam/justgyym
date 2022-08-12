@@ -6,7 +6,7 @@ import SingleCounter1 from "./SingleCounter1";
 import Image from "next/image";
 const style = {
   wrapper: "my-12 md:my-28 w-[85%] md:w-[48%] mx-auto font-bold",
-  container: "mx-auto mt-16 bg-[#2a2a2a] px-5 md:px-12 py-8   font-bold",
+  container: "mx-auto mt-8 bg-[#2a2a2a] px-5 md:px-7 py-4   font-bold",
   container1:
     " my-1 py-3 flex flex-col md:flex-row items-center justify-between font-bold",
   side: "bg-[#2a2a2a] flex flex-col pb-1 w-[100%] md:w-[48%] my-3 font-bold h-[25vh] md:h-[33vh]",
