@@ -165,8 +165,8 @@ const Summary = (props) => {
               disabled
             />
             <div className="flex items-center justify-between w-[100%] font-thin mt-2">
-              <p className="text-[#ffffff] text-xs">1000kcal</p>
-              <p className="text-[#ffffff] text-xs">5000kcal</p>
+              <p className="text-[#ffffff] text-sm">1000kcal</p>
+              <p className="text-[#ffffff] text-sm">5000kcal</p>
             </div>
           </div>
         </div>
