@@ -9,7 +9,7 @@ import Timer from "./Timer";
 import useWindowSize from "../../hooks/windowSize";
 const style = {
   wrapper:
-    "bg-neutral-900 px-3 md:px-12 py-8 md:py-24 flex flex-col md:flex-row w-[95%] md:w-[80%] lg:w-[85%] mx-auto",
+    "bg-neutral-900 px-3 md:px-12 py-8 md:py-12 mt-8 flex flex-col md:flex-row w-[95%] md:w-[80%] lg:w-[85%] mx-auto",
   left: "w-[95%] md:w-[50%] flex items-center justify-center flex-col",
   right: "w-[95%] md:w-[50%] ",
 };
@@ -63,8 +63,8 @@ const Plan = () => {
         <Timer endTimer={handleEndTimer} />
         <Image
           src={`${width > 700 ? "/final/a.webp" : "/final/apng.png"}`}
-          height={width > 700 ? 360 : 300}
-          width={160}
+          height={width > 700 ? 460 : 300}
+          width={200}
         />
       </div>
       <div className={style.right}>
