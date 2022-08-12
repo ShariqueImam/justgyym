@@ -9,7 +9,7 @@ const index = (props) => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Animator>
+    <>
       {/* <a href={`${props.data[0].FileURL}?dl=latexhseet-a4.pdf`} className="text-gray-100">Download Me</a> */}
       <FinalPage />
       <Footer />
@@ -34,7 +34,7 @@ const index = (props) => {
           </a>
         </div>
       </div>
-    </Animator>
+    </>
   );
 };
 
