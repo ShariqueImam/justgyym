@@ -39,7 +39,7 @@ const FinalPage = () => {
         <Video />
       </div>
       <div className="bg1">
-        <FullPlan fat={fat} />
+        <FullPlan fat={fat}  />
       </div>
       <div id="plan">
         <Plan fat={fat} />

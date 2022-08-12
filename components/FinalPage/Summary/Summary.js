@@ -135,7 +135,7 @@ const Summary = (props) => {
               recommended
             </div>
             <div className="flex px-4">
-              <h2 className="text-2xl md:text-3xl font-bold border-2 border-stone-500 px-3 py-3">
+              <h2 className="text-2xl md:text-4xl font-bold border-2 border-stone-500 px-3 py-3">
                 🍔
               </h2>
               <div className="flex flex-col items-start justify-center mx-6 font-bold">
@@ -164,9 +164,9 @@ const Summary = (props) => {
               className="slider"
               disabled
             />
-            <div className="flex items-center justify-between w-[100%] font-thin mt-2">
-              <p className="text-[#ffffff] text-sm">1000kcal</p>
-              <p className="text-[#ffffff] text-sm">5000kcal</p>
+            <div className="flex items-center justify-between w-[100%]  mt-2">
+              <p className="text-[#ffffff] text-sm font-semibold">1000kcal</p>
+              <p className="text-[#ffffff] text-sm font-semibold">5000kcal</p>
             </div>
           </div>
         </div>
@@ -176,7 +176,7 @@ const Summary = (props) => {
               recommended
             </div>
             <div className="flex px-4 py-1">
-              <h2 className="text-2xl md:text-3xl border-2 border-stone-500 px-3 py-3">
+              <h2 className="text-2xl md:text-4xl border-2 border-stone-500 px-3 py-3">
                 💧
               </h2>
               <div className="flex flex-col items-start justify-center mx-8 font-bold">
