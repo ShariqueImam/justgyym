@@ -3,9 +3,10 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import Link from "next/link";
 import Image from "next/image";
 const Navbar = (props) => {
+  // ${props.pos==='home2'?'absolute':'relative'}
   const style = {
     wrapper:
-      ` z-40 ${props.pos==='home2'?'absolute':'relative'} h-[7vh] w-[100%] md:w-[98%] lg:w-[98%] flex mx-auto items-center justify-between px-3 mt-2 font-bold`,
+      ` z-40  h-[7vh] w-[100%] md:w-[98%] lg:w-[98%] flex mx-auto items-center justify-between px-3 mt-2 font-bold`,
     logo: "cursor-pointer flex-1 max-w-fit font-bold",
     container: "flex items-center justify-center font-bold",
   };
