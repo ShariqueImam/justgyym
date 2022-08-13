@@ -171,13 +171,13 @@ const Home = (props) => {
             </Link>
           </div>
         </div>
-        <div className={style.allow1}>
+        {/* <div className={style.allow1}>
           <div onClick={handle2} className="mx-4">
             {" "}
             I would like to receive updates about products, services, and
             special offers from MadMuscles via email
           </div>
-        </div>
+        </div> */}
         {Error && Touch && (
           <div className="bg-[#e22336] px-4 py-3 flex items-center justify-center">
             <BiErrorCircle className="text-[#ffffff] text-3xl mr-3" />
