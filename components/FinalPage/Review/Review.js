@@ -11,7 +11,10 @@ import useWindowSize from "../../hooks/windowSize";
 const Review = () => {
   const { width } = useWindowSize();
   return (
-    <div className="mt-24 bg-[#1e1e1e] py-12 font-bold review-bg" style={{ zIndex: 0 }}>
+    <div
+      className="mt-24 bg-[#1e1e1e] py-12 font-bold review-bg"
+      style={{ zIndex: 0 }}
+    >
       <p className="text-center my-5 text-[#ffffff] text-xl md:text-xl font-semibold font-bold">
         We helped over
       </p>
@@ -25,7 +28,7 @@ const Review = () => {
         to achieve their dream physique
       </p>
       {/* adding the review */}
-      <div className="w-[95%] md:w-[83%] xl:w-[65%] mx-auto flex font-bold z-10">
+      <div className="w-[95%] md:w-[83%] xl:w-[65%] mx-auto flex font-bold z-10 items-center justify-center">
         <Swiper
           spaceBetween={10}
           onSlideChange={() => console.log("slide change")}
@@ -37,28 +40,44 @@ const Review = () => {
           scrollbar={true}
         >
           <SwiperSlide>
-            <Image src={"/review/1.png"} width={280} height={100} />
+            <div className=" flex items-center justify-center">
+              <Image src={"/review/1.png"} width={280} height={100} />
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={"/review/2.png"} width={280} height={100} />
+            <div className=" flex items-center justify-center">
+              <Image src={"/review/2.png"} width={280} height={100} />
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={"/review/3.png"} width={280} height={100} />
+            <div className=" flex items-center justify-center">
+              <Image src={"/review/3.png"} width={280} height={100} />
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={"/review/4.png"} width={280} height={100} />
+            <div className=" flex items-center justify-center">
+              <Image src={"/review/4.png"} width={280} height={100} />
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={"/review/5.png"} width={280} height={100} />
+            <div className=" flex items-center justify-center">
+              <Image src={"/review/5.png"} width={280} height={100} />
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={"/review/6.png"} width={280} height={100} />
+            <div className=" flex items-center justify-center">
+              <Image src={"/review/6.png"} width={280} height={100} />
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={"/review/7.png"} width={280} height={100} />
+            <div className=" flex items-center justify-center">
+              <Image src={"/review/7.png"} width={280} height={100} />
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={"/review/8.png"} width={280} height={100} />
+            <div className=" flex items-center justify-center">
+              <Image src={"/review/8.png"} width={280} height={100} />
+            </div>
           </SwiperSlide>
         </Swiper>
       </div>
