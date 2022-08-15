@@ -14,7 +14,7 @@ import Popup from "./Pop";
 import { scroller } from "react-scroll";
 
 const style = {
-  wrapper: "",
+  wrapper: "hold",
 };
 const FinalPage = () => {
   const [Pop, setPop] = useState(false);
@@ -28,7 +28,7 @@ const FinalPage = () => {
 
   const onScroll = (value) => {
     if (typeof window !== "undefined") {
-      console.log("adfs");
+      console.log(value);
       scroller.scrollTo(`${value}`, {
         duration: 50,
         delay: 0,
@@ -38,27 +38,33 @@ const FinalPage = () => {
   };
   // style={{scrollBehaviour:auto}}
   return (
-    <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif",scrollBehavior:'auto' }}>
+    <div
+      className={style.wrapper}
+      style={{ fontFamily: "Inter,sans-serif"}}
+    >
       {Pop && <Popup handlePop={handlePop} />}
-      <button className="text-gray-100 bg-white px-12 py-12 text-4xl text-black" onClick={() => onScroll("main")}>
+      <button
+        className="text-gray-100 bg-white px-12 py-12 text-4xl text-black"
+        onClick={() => onScroll("main")}
+      >
         asdf
       </button>
-      <Result fat={fat} onScroll={onScroll} />
+      <Result fat={fat}/>
       <Summary fat={fat} handlePop={handlePop} />
       <PlanFeatures fat={fat} />
-      <div className="bgorange">
+      <div className="bgorange flex flex-col">
         <Get fat={fat} />
         <Video />
       </div>
       <div className="bg1">
         <FullPlan fat={fat} />
       </div>
-      <div className="main">
+      <div className="main flex">
         <Plan fat={fat} />
       </div>
       <MoneyBack fat={fat} />
       <Review fat={fat} />
-      <div
+      {/* <div
         onClick={() => onScroll("main")}
         // style={{ zIndex: 10 }}
         className="fixed bottom-[0px] left-[0px] md:bottom-[80%] md:left-[78%] border-t-[2px] w-[100vw] md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent cursor-pointer text-[#ffffff] font-bold flex  items-center"
@@ -69,7 +75,7 @@ const FinalPage = () => {
           </button>
           <AiOutlineArrowRight className={"text-2xl"} />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

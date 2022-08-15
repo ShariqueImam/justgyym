@@ -37,7 +37,7 @@ const Challenge = (props) => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <>
+    <div className="pb-24 md:mb-2">
       <ProgressBar scrollLength={"88%"} val={16} link="/products" />
       <div className="w-[95%] md:w-[41%] lg:w-[33%] mx-auto">
         <div>
@@ -87,7 +87,7 @@ const Challenge = (props) => {
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

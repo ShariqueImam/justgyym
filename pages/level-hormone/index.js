@@ -11,7 +11,7 @@ const LevelHormone = (props) => {
   props.which("home1");
   React.useEffect(() => {
     window.scrollTo(0, 0);
-  }, []); 
+  }, []);
   return (
     <>
       <div className="w-[95%] md:w-[37%] lg:w-[35%] mx-auto ">
@@ -35,31 +35,31 @@ const LevelHormone = (props) => {
               style={{ fontFamily: "Inter,sans-serif" }}
             >
               {/* <div className="w-[95%] md:w-[80%]"> */}
-                <h2 className="text-3xl font-bold my-4">
-                  Our workout plan was created to ensure a balanced
-                  testosterone/cortisol ratio.
-                </h2>
-                <p className="my-4 text-lg" style={{ fontWeight: 450 }}>
-                  Both cortisol and testosterone levels increase linearly in
-                  response to physical exercise.
-                </p>
-                <p className="my-4 text-lg" style={{ fontWeight: 450 }}>
-                  However, it is of vital importance to consider them in order
-                  to reach a specific threshold of exercise intensity.
-                </p>
-                <p className="my-4 text-lg" style={{ fontWeight: 450 }}>
-                  Otherwise, physical stressors can result in excessive cortisol
-                  secretion, which decreases the production of testosterone.
-                </p>
-                <p className="my-4 text-lg" style={{ fontWeight: 450 }}>
-                  Overtraining and susceptibility to certain diseases and
-                  disorders could be the result of an extreme stressor and a low
-                  level of testosterone.
-                </p>
+              <h2 className="text-3xl font-bold my-4">
+                Our workout plan was created to ensure a balanced
+                testosterone/cortisol ratio.
+              </h2>
+              <p className="my-4 text-lg" style={{ fontWeight: 450 }}>
+                Both cortisol and testosterone levels increase linearly in
+                response to physical exercise.
+              </p>
+              <p className="my-4 text-lg" style={{ fontWeight: 450 }}>
+                However, it is of vital importance to consider them in order to
+                reach a specific threshold of exercise intensity.
+              </p>
+              <p className="my-4 text-lg" style={{ fontWeight: 450 }}>
+                Otherwise, physical stressors can result in excessive cortisol
+                secretion, which decreases the production of testosterone.
+              </p>
+              <p className="my-4 text-lg" style={{ fontWeight: 450 }}>
+                Overtraining and susceptibility to certain diseases and
+                disorders could be the result of an extreme stressor and a low
+                level of testosterone.
+              </p>
               {/* </div> */}
             </div>
             <Link href="/water">
-              <div  className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent">
+              <div className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent">
                 <Button text={"Got it"} />
               </div>
             </Link>
