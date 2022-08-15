@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { SmallHeading, MainHeading } from "../../components/UI/Heading";
 import { Button } from "../../components/UI/Button";
 import { BasicCard } from "../../components/UI/BasicCard";
@@ -34,8 +34,8 @@ const AdditionalGoals = (props) => {
       }
     }
   };
-  React.useEffect(() => {
-    window.scrollBy(0, -65);
+  useEffect(() => {
+    window.scrollBy(0, -130);
   }, []);
   return (
     <div className="mb-32 md:mb-0" >
