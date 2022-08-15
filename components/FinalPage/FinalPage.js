@@ -39,9 +39,9 @@ const FinalPage = () => {
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
       {Pop && <Popup handlePop={handlePop} />}
-      {/* <div className="text-gray-100" onClick={() => onScroll("main")}>
+      <button className="text-gray-100 bg-white px-12 py-12 text-4xl text-black" onClick={() => onScroll("main")}>
         asdf
-      </div> */}
+      </button>
       <Result fat={fat} onScroll={onScroll} />
       <Summary fat={fat} handlePop={handlePop} />
       <PlanFeatures fat={fat} />
@@ -59,7 +59,7 @@ const FinalPage = () => {
       <Review fat={fat} />
       <div
         onClick={() => onScroll("main")}
-        style={{ zIndex: 10 }}
+        // style={{ zIndex: 10 }}
         className="fixed bottom-[0px] left-[0px] md:bottom-[80%] md:left-[78%] border-t-[2px] w-[100vw] md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent cursor-pointer text-[#ffffff] font-bold flex  items-center"
       >
         <div className="flex items-center justify-center flex-1 mx-4 bg-[#ff4400] my-2 px-4 py-1">
