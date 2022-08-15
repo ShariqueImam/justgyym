@@ -9,7 +9,7 @@ const style = {
   container: "mx-auto mt-10 bg-[#2a2a2a] px-3 md:px-7 py-4 font-bold",
   container1:
     " my-1 py-3 flex flex-col md:flex-row items-center justify-between font-bold",
-  side: "bg-[#2a2a2a] flex flex-col pb-1 w-[100%] md:w-[48%] my-3 font-bold h-[25vh] md:h-[33vh]",
+  side: "bg-[#2a2a2a] flex flex-col pb-1 w-[100%] md:w-[48%] my-3 font-bold h-[22vh] md:h-[33vh]",
 };
 function valuetext(value) {
   return `${value}°C`;
@@ -131,7 +131,7 @@ const Summary = (props) => {
       <div className={style.container1}>
         <div className={style.side}>
           <div className="flex flex-col mb-6 font-bold">
-            <div className="border-2 border-[#ff7c4b] max-w-fit px-6 text-xs text-[#ff7c4b] py-0 ml-auto font-normal mb-2">
+            <div className="border-2 border-[#ff7c4b] max-w-fit px-2 text-xs text-[#ff7c4b] py-0 ml-auto font-normal mb-2">
               recommended
             </div>
             <div className="flex px-4">
@@ -172,7 +172,7 @@ const Summary = (props) => {
         </div>
         <div className={style.side}>
           <div className="flex flex-col mb-6 font-bold">
-            <div className="border-2 border-[#ff7c4b] max-w-fit px-6 text-xs text-[#ff7c4b] py-0 ml-auto font-normal mb-3">
+            <div className="border-2 border-[#ff7c4b] max-w-fit px-2 text-xs text-[#ff7c4b] py-0 ml-auto font-normal mb-3">
               recommended
             </div>
             <div className="flex px-4 py-1">
