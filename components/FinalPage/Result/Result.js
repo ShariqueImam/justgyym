@@ -10,7 +10,7 @@ const style = {
   rightContainer:
     "w-[50%] flex flex-col justify-center items-center md:items-start px-4 md:px-12 py-7 font-bold",
 };
-const Result = ({ fat }) => {
+const Result = (props) => {
   const [Type, setType] = useState(Cookies.get("body-type") || "");
   const [Goal, setGoal] = useState(Cookies.get("goal") || "");
   const [Target, setTarget] = useState(Cookies.get("target-body") || "");
@@ -89,7 +89,6 @@ const Result = ({ fat }) => {
       }
     }
   }, [Goal, Target]);
-  console.log(Array);
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter, sans-serif" }}>
       {/* img container */}
@@ -144,7 +143,7 @@ const Result = ({ fat }) => {
         <div className={style.leftContainer}>
           <h2 className="text-gray-100 font-bold">Body Fat</h2>
           <h3 className="text-orange-600 text-md font-bold">
-            {+fat }%-{+fat + 5}%
+            {+props.fat}%-{+props.fat + 5}%
           </h3>
           <h3 className="text-[#ffffff] text-sm my-3 font-bold">
             Body Muscles

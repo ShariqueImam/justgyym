@@ -13,15 +13,15 @@ const index = (props) => {
       {/* <a href={`${props.data[0].FileURL}?dl=latexhseet-a4.pdf`} className="text-gray-100">Download Me</a> */}
       <FinalPage />
       <Footer />
-      <div className="mb-16 md:mb-0">
+      <div className="mb-16 md:mb-0 ">
         <div
-          className="bg-[#171717] text-[#8d8d8d] py-1 md:text-center font-normal scroll-smooth text-sm mx-5"
+          className="bg-[#171717] text-[#8d8d8d] py-1 text-center font-normal scroll-smooth text-sm"
           style={{ fontFamily: "Inter,sans-serif", fontWeight: 300 }}
         >
           Any questions? We're here to help.
         </div>
         <div
-          className="bg-[#2a2a2a] flex items-center md:justify-center font-bold pb-3"
+          className="bg-[#2a2a2a] flex items-center justify-center font-bold pb-3"
           style={{ fontFamily: "Inter,sans-serif" }}
         >
           <a
@@ -30,7 +30,9 @@ const index = (props) => {
             style={{ fontWeight: 300 }}
           >
             <AiOutlineMail className="text-[#ffffff] mx-4 text-2xl" />
-            <p className=" border-b-2" style={{fontWeight:500}}>support@justgyym.com</p>
+            <p className=" border-b-2" style={{ fontWeight: 500 }}>
+              support@justgyym.com
+            </p>
           </a>
         </div>
       </div>

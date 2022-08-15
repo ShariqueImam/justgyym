@@ -57,7 +57,6 @@ const Get = () => {
       setShowImage("10");
     }, 4000);
   }
-  console.log(ShowImage);
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
       <h2 className="text-3xl md:text-5xl text-[#ffffff] font-bold text-center font-bold ">

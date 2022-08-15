@@ -63,8 +63,8 @@ const Plan = () => {
         <Timer endTimer={handleEndTimer} />
         <Image
           src={`${width > 700 ? "/final/a.webp" : "/final/apng.png"}`}
-          height={width > 700 ? 460 : 300}
-          width={200}
+          height={width > 700 ? 460 : 230}
+          width={width > 700 ? 200 : 160}
         />
       </div>
       <div className={style.right}>
