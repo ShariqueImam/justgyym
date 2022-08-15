@@ -2,15 +2,17 @@ import React, { useState, useEffect } from "react";
 
 import Image from "next/image";
 // import { Parallax } from "react-scroll-parallax";
+import useWindowSize from "../../hooks/windowSize";
 const style = {
   wrapper: "",
   container: "w-[85%] md:w-[47%] mx-auto flex md:items-start",
-  left: "w-[95%] md:w-[60%] mx-auto",
+  left: "w-[95%] md:w-[45%] mx-auto",
   right: "w-[95%] md:w-[45%] mx-auto flex items-center justify-center md:mt-24",
-  singleGet: "my-24 flex flex-col items-start md:items-start",
+  singleGet: "my-8 md:my-24 flex flex-col items-start md:items-start",
   text: "text-[#ffffff] text-md md:text-xl my-8  font-extrabold",
 };
 const Get = () => {
+  const { width } = useWindowSize();
   const [ShowImage, setShowImage] = useState("1");
   if (ShowImage === "1") {
     setTimeout(() => {
@@ -66,22 +68,22 @@ const Get = () => {
         <div className={style.left}>
           {/* <Parallax speed={10}> */}
           <div className={style.singleGet}>
-            <Image src={"/svg/0.svg"} height={60} width={60} />
+            <Image src={"/svg/0.svg"} height={width<700?40:60} width={width<700?40:60} />
             <h2 className={style.text}>Personalized workout program</h2>
           </div>
           <div className={style.singleGet}>
-            <Image src={"/svg/2.svg"} height={60} width={60} />
+            <Image src={"/svg/2.svg"} height={width<700?40:60} width={width<700?40:60} />
             <h2 className={style.text}>
               Clear and easy to follow workout plan
             </h2>
           </div>
           <div className={style.singleGet}>
-            <Image src={"/svg/3.svg"} height={60} width={60} />
+            <Image src={"/svg/3.svg"} height={width<700?40:60} width={width<700?40:60} />
             <h2 className={style.text}>Visible results after first month</h2>
           </div>
 
           <div className={style.singleGet}>
-            <Image src={"/svg/1.svg"} height={60} width={60} />
+            <Image src={"/svg/1.svg"} height={width<700?40:60} width={width<700?40:60} />
             <h2 className={style.text}>Progress tracking and analysis</h2>
           </div>
           {/* </Parallax> */}
@@ -89,34 +91,34 @@ const Get = () => {
         {/* adding the phone */}
         <div className={style.right}>
           {ShowImage == "1" && (
-            <Image src={"/edited.png"} width={200} height={600} />
+            <Image src={"/edited.png"} width={width<700? 170 :200} height={width<700?400 :width<700?40:600} />
           )}
           {ShowImage == "3" && (
-            <Image src={"/edited.png"} width={200} height={600} />
+            <Image src={"/edited.png"} width={width<700?170 :200} height={width<700?400 :width<700?40:600} />
           )}
           {ShowImage == "5" && (
-            <Image src={"/edited.png"} width={200} height={600} />
+            <Image src={"/edited.png"} width={width<700?170 :200} height={width<700?400 :width<700?40:600} />
           )}
           {ShowImage == "7" && (
-            <Image src={"/edited.png"} width={200} height={600} />
+            <Image src={"/edited.png"} width={width<700?170 :200} height={width<700?400 :width<700?40:600} />
           )}
           {ShowImage == "9" && (
-            <Image src={"/edited.png"} width={200} height={600} />
+            <Image src={"/edited.png"} width={width<700?170 :200} height={width<700?400 :width<700?40:600} />
           )}
           {ShowImage == "2" && (
-            <Image src={"/aaa.png"} width={200} height={600} />
+            <Image src={"/aaa.png"} width={width<700?170 :200} height={width<700?400 :width<700?40:600} />
           )}
           {ShowImage == "4" && (
-            <Image src={"/aaa.png"} width={200} height={600} />
+            <Image src={"/aaa.png"} width={width<700?170 :200} height={width<700?400 :width<700?40:600} />
           )}
           {ShowImage == "6" && (
-            <Image src={"/aaa.png"} width={200} height={600} />
+            <Image src={"/aaa.png"} width={width<700?170 :200} height={width<700?400 :width<700?40:600} />
           )}
           {ShowImage == "8" && (
-            <Image src={"/aaa.png"} width={200} height={600} />
+            <Image src={"/aaa.png"} width={width<700?170 :200} height={width<700?400 :width<700?40:600} />
           )}
           {ShowImage == "10" && (
-            <Image src={"/aaa.png"} width={200} height={600} />
+            <Image src={"/aaa.png"} width={width<700?170 :200} height={width<700?400 :width<700?40:600} />
           )}
 
           {/* {ShowImage == "2" ||
@@ -124,7 +126,7 @@ const Get = () => {
             ShowImage == "6" ||
             ShowImage == "8" ||
             (ShowImage == "10" && (
-              <Image src={"/aaa.png"} width={200} height={600} />
+              <Image src={"/aaa.png"} width={200} height={width<700?40:600} />
             ))} */}
         </div>
       </div>
