@@ -27,7 +27,7 @@ function CircularProgressWithLabel(props) {
           padding: "10px",
         }}
       >
-        <h2 className="text-white text-xl">{props.value}%</h2>
+        <h2 className="text-white text-2xl">{props.value}%</h2>
       </Box>
     </Box>
   );

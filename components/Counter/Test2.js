@@ -27,7 +27,7 @@ function CircularProgressWithLabel(props) {
           padding: "10px",
         }}
       >
-        <h2 className="text-white text-xl">{props.value}%</h2>
+        <h2 className="text-white text-2xl">{props.value}%</h2>
       </Box>
     </Box>
   );
@@ -48,7 +48,7 @@ function CircularStatic(props) {
   React.useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prevProgress) =>
-        prevProgress >= 100 ? 0 : prevProgress + 1
+        prevProgress >= 100 ? 100 : prevProgress + 1
       );
     }, 100);
     // return () => {

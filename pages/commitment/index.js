@@ -6,8 +6,7 @@ import { useRouter } from "next/router";
 import { ImCross } from "react-icons/im";
 import Image from "next/image";
 const style = {
-  wrapper:
-    "flex items-center justify-center mx-auto h-[80vh] w-[100vw]",
+  wrapper: "flex items-center justify-center mx-auto h-[80vh] w-[100vw]",
 };
 const index = (props) => {
   const [Show, setShow] = useState(false);
@@ -32,10 +31,9 @@ const index = (props) => {
   const handleEnd2 = () => {};
 
   if (Show1 === true) {
-   
     setTimeout(() => {
       router.push("/final-page");
-    },5100);
+    }, 5100);
   }
   return (
     <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>

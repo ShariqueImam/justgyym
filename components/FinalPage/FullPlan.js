@@ -4,7 +4,7 @@ import Link from "next/link";
 import { AiOutlineArrowRight } from "react-icons/ai";
 const style = {
   wrapper: "mt-12 pt-12 w-[90%] md:w-[47%] mx-auto",
-  para: "text-[#ffffff] text-md my-3 mx-auto flex items-center gap-4 mx-auto md:mx-24",
+  para: "text-[#ffffff] text-md my-3 md:my-4 mx-auto flex items-center gap-4 mx-auto md:mx-24",
 };
 const FullPlan = (props) => {
   return (
