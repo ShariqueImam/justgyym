@@ -44,27 +44,32 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <div
         className={`
-         overflow-x-hidden   ${
-           Which === "home" || Which === "home2" ? "home-bg" : "home-bg1"
-         }  z-0 w-[100vw]`}
+           ${
+             Which === "home" || Which === "home2" ? "home-bg" : "home-bg1"
+           }  z-0 w-[100vw]`}
         style={{ fontDisplay: "swap", width: "calc(100% - 1px)" }}
       >
-        <AnimatePresence exitBeforeEnter>
-          <div key={asPath}>
-            <Navbar menu={handleMenu} pos={Which} />
-            {/* <ParallaxProvider> */}
-            {isOpen && <OpenMenu menu={handleMenu} pos={Which} />}
-            {!isOpen && (
-              <Component
-                {...pageProps}
-                onClick={handleMenu}
-                setData={handleData}
-                which={handelWhich}
-              />
-            )}
-            {/* </ParallaxProvider> */}
-          </div>
-        </AnimatePresence>
+        {/* <AnimatePresence exitBeforeEnter> */}
+        {/* <div key={asPath}> */}
+        <Navbar menu={handleMenu} pos={Which} />
+        {/* <ParallaxProvider> */}
+        {isOpen && <OpenMenu menu={handleMenu} pos={Which} />}
+        <div
+          className="overflow-x-hidden w-[100vw]"
+          style={{ fontDisplay: "swap", width: "calc(100% - 1px)" }}
+        >
+          {!isOpen && (
+            <Component
+              {...pageProps}
+              onClick={handleMenu}
+              setData={handleData}
+              which={handelWhich}
+            />
+          )}
+        </div>
+        {/* </ParallaxProvider> */}
+        {/* </div> */}
+        {/* </AnimatePresence> */}
       </div>
     </>
   );

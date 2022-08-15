@@ -8,13 +8,13 @@ import Cookies from "js-cookie";
 import Link from "next/link";
 import Image from "next/image";
 const BodyType = (props) => {
-  const [click, setClick] = useState(Cookies.get('body-type')||"");
+  const [click, setClick] = useState(Cookies.get("body-type") || "");
   const handleClick = (value) => {
-    setClick(value)
+    setClick(value);
   };
   props.which("home1");
   React.useEffect(() => {
-    window.scrollBy(0, -65);
+    window.scrollBy(0, -110);
   }, []);
   return (
     <>
@@ -59,7 +59,7 @@ const BodyType = (props) => {
               />
             </div>
           </Link>
-          <Link href={`${ "/level-of-fat" }`}>
+          <Link href={`${"/level-of-fat"}`}>
             <div
               onClick={() => {
                 handleClick("endomorph");
