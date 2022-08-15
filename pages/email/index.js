@@ -31,7 +31,7 @@ const Email = (props) => {
     setEmail(e.target.value);
   };
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollBy(0, -65);
   }, []);
   const valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
   const handleClick = () => {

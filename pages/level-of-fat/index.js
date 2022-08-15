@@ -28,7 +28,7 @@ const LevelOfFat = (props) => {
   props.which("home");
   const { width } = useWindowSize();
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollBy(0, -65);
   }, []);
   return (
     <>

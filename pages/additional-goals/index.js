@@ -35,7 +35,7 @@ const AdditionalGoals = (props) => {
     }
   };
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollBy(0, -65);
   }, []);
   return (
     <div className="mb-32 md:mb-0" >

@@ -30,6 +30,9 @@ const Water = (props) => {
   useEffect(() => {
     scrollToBottom();
   }, [Show]);
+  useEffect(() => {
+    window.scrollBy(0, -65);
+  }, []);
   return (
     <>
       <ProgressBar scrollLength={"76%"} val={15} link="/level-hormone" />

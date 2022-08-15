@@ -17,7 +17,7 @@ const index = (props) => {
     })
   );
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollBy(0, -65);
   }, []);
   // 0-7
   if (Place == "Gym" && Got == true) {

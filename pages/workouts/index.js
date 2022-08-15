@@ -35,7 +35,7 @@ const Workouts = (props) => {
     }
   };
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollBy(0, -65);
   }, []);
   return (
     <>

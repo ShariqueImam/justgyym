@@ -10,7 +10,7 @@ import NumberFormat from "react-number-format";
 const TargetWeight = (props) => {
   props.which("home1");
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollBy(0, -65);
   }, []);
   const messagesEndRef = useRef(null);
 

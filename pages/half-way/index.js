@@ -14,7 +14,7 @@ const index = (props) => {
   props.which("home2");
   const { width } = useWindowSize();
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollBy(0, -65);
   }, []);
   return (
     // <Animator>

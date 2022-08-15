@@ -9,7 +9,7 @@ const DOB = (props) => {
   const [dob, setDob] = useState(Cookies.get("dob") ? Cookies.get("dob") : "");
   const [Error, setError] = useState(false);
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollBy(0, -65);
   }, []);
 
   const handleClick = () => {

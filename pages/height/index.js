@@ -14,7 +14,7 @@ const Height = (props) => {
   // const [FT, setFT] = useState(Cookies.get("height-ft") || "");
   const [click, setClick] = useState(false);
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollBy(0, -65);
   }, []);
 
   let val = height.replace("cm", "");

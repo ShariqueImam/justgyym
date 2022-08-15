@@ -27,7 +27,7 @@ const index = (props) => {
   };
   props.which("home1");
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollBy(0, -65);
   }, []);
   useEffect(() => {
     setTimeout(() => {

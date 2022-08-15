@@ -14,7 +14,7 @@ const style = {
 const Attention = (props) => {
   props.which("home2");
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollBy(0, -65);
   }, []);
   return (
     <div className="md:mb-0">
