@@ -22,7 +22,7 @@ const ProblemArea = (props) => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="pb-24 md:pb-0 scroll-smooth">
+    <div className="pb-24 md:pb-0 ">
       <ProgressBar  scrollLength={"12%"} val={4} link="/level-of-fat" />
       <div className="w-[95%] md:w-[39%] lg:w-[36%] mx-auto">
         <div>

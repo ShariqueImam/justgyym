@@ -36,8 +36,9 @@ const FinalPage = () => {
       });
     }
   };
+  // style={{scrollBehaviour:auto}}
   return (
-    <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif" }}>
+    <div className={style.wrapper} style={{ fontFamily: "Inter,sans-serif",scrollBehavior:'auto' }}>
       {Pop && <Popup handlePop={handlePop} />}
       <button className="text-gray-100 bg-white px-12 py-12 text-4xl text-black" onClick={() => onScroll("main")}>
         asdf

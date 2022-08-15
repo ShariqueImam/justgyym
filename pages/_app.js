@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <div
         className={`
-         overflow-x-hidden scroll-smooth ${
+         overflow-x-hidden   ${
            Which === "home" || Which === "home2" ? "home-bg" : "home-bg1"
          }  z-0 w-[100vw]`}
         style={{ fontDisplay: "swap", width: "calc(100% - 1px)" }}

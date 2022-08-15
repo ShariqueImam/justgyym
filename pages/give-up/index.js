@@ -18,7 +18,7 @@ const GiveUp = (props) => {
   }, []);
   return (
     <>
-      <div className="pb-8 md:pb-0 scroll-smooth">
+      <div className="pb-8 md:pb-0">
         <div
           className={style.wrapper}
           style={{ fontFamily: "Inter,sans-serif" }}

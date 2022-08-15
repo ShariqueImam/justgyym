@@ -25,7 +25,7 @@ const Water = (props) => {
   props.which("home1");
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    messagesEndRef.current?.scrollIntoView();
   };
   useEffect(() => {
     scrollToBottom();

@@ -21,7 +21,7 @@ const Time = (props) => {
   return (
     <>
       <ProgressBar scrollLength={"80%"} val={19} link="/water" />
-      <div className="w-[95%] md:w-[30%] lg:w-[31%] mx-auto scroll-smooth">
+      <div className="w-[95%] md:w-[30%] lg:w-[31%] mx-auto ">
         <div>
           <MainHeading text="How much time are you ready to spend on per one meal prep?" />
           <div onClick={() => handleClick("30")}>

@@ -33,7 +33,7 @@ const WorkoutFrequency = (props) => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="mb-32 md:mb-0 scroll-smooth">
+    <div className="mb-32 md:mb-0">
       <ProgressBar scrollLength={"64%"} val={14} link="/workout-place" />
       <div className="w-[95%] md:w-[30%] lg:w-[32%] mx-auto">
         <div>

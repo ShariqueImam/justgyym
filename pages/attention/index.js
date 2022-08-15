@@ -6,7 +6,7 @@ import Animator from "../../components/UI/Animator";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 
 const style = {
-  wrapper: "flex flex-col md:flex-row overflow-y-hidden pb-20 scroll-smooth",
+  wrapper: "flex flex-col md:flex-row overflow-y-hidden pb-20 ",
   left: "w-[100%] md:w-[50%] flex items-center justify-center",
   right:
     "w-[100%] md:w-[50%] bg-[#191919] h-[62vh] md:h-[100vh] text-[#ffffff] flex flex-col justify-center px-4 md:px-12 pb-8",

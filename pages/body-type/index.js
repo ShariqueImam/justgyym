@@ -20,7 +20,7 @@ const BodyType = (props) => {
     <>
       <ProgessBar scrollLength={"8%"} val={2} link="/target-body" />
       <div
-        className="w-[95%] md:w-[38%] lg:w-[36%] mx-auto scroll-smooth mb-24"
+        className="w-[95%] md:w-[38%] lg:w-[36%] mx-auto mb-24"
         style={{ fontFamily: "Inter,sans-serif" }}
       >
         <div>

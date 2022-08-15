@@ -14,6 +14,7 @@ const style = {
   right:
     " w-[100%] md:w-[50%] bg-[#191919] h-[50vh] md:h-[85vh] flex items-start justify-center md:justify-start md:px-8 lg:p-12",
 };
+
 function valuetext(value) {
   return `${value}-${value - 5}`;
 }
@@ -32,7 +33,7 @@ const LevelOfFat = (props) => {
   return (
     <>
       <ProgressBar scrollLength={"12%"} val={3} link="/body-type" />
-      <div className="scroll-smooth">
+      <div className="">
         <div
           className={style.wrapper}
           style={{ fontFamily: "Inter,sans-serif" }}

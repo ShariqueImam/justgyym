@@ -10,7 +10,7 @@ const App = (props) => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="overflow-x-hidden scroll-smooth">
+    <div className="overflow-x-hidden">
       <div className="">
         <Home goal={handleClick} />
       </div>
