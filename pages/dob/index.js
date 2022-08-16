@@ -9,7 +9,7 @@ const DOB = (props) => {
   const [dob, setDob] = useState(Cookies.get("dob") ? Cookies.get("dob") : "");
   const [Error, setError] = useState(false);
   React.useEffect(() => {
-    window.scrollBy(0, -65);
+    window.scrollTo(0, 0);
   }, []);
 
   const handleClick = () => {
@@ -35,7 +35,7 @@ const DOB = (props) => {
       {/* <ProgressBar scrollLength={"96%"} val={24} /> */}
       <div>
         <div
-          className="w-[95%] md:w-[42%] lg:w-[37%] mx-auto mt-4"
+          className="w-[95%] md:w-[42%] lg:w-[37%] mx-auto mt-4 "
           style={{ fontFamily: "Inter,sans-serif" }}
         >
           <div className="bg-[#1e1e1e] mx-auto py-2 flex items-center mb-7">

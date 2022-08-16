@@ -91,7 +91,7 @@ const Summary = (props) => {
             <AiOutlineExclamationCircle className="text-3xl text-gray-400 cursor-pointer" />
           </p>
         </div>
-        <div className="mt-8 md:mt-8 flex items-center justify-center font-bold">
+        <div className="mt-2 md:mt-2 flex items-center justify-center font-bold">
           {BMI && (
             <input
               type="range"

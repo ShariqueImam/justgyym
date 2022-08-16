@@ -6,7 +6,7 @@ import Animator from "../../components/UI/Animator";
 import Cookies from "js-cookie";
 import ProgressBar1 from "../../components/ProgressBar/ProgressBar1";
 const style = {
-  wrapper: "flex flex-col my-8",
+  wrapper: "flex flex-col my-8 pb-12",
   container: "my-6 md:my-8",
   input:
     "my-3 ring-none outline-none px-5 py-3 bg-transparent border-[1px] border-stone-600 placeholder:font-thin placeholder:text-neutral-400 w-[100%] text-gray-200 bg-[#1E1E1E] text-lg focus:border-2 focus:border-orange-600",

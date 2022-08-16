@@ -50,7 +50,8 @@ const FinalPage = () => {
       <MoneyBack fat={fat} />
       <Review fat={fat} />
       <div
-        onClick={() => scrollToBottom()} // style={{ zIndex: 10 }}
+        onClick={() => scrollToBottom()}
+        style={{ zIndex: 10 }}
         className="fixed bottom-[0px] left-[0px] md:bottom-[80%] md:left-[78%] border-t-[2px] w-[100vw] md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent cursor-pointer text-[#ffffff] font-bold flex  items-center"
       >
         <div className="flex items-center justify-center flex-1 mx-4 bg-[#ff4400] my-2 px-4 py-1">
