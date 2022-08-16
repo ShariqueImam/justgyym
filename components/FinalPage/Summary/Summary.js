@@ -113,15 +113,38 @@ const Summary = (props) => {
           )}
         </div>
         <div className="flex items-center justify-between font-bold mt-2">
-          <h2 className="text-[#ffffff] font-thin md:font-normal text-sm">Underwight</h2>
-          <h2 className="text-[#ffffff] font-thin md:font-normal text-sm">Obese</h2>
+          <h2 className="text-[#ffffff] font-thin md:font-normal text-sm">
+            Underweight
+          </h2>
+          <h2 className="text-[#ffffff] font-thin md:font-normal text-sm">
+            Obese
+          </h2>
         </div>
         {/* THIS NEEDS TO BE CHANGES ACCORDING TO THE BMI VALUE */}
         <div>
-          <h2 className="text-[#ff4400] text-2xl mt-1 font-bold">BMI</h2>
+          {BMI <= 18.5 && (
+            <h2 className="text-blue-600 text-md font-bold mt-3">
+              Underweight
+            </h2>
+          )}
+          {BMI > 18.5 && BMI < 24.9 && (
+            <h2 className="text-green-600 text-md font-bold mt-3">Normal</h2>
+          )}
+          {BMI > 25 && BMI < 29.9 && (
+            <h2 className="text-[#5a91c7] text-md font-bold mt-3">
+              Slightly Overweight
+            </h2>
+          )}
+          {BMI > 30 && BMI < 34.9 && (
+            <h2 className="text-red-600 text-md font-bold mt-3">Overweight</h2>
+          )}
+          {BMI > 35 && (
+            <h2 className="text-red-600 text-md font-bold mt-3">Obese</h2>
+          )}
+
           <p
-            className="text-[#ffffff] mt-0 font-normal text-sm"
-            style={{ fontWeight: 400 }}
+            className="text-[#ffffff] mt-0 font-normal text-xs"
+            style={{ fontWeight: 350 }}
           >
             The body mass index (BMI) is a measure that uses your height and
             weight to work out if your weight is healthy.
@@ -136,7 +159,7 @@ const Summary = (props) => {
               recommended
             </div>
             <div className="flex px-4">
-              <h2 className="text-2xl md:text-4xl font-bold border-2 border-stone-500 px-3 py-3">
+              <h2 className="text-3xl md:text-4xl font-bold border-2 border-neutral-700 px-3 py-3">
                 🍔
               </h2>
               <div className="flex flex-col items-start justify-center mx-6 font-bold">
@@ -166,8 +189,12 @@ const Summary = (props) => {
               disabled
             />
             <div className="flex items-center justify-between w-[100%]  mt-2">
-              <p className="text-[#ffffff] text-sm font-thin md:font-normal">1000kcal</p>
-              <p className="text-[#ffffff] text-sm font-thin md:font-normal">5000kcal</p>
+              <p className="text-[#ffffff] text-sm font-thin md:font-normal">
+                1000kcal
+              </p>
+              <p className="text-[#ffffff] text-sm font-thin md:font-normal">
+                5000kcal
+              </p>
             </div>
           </div>
         </div>
@@ -177,7 +204,7 @@ const Summary = (props) => {
               recommended
             </div>
             <div className="flex px-4 py-1">
-              <h2 className="text-2xl md:text-4xl border-2 border-stone-500 px-3 py-3">
+              <h2 className="text-3xl md:text-4xl border-2 border-neutral-700 px-3 py-3">
                 💧
               </h2>
               <div className="flex flex-col items-start justify-center mx-8 font-bold">
