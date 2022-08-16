@@ -9,7 +9,7 @@ const style = {
   wrapper: "flex flex-col my-8",
   container: "mx-auto my-6 md:my-10",
   input:
-  "my-3 ring-none outline-none px-5 py-3 bg-transparent border-[1px] border-stone-600 placeholder:font-thin placeholder:text-neutral-400 w-[100%] text-gray-200 bg-[#1E1E1E] text-lg focus:border-2 focus:border-orange-600",
+    "my-3 ring-none outline-none px-5 py-3 bg-transparent border-[1px] border-stone-600 placeholder:font-thin placeholder:text-neutral-400 w-[100%] text-gray-200 bg-[#1E1E1E] text-lg focus:border-2 focus:border-orange-600",
 };
 const Email = (props) => {
   props.which("home1");
@@ -34,6 +34,7 @@ const Email = (props) => {
     window.scrollBy(0, -65);
   }, []);
   const valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+  console.log(Data.email);
   const handleClick = () => {
     const sendData = async () => {
       const { data } = await axios.post(
@@ -45,7 +46,7 @@ const Email = (props) => {
                 _type: "user",
                 createdAt: new Date().toISOString(),
                 name: Data.name,
-                email: Data.email,
+                email: email,
                 dob: Data.dob,
               },
             },
@@ -74,9 +75,12 @@ const Email = (props) => {
           className="w-[95%] md:w-[42%] lg:w-[37%] mx-auto mt-4"
           style={{ fontFamily: "Inter,sans-serif" }}
         >
-         <div className="bg-[#1e1e1e] mx-auto py-2 flex items-center mb-7">
+          <div className="bg-[#1e1e1e] mx-auto py-2 flex items-center mb-7">
             <p className="text-2xl ml-3">✅ </p>
-            <p className="text-gray-50 tracking-wide text-lg md:text-md my-1 mx-5" style={{fontWeight:450}}>
+            <p
+              className="text-gray-50 tracking-wide text-lg md:text-md my-1 mx-5"
+              style={{ fontWeight: 450 }}
+            >
               Your workout and meal plan are almost ready!
             </p>
           </div>
@@ -91,7 +95,11 @@ const Email = (props) => {
             className={style.container}
             style={{ fontFamily: "Inter,sans-serif" }}
           >
-            <label htmlFor="name" className="text-gray-200 my-4" style={{fontWeight:450}}>
+            <label
+              htmlFor="name"
+              className="text-gray-200 my-4"
+              style={{ fontWeight: 450 }}
+            >
               Email
             </label>
             <input
@@ -101,7 +109,7 @@ const Email = (props) => {
               className={style.input}
               value={email}
               onChange={emailChangeHandler}
-              style={{fontFamily:'Inter,sans-serif'}}
+              style={{ fontFamily: "Inter,sans-serif" }}
             />
 
             {Checked && (
@@ -109,18 +117,24 @@ const Email = (props) => {
                 Enter a valid email
               </p>
             )}
-            <h2 className="text-gray-100 text-lg mt-10 tracking-wide" style={{fontWeight:450}}>
+            <h2
+              className="text-gray-100 text-lg mt-10 tracking-wide"
+              style={{ fontWeight: 450 }}
+            >
               We respect your privacy and take protecting it very seriously — no
               spam
             </h2>
           </div>
           <Link href={`${valid > 0 ? "/commitment" : ""}`}>
-            <div onClick={handleClick}  className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent ">
+            <div
+              onClick={handleClick}
+              className="fixed bottom-[0px] left-[0px] md:relative border-t-[2px] w-[100vw] px-4 md:w-auto md:border-none border-stone-700 bg-[#1e1e1e] md:bg-transparent "
+            >
               <Button dis={email.length > 0 ? false : true} text={"Continue"} />
             </div>
           </Link>
         </div>
-      </div >
+      </div>
     </>
   );
 };
