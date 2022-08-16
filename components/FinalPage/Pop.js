@@ -3,7 +3,7 @@ import Image from "next/image";
 import { RiCloseFill } from "react-icons/ri";
 const style = {
   wrapper:
-    "bg-black absolute w-[100vw] h-[100vh]  bg-opacity-[0.8] top-[0px] left-[0px] flex items-center justify-center",
+    "bg-black absolute w-[100vw] h-[100vh]  bg-opacity-[0.8] top-[250px] left-[0px] flex items-center justify-center",
   contentContainer:
     "bg-[#393939] text-white w-[85%] md:w-[35%] px-4 md:px-12 py-0 md:py-5",
 };
